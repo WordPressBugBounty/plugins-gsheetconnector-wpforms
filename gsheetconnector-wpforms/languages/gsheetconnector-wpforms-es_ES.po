@@ -1,0 +1,1381 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPForms GSheetConnector\n"
+"POT-Creation-Date: 2025-01-20 17:03+0530\n"
+"PO-Revision-Date: 2025-01-20 17:03+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: gsheetconnector-wpforms.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: gsheetconnector-wpforms.php:124
+msgid "View Documentation"
+msgstr "Ver Documentación"
+
+#: gsheetconnector-wpforms.php:124 includes/pages/admin-footer.php:19
+msgid "Docs"
+msgstr "Documentos"
+
+#: gsheetconnector-wpforms.php:125
+msgid "Get Support"
+msgstr "Obtener Soporte"
+
+#: gsheetconnector-wpforms.php:125 includes/pages/admin-footer.php:18
+msgid "Support"
+msgstr "Soporte"
+
+#: gsheetconnector-wpforms.php:233
+msgid "Google Sheet"
+msgstr "Hoja de cálculo de Google:"
+
+#: gsheetconnector-wpforms.php:250
+msgid "<img style='width:30px;margin-right: 10px;' src='"
+msgstr "<img style='width:30px; margen derecho: 10px;' src='"
+
+#: gsheetconnector-wpforms.php:408
+msgid "Settings"
+msgstr "Ajustes"
+
+#: gsheetconnector-wpforms.php:409
+msgid ""
+" <span style=\"color: #ff0000; font-weight: bold;\">Upgrade to PRO</span>"
+msgstr ""
+"<span style=\"color: #ff0000; font-weight: bold;\">Actualizar a PRO</span>"
+
+#: includes/class-wpform-utility.php:81
+msgid "There's something wrong with your code..."
+msgstr "Hay algo mal con tu código..."
+
+#: includes/class-wpforms-integration.php:58
+msgid ""
+"This settings page is deprecated and will be removed in upcoming version. "
+"Move your settings to the <a target=\"_blank\" href=\""
+msgstr ""
+"Esta página de configuración está obsoleta y se eliminará en la próxima "
+"versión. Mueva su configuración a la <a target=\"_blank\" href=\""
+
+#: includes/class-wpforms-integration.php:138
+msgid "Google Sheet Settings"
+msgstr "Configuración de Hojas de cálculo de Google:"
+
+#: includes/class-wpforms-integration.php:147
+msgid "Google Sheet Name"
+msgstr "Nombre de la hoja de cálculo de Google"
+
+#: includes/class-wpforms-integration.php:153
+msgid ""
+"Go to your google account and click on\"Google apps\" icon and than click "
+"\"Sheets\". Select the name of the appropriate sheet you want to link your "
+"contact form or create new sheet."
+msgstr ""
+"Vaya a su cuenta de Google y haga clic en el icono \"Aplicaciones de Google"
+"\" y luego haga clic en \"Hojas\". Seleccione el nombre de la hoja apropiada "
+"a la que desea vincular su formulario de contacto o crear una nueva hoja."
+
+#: includes/class-wpforms-integration.php:157
+msgid "Google Sheet Id"
+msgstr "ID de hoja de cálculo de Google"
+
+#: includes/class-wpforms-integration.php:162
+msgid "you can get sheet id from your sheet URL"
+msgstr "puede obtener el ID de la hoja desde la URL de la hoja"
+
+#: includes/class-wpforms-integration.php:165
+msgid "Google Sheet Tab Name"
+msgstr "Nombre de la pestaña Hoja de cálculo de Google"
+
+#: includes/class-wpforms-integration.php:170
+msgid ""
+"Open your Google Sheet with which you want to link your contact form . You "
+"will notice a tab names at bottom of the screen. Copy the tab name where you "
+"want to have an entry of contact form."
+msgstr ""
+"Abre tu hoja de cálculo de Google con la que quieres vincular tu formulario "
+"de contacto. Notarás los nombres de las pestañas en la parte inferior de la "
+"pantalla. Copie el nombre de la pestaña donde desea tener una entrada del "
+"formulario de contacto."
+
+#: includes/class-wpforms-integration.php:173
+msgid "Google Tab Id"
+msgstr "ID de pestaña de Google"
+
+#: includes/class-wpforms-integration.php:178
+msgid "you can get tab id from your sheet URL"
+msgstr "puede obtener el ID de la pestaña desde la URL de la hoja"
+
+#: includes/class-wpforms-integration.php:201
+msgid "Upgrade to WPForms Google sheet Connector PRO"
+msgstr "Conector de hojas de cálculo de Google de WPForms"
+
+#: includes/class-wpforms-integration.php:205
+#: includes/pages/wpforms-integration-demo-info.php:30
+msgid "Click Here Demo"
+msgstr "Haga clic aquí Demo"
+
+#: includes/class-wpforms-integration.php:211
+#: includes/pages/wpforms-integration-demo-info.php:36
+msgid "Sheet URL (Click Here to view Sheet with submitted data.)"
+msgstr ""
+"URL de la hoja (Haga clic aquí para ver la hoja con los datos enviados)."
+
+#: includes/class-wpforms-integration.php:216
+msgid "WPForms Google Sheet Connector PRO Features"
+msgstr "Características de WPForms Google Sheet Connector PRO"
+
+#: includes/class-wpforms-integration.php:220
+#: includes/pages/wpforms-integration-demo-info.php:45
+msgid "Google Sheets API (Up-to date)"
+msgstr "API de Hojas de cálculo de Google (actualizada)"
+
+#: includes/class-wpforms-integration.php:221
+#: includes/pages/wpforms-integration-demo-info.php:46
+msgid "One Click Authentication"
+msgstr "Autenticación con un solo clic"
+
+#: includes/class-wpforms-integration.php:222
+#: includes/pages/wpforms-integration-demo-info.php:47
+msgid "Click & Fetch Sheet Automated"
+msgstr "Click & Fetch Sheet Automatizado"
+
+#: includes/class-wpforms-integration.php:223
+#: includes/pages/wpforms-integration-demo-info.php:48
+msgid "Automated Sheet Name & Tab Name"
+msgstr "Nombre de la hoja automatizada y nombre de la pestaña"
+
+#: includes/class-wpforms-integration.php:224
+#: includes/pages/wpforms-integration-demo-info.php:49
+msgid "Manually Adding Sheet Name & Tab Name"
+msgstr "Adición manual del nombre de la hoja y del nombre de la pestaña"
+
+#: includes/class-wpforms-integration.php:225
+#: includes/pages/wpforms-integration-demo-info.php:50
+msgid "Supported WPForms Lite/Pro"
+msgstr "Compatible con WPForms Lite/Pro"
+
+#: includes/class-wpforms-integration.php:226
+#: includes/pages/wpforms-integration-demo-info.php:51
+msgid "Latest WordPress & PHP Support"
+msgstr "Último soporte de WordPress y PHP"
+
+#: includes/class-wpforms-integration.php:227
+#: includes/pages/wpforms-integration-demo-info.php:52
+msgid "Support WordPress Multisite"
+msgstr "Soporta WordPress Multisite"
+
+#: includes/class-wpforms-integration.php:237
+#: includes/pages/wpforms-integration-demo-info.php:62
+msgid "Multiple Forms to Sheet"
+msgstr "Múltiples formularios para hoja"
+
+#: includes/class-wpforms-integration.php:238
+#: includes/pages/wpforms-integration-demo-info.php:63
+msgid "Roles Management"
+msgstr "Gestión de roles"
+
+#: includes/class-wpforms-integration.php:239
+#: includes/pages/wpforms-integration-demo-info.php:64
+msgid "Creating New Sheet Option"
+msgstr "Opción Crear nueva hoja"
+
+#: includes/class-wpforms-integration.php:240
+#: includes/pages/wpforms-integration-demo-info.php:65
+msgid "Authenticated Email Display"
+msgstr "Visualización de correo electrónico autenticado"
+
+#: includes/class-wpforms-integration.php:241
+#: includes/pages/wpforms-integration-demo-info.php:66
+msgid "Automatic Updates"
+msgstr "Actualizaciones automáticas"
+
+#: includes/class-wpforms-integration.php:242
+#: includes/pages/wpforms-integration-demo-info.php:67
+msgid "Using Smart Tags"
+msgstr "Uso de etiquetas inteligentes"
+
+#: includes/class-wpforms-integration.php:243
+#: includes/pages/wpforms-integration-demo-info.php:68
+msgid "Custom Ordering"
+msgstr "Orden personalizado"
+
+#: includes/class-wpforms-integration.php:244
+#: includes/pages/wpforms-integration-demo-info.php:69
+msgid "Image / PDF Attachment Link"
+msgstr "Imagen / PDF Enlace adjunto"
+
+#: includes/class-wpforms-integration.php:245
+#: includes/pages/wpforms-integration-demo-info.php:70
+msgid "Sheet Headers Settings"
+msgstr "Configuración de encabezados de hoja"
+
+#: includes/class-wpforms-integration.php:246
+#: includes/pages/wpforms-integration-demo-info.php:71
+msgid "Click to Sync"
+msgstr "Haga clic para sincronizar"
+
+#: includes/class-wpforms-integration.php:247
+#: includes/pages/wpforms-integration-demo-info.php:72
+msgid "Sheet Sorting"
+msgstr "Clasificación de hojas"
+
+#: includes/class-wpforms-integration.php:248
+#: includes/pages/wpforms-integration-demo-info.php:73
+msgid "Excellent Priority Support"
+msgstr "Excelente soporte prioritario"
+
+#: includes/class-wpforms-integration.php:255
+#: includes/class-wpforms-integration.php:332 includes/pages/extensions.php:49
+#: includes/pages/extensions.php:74 includes/pages/extensions.php:98
+#: includes/pages/extensions.php:122 includes/pages/extensions.php:147
+#: includes/pages/extensions.php:182 includes/pages/extensions.php:206
+#: includes/pages/extensions.php:230
+#: includes/pages/wpforms-integration-demo-info.php:80
+msgid "Buy Now"
+msgstr "Comprar ahora"
+
+#: includes/class-wpforms-integration.php:325
+msgid "A way to connect WordPress"
+msgstr "Una forma de conectar WordPress"
+
+#: includes/class-wpforms-integration.php:326
+#: includes/class-wpforms-integration.php:330
+#: includes/class-wpforms-integration.php:331
+msgid "and"
+msgstr "y"
+
+#: includes/class-wpforms-integration.php:326
+msgid "Google Sheets Pro"
+msgstr "Hojas de cálculo de Google Pro"
+
+#: includes/class-wpforms-integration.php:327
+msgid "Ratings"
+msgstr "Calificaciones"
+
+#: includes/class-wpforms-integration.php:328
+msgid "The Most Powerful Bridge Between WordPress  and"
+msgstr "El puente más poderoso entre WordPress y"
+
+#: includes/class-wpforms-integration.php:328
+#: includes/class-wpforms-integration.php:413
+msgid "Google Sheets"
+msgstr "Hojas de cálculo de Google"
+
+#: includes/class-wpforms-integration.php:329
+msgid "Now available for popular"
+msgstr "Ahora disponible para"
+
+#: includes/class-wpforms-integration.php:329
+msgid "Contact Forms"
+msgstr "Formularios de contacto"
+
+#: includes/class-wpforms-integration.php:329
+msgid "Page Builder Forms"
+msgstr "Formularios de Page Builder"
+
+#: includes/class-wpforms-integration.php:330
+msgid "E-commerce"
+msgstr "Comercio electrónico"
+
+#: includes/class-wpforms-integration.php:330
+msgid "Platforms like "
+msgstr "Plataformas como"
+
+#: includes/class-wpforms-integration.php:330
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/class-wpforms-integration.php:331
+msgid "Easy Digital Downloads"
+msgstr "Easy Digital Downloads"
+
+#: includes/class-wpforms-integration.php:331
+msgid "EDD"
+msgstr "EDD"
+
+#: includes/class-wpforms-integration.php:332
+msgid "Check Demo"
+msgstr "Ver Demo"
+
+#: includes/class-wpforms-integration.php:379
+msgid "Choose Google API Setting :"
+msgstr "Elija la configuración de la API de Google:"
+
+#: includes/class-wpforms-integration.php:383
+msgid "Use Existing Client/Secret Key (Auto Google API Configuration)"
+msgstr ""
+"Usar clave secreta/cliente existente (configuración automática de la API de "
+"Google)"
+
+#: includes/class-wpforms-integration.php:385
+msgid ""
+"Use Manual Client/Secret Key (Use Your Google API Configuration) (Upgrade To "
+"PRO)"
+msgstr ""
+"Use el cliente manual/clave secreta (use la configuración de su API de "
+"Google) (Actualizar a Pro)"
+
+#: includes/class-wpforms-integration.php:388
+msgid "Upgrade To PRO"
+msgstr "Actualizar a Pro"
+
+#: includes/class-wpforms-integration.php:391
+msgid ""
+"Manual Client/Secret Key (Use Your Google API Configuration) method is "
+"available in the PRO version of the plugin."
+msgstr ""
+"El método manual de cliente/clave secreta (use su configuración de API de "
+"Google) está disponible en la versión PRO del complemento."
+
+#: includes/class-wpforms-integration.php:400
+msgid "WPForms - Google Sheet Integration"
+msgstr "WPForms - Integración de Google Sheet"
+
+#: includes/class-wpforms-integration.php:406
+msgid "Authenticate with your Google account, follow these steps:"
+msgstr "Autentícate con tu cuenta de Google, sigue estos pasos:"
+
+#: includes/class-wpforms-integration.php:409
+msgid "Click on the \"Sign In With Google\" button."
+msgstr "Haga clic en el botón \"Iniciar sesión con Google\"."
+
+#: includes/class-wpforms-integration.php:410
+msgid "Grant permissions for the following:"
+msgstr "Conceda permisos para lo siguiente:"
+
+#: includes/class-wpforms-integration.php:412
+msgid "Google Drive"
+msgstr "Google Drive"
+
+#: includes/class-wpforms-integration.php:414
+msgid "* Ensure that you enable the checkbox for each of these services."
+msgstr ""
+"* Asegúrese de habilitar la casilla de verificación para cada uno de estos "
+"servicios."
+
+#: includes/class-wpforms-integration.php:421
+msgid ""
+"This will allow the integration to access your Google Drive and Google "
+"Sheets."
+msgstr ""
+"Esto permitirá que la integración acceda a su Google Drive y Google Sheets."
+
+#: includes/class-wpforms-integration.php:429
+msgid "Google Access Code"
+msgstr "Código de acceso de Google"
+
+#: includes/class-wpforms-integration.php:433
+msgid "Currently Active"
+msgstr "Actualmente activo"
+
+#: includes/class-wpforms-integration.php:435
+msgid "Deactivate"
+msgstr "Desactivar"
+
+#: includes/class-wpforms-integration.php:438
+msgid ""
+"On deactivation, all your data saved with authentication will be removed and "
+"you need to reauthenticate with your google account and configure sheet name "
+"and tab."
+msgstr ""
+"Tras la desactivación, se eliminarán todos los datos guardados con la "
+"autenticación y deberá volver a autenticarse con su cuenta de Google y "
+"configurar el nombre y la pestaña de la hoja."
+
+#: includes/class-wpforms-integration.php:444
+msgid "Click Sign in with Google"
+msgstr "Haz clic en Iniciar sesión con Google"
+
+#: includes/class-wpforms-integration.php:470
+msgid ""
+"Something went wrong! It looks you have not given the permission of Google "
+"Drive and Google Sheets from your google account.Please Deactivate Auth and "
+"Re-Authenticate again with the permissions."
+msgstr ""
+"¡Algo salió mal! Parece que no has dado el permiso de Google Drive y Google "
+"Sheets desde tu cuenta de google. Desactive la autenticación y vuelva a "
+"autenticarse con los permisos."
+
+#: includes/class-wpforms-integration.php:475
+msgid "Also,"
+msgstr "Además"
+
+#: includes/class-wpforms-integration.php:476
+msgid "Click Here "
+msgstr "Haga clic aquí "
+
+#: includes/class-wpforms-integration.php:477
+msgid ""
+"and if it displays \"GSheetConnector for WP Contact Forms\" under Third-"
+"party apps with account access then remove it."
+msgstr ""
+"y si muestra \"GSheetConnector for WP Contact Forms\" en Aplicaciones de "
+"terceros con acceso a la cuenta, elimínelo."
+
+#: includes/class-wpforms-integration.php:492
+#, php-format
+msgid "Connected email account: %s"
+msgstr "Cuenta de correo electrónico conectada: %s"
+
+#: includes/class-wpforms-integration.php:498
+msgid ""
+"Something went wrong ! Your Auth Code may be wrong or expired. Please "
+"Deactivate AUTH and Re-Authenticate again. "
+msgstr ""
+"¡Algo salió mal! Es posible que su código de autorización sea incorrecto o "
+"haya caducado. Desactive AUTH y vuelva a autenticarse. "
+
+#: includes/class-wpforms-integration.php:510
+msgid ""
+" We do not store any of the data from your Google account on our servers, "
+"everything is processed & stored on your server. We take your privacy "
+"extremely seriously and ensure it is never misused."
+msgstr ""
+"No almacenamos ninguno de los datos de su cuenta de Google en nuestros "
+"servidores, todo se procesa y almacena en su servidor. Nos tomamos muy en "
+"serio su privacidad y nos aseguramos de que nunca se haga un uso indebido."
+
+#: includes/class-wpforms-integration.php:510
+msgid "Learn more."
+msgstr "Leer más."
+
+#: includes/class-wpforms-integration.php:516
+msgid "Debug Log"
+msgstr "Registro de depuración"
+
+#: includes/class-wpforms-integration.php:517
+#: includes/class-wpforms-integration.php:519
+msgid "View"
+msgstr "Ver"
+
+#: includes/class-wpforms-integration.php:520
+#: includes/pages/wpforms-integrate-system-info.php:20
+msgid "Clear"
+msgstr "Limpiar"
+
+#: includes/class-wpforms-integration.php:534
+msgid "Copy Logs"
+msgstr "Copiar registros"
+
+#: includes/class-wpforms-integration.php:545
+msgid "No errors found."
+msgstr "No se encontraron errores."
+
+#: includes/class-wpforms-integration.php:549
+msgid "No log file exists as no errors are generated."
+msgstr "No existe ningún archivo de registro, ya que no se generan errores."
+
+#: includes/class-wpforms-integration.php:576
+msgid "Next steps…"
+msgstr "Próximos pasos..."
+
+#: includes/class-wpforms-integration.php:586
+msgid "Upgrade to PRO"
+msgstr "Actualiza a PRO"
+
+#: includes/class-wpforms-integration.php:587
+msgid " Multiple Forms to Sheets, Custom mail tags and much more..."
+msgstr ""
+" Múltiples formularios a hojas de cálculo, etiquetas de correo "
+"personalizadas y mucho más..."
+
+#: includes/class-wpforms-integration.php:597
+msgid "Compatibility"
+msgstr "Compatibilidad"
+
+#: includes/class-wpforms-integration.php:598
+msgid "Compatibility with WPForms Third-Party Plugins"
+msgstr "Compatibilidad con plugins de terceros de WPForms"
+
+#: includes/class-wpforms-integration.php:608
+msgid "Multi Languages"
+msgstr "Multi Idiomas"
+
+#: includes/class-wpforms-integration.php:609
+msgid "This plugin supports multi-languages as well!"
+msgstr "¡Este plugin también es compatible con varios idiomas!"
+
+#: includes/class-wpforms-integration.php:619
+msgid "Support Wordpress multisites"
+msgstr "Soporta multisitios de Wordpress"
+
+#: includes/class-wpforms-integration.php:620
+msgid ""
+"With the use of a Multisite, you’ll also have a new level of user-available: "
+"the Super\n"
+"                                Admin."
+msgstr ""
+"Con el uso de un Multisitio, también tendrás un nuevo nivel de "
+"disponibilidad para el usuario: el Super\n"
+"                                Admin."
+
+#: includes/class-wpforms-integration.php:632
+msgid "Product Support"
+msgstr "Soporte de productos"
+
+#: includes/class-wpforms-integration.php:640
+msgid "Online Documentation"
+msgstr "Documentación Online"
+
+#: includes/class-wpforms-integration.php:641
+msgid "Understand all the capabilities of WPForms GsheetConnector"
+msgstr "Comprender todas las capacidades de WPForms GsheetConnector"
+
+#: includes/class-wpforms-integration.php:649
+msgid "Ticket Support"
+msgstr "Soporte de Tickets"
+
+#: includes/class-wpforms-integration.php:650
+msgid "Direct help from our qualified support team"
+msgstr "Ayuda directa de nuestro equipo cualificado de soporte"
+
+#: includes/class-wpforms-integration.php:658
+msgid "Affiliate Program"
+msgstr "Programa de Afiliados"
+
+#: includes/class-wpforms-integration.php:659
+msgid "Earn flat 30"
+msgstr "Gana 30 fijos"
+
+#: includes/class-wpforms-integration.php:659
+msgid "on every sale"
+msgstr "en cada venta"
+
+#: includes/class-wpforms-integration.php:696
+#: includes/class-wpforms-integration.php:700
+msgid "Select Form"
+msgstr "Seleccionar formulario"
+
+#: includes/class-wpforms-integration.php:713
+msgid "WPForms - Google Sheet Settings"
+msgstr "WPForms - Configuración de Hojas de cálculo de Google"
+
+#: includes/class-wpforms-integration.php:717
+msgid ""
+"This settings page is deprecated and moved old settings to new settings."
+"Follow these below steps to import the old settings into the new settings."
+msgstr ""
+"Esta página de configuración ha quedado obsoleta y se ha movido la "
+"configuración antigua a la nueva. Siga estos pasos a continuación para "
+"importar la configuración anterior a la nueva."
+
+#: includes/class-wpforms-integration.php:719
+msgid "Select the form which you want to connect with your spreadsheet."
+msgstr "Seleccione el formulario que desea conectar con su hoja de cálculo."
+
+#: includes/class-wpforms-integration.php:726
+msgid "Then you can see your old settings here."
+msgstr "A continuación, puede ver su configuración anterior aquí."
+
+#: includes/pages/admin-footer.php:8
+msgid "Please rate"
+msgstr "Por favor, califique"
+
+#: includes/pages/admin-footer.php:10 includes/pages/wpforms-gs-settings.php:35
+msgid "WPForms - GSheetConnector"
+msgstr "WPForms - GSheetConnector"
+
+#: includes/pages/admin-footer.php:10
+msgid "WordPress.org"
+msgstr "Proyecto en WordPress.org"
+
+#: includes/pages/admin-footer.php:10
+msgid "to help us spread the word."
+msgstr "para ayudarnos a correr la voz."
+
+#: includes/pages/admin-footer.php:16
+msgid "Made with ♥ by the GSheetConnector Team"
+msgstr "Hecho con ♥ por el equipo de GSheetConnector"
+
+#: includes/pages/admin-footer.php:20
+msgid "VIP Circle"
+msgstr "Círculo VIP"
+
+#: includes/pages/admin-footer.php:21
+msgid "Free Plugins"
+msgstr "Plugins gratuitos"
+
+#: includes/pages/extensions.php:5
+msgid "Upgrade"
+msgstr "Actualizar"
+
+#: includes/pages/extensions.php:8 includes/pages/extensions.php:32
+#: includes/pages/extensions.php:58 includes/pages/extensions.php:82
+#: includes/pages/extensions.php:106 includes/pages/extensions.php:131
+#: includes/pages/extensions.php:166 includes/pages/extensions.php:191
+#: includes/pages/extensions.php:215 includes/pages/extensions.php:239
+#: includes/pages/extensions.php:263 includes/pages/extensions.php:287
+msgid "logo"
+msgstr "logo"
+
+#: includes/pages/extensions.php:12 includes/pages/extensions.php:36
+#: includes/pages/extensions.php:62 includes/pages/extensions.php:86
+#: includes/pages/extensions.php:110 includes/pages/extensions.php:135
+#: includes/pages/extensions.php:170 includes/pages/extensions.php:195
+#: includes/pages/extensions.php:219 includes/pages/extensions.php:243
+#: includes/pages/extensions.php:267 includes/pages/extensions.php:291
+msgid "Learn more"
+msgstr "Saber más"
+
+#: includes/pages/extensions.php:12
+msgid "WPForms Google Sheet Connector"
+msgstr "Conector de hojas de cálculo de Google de WPForms"
+
+#: includes/pages/extensions.php:15
+msgid ""
+"WPForms, A bridge between your WordPress based WPForms and Google Sheets. It "
+"helps to record the entries in real-time."
+msgstr ""
+"WPForms, Un puente entre tus WPForms basados en WordPress y Google Sheets. "
+"Ayuda a registrar las entradas en tiempo real."
+
+#: includes/pages/extensions.php:20 includes/pages/extensions.php:44
+#: includes/pages/extensions.php:70 includes/pages/extensions.php:94
+#: includes/pages/extensions.php:118 includes/pages/extensions.php:143
+#: includes/pages/extensions.php:178
+msgid "PRO"
+msgstr "PRO"
+
+#: includes/pages/extensions.php:23
+msgid "UPGRADE NOW"
+msgstr "ACTUALIZAR AHORA"
+
+#: includes/pages/extensions.php:36
+msgid "Ninja Forms Google Sheet Connector"
+msgstr "Conector de hojas de cálculo de Google de Ninja Forms"
+
+#: includes/pages/extensions.php:39
+msgid ""
+"Ninja Forms, A bridge between your WordPress based Ninja Forms and Google "
+"Sheets. It helps to record the entries in real-time."
+msgstr ""
+"Ninja Forms, un puente entre tus Ninja Forms basados en WordPress y Google "
+"Sheets. Ayuda a registrar las entradas en tiempo real."
+
+#: includes/pages/extensions.php:48 includes/pages/extensions.php:73
+#: includes/pages/extensions.php:97 includes/pages/extensions.php:121
+#: includes/pages/extensions.php:146 includes/pages/extensions.php:181
+#: includes/pages/extensions.php:254 includes/pages/extensions.php:278
+#: includes/pages/extensions.php:302
+msgid "Download"
+msgstr "Descargar"
+
+#: includes/pages/extensions.php:62
+msgid "Gravity Forms Google Sheet Connector"
+msgstr "Conector de hojas de cálculo de Google de Gravity Forms"
+
+#: includes/pages/extensions.php:65
+msgid ""
+"Gravity Forms Google Sheets Connector Plugin is a Bridge between your "
+"Gravity Forms and Google Sheets."
+msgstr ""
+"El plugin Gravity Forms Google Sheets Connector es un puente entre tus "
+"Gravity Forms y Google Sheets."
+
+#: includes/pages/extensions.php:86
+msgid "WooCommerce Google Sheet Connector"
+msgstr "Conector de hojas de cálculo de Google de WooCommerce"
+
+#: includes/pages/extensions.php:89
+msgid ""
+"WooCommerce Google Spreadsheet Addon Plugin to connect with Google Sheets."
+msgstr ""
+"Complemento de hoja de cálculo de Google WooCommerce para conectarse con "
+"Hojas de cálculo de Google."
+
+#: includes/pages/extensions.php:110
+msgid "Elementor Forms Google Sheet Connector"
+msgstr "Conector de hojas de cálculo de Google de Elementor Forms"
+
+#: includes/pages/extensions.php:113
+msgid ""
+"A bridge between your WordPress based Elementor Forms or Metform Elementor "
+"Builder to Google Sheets."
+msgstr ""
+"Un puente entre sus formularios Elementor basados en WordPress o Metform "
+"Elementor Builder con Google Sheets."
+
+#: includes/pages/extensions.php:135
+msgid "CF7 Google Sheets Connector"
+msgstr "CF7 Conector de Hojas de cálculo de Google"
+
+#: includes/pages/extensions.php:138
+msgid ""
+"CF7 Google Sheet Connector is an addon plugin, A bridge between your "
+"WordPress based Contact Form 7 forms and Google Sheets."
+msgstr ""
+"CF7 Google Sheet Connector es un complemento complementario, un puente entre "
+"sus formularios Contact Form 7 basados en WordPress y Google Sheets."
+
+#: includes/pages/extensions.php:170
+msgid "Easy Digital Downloads Google Sheet Connector"
+msgstr "Descargas digitales sencillas Conector de hojas de cálculo de Google"
+
+#: includes/pages/extensions.php:173
+msgid ""
+"Easy Digital Downloads Google Sheet Connector sends orders entries to Google "
+"Sheet in a real-time"
+msgstr ""
+"Easy Digital Downloads Google Sheet Connector envía entradas de pedidos a "
+"Google Sheet en tiempo real"
+
+#: includes/pages/extensions.php:195
+msgid "Avada Forms Google Sheet Connector Pro"
+msgstr "Avada Forms Google Sheet Connector Pro"
+
+#: includes/pages/extensions.php:198
+msgid ""
+"Avada Theme Fusion Builder addon, simplifies real-time data transmission "
+"from Avada theme-based forms to Google Sheets with premium features."
+msgstr ""
+"El complemento Avada Theme Fusion Builder simplifica la transmisión de datos "
+"en tiempo real desde los formularios basados en temas de Avada a Hojas de "
+"cálculo de Google con funciones premium."
+
+#: includes/pages/extensions.php:203 includes/pages/extensions.php:227
+msgid "Available PRO Version"
+msgstr "Versión PRO disponible"
+
+#: includes/pages/extensions.php:219
+msgid "Divi Forms Google Sheet Connector Pro"
+msgstr "Divi Forms Google Sheet Connector Pro"
+
+#: includes/pages/extensions.php:222
+msgid ""
+"Divi Forms GSheetConnector, an addon for DIVI Theme/Builder, simplifies real-"
+"time syncing of data from DIVI theme forms to both the database and Google "
+"Sheets."
+msgstr ""
+"Divi Forms GSheetConnector, un complemento para DIVI Theme/Builder, "
+"simplifica la sincronización en tiempo real de los datos de los formularios "
+"del tema DIVI tanto con la base de datos como con Google Sheets."
+
+#: includes/pages/extensions.php:243
+msgid "GSheetConnector for Forminator Forms"
+msgstr "GSheetConnector para formularios de forminador"
+
+#: includes/pages/extensions.php:246
+msgid ""
+"GSheetConnector for Forminator Forms is an addon plugin, A bridge between "
+"your WordPress based Forminator Forms forms and Google Sheets."
+msgstr ""
+"GSheetConnector for Forminator Forms es un complemento complementario, un "
+"puente entre sus formularios de Forminator Forms basados en WordPress y "
+"Google Sheets."
+
+#: includes/pages/extensions.php:251 includes/pages/extensions.php:275
+#: includes/pages/extensions.php:299
+msgid "Free"
+msgstr "Gratis"
+
+#: includes/pages/extensions.php:267
+msgid "GSheetConnector for Formidable Forms"
+msgstr "GSheetConnector para formularios formidables"
+
+#: includes/pages/extensions.php:270
+msgid ""
+"Formidable Forms, A bridge between your WordPress based Formidable Forms "
+"forms and Google Sheets."
+msgstr ""
+"Formidable Forms, un puente entre sus formularios de Formidable Forms "
+"basados en WordPress y Google Sheets."
+
+#: includes/pages/extensions.php:291
+msgid "Caldera Forms Google Sheets Connector"
+msgstr "Conector de Hojas de cálculo de Google de Caldera Forms"
+
+#: includes/pages/extensions.php:294
+msgid ""
+"Caldera Forms Closure, No more updates on this plugin Due to Caldera Forms "
+"being sunset/retired on December 31, 2021"
+msgstr ""
+"Cierre de Caldera Forms, no hay más actualizaciones en este complemento "
+"Debido a que Caldera Forms expiró/retiró el 31 de diciembre de 2021"
+
+#: includes/pages/wpform-dashboard-widget.php:20
+msgid "WPForms Connected with Google Sheets."
+msgstr "WPForms conectados con Hojas de cálculo de Google"
+
+#: includes/pages/wpform-dashboard-widget.php:67
+msgid "Not Connected"
+msgstr "No Conectado"
+
+#: includes/pages/wpform-dashboard-widget.php:76
+msgid "No WPForms are Connected with Google Sheets."
+msgstr "Ningún WPForms está conectado con Hojas de cálculo de Google."
+
+#: includes/pages/wpforms-gs-integration-support.php:6
+msgid "Like & Subscribe our channel for regular updates"
+msgstr ""
+"Dale \"Me gusta\" y suscríbete a nuestro canal para recibir actualizaciones "
+"periódicas"
+
+#: includes/pages/wpforms-gs-integration-support.php:11
+msgid "Submit A Ticket"
+msgstr "Enviar un Ticket"
+
+#: includes/pages/wpforms-gs-integration-support.php:12
+msgid ""
+"We offer excellent support through our advanced ticket system. Make sure to "
+"register your purchase first to access our support services and other "
+"resources."
+msgstr ""
+"Ofrecemos un soporte excelente a través de nuestro sistema de tickets "
+"avanzado. Asegúrese de registrar su compra primero para poder acceder a "
+"nuestro soporte y a otros recursos."
+
+#: includes/pages/wpforms-gs-integration-support.php:13
+msgid "Submit a ticket"
+msgstr "Enviar un ticket"
+
+#: includes/pages/wpforms-gs-integration-support.php:14
+#: includes/pages/wpforms-gs-integration-support.php:16
+msgid "Documentation"
+msgstr "Documentación"
+
+#: includes/pages/wpforms-gs-integration-support.php:15
+msgid ""
+"This is the place to go to reference different aspects of the theme. Our "
+"online documentaiton is an incredible resource for learning the ins and outs."
+msgstr ""
+"Ofrecemos un soporte excelente a través de nuestro sistema de tickets "
+"avanzado. Asegúrese de registrar su compra primero para poder acceder a "
+"nuestro soporte y a otros recursos."
+
+#: includes/pages/wpforms-gs-settings.php:35
+msgid "Version :"
+msgstr "Versión"
+
+#: includes/pages/wpforms-gs-settings.php:38
+msgid "DASHBOARD"
+msgstr "ESCRITORIO"
+
+#: includes/pages/wpforms-gs-settings.php:47
+msgid "Integration"
+msgstr "Integración"
+
+#: includes/pages/wpforms-gs-settings.php:48
+msgid "GoogleSheet Form Settings"
+msgstr "Configuración del formulario de GoogleSheet"
+
+#: includes/pages/wpforms-gs-settings.php:52
+msgid "System Status"
+msgstr "Estado del sistema"
+
+#: includes/pages/wpforms-gs-settings.php:53
+msgid "Extensions"
+msgstr "Extensiones"
+
+#: includes/pages/wpforms-integrate-system-info.php:10
+msgid "System Info"
+msgstr "Información del sistema"
+
+#: includes/pages/wpforms-integrate-system-info.php:11
+msgid "Copy System Info to Clipboard"
+msgstr "Copiar información del sistema al portapapeles"
+
+#: includes/pages/wpforms-integrate-system-info.php:17
+msgid "Error Log"
+msgstr "Registro de Errores"
+
+#: includes/pages/wpforms-integrate-system-info.php:18
+msgid "If you have"
+msgstr "Si tienes"
+
+#: includes/pages/wpforms-integrate-system-info.php:18
+msgid "WP_DEBUG_LOG"
+msgstr "WP_DEBUG_LOG"
+
+#: includes/pages/wpforms-integrate-system-info.php:18
+msgid ""
+"enabled, errors are stored in a log file. Here you can find the last 100 "
+"lines in reversed order so that you or the GSheetConnector support team can "
+"view it easily. The file cannot be edited here."
+msgstr ""
+"habilitado, los errores se almacenan en un archivo de registro. Aquí puede "
+"encontrar las últimas 100 líneas en orden inverso para que usted o el equipo "
+"de soporte de GSheetConnector puedan verlas fácilmente. El archivo no se "
+"puede editar aquí."
+
+#: includes/pages/wpforms-integrate-system-info.php:19
+msgid "Copy Error Log to Clipboard"
+msgstr "Copiar el registro de errores en el portapapeles"
+
+#: includes/pages/wpforms-integrate-system-info.php:26
+msgid "Copied"
+msgstr "Copiado"
+
+#: includes/pages/wpforms-integration-demo-info.php:41
+msgid "WPForm Google Sheet Connector PRO Features"
+msgstr "Características de WPForm Google Sheet Connector PRO"
+
+#: includes/pages/wpforms-integration-faq.php:5
+msgid "How to configure your Google Spreadsheet with WPForms plugin?"
+msgstr "¿Cómo configurar tu hoja de cálculo de Google con el plugin WPForms?"
+
+#: includes/pages/wpforms-integration-faq.php:8
+msgid "Go to the WPForms Menu and click on  Googlesheet ."
+msgstr "Ve al menú de WPForms y haz clic en Googlesheet ."
+
+#: includes/pages/wpforms-integration-faq.php:9
+msgid "Then click on the Google Sheet tab."
+msgstr "A continuación, haz clic en la pestaña Hoja de cálculo de Google."
+
+#: includes/pages/wpforms-integration-faq.php:10
+msgid "Then go to Form Settings Tab."
+msgstr "A continuación, vaya a la pestaña Configuración del formulario."
+
+#: includes/pages/wpforms-integration-faq.php:11
+msgid "Then Select the form which you want to connect with your spreadsheet."
+msgstr ""
+"A continuación, seleccione el formulario que desea conectar con su hoja de "
+"cálculo."
+
+#: includes/pages/wpforms-integration-faq.php:15
+msgid ""
+"Enter Google Sheet name and Google Sheet tab name inside the Google Sheet "
+"tab.."
+msgstr ""
+"Ingrese el nombre de la hoja de cálculo de Google y el nombre de la pestaña "
+"de la hoja de cálculo de Google dentro de la pestaña de hoja de cálculo de "
+"Google."
+
+#: includes/pages/wpforms-integration-faq.php:23
+msgid "Why I am Getting Error 500 After Installing Plugin."
+msgstr "¿Por qué recibo el error 500 después de instalar el complemento?"
+
+#: includes/pages/wpforms-integration-faq.php:25
+msgid "Following are few of the points which will help to debug the issue."
+msgstr ""
+"A continuación se presentan algunos de los puntos que ayudarán a depurar el "
+"problema."
+
+#: includes/pages/wpforms-integration-faq.php:26
+msgid ""
+"1) Enable debug by adding&nbsp;following in your wp-config.php file before /"
+"* That’s all, stop editing! Happy blogging."
+msgstr ""
+"1) Habilite la depuración agregando lo siguiente en su archivo wp-config.php "
+"antes de /* Eso es todo, ¡deja de editar! Feliz blogueo."
+
+#: includes/pages/wpforms-integration-faq.php:27
+msgid ""
+"define(‘WP_DEBUG’, true); define(‘WP_DEBUG_LOG’, true); "
+"define(‘SCRIPT_DEBUG’, true); define(‘SAVEQUERIES’, true);"
+msgstr ""
+"define('WP_DEBUG', true); define('WP_DEBUG_LOG', verdadero); "
+"define('SCRIPT_DEBUG', verdadero); define('SAVEQUERIES', true);"
+
+#: includes/pages/wpforms-integration-faq.php:28
+msgid ""
+"And then try to activate the plugin again. This will create a debug.log "
+"under wp-content folder.&nbsp;Check for WPForms google sheet connector error "
+"if so send us the file at support@westerndeal.com"
+msgstr ""
+"Y luego intente activar el complemento nuevamente. Esto creará un debug.log "
+"en la carpeta wp-content. Verifique el error del conector de hojas de Google "
+"de WPForms, si es así, envíenos el archivo a support@westerndeal.com"
+
+#: includes/pages/wpforms-integration-faq.php:29
+msgid ""
+"2) Check the log that is created by WPForms google sheet. For that click "
+"“View” from goggle sheet integration page. Let us know if there is any error "
+"we will assist you."
+msgstr ""
+"2) Verifique el registro creado por la hoja de Google de WPForms. Para eso, "
+"haga clic en \"Ver\" desde la página de integración de la hoja de gafas. "
+"Háganos saber si hay algún error, lo ayudaremos."
+
+#: includes/pages/wpforms-integration-faq.php:35
+msgid "How do I get the Google Access Code required in step 3 of Installation?"
+msgstr ""
+"¿Cómo obtengo el código de acceso de Google requerido en el paso 3 de la "
+"instalación?"
+
+#: includes/pages/wpforms-integration-faq.php:38
+msgid "On the&nbsp;<code>Admin Panel &gt; WPForms &gt; Google Sheets.</code>"
+msgstr "En el<code>Admin Panel &gt; WPForms &gt; Google Sheets.</code>"
+
+#: includes/pages/wpforms-integration-faq.php:39
+msgid "Go to “Integration” tab and click on \"Get Code\" button."
+msgstr ""
+"Vaya a la pestaña \"Integración\" y haga clic en el botón \"Obtener código\"."
+
+#: includes/pages/wpforms-integration-faq.php:40
+msgid ""
+"In a popup Google will ask you to authorize the plugin to connect to your "
+"Google Sheets. Authorize it – you may have to log in to your Google account "
+"if you aren’t already logged in."
+msgstr ""
+"En una ventana emergente, Google te pedirá que autorices al plugin a "
+"conectarse a tus Hojas de cálculo de Google. Autorízalo: es posible que "
+"tengas que iniciar sesión en tu cuenta de Google si aún no lo has hecho."
+
+#: includes/pages/wpforms-integration-faq.php:41
+msgid "On the next screen, you should receive the Access Code. Copy it."
+msgstr ""
+"En la siguiente pantalla, debería recibir el código de acceso. Cópialo."
+
+#: includes/pages/wpforms-integration-faq.php:42
+msgid "Now you can paste this code back in the Google Access Code."
+msgstr ""
+"Ahora puede volver a pegar este código en el código de acceso de Google."
+
+#: includes/pages/wpforms-integration-faq.php:48
+msgid "Submitted Value is not showing in Googlesheet."
+msgstr "El valor enviado no se muestra en Googlesheet."
+
+#: includes/pages/wpforms-integration-faq.php:52
+#: includes/pages/wpforms-integration-faq.php:67
+msgid ""
+"Sometimes it can take a while of spinning before it goes through. But if the "
+"entries never show up in your Sheet then one of these things might be the "
+"reason:"
+msgstr ""
+"A veces puede tomar un tiempo de girar antes de que se apruebe. Pero si las "
+"entradas nunca aparecen en su hoja, entonces una de estas cosas podría ser "
+"la razón:"
+
+#: includes/pages/wpforms-integration-faq.php:53
+#: includes/pages/wpforms-integration-faq.php:69
+msgid "Wrong access code ( Check debug log )"
+msgstr "Código de acceso incorrecto ( Verifique el registro de depuración )"
+
+#: includes/pages/wpforms-integration-faq.php:54
+#: includes/pages/wpforms-integration-faq.php:70
+msgid "Wrong Sheet name or tab name"
+msgstr "Nombre incorrecto de la hoja o nombre de la pestaña"
+
+#: includes/pages/wpforms-integration-faq.php:55
+msgid ""
+"Wrong Column name ( Column names in the WPForms. It cannot have underscore, "
+"space or any special characters. )"
+msgstr ""
+"Nombre de columna incorrecto ( Nombres de columna en WPForms. No puede tener "
+"caracteres de subrayado, espacios ni caracteres especiales. )"
+
+#: includes/pages/wpforms-integration-faq.php:57
+#: includes/pages/wpforms-integration-faq.php:73
+msgid ""
+"Please double-check those items and hopefully getting them right will fix "
+"the issue."
+msgstr ""
+"Por favor, vuelva a comprobar esos elementos y, con suerte, si los hace "
+"bien, se solucionará el problema."
+
+#: includes/pages/wpforms-integration-faq.php:65
+msgid "Why I am not showing WPForms Values(submitted data) in My Googlesheet?"
+msgstr ""
+"¿Por qué no muestro los valores de WPForms (datos enviados) en Mi hoja de "
+"Google?"
+
+#: includes/pages/wpforms-integration-faq.php:71
+msgid ""
+"Wrong Column name mapping ( Column names in the WPForms. It cannot have "
+"underscore, space or any special characters )"
+msgstr ""
+"Asignación incorrecta de nombres de columna ( Nombres de columna en WPForms. "
+"No puede tener guiones bajos, espacios ni caracteres especiales :)"
+
+#: includes/views/settings/fields-mapping.php:51
+msgid "Enter Column Name Upgrade To Pro &hellip;"
+msgstr "Ingrese el nombre de la columna Actualizar a Pro ..."
+
+#: includes/wpforms-panel.php:228
+msgid "Publishing processing stopped by conditional logic."
+msgstr "El procesamiento de publicación se detuvo por lógica condicional."
+
+#: includes/wpforms-panel.php:558
+msgid "GSheetConnector Feed Settings"
+msgstr "Configuración de la fuente de GSheetConnector"
+
+#: includes/wpforms-panel.php:561
+msgid "Add New Feed"
+msgstr "Añadir nuevo feed"
+
+#: includes/wpforms-panel.php:570
+msgid ""
+"<strong>Authentication Required:</strong>\n"
+"                  You must have to <a href=\"admin.php?page=wpform-google-"
+"sheet-config\" target=\"_blank\">Authenticate using your Google Account</a> "
+"along with Google Drive and Google Sheets Permissions in order to enable the "
+"settings for configuration.</p>"
+msgstr ""
+"<strong>Autenticación requerida:</strong>\n"
+"                  Debe <a href=\"admin.php?page=wpform-google-sheet-config\" "
+"target=\"_blank\">autenticarse con su cuenta de Google</a> junto con los "
+"permisos de Google Drive y Google Sheets para habilitar los ajustes de "
+"configuración.</p>"
+
+#: includes/wpforms-panel.php:604
+msgid "Enable Settings"
+msgstr "Activar ajustes"
+
+#: includes/wpforms-panel.php:608
+msgid "On"
+msgstr "Activado"
+
+#: includes/wpforms-panel.php:609
+msgid "Off"
+msgstr "Apagado"
+
+#: includes/wpforms-panel.php:732
+msgid "Integration Mode"
+msgstr "Modo de integración"
+
+#: includes/wpforms-panel.php:738
+msgid "Manual"
+msgstr "Manual"
+
+#: includes/wpforms-panel.php:739
+msgid "Automatic (Upgrade To Pro)"
+msgstr "Automático (Actualizar a Pro)"
+
+#: includes/wpforms-panel.php:743
+msgid "Selection of chosing google sheet for data submission."
+msgstr "Selección de la hoja de Google elegida para el envío de datos."
+
+#: includes/wpforms-panel.php:763
+msgid "Select Spreadsheet Name"
+msgstr "Seleccione el nombre de la hoja de cálculo"
+
+#: includes/wpforms-panel.php:770
+msgid "Enter Spreadsheet Name"
+msgstr "Introduzca el nombre de la hoja de cálculo"
+
+#: includes/wpforms-panel.php:771
+msgid "Enter spreadsheet name of sheet you want to send the data"
+msgstr ""
+"Introduzca el nombre de la hoja de cálculo a la que desea enviar los datos"
+
+#: includes/wpforms-panel.php:784
+msgid "Enter Spreadsheet Id"
+msgstr "Introduzca el ID de la hoja de cálculo"
+
+#: includes/wpforms-panel.php:791
+msgid "Enter Spreadsheet ID "
+msgstr "Introduzca el ID de la hoja de cálculo "
+
+#: includes/wpforms-panel.php:792
+msgid "Enter spreadsheet id of sheet you want to send the data."
+msgstr "Ingrese el ID de la hoja de cálculo a la que desea enviar los datos"
+
+#: includes/wpforms-panel.php:805
+msgid "Sheet Tab Name"
+msgstr "Nombre de la pestaña Hoja"
+
+#: includes/wpforms-panel.php:812
+msgid "Enter Tab Name"
+msgstr "Introduzca el nombre de la pestaña"
+
+#: includes/wpforms-panel.php:813
+msgid "Enter tab name from above written google sheet."
+msgstr "Ingrese el nombre de la pestaña de la hoja de Google escrita arriba."
+
+#: includes/wpforms-panel.php:826
+msgid "Sheet Tab ID"
+msgstr "ID de pestaña de hoja"
+
+#: includes/wpforms-panel.php:833
+msgid "Enter Tab ID"
+msgstr "Introduzca el ID de la pestaña"
+
+#: includes/wpforms-panel.php:834
+msgid "Enter tab id from above written google sheet."
+msgstr "Ingrese el ID de la pestaña de la hoja de Google escrita arriba."
+
+#: includes/wpforms-panel.php:846
+msgid "View Google Sheet"
+msgstr "Ver hoja de cálculo de Google"
+
+#: includes/wpforms-panel.php:849
+msgid "Sheet URL"
+msgstr "URL de la hoja"
+
+#: includes/wpforms-panel.php:873
+msgid " Check All "
+msgstr " Comprobar todo "
+
+#: includes/wpforms-panel.php:904
+msgid " "
+msgstr " "
+
+#: includes/wpforms-panel.php:911
+msgid " Enable "
+msgstr " Habilitar "
+
+#: includes/wpforms-panel.php:944
+msgid "Can't find the field you added recently?"
+msgstr "¿No puede encontrar el campo que agregó recientemente?"
+
+#: includes/wpforms-panel.php:945
+msgid "Click here to save and reload"
+msgstr "Haga clic aquí para guardar y volver a cargar"
+
+#: includes/wpforms-panel.php:946
+msgid "Save and reload the form to view new fields."
+msgstr "Guarde y vuelva a cargar el formulario para ver los nuevos campos."
+
+#: includes/wpforms-panel.php:960
+msgid "Request Headers"
+msgstr "Cabeceras de la solicitud"
+
+#: includes/wpforms-panel.php:978
+msgid "Freeze Header "
+msgstr "Congelar encabezado"
+
+#: includes/wpforms-panel.php:983
+msgid ""
+"Control formatting of header. Check freeze header if you want to freeze "
+"first row considered as header."
+msgstr ""
+"Controle el formato del encabezado. Marque congelar encabezado si desea "
+"congelar la primera fila considerada como encabezado."
+
+#: includes/wpforms-panel.php:995
+msgid "Alternate Colors "
+msgstr "Colores alternativos "
+
+#: includes/wpforms-panel.php:1000
+msgid ""
+"Control background colors of odd even rows as well as background color of "
+"header row."
+msgstr ""
+"Controle los colores de fondo de las filas pares impares, así como el color "
+"de fondo de la fila de encabezado."
+
+#: includes/wpforms-panel.php:1014
+msgid "Sort Sheet "
+msgstr "Hoja de clasificación "
+
+#: includes/wpforms-panel.php:1019
+msgid ""
+"Set up this field if you want data to be sorted automatically upon the "
+"submission based on column."
+msgstr ""
+"Configure este campo si desea que los datos se ordenen automáticamente en el "
+"envío en función de la columna."
+
+#: includes/wpforms-panel.php:1032
+msgid "Enable Conditional Logic "
+msgstr "Habilitar lógica condicional "
+
+#: includes/wpforms-panel.php:1037
+msgid "Enable Conditional Logic"
+msgstr "Habilitar la lógica condicional"
+
+#: includes/wpforms-panel.php:1058
+msgid "Sync to Google Sheet"
+msgstr "Sincronizar con Hoja de cálculo de Google"
+
+#: includes/wpforms-panel.php:1059
+msgid "Click here"
+msgstr "Haga clic aquí"
+
+#: includes/wpforms-panel.php:1060
+msgid "Pro"
+msgstr "Pro"
+
+#: includes/wpforms-panel.php:1061
+msgid ""
+"Click here to sync all the entries to the above selected Google Sheet. Make "
+"sure it will add all the form entries filled till now. If find duplicate "
+"then remove it manually or select the new spreadsheet or a new tab in same "
+"sheet."
+msgstr ""
+"Haga clic aquí para sincronizar todas las entradas con la hoja de cálculo de "
+"Google seleccionada anteriormente. Asegúrese de que agregará todas las "
+"entradas del formulario completadas hasta ahora. Si encuentra duplicado, "
+"elimínelo manualmente o seleccione la nueva hoja de cálculo o una nueva "
+"pestaña en la misma hoja."
+
+#: includes/wpforms-panel.php:1075
+msgid "From Date"
+msgstr "Desde"
+
+#: includes/wpforms-panel.php:1082
+msgid "To Date"
+msgstr "Hasta"
+
+#. Author of the plugin/theme
+#: includes/wpforms-panel.php:1133
+msgid "GSheetConnector"
+msgstr "GSheetConnector"
+
+#: includes/wpforms-panel.php:1151
+msgid "Enter a Feed Name"
+msgstr "Introduzca un nombre de feed"
+
+#: includes/wpforms-panel.php:1153
+msgid "You must provide a googlesheet name"
+msgstr "Debes proporcionar un nombre de hoja de cálculo de Google"
+
+#: includes/wpforms-panel.php:1154
+msgid "To disable all wpgs_spreadsheets use the \"Webhooks\" dropdown setting."
+msgstr ""
+"Para deshabilitar todos los wpgs_spreadsheets use la configuración "
+"desplegable \"Webhooks\"."
+
+#: includes/wpforms-panel.php:1155
+msgid "Are you sure that you want to delete this googlesheet?"
+msgstr "¿Estás seguro de que quieres eliminar esta hoja de Google?"
+
+#: includes/wpforms-panel.php:1156
+msgid "Unnamed Googlesheet"
+msgstr "Hoja de cálculo de Google sin nombre"
+
+#: includes/wpforms-panel.php:1157
+msgid ""
+"Your form contains required Googlesheet settings that have not been "
+"configured. Please double-check and configure these settings to complete the "
+"connection setup."
+msgstr ""
+"El formulario contiene los ajustes necesarios de la hoja de cálculo de "
+"Google que no se han configurado. Vuelva a verificar y configure estos "
+"ajustes para completar la configuración de la conexión."
+
+#. Plugin Name of the plugin/theme
+msgid "WPForms GSheetConnector"
+msgstr "WPForms GSheetConnector"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro"
+msgstr "https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro"
+
+#. Description of the plugin/theme
+msgid "Send your WPForms data to your Google Sheets spreadsheet."
+msgstr ""
+"Envía tus datos de WPForms a tu hoja de cálculo de Hojas de cálculo de "
+"Google."
+
+#. Author URI of the plugin/theme
+msgid "https://www.gsheetconnector.com/"
+msgstr "https://www.gsheetconnector.com/"
+
+#~ msgid "Save (Upgrade To Pro)"
+#~ msgstr "Actualiza a PRO"
+
+#~ msgid "Upgrade to Unlock Elementor Forms GSheetConnector Addons"
+#~ msgstr ""
+#~ "Actualice para desbloquear complementos de Elementor Forms GSheetConnector"
+
+#~ msgid ""
+#~ "Access powerful marketing and payment integrations, advanced form fields, "
+#~ "and more when you purchase our Plus, Pro, or Elite plans."
+#~ msgstr ""
+#~ "Acceda a potentes integraciones de marketing y pago, campos de formulario "
+#~ "avanzados y mucho más al comprar nuestros planes Plus, Pro o Elite."
+
+#~ msgid "Upgrade Now"
+#~ msgstr "Actualizar ahora"

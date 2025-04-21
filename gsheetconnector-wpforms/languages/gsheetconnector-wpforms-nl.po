@@ -1,0 +1,1150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2024-07-30 17:08+0530\n"
+"PO-Revision-Date: 2025-01-04 15:58+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gsheetconnector-wpforms.php:121
+msgid "View Documentation"
+msgstr "Bekijk documentatie"
+
+#: gsheetconnector-wpforms.php:121 includes/pages/admin-footer.php:19
+msgid "Docs"
+msgstr "Documentatie"
+
+#: gsheetconnector-wpforms.php:122
+msgid "Get Support"
+msgstr "Krijg ondersteuning"
+
+#: gsheetconnector-wpforms.php:122 includes/pages/admin-footer.php:18
+msgid "Support"
+msgstr "Ondersteuning"
+
+#: gsheetconnector-wpforms.php:229
+msgid "Google Sheet"
+msgstr "Google Sheet"
+
+#: gsheetconnector-wpforms.php:246 includes/pages/admin-footer.php:10
+#: includes/pages/wpforms-gs-settings.php:35
+msgid "WPForms - GSheetConnector"
+msgstr "WPForms - GSheetConnector"
+
+#: gsheetconnector-wpforms.php:392
+msgid "Settings"
+msgstr "Instellingen"
+
+#: gsheetconnector-wpforms.php:393
+msgid ""
+" <span style=\"color: #ff0000; font-weight: bold;\">Upgrade to PRO</span>"
+msgstr ""
+"<span style=\"color: #ff0000; font-weight: bold;\">Upgrade naar PRO</span>"
+
+#: includes/class-wpform-utility.php:78
+msgid "There's something wrong with your code..."
+msgstr "Er is iets mis met je code..."
+
+#: includes/class-wpforms-integration.php:58
+msgid ""
+"This settings page is deprecated and will be removed in upcoming version. "
+"Move your settings to the <a target=\"_blank\" href=\""
+msgstr ""
+"Deze instellingenpagina is afgeschaft en zal in de volgende versie worden "
+"verwijderd. Verplaats uw instellingen naar de <a target=\"_blank\" href=\""
+
+#: includes/class-wpforms-integration.php:138
+msgid "Google Sheet Settings"
+msgstr "Google Spreadsheet-instellingen"
+
+#: includes/class-wpforms-integration.php:147
+msgid "Google Sheet Name"
+msgstr "Naam Google-spreadsheet"
+
+#: includes/class-wpforms-integration.php:153
+msgid ""
+"Go to your google account and click on\"Google apps\" icon and than click "
+"\"Sheets\". Select the name of the appropriate sheet you want to link your "
+"contact form or create new sheet."
+msgstr ""
+"Ga naar uw Google-account en klik op het pictogram \"Google apps\" en klik "
+"vervolgens op \"Spreadsheets\". Selecteer de naam van het juiste blad "
+"waaraan u uw contactformulier wilt koppelen of maak een nieuw blad aan."
+
+#: includes/class-wpforms-integration.php:157
+msgid "Google Sheet Id"
+msgstr "Google-spreadsheet-ID"
+
+#: includes/class-wpforms-integration.php:162
+msgid "you can get sheet id from your sheet URL"
+msgstr "U kunt de blad-ID ophalen via de URL van uw werkblad"
+
+#: includes/class-wpforms-integration.php:165
+msgid "Google Sheet Tab Name"
+msgstr "Naam van tabblad Google Spreadsheet"
+
+#: includes/class-wpforms-integration.php:170
+msgid ""
+"Open your Google Sheet with which you want to link your contact form . You "
+"will notice a tab names at bottom of the screen. Copy the tab name where you "
+"want to have an entry of contact form."
+msgstr ""
+"Open je Google Sheet waarmee je je contactformulier wilt koppelen. U ziet "
+"een tabbladnaam onderaan het scherm. Kopieer de naam van het tabblad waar u "
+"een invoer van het contactformulier wilt hebben."
+
+#: includes/class-wpforms-integration.php:173
+msgid "Google Tab Id"
+msgstr "Google-tabblad-ID"
+
+#: includes/class-wpforms-integration.php:178
+msgid "you can get tab id from your sheet URL"
+msgstr "je kunt de tab-id ophalen via de URL van je werkblad"
+
+#: includes/class-wpforms-integration.php:205
+#: includes/pages/wpforms-integration-demo-info.php:30
+msgid "Click Here Demo"
+msgstr "Klik hier Demo"
+
+#: includes/class-wpforms-integration.php:211
+#: includes/pages/wpforms-integration-demo-info.php:36
+msgid "Sheet URL (Click Here to view Sheet with submitted data.)"
+msgstr ""
+"URL van werkblad (klik hier om het blad met ingediende gegevens te bekijken.)"
+
+#: includes/class-wpforms-integration.php:255
+#: includes/class-wpforms-integration.php:332 includes/pages/extensions.php:49
+#: includes/pages/extensions.php:74 includes/pages/extensions.php:98
+#: includes/pages/extensions.php:122 includes/pages/extensions.php:147
+#: includes/pages/extensions.php:182 includes/pages/extensions.php:206
+#: includes/pages/extensions.php:230
+#: includes/pages/wpforms-integration-demo-info.php:80
+msgid "Buy Now"
+msgstr "Koop Nu"
+
+#: includes/class-wpforms-integration.php:325
+msgid "A way to connect WordPress"
+msgstr "Een manier om WordPress te verbinden"
+
+#: includes/class-wpforms-integration.php:326
+#: includes/class-wpforms-integration.php:330
+#: includes/class-wpforms-integration.php:331
+msgid "and"
+msgstr "and"
+
+#: includes/class-wpforms-integration.php:326
+msgid "Google Sheets Pro"
+msgstr "Google Spreadsheets Pro"
+
+#: includes/class-wpforms-integration.php:327
+msgid "Ratings"
+msgstr "Beoordelingen"
+
+#: includes/class-wpforms-integration.php:328
+msgid "The Most Powerful Bridge Between WordPress  and"
+msgstr "De krachtigste brug tussen WordPress en"
+
+#: includes/class-wpforms-integration.php:328
+#: includes/class-wpforms-integration.php:396
+msgid "Google Sheets"
+msgstr "Google Sheets"
+
+#: includes/class-wpforms-integration.php:329
+msgid "Now available for popular"
+msgstr "Nu bijwerken."
+
+#: includes/class-wpforms-integration.php:329
+msgid "Contact Forms"
+msgstr "Contactformulieren"
+
+#: includes/class-wpforms-integration.php:329
+msgid "Page Builder Forms"
+msgstr "Formulieren voor het maken van pagina's"
+
+#: includes/class-wpforms-integration.php:330
+msgid "E-commerce"
+msgstr "E-commerce"
+
+#: includes/class-wpforms-integration.php:330
+msgid "Platforms like "
+msgstr "Platformen zoals "
+
+#: includes/class-wpforms-integration.php:330
+msgid "WooCommerce"
+msgstr "Woocommerce"
+
+#: includes/class-wpforms-integration.php:331
+msgid "Easy Digital Downloads"
+msgstr "Easy Digital Downloads"
+
+#: includes/class-wpforms-integration.php:331
+msgid "EDD"
+msgstr "EDD"
+
+#: includes/class-wpforms-integration.php:332
+msgid "Check Demo"
+msgstr "Bekijk de demo"
+
+#: includes/class-wpforms-integration.php:383
+msgid "WPForms - Google Sheet Integration"
+msgstr "WPForms - Google Sheet-integratie"
+
+#: includes/class-wpforms-integration.php:389
+msgid "Authenticate with your Google account, follow these steps:"
+msgstr "Verifieer met uw Google-account, volg deze stappen:"
+
+#: includes/class-wpforms-integration.php:392
+msgid "Click on the \"Sign In With Google\" button."
+msgstr "Klik op de knop \"Aanmelden met Google\"."
+
+#: includes/class-wpforms-integration.php:393
+msgid "Grant permissions for the following:"
+msgstr "Verleen machtigingen voor het volgende:"
+
+#: includes/class-wpforms-integration.php:395
+msgid "Google Drive"
+msgstr "Google Drive"
+
+#: includes/class-wpforms-integration.php:397
+msgid "* Ensure that you enable the checkbox for each of these services."
+msgstr ""
+"* Zorg ervoor dat u het selectievakje voor elk van deze services inschakelt."
+
+#: includes/class-wpforms-integration.php:404
+msgid ""
+"This will allow the integration to access your Google Drive and Google "
+"Sheets."
+msgstr ""
+"Hierdoor heeft de integratie toegang tot uw Google Drive en Google "
+"Spreadsheets."
+
+#: includes/class-wpforms-integration.php:412
+msgid "Google Access Code"
+msgstr "Google-toegangscode"
+
+#: includes/class-wpforms-integration.php:416
+msgid "Currently Active"
+msgstr "Nu Actief"
+
+#: includes/class-wpforms-integration.php:418
+msgid "Deactivate"
+msgstr "Deactiveren"
+
+#: includes/class-wpforms-integration.php:421
+msgid ""
+"On deactivation, all your data saved with authentication will be removed and "
+"you need to reauthenticate with your google account and configure sheet name "
+"and tab."
+msgstr ""
+"Bij deactivering worden al uw gegevens die met authenticatie zijn "
+"opgeslagen, verwijderd en moet u zich opnieuw authenticeren met uw Google-"
+"account en de bladnaam en het tabblad configureren."
+
+#: includes/class-wpforms-integration.php:427
+msgid "Click Sign in with Google"
+msgstr "Klik op Inloggen met Google"
+
+#: includes/class-wpforms-integration.php:453
+msgid ""
+"Something went wrong! It looks you have not given the permission of Google "
+"Drive and Google Sheets from your google account.Please Deactivate Auth and "
+"Re-Authenticate again with the permissions."
+msgstr ""
+"Er is iets misgegaan! Het lijkt erop dat je geen toestemming hebt gegeven "
+"voor Google Drive en Google Spreadsheets vanuit je Google-account. "
+"Deactiveer Auth en verifieer opnieuw met de machtigingen."
+
+#: includes/class-wpforms-integration.php:458
+msgid "Also,"
+msgstr "Ook,"
+
+#: includes/class-wpforms-integration.php:459
+msgid "Click Here "
+msgstr "Klik hier "
+
+#: includes/class-wpforms-integration.php:460
+msgid ""
+"and if it displays \"GSheetConnector for WP Contact Forms\" under Third-"
+"party apps with account access then remove it."
+msgstr ""
+"en als het \"GSheetConnector for WP Contact Forms\" weergeeft onder Apps van "
+"derden met accounttoegang, verwijder het dan."
+
+#: includes/class-wpforms-integration.php:473
+#, php-format
+msgid "Connected email account: %s"
+msgstr "Verbonden e-mailaccount: %s"
+
+#: includes/class-wpforms-integration.php:477
+msgid ""
+"Something went wrong ! Your Auth Code may be wrong or expired. Please "
+"Deactivate AUTH and Re-Authenticate again. "
+msgstr ""
+"Er is iets misgegaan! Uw verificatiecode is mogelijk onjuist of verlopen. "
+"Deactiveer AUTH en verifieer opnieuw opnieuw. "
+
+#: includes/class-wpforms-integration.php:491
+msgid ""
+" We do not store any of the data from your Google account on our servers, "
+"everything is processed & stored on your server. We take your privacy "
+"extremely seriously and ensure it is never misused."
+msgstr ""
+" Wij slaan geen gegevens van uw Google-account op onze servers op, alles "
+"wordt verwerkt en opgeslagen op uw server. Wij nemen uw privacy uiterst "
+"serieus en zorgen ervoor dat er nooit misbruik van wordt gemaakt."
+
+#: includes/class-wpforms-integration.php:491
+msgid "Learn more."
+msgstr "Meer informatie."
+
+#: includes/class-wpforms-integration.php:497
+msgid "Debug Log"
+msgstr "Debug logboek"
+
+#: includes/class-wpforms-integration.php:498
+#: includes/class-wpforms-integration.php:500
+msgid "View"
+msgstr "Bekijk"
+
+#: includes/class-wpforms-integration.php:501
+msgid "Clear"
+msgstr "Leeren"
+
+#: includes/class-wpforms-integration.php:524
+msgid "No errors found."
+msgstr "Geen fouten gevonden."
+
+#: includes/class-wpforms-integration.php:529
+msgid "No log file exists as no errors are generated."
+msgstr "Er bestaat geen logbestand omdat er geen fouten worden gegenereerd."
+
+#: includes/class-wpforms-integration.php:537
+msgid "Next steps…"
+msgstr "Volgende stappen..."
+
+#: includes/class-wpforms-integration.php:547
+msgid "Upgrade to PRO"
+msgstr "Upgrade naar PRO"
+
+#: includes/class-wpforms-integration.php:548
+msgid " Multiple Forms to Sheets, Custom mail tags and much more..."
+msgstr ""
+" Meerdere formulieren naar werkbladen, aangepaste e-mailtags en nog veel "
+"meer..."
+
+#: includes/class-wpforms-integration.php:558
+msgid "Compatibility"
+msgstr "Compatibiliteit"
+
+#: includes/class-wpforms-integration.php:559
+msgid "Compatibility with WPForms Third-Party Plugins"
+msgstr "Compatibiliteit met WPForms-plug-ins van derden"
+
+#: includes/class-wpforms-integration.php:569
+msgid "Multi Languages"
+msgstr "Meerdere talen"
+
+#: includes/class-wpforms-integration.php:570
+msgid "This plugin supports multi-languages as well!"
+msgstr "Deze plug-in ondersteunt ook meerdere talen!"
+
+#: includes/class-wpforms-integration.php:580
+msgid "Support Wordpress multisites"
+msgstr "Ondersteuning Wordpress multisites"
+
+#: includes/class-wpforms-integration.php:581
+msgid ""
+"With the use of a Multisite, you’ll also have a new level of user-available: "
+"the Super\n"
+"                                Admin."
+msgstr ""
+"Met het gebruik van een Multisite heb je ook een nieuw niveau van "
+"gebruikersbeschikking: de Super\n"
+"                                Admin."
+
+#: includes/class-wpforms-integration.php:593
+msgid "Product Support"
+msgstr "Productondersteuning"
+
+#: includes/class-wpforms-integration.php:601
+msgid "Online Documentation"
+msgstr "Online documentatie"
+
+#: includes/class-wpforms-integration.php:602
+msgid "Understand all the capabilities of WPForms GsheetConnector"
+msgstr "Begrijp alle mogelijkheden van WPForms GsheetConnector"
+
+#: includes/class-wpforms-integration.php:610
+msgid "Ticket Support"
+msgstr "Ticket ondersteuning"
+
+#: includes/class-wpforms-integration.php:611
+msgid "Direct help from our qualified support team"
+msgstr "Directe hulp van ons gekwalificeerde ondersteuningsteam"
+
+#: includes/class-wpforms-integration.php:619
+msgid "Affiliate Program"
+msgstr "Partner programma"
+
+#: includes/class-wpforms-integration.php:620
+msgid "Earn flat 30"
+msgstr "Verdien vast 30"
+
+#: includes/class-wpforms-integration.php:620
+msgid "on every sale"
+msgstr "bij elke verkoop"
+
+#: includes/class-wpforms-integration.php:657
+#: includes/class-wpforms-integration.php:661
+msgid "Select Form"
+msgstr "Selecteer formulier"
+
+#: includes/class-wpforms-integration.php:674
+msgid "WPForms - Google Sheet Settings"
+msgstr "WPForms - Google Spreadsheet-instellingen"
+
+#: includes/class-wpforms-integration.php:678
+msgid ""
+"This settings page is deprecated and moved old settings to new settings."
+"Follow these below steps to import the old settings into the new settings."
+msgstr ""
+"Deze instellingenpagina is afgeschaft en oude instellingen zijn verplaatst "
+"naar nieuwe instellingen. Volg deze onderstaande stappen om de oude "
+"instellingen te importeren in de nieuwe instellingen."
+
+#: includes/class-wpforms-integration.php:680
+msgid "Select the form which you want to connect with your spreadsheet."
+msgstr "Selecteer het formulier dat u aan uw spreadsheet wilt koppelen."
+
+#: includes/class-wpforms-integration.php:687
+msgid "Then you can see your old settings here."
+msgstr "Dan kun je hier je oude instellingen zien."
+
+#: includes/pages/admin-footer.php:8
+msgid "Please rate"
+msgstr "Gelieve te beoordelen"
+
+#: includes/pages/admin-footer.php:10
+msgid "WordPress.org"
+msgstr "WordPress.org"
+
+#: includes/pages/admin-footer.php:10
+msgid "to help us spread the word."
+msgstr "om ons te helpen het woord te verspreiden."
+
+#: includes/pages/admin-footer.php:16
+msgid "Made with ♥ by the GSheetConnector Team"
+msgstr "Gemaakt met ♥ het GSheetConnector-team"
+
+#: includes/pages/admin-footer.php:20
+msgid "VIP Circle"
+msgstr "VIP-cirkel"
+
+#: includes/pages/admin-footer.php:21
+msgid "Free Plugins"
+msgstr "Gratis plug-ins"
+
+#: includes/pages/extensions.php:5
+msgid "Upgrade"
+msgstr "Upgrade"
+
+#: includes/pages/extensions.php:8 includes/pages/extensions.php:32
+#: includes/pages/extensions.php:58 includes/pages/extensions.php:82
+#: includes/pages/extensions.php:106 includes/pages/extensions.php:131
+#: includes/pages/extensions.php:166 includes/pages/extensions.php:191
+#: includes/pages/extensions.php:215 includes/pages/extensions.php:239
+#: includes/pages/extensions.php:263 includes/pages/extensions.php:287
+msgid "logo"
+msgstr "logo"
+
+#: includes/pages/extensions.php:12 includes/pages/extensions.php:36
+#: includes/pages/extensions.php:62 includes/pages/extensions.php:86
+#: includes/pages/extensions.php:110 includes/pages/extensions.php:135
+#: includes/pages/extensions.php:170 includes/pages/extensions.php:195
+#: includes/pages/extensions.php:219 includes/pages/extensions.php:243
+#: includes/pages/extensions.php:267 includes/pages/extensions.php:291
+msgid "Learn more"
+msgstr "Leer meer"
+
+#: includes/pages/extensions.php:12
+msgid "WPForms Google Sheet Connector"
+msgstr "WPForms Google Sheet Connector"
+
+#: includes/pages/extensions.php:15
+msgid ""
+"WPForms, A bridge between your WordPress based WPForms and Google Sheets. It "
+"helps to record the entries in real-time."
+msgstr ""
+"WPForms, een brug tussen uw op WordPress gebaseerde WPForms en Google "
+"Sheets. Het helpt om de invoer in realtime vast te leggen."
+
+#: includes/pages/extensions.php:20 includes/pages/extensions.php:44
+#: includes/pages/extensions.php:70 includes/pages/extensions.php:94
+#: includes/pages/extensions.php:118 includes/pages/extensions.php:143
+#: includes/pages/extensions.php:178
+msgid "PRO"
+msgstr "PRO"
+
+#: includes/pages/extensions.php:23
+msgid "UPGRADE NOW"
+msgstr "UPGRADE NU"
+
+#: includes/pages/extensions.php:36
+msgid "Ninja Forms Google Sheet Connector"
+msgstr "Ninja Forms Google Sheet Connector"
+
+#: includes/pages/extensions.php:39
+msgid ""
+"Ninja Forms, A bridge between your WordPress based Ninja Forms and Google "
+"Sheets. It helps to record the entries in real-time."
+msgstr ""
+"Ninja Forms, een brug tussen uw op WordPress gebaseerde Ninja Forms en "
+"Google Sheets. Het helpt om de invoer in realtime vast te leggen."
+
+#: includes/pages/extensions.php:48 includes/pages/extensions.php:73
+#: includes/pages/extensions.php:97 includes/pages/extensions.php:121
+#: includes/pages/extensions.php:146 includes/pages/extensions.php:181
+#: includes/pages/extensions.php:254 includes/pages/extensions.php:278
+#: includes/pages/extensions.php:302
+msgid "Download"
+msgstr "Download"
+
+#: includes/pages/extensions.php:62
+msgid "Gravity Forms Google Sheet Connector"
+msgstr "Zwaartekracht vormt Google Sheet Connector"
+
+#: includes/pages/extensions.php:65
+msgid ""
+"Gravity Forms Google Sheets Connector Plugin is a Bridge between your "
+"Gravity Forms and Google Sheets."
+msgstr ""
+"Gravity Forms Google Sheets Connector Plugin is een brug tussen uw Gravity "
+"Forms en Google Sheets."
+
+#: includes/pages/extensions.php:86
+msgid "WooCommerce Google Sheet Connector"
+msgstr "WooCommerce Google Sheet Connector"
+
+#: includes/pages/extensions.php:89
+msgid ""
+"WooCommerce Google Spreadsheet Addon Plugin to connect with Google Sheets."
+msgstr ""
+"WooCommerce Google Spreadsheet Addon Plugin om verbinding te maken met "
+"Google Spreadsheets."
+
+#: includes/pages/extensions.php:110
+msgid "Elementor Forms Google Sheet Connector"
+msgstr "Elementor Forms Google Sheet-connector"
+
+#: includes/pages/extensions.php:113
+msgid ""
+"A bridge between your WordPress based Elementor Forms or Metform Elementor "
+"Builder to Google Sheets."
+msgstr ""
+"Een brug tussen uw op WordPress gebaseerde Elementor Forms of Metform "
+"Elementor Builder naar Google Sheets."
+
+#: includes/pages/extensions.php:135
+msgid "CF7 Google Sheets Connector"
+msgstr "CF7 Google Spreadsheets-connector"
+
+#: includes/pages/extensions.php:138
+msgid ""
+"CF7 Google Sheet Connector is an addon plugin, A bridge between your "
+"WordPress based Contact Form 7 forms and Google Sheets."
+msgstr ""
+"CF7 Google Sheet Connector is een add-on plugin, een brug tussen uw op "
+"WordPress gebaseerde Contact Form 7-formulieren en Google Sheets."
+
+#: includes/pages/extensions.php:170
+msgid "Easy Digital Downloads Google Sheet Connector"
+msgstr "Eenvoudige digitale downloads Google Sheet Connector"
+
+#: includes/pages/extensions.php:173
+msgid ""
+"Easy Digital Downloads Google Sheet Connector sends orders entries to Google "
+"Sheet in a real-time"
+msgstr ""
+"Easy Digital Downloads Google Sheet Connector stuurt orderinvoer in realtime "
+"naar Google Sheet"
+
+#: includes/pages/extensions.php:195
+msgid "Avada Forms Google Sheet Connector Pro"
+msgstr "Avada Forms Google Sheet Connector Pro"
+
+#: includes/pages/extensions.php:198
+msgid ""
+"Avada Theme Fusion Builder addon, simplifies real-time data transmission "
+"from Avada theme-based forms to Google Sheets with premium features."
+msgstr ""
+"Avada Theme Fusion Builder-add-on, vereenvoudigt real-time "
+"gegevensoverdracht van op Avada-thema's gebaseerde formulieren naar Google "
+"Spreadsheets met premiumfuncties."
+
+#: includes/pages/extensions.php:203 includes/pages/extensions.php:227
+msgid "Available PRO Version"
+msgstr "Beschikbare PRO-versie"
+
+#: includes/pages/extensions.php:219
+msgid "Divi Forms Google Sheet Connector Pro"
+msgstr "Divi Forms Google Sheet Connector Pro"
+
+#: includes/pages/extensions.php:222
+msgid ""
+"Divi Forms GSheetConnector, an addon for DIVI Theme/Builder, simplifies real-"
+"time syncing of data from DIVI theme forms to both the database and Google "
+"Sheets."
+msgstr ""
+"Divi Forms GSheetConnector, een add-on voor DIVI Theme/Builder, "
+"vereenvoudigt real-time synchronisatie van gegevens van DIVI-"
+"themaformulieren naar zowel de database als Google Spreadsheets."
+
+#: includes/pages/extensions.php:243
+msgid "GSheetConnector for Forminator Forms"
+msgstr "GSheetConnector voor Forminator Forms"
+
+#: includes/pages/extensions.php:246
+msgid ""
+"GSheetConnector for Forminator Forms is an addon plugin, A bridge between "
+"your WordPress based Forminator Forms forms and Google Sheets."
+msgstr ""
+"GSheetConnector voor Forminator Forms is een add-on-plug-in, een brug tussen "
+"uw op WordPress gebaseerde Forminator Forms-formulieren en Google "
+"Spreadsheets."
+
+#: includes/pages/extensions.php:251 includes/pages/extensions.php:275
+#: includes/pages/extensions.php:299
+msgid "Free"
+msgstr "Gratis"
+
+#: includes/pages/extensions.php:267
+msgid "GSheetConnector for Formidable Forms"
+msgstr "GSheetConnector voor formidabele formulieren"
+
+#: includes/pages/extensions.php:270
+msgid ""
+"Formidable Forms, A bridge between your WordPress based Formidable Forms "
+"forms and Google Sheets."
+msgstr ""
+"Formidable Forms, een brug tussen uw op WordPress gebaseerde Formidable "
+"Forms-formulieren en Google Sheets."
+
+#: includes/pages/extensions.php:291
+msgid "Caldera Forms Google Sheets Connector"
+msgstr "Caldera Forms Google Spreadsheets-connector"
+
+#: includes/pages/extensions.php:294
+msgid ""
+"Caldera Forms Closure, No more updates on this plugin Due to Caldera Forms "
+"being sunset/retired on December 31, 2021"
+msgstr ""
+"Sluiting van Caldera Forms, geen updates meer over deze plug-in Omdat "
+"Caldera Forms op 31 december 2021 is vervallen/buiten gebruik is gesteld"
+
+#: includes/pages/wpform-dashboard-widget.php:20
+msgid "WPForms Connected with Google Sheets"
+msgstr "WPForms verbonden met Google Spreadsheets"
+
+#: includes/pages/wpform-dashboard-widget.php:42
+#: includes/pages/wpform-dashboard-widget.php:48
+msgid "No WPForms are Connected with Google Sheets."
+msgstr "Er zijn geen WPForms verbonden met Google Spreadsheets."
+
+#: includes/pages/wpforms-gs-integration-support.php:11
+msgid "Submit A Ticket"
+msgstr "Ticket Indienen"
+
+#: includes/pages/wpforms-gs-integration-support.php:12
+msgid ""
+"We offer excellent support through our advanced ticket system. Make sure to "
+"register your purchase first to access our support services and other "
+"resources."
+msgstr ""
+"We bieden uitstekende ondersteuning via ons geavanceerde ticket systeem. "
+"Registreer je aankoop om toegang te krijgen tot onze ondersteunende diensten."
+
+#: includes/pages/wpforms-gs-integration-support.php:13
+msgid "Submit a ticket"
+msgstr "Ticket indienen"
+
+#: includes/pages/wpforms-gs-integration-support.php:14
+#: includes/pages/wpforms-gs-integration-support.php:16
+msgid "Documentation"
+msgstr "Documentatie"
+
+#: includes/pages/wpforms-gs-integration-support.php:15
+msgid ""
+"This is the place to go to reference different aspects of the theme. Our "
+"online documentaiton is an incredible resource for learning the ins and outs."
+msgstr ""
+"Dit is de plek om naar verschillende aspecten van het thema te verwijzen. "
+"Onze online documentatie is een ongelooflijke bron om de ins en outs te "
+"leren."
+
+#: includes/pages/wpforms-gs-settings.php:38
+msgid "DASHBOARD"
+msgstr "DASHBOARD"
+
+#: includes/pages/wpforms-gs-settings.php:47
+msgid "Integration"
+msgstr "Integratie"
+
+#: includes/pages/wpforms-gs-settings.php:48
+msgid "GoogleSheet Form Settings"
+msgstr "GoogleSheet-formulierinstellingen"
+
+#: includes/pages/wpforms-gs-settings.php:52
+msgid "System Status"
+msgstr "Systeemstatus"
+
+#: includes/pages/wpforms-gs-settings.php:53
+msgid "Extensions"
+msgstr "Extensies"
+
+#: includes/pages/wpforms-integration-faq.php:5
+msgid "How to configure your Google Spreadsheet with WPForms plugin?"
+msgstr "Hoe configureer je je Google Spreadsheet met WPForms plugin?"
+
+#: includes/pages/wpforms-integration-faq.php:8
+msgid "Go to the WPForms Menu and click on  Googlesheet ."
+msgstr "Ga naar het WPForms-menu en klik op Googlesheet ."
+
+#: includes/pages/wpforms-integration-faq.php:9
+msgid "Then click on the Google Sheet tab."
+msgstr "Klik vervolgens op het tabblad Google Sheet."
+
+#: includes/pages/wpforms-integration-faq.php:10
+msgid "Then go to Form Settings Tab."
+msgstr "Ga vervolgens naar het tabblad Formulierinstellingen."
+
+#: includes/pages/wpforms-integration-faq.php:11
+msgid "Then Select the form which you want to connect with your spreadsheet."
+msgstr ""
+"Selecteer vervolgens het formulier dat u aan uw spreadsheet wilt koppelen."
+
+#: includes/pages/wpforms-integration-faq.php:15
+msgid ""
+"Enter Google Sheet name and Google Sheet tab name inside the Google Sheet "
+"tab.."
+msgstr ""
+"Voer de naam van het Google-werkblad en de naam van het tabblad Google "
+"Spreadsheet in op het tabblad Google Spreadsheet."
+
+#: includes/pages/wpforms-integration-faq.php:23
+msgid "Why I am Getting Error 500 After Installing Plugin."
+msgstr "Waarom ik foutmelding 500 krijg na het installeren van de plug-in."
+
+#: includes/pages/wpforms-integration-faq.php:25
+msgid "Following are few of the points which will help to debug the issue."
+msgstr ""
+"Hieronder volgen enkele van de punten die zullen helpen om het probleem op "
+"te lossen."
+
+#: includes/pages/wpforms-integration-faq.php:26
+msgid ""
+"1) Enable debug by adding&nbsp;following in your wp-config.php file before /"
+"* That’s all, stop editing! Happy blogging."
+msgstr ""
+"1) Schakel debug in door het volgende toe te voegen aan uw wp-config.php "
+"bestand voor /* Dat is alles, stop met bewerken! Veel plezier met bloggen."
+
+#: includes/pages/wpforms-integration-faq.php:27
+msgid ""
+"define(‘WP_DEBUG’, true); define(‘WP_DEBUG_LOG’, true); "
+"define(‘SCRIPT_DEBUG’, true); define(‘SAVEQUERIES’, true);"
+msgstr ""
+"define('WP_DEBUG', true); define('WP_DEBUG_LOG', true); "
+"define('SCRIPT_DEBUG', waar); define('SAVEQUERIES', true);"
+
+#: includes/pages/wpforms-integration-faq.php:28
+msgid ""
+"And then try to activate the plugin again. This will create a debug.log "
+"under wp-content folder.&nbsp;Check for WPForms google sheet connector error "
+"if so send us the file at support@westerndeal.com"
+msgstr ""
+"En probeer vervolgens de plug-in opnieuw te activeren. Dit zal een debug.log "
+"aanmaken onder de map wp-content. Controleer op WPForms google sheet "
+"connector fout, zo ja, stuur ons het bestand op support@westerndeal.com"
+
+#: includes/pages/wpforms-integration-faq.php:29
+msgid ""
+"2) Check the log that is created by WPForms google sheet. For that click "
+"“View” from goggle sheet integration page. Let us know if there is any error "
+"we will assist you."
+msgstr ""
+"2) Controleer het logboek dat is gemaakt door WPForms google sheet. Klik "
+"daarvoor op \"Bekijken\" op de integratiepagina van het brilblad. Laat het "
+"ons weten als er een fout is, we zullen u helpen."
+
+#: includes/pages/wpforms-integration-faq.php:35
+msgid "How do I get the Google Access Code required in step 3 of Installation?"
+msgstr ""
+"Hoe kom ik aan de Google Access-code die vereist is in stap 3 van de "
+"installatie?"
+
+#: includes/pages/wpforms-integration-faq.php:38
+msgid "On the&nbsp;<code>Admin Panel &gt; WPForms &gt; Google Sheets.</code>"
+msgstr "Op de<code>Admin Panel &gt; WPForms &gt; Google Sheets.</code>"
+
+#: includes/pages/wpforms-integration-faq.php:39
+msgid "Go to “Integration” tab and click on \"Get Code\" button."
+msgstr ""
+"Ga naar het tabblad \"Integratie\" en klik op de knop \"Code ophalen\"."
+
+#: includes/pages/wpforms-integration-faq.php:40
+msgid ""
+"In a popup Google will ask you to authorize the plugin to connect to your "
+"Google Sheets. Authorize it – you may have to log in to your Google account "
+"if you aren’t already logged in."
+msgstr ""
+"In een pop-up zal Google je vragen om de plugin toestemming te geven om "
+"verbinding te maken met je Google Spreadsheets. Autoriseer het - mogelijk "
+"moet u inloggen op uw Google-account als u nog niet bent ingelogd."
+
+#: includes/pages/wpforms-integration-faq.php:41
+msgid "On the next screen, you should receive the Access Code. Copy it."
+msgstr ""
+"Op het volgende scherm zou u de toegangscode moeten ontvangen. Kopieer het."
+
+#: includes/pages/wpforms-integration-faq.php:42
+msgid "Now you can paste this code back in the Google Access Code."
+msgstr "Nu kun je deze code weer in de Google Access Code plakken."
+
+#: includes/pages/wpforms-integration-faq.php:48
+msgid "Submitted Value is not showing in Googlesheet."
+msgstr "De ingediende waarde wordt niet weergegeven in Googlesheet."
+
+#: includes/pages/wpforms-integration-faq.php:52
+#: includes/pages/wpforms-integration-faq.php:67
+msgid ""
+"Sometimes it can take a while of spinning before it goes through. But if the "
+"entries never show up in your Sheet then one of these things might be the "
+"reason:"
+msgstr ""
+"Soms kan het even draaien duren voordat het er doorheen gaat. Maar als de "
+"vermeldingen nooit in uw werkblad verschijnen, kan een van deze dingen de "
+"reden zijn:"
+
+#: includes/pages/wpforms-integration-faq.php:53
+#: includes/pages/wpforms-integration-faq.php:69
+msgid "Wrong access code ( Check debug log )"
+msgstr "Verkeerde toegangscode ( Controleer debug log )"
+
+#: includes/pages/wpforms-integration-faq.php:54
+#: includes/pages/wpforms-integration-faq.php:70
+msgid "Wrong Sheet name or tab name"
+msgstr "Verkeerde bladnaam of tabbladnaam"
+
+#: includes/pages/wpforms-integration-faq.php:55
+msgid ""
+"Wrong Column name ( Column names in the WPForms. It cannot have underscore, "
+"space or any special characters. )"
+msgstr ""
+"Verkeerde kolomnaam ( Kolomnamen in de WPForms. Het mag geen "
+"onderstrepingstekens, spaties of speciale tekens bevatten. )"
+
+#: includes/pages/wpforms-integration-faq.php:57
+#: includes/pages/wpforms-integration-faq.php:73
+msgid ""
+"Please double-check those items and hopefully getting them right will fix "
+"the issue."
+msgstr ""
+"Controleer die items nogmaals en hopelijk wordt het probleem opgelost door "
+"ze goed te krijgen."
+
+#: includes/pages/wpforms-integration-faq.php:65
+msgid "Why I am not showing WPForms Values(submitted data) in My Googlesheet?"
+msgstr ""
+"Waarom geef ik WPForms-waarden (ingediende gegevens) niet weer in Mijn "
+"Googlesheet?"
+
+#: includes/pages/wpforms-integration-faq.php:71
+msgid ""
+"Wrong Column name mapping ( Column names in the WPForms. It cannot have "
+"underscore, space or any special characters )"
+msgstr ""
+"Verkeerde kolomnaamtoewijzing ( Kolomnamen in de WPForms. Het mag geen "
+"onderstrepingstekens, spaties of speciale tekens hebben :)"
+
+#: includes/views/settings/fields-mapping.php:51
+msgid "Enter Column Name Upgrade To Pro &hellip;"
+msgstr "Voer kolomnaam in Upgrade naar Pro ..."
+
+#: includes/wpforms-panel.php:228
+msgid "Publishing processing stopped by conditional logic."
+msgstr "De verwerking van publicaties is gestopt door voorwaardelijke logica."
+
+#: includes/wpforms-panel.php:558
+msgid "GSheetConnector Feed Settings"
+msgstr "GSheetConnector Feed-instellingen"
+
+#: includes/wpforms-panel.php:561
+msgid "Add New Feed"
+msgstr "Nieuwe Datafeed Toevoegen"
+
+#: includes/wpforms-panel.php:570
+msgid ""
+"<strong>Authentication Required:</strong>\n"
+"                  You must have to <a href=\"admin.php?page=wpform-google-"
+"sheet-config\" target=\"_blank\">Authenticate using your Google Account</a> "
+"along with Google Drive and Google Sheets Permissions in order to enable the "
+"settings for configuration.</p>"
+msgstr ""
+"<strong>Authenticatie vereist:</strong>\n"
+"                  U moet <a href=\"admin.php?page=wpform-google-sheet-config"
+"\" target=\"_blank\">zich verifiëren met uw Google-account</a> in combinatie "
+"met Google Drive- en Google Spreadsheets-machtigingen om de configuratie-"
+"instellingen in te schakelen.</p>"
+
+#: includes/wpforms-panel.php:604
+msgid "Enable Settings"
+msgstr "Instellingen inschakelen"
+
+#: includes/wpforms-panel.php:608
+msgid "On"
+msgstr "Aan"
+
+#: includes/wpforms-panel.php:609
+msgid "Off"
+msgstr "Uit"
+
+#: includes/wpforms-panel.php:732
+msgid "Integration Mode"
+msgstr "Integratie modus"
+
+#: includes/wpforms-panel.php:738
+msgid "Manual"
+msgstr "Handmatig"
+
+#: includes/wpforms-panel.php:739
+msgid "Automatic (Upgrade To Pro)"
+msgstr "Automatisch (upgrade naar Pro)"
+
+#: includes/wpforms-panel.php:743
+msgid "Selection of chosing google sheet for data submission."
+msgstr ""
+"Selectie van het kiezen van Google-spreadsheet voor het indienen van "
+"gegevens."
+
+#: includes/wpforms-panel.php:763
+msgid "Select Spreadsheet Name"
+msgstr "Selecteer de naam van de spreadsheet"
+
+#: includes/wpforms-panel.php:770
+msgid "Enter Spreadsheet Name"
+msgstr "Voer de naam van de spreadsheet in"
+
+#: includes/wpforms-panel.php:771
+msgid "Enter spreadsheet name of sheet you want to send the data"
+msgstr ""
+"Voer de spreadsheetnaam in van het werkblad dat u de gegevens wilt verzenden"
+
+#: includes/wpforms-panel.php:784
+msgid "Enter Spreadsheet Id"
+msgstr "Spreadsheet-ID invoeren"
+
+#: includes/wpforms-panel.php:791
+msgid "Enter Spreadsheet ID "
+msgstr "Spreadsheet-ID invoeren "
+
+#: includes/wpforms-panel.php:792
+msgid "Enter spreadsheet id of sheet you want to send the data."
+msgstr ""
+"Voer de spreadsheet-id in van het blad dat u de gegevens wilt verzenden."
+
+#: includes/wpforms-panel.php:805
+msgid "Sheet Tab Name"
+msgstr "Naam bladtabblad"
+
+#: includes/wpforms-panel.php:812
+msgid "Enter Tab Name"
+msgstr "Voer de naam van het tabblad in"
+
+#: includes/wpforms-panel.php:813
+msgid "Enter tab name from above written google sheet."
+msgstr ""
+"Voer de naam van het tabblad in van het hierboven geschreven Google-blad."
+
+#: includes/wpforms-panel.php:826
+msgid "Sheet Tab ID"
+msgstr "Tabblad-ID van werkblad"
+
+#: includes/wpforms-panel.php:833
+msgid "Enter Tab ID"
+msgstr "Tab-ID invoeren"
+
+#: includes/wpforms-panel.php:834
+msgid "Enter tab id from above written google sheet."
+msgstr "Voer de tab-id in van het hierboven geschreven Google-blad."
+
+#: includes/wpforms-panel.php:846
+msgid "View Google Sheet"
+msgstr "Google-spreadsheet bekijken"
+
+#: includes/wpforms-panel.php:849
+msgid "Sheet URL"
+msgstr "URL van werkblad"
+
+#: includes/wpforms-panel.php:873
+msgid " Check All "
+msgstr " Alles controleren "
+
+#: includes/wpforms-panel.php:904
+msgid " "
+msgstr " "
+
+#: includes/wpforms-panel.php:911
+msgid " Enable "
+msgstr " Inschakelen "
+
+#: includes/wpforms-panel.php:944
+msgid "Can't find the field you added recently?"
+msgstr "Kunt u het veld dat u onlangs hebt toegevoegd niet vinden?"
+
+#: includes/wpforms-panel.php:945
+msgid "Click here to save and reload"
+msgstr "Klik hier om op te slaan en te herladen"
+
+#: includes/wpforms-panel.php:946
+msgid "Save and reload the form to view new fields."
+msgstr ""
+"Sla het formulier op en laad het opnieuw om nieuwe velden weer te geven."
+
+#: includes/wpforms-panel.php:960
+msgid "Request Headers"
+msgstr "Aanvraag headers"
+
+#: includes/wpforms-panel.php:978
+msgid "Freeze Header "
+msgstr "Koptekst bevriezen "
+
+#: includes/wpforms-panel.php:983
+msgid ""
+"Control formatting of header. Check freeze header if you want to freeze "
+"first row considered as header."
+msgstr ""
+"Bepaal de opmaak van de koptekst. Vink de koptekst bevriezen aan als u de "
+"eerste rij wilt bevriezen die als koptekst wordt beschouwd."
+
+#: includes/wpforms-panel.php:995
+msgid "Alternate Colors "
+msgstr "Alternatieve kleuren "
+
+#: includes/wpforms-panel.php:1000
+msgid ""
+"Control background colors of odd even rows as well as background color of "
+"header row."
+msgstr ""
+"Bepaal de achtergrondkleuren van oneven even rijen en de achtergrondkleur "
+"van de koptekstrij."
+
+#: includes/wpforms-panel.php:1014
+msgid "Sort Sheet "
+msgstr "Blad sorteren "
+
+#: includes/wpforms-panel.php:1019
+msgid ""
+"Set up this field if you want data to be sorted automatically upon the "
+"submission based on column."
+msgstr ""
+"Stel dit veld in als u wilt dat gegevens automatisch worden gesorteerd bij "
+"de indiening op basis van kolom."
+
+#: includes/wpforms-panel.php:1032
+msgid "Enable Conditional Logic "
+msgstr "Voorwaardelijke logica inschakelen "
+
+#: includes/wpforms-panel.php:1037
+msgid "Enable Conditional Logic"
+msgstr "Voorwaardelijke logica inschakelen"
+
+#: includes/wpforms-panel.php:1047
+msgid "Sync to Google Sheet"
+msgstr "Synchroniseren met Google Spreadsheet"
+
+#: includes/wpforms-panel.php:1048
+msgid "Click here"
+msgstr "Klik hier"
+
+#: includes/wpforms-panel.php:1049
+msgid "Pro"
+msgstr "Pro"
+
+#: includes/wpforms-panel.php:1050
+msgid ""
+"Click here to sync all the entries to the above selected Google Sheet. Make "
+"sure it will add all the form entries filled till now. If find duplicate "
+"then remove it manually or select the new spreadsheet or a new tab in same "
+"sheet."
+msgstr ""
+"Klik hier om alle items te synchroniseren met de hierboven geselecteerde "
+"Google-spreadsheet. Zorg ervoor dat alle tot nu toe ingevulde "
+"formulierinvoer wordt toegevoegd. Als u duplicaat vindt, verwijdert u het "
+"handmatig of selecteert u de nieuwe spreadsheet of een nieuw tabblad in "
+"hetzelfde blad."
+
+#. Author of the plugin/theme
+#: includes/wpforms-panel.php:1105
+msgid "GSheetConnector"
+msgstr "GSheetAansluiting"
+
+#: includes/wpforms-panel.php:1123
+msgid "Enter a Feed Name"
+msgstr "Voer een feednaam in"
+
+#: includes/wpforms-panel.php:1125
+msgid "You must provide a googlesheet name"
+msgstr "U moet een naam voor een googlesheet opgeven"
+
+#: includes/wpforms-panel.php:1126
+msgid "To disable all wpgs_spreadsheets use the \"Webhooks\" dropdown setting."
+msgstr ""
+"Om alle wpgs_spreadsheets uit te schakelen, gebruikt u de vervolgkeuzelijst "
+"'Webhooks'."
+
+#: includes/wpforms-panel.php:1127
+msgid "Are you sure that you want to delete this googlesheet?"
+msgstr "Weet je zeker dat je deze googlesheet wilt verwijderen?"
+
+#: includes/wpforms-panel.php:1128
+msgid "Unnamed Googlesheet"
+msgstr "Naamloze Googlesheet"
+
+#: includes/wpforms-panel.php:1129
+msgid ""
+"Your form contains required Googlesheet settings that have not been "
+"configured. Please double-check and configure these settings to complete the "
+"connection setup."
+msgstr ""
+"Uw formulier bevat vereiste Googlesheet-instellingen die niet zijn "
+"geconfigureerd. Controleer en configureer deze instellingen nogmaals om de "
+"installatie van de verbinding te voltooien."
+
+#. Plugin Name of the plugin/theme
+msgid "WPForms GSheetConnector"
+msgstr "WPForms GSheetConnector"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro"
+msgstr "https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro"
+
+#. Description of the plugin/theme
+msgid "Send your WPForms data to your Google Sheets spreadsheet."
+msgstr "Stuur uw WPForms-gegevens naar uw Google Spreadsheets-spreadsheet."
+
+#. Author URI of the plugin/theme
+msgid "https://www.gsheetconnector.com/"
+msgstr "https://www.gsheetconnector.com/"
+
+#~ msgid "FAQ"
+#~ msgstr "FAQ"
+
+#~ msgid "Demos"
+#~ msgstr "Demo’s"

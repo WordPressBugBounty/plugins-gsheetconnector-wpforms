@@ -1,14 +1,16 @@
 <?php
 /**
- * Plugin Name:			WPForms GSheetConnector
+ * Plugin Name:			GSheetConnector For WPForms 
  * Plugin URI:			   https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro
  * Description:			Send your WPForms data to your Google Sheets spreadsheet.
  * Requires at least: 	5.6
  * Requires PHP: 		   7.4
  * Author:       	   	GSheetConnector
  * Author URI:   		   https://www.gsheetconnector.com/
- * Version:      		   3.4.26
+ * Version:      		   3.4.27
  * Text Domain:  		   gsheetconnector-wpforms
+ * License:             GPLv2
+ * License URI:         http://www.gnu.org/licenses/gpl-2.0.html
  * Domain Path:  		   languages
  */
 // Exit if accessed directly.
@@ -16,8 +18,8 @@ if (!defined('ABSPATH')) {
    exit;
 }
 
-define('WPFORMS_GOOGLESHEET_VERSION', '3.4.26');
-define('WPFORMS_GOOGLESHEET_DB_VERSION', '3.4.26');
+define('WPFORMS_GOOGLESHEET_VERSION', '3.4.27');
+define('WPFORMS_GOOGLESHEET_DB_VERSION', '3.4.27');
 define('WPFORMS_GOOGLESHEET_ROOT', dirname(__FILE__));
 define('WPFORMS_GOOGLESHEET_URL', plugins_url('/', __FILE__));
 define('WPFORMS_GOOGLESHEET_BASE_FILE', basename(dirname(__FILE__)) . '/gsheetconnector-wpforms.php');

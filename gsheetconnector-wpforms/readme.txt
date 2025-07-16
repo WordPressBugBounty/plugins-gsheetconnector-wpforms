@@ -1,11 +1,11 @@
-=== WPForms Google Sheet Connector ===
+=== GSheetConnector For WPForms ===
 Contributors: westerndeal, abdullah17, gsheetconnector
 Author URL: https://www.gsheetconnector.com/
 Tags: WPFORMS, WPForms Google Sheet, Google Sheet Integration, WPForms Google Sheet Integration, Contact Form Google Sheet Integration
-Tested up to: 6.7.1
+Tested up to: 6.8
 Requires at least: 5.6
 Requires PHP: 7.4 
-Stable tag: 3.4.26
+Stable tag: 3.4.27
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,7 +110,10 @@ Enjoy!
 
 
 == Changelog ==
-
+= 3.4.27 = (16-07-2025)
+* Tested up to latest version of WordPress 6.8.1.
+* Confirmed compatibility with the latest versions of WPForms and WPForms Lite.  
+ 
 = 3.4.26 = (21-04-2025)
 * Added: Moved saving of credentials to database for Auto API Integration.
 

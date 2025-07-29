@@ -74,13 +74,14 @@ class Wpform_gs_Connector_Adds {
       $review_text .= '<li><a href="javascript:void(0);" class="wpform-gs-set-auth-expired-adds-interval" title="Nope, may be later">Nope, may be later.</a></li>';
       $review_text .= '<li><a href="javascript:void(0);" class="wpform-gs-close-auth-expired-adds-interval" title="Dismiss">Dismiss</a></li>';
       $review_text .= '</ul>';
-      $review_text .= '<input type="hidden" name="wpform_gs_auth_expired_adds_ajax_nonce" id="wpform_gs_auth_expired_adds_ajax_nonce" value="' . $ajax_nonce . '" /></div>';
+      $review_text .= '<input type="hidden" name="wpform_gs_auth_expired_adds_ajax_nonce" id="wpform_gs_auth_expired_adds_ajax_nonce" value="' . esc_attr( $ajax_nonce ) . '" /></div>';
+
 
       $rating_block = Wpform_gs_Connector_Utility::instance()->admin_notice( array(
          'type'    => 'auth-expired-notice',
          'message' => $review_text
       ) );
-      echo $rating_block;
+      echo wp_kses_post( $rating_block );
    }
    
 }

@@ -1,30 +1,41 @@
-<!-- plugin promotion footer-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <?php
-function remove_footer_admin () 
-{
-     ?><p id="footer-left" class="alignleft"> 
+// Custom footer text with review link
+function gsheetconnector_admin_footer_text() {
+    $review_url  = 'https://wordpress.org/support/plugin/gsheetconnector-wpforms/reviews/';
+    $plugin_name = 'GSheetConnector WPForms';
 
-<?php echo __("Please rate", "gsheetconnector-wpforms"); ?>
+    $text = sprintf(
+        /* translators: %1$s: plugin name, %2$s: link to reviews */
+        esc_html__(
+            'Enjoy using %1$s? Check out our reviews or leave your own on %2$s.',
+            'gsheetconnector-wpforms'
+        ),
+        '<strong>' . esc_html( $plugin_name ) . '</strong>',
+        '<a href="' . esc_url( $review_url ) . '" target="_blank" rel="noopener">' . esc_html__( 'WordPress.org', 'gsheetconnector-wpforms' ) . '</a>'
+    );
 
-		 <strong><?php echo __("WPForms - GSheetConnector", "gsheetconnector-wpforms"); ?></strong> <a href="https://wordpress.org/support/plugin/gsheetconnector-wpforms/reviews/?filter=5" target="_blank" rel="noopener noreferrer">★★★★★</a> on <a href="https://wordpress.org/support/plugin/gsheetconnector-wpforms/reviews/?filter=5" target="_blank" rel="noopener"><?php echo __("WordPress.org", "gsheetconnector-wpforms"); ?></a> <?php echo __("to help us spread the word.", "gsheetconnector-wpforms"); ?> 	</p> <?php 
+    echo wp_kses_post( '<span id="footer-left" class="alignleft">' . $text . '</span>' );
 }
-add_filter('admin_footer_text', 'remove_footer_admin');
+add_filter( 'admin_footer_text', 'gsheetconnector_admin_footer_text' );
 
- ?>
+
+?>
+
 <div class="gsheetconnect-footer-promotion">
-  <p><?php echo __("Made with ♥ by the GSheetConnector Team", "gsheetconnector-wpforms"); ?></p>
+  <p><?php echo esc_html__( 'Made with ♥ by the GSheetConnector Team', 'gsheetconnector-wpforms' ); ?></p>
+
   <ul class="gsheetconnect-footer-promotion-links">
-    <li> <a href="https://www.gsheetconnector.com/support" target="_blank"><?php echo __("Support", "gsheetconnector-wpforms"); ?></a> </li>
-    <li> <a href="https://support.gsheetconnector.com/kb/ninjaforms-gsheetconnector-introduction" target="_blank"><?php echo __("Docs", "gsheetconnector-wpforms"); ?></a> </li>
-    <li> <a href="https://www.facebook.com/gsheetconnectorofficial" target="_blank"><?php echo __("VIP Circle", "gsheetconnector-wpforms"); ?></a> </li>
-    <li> <a href="https://profiles.wordpress.org/westerndeal/#content-plugins"><?php echo __("Free Plugins", "gsheetconnector-wpforms"); ?></a> </li>
+    <li><a href="https://www.gsheetconnector.com/support" target="_blank" rel="noopener"><?php esc_html_e( 'Support', 'gsheetconnector-wpforms' ); ?></a></li>
+    <li><a href="https://support.gsheetconnector.com/kb/elementor-forms-gsheetconnector-introduction" target="_blank" rel="noopener"><?php esc_html_e( 'Docs', 'gsheetconnector-wpforms' ); ?></a></li>
+    <li><a href="https://www.facebook.com/gsheetconnectorofficial" target="_blank" rel="noopener"><?php esc_html_e( 'VIP Circle', 'gsheetconnector-wpforms' ); ?></a></li>
+    <li><a href="https://profiles.wordpress.org/westerndeal/#content-plugins" target="_blank" rel="noopener"><?php esc_html_e( 'Free Plugins', 'gsheetconnector-wpforms' ); ?></a></li>
   </ul>
+
   <ul class="gsheetconnect-footer-promotion-social">
-    <li> <a href="https://www.facebook.com/gsheetconnectorofficial" target="_blank"> <i class="fa fa-facebook-square" aria-hidden="true"></i> </a> </li>
-    <li> <a href="https://www.instagram.com/gsheetconnector/" target="_blank"> <i class="fa fa-instagram" aria-hidden="true"></i> </a> </li>
-    <li> <a href="https://www.linkedin.com/in/abdullah17/" target="_blank"> <i class="fa fa-linkedin-square" aria-hidden="true"></i> </a> </li>
-    <li> <a href="https://twitter.com/gsheetconnector?lang=en" target="_blank"> <i class="fa fa-twitter-square" aria-hidden="true"></i> </a> </li>
-    <li> <a href="https://www.youtube.com/@GSheetConnector" target="_blank"> <i class="fa fa-youtube-square" aria-hidden="true"></i> </a> </li>
+    <li><a href="https://www.facebook.com/gsheetconnectorofficial" target="_blank" rel="noopener"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+    <li><a href="https://www.instagram.com/gsheetconnector/" target="_blank" rel="noopener"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/abdullah17/" target="_blank" rel="noopener"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+    <li><a href="https://twitter.com/gsheetconnector?lang=en" target="_blank" rel="noopener"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+    <li><a href="https://www.youtube.com/@GSheetConnector" target="_blank" rel="noopener"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
   </ul>
 </div>

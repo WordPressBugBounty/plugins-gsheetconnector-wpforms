@@ -417,101 +417,7 @@ class wpfgsc_googlesheet
       return $header_cells;
    }
 
-
-
-
-
-   /** 
-    * GFGSC_googlesheet::hex_color_to_google_rgb
-    * Function to convert hex to rgb for google
-    * @since 3.1 
-    * @param string $hex
-    * @retun array $rgba
-    **/
-   function hex_color_to_google_rgb($hex)
-   {
-
-      $rgb_return = array();
-
-      $hex = str_replace('#', '', $hex);
-      $length = strlen($hex);
-      $rgb['red'] = hexdec($length == 6 ? substr($hex, 0, 2) : ($length == 3 ? str_repeat(substr($hex, 0, 1), 2) : 0));
-      $rgb['green'] = hexdec($length == 6 ? substr($hex, 2, 2) : ($length == 3 ? str_repeat(substr($hex, 1, 1), 2) : 0));
-      $rgb['blue'] = hexdec($length == 6 ? substr($hex, 4, 2) : ($length == 3 ? str_repeat(substr($hex, 2, 1), 2) : 0));
-
-      foreach ($rgb as $key => $clr) {
-         $rgb_return[$key] = $clr / 255;
-      }
-      return $rgb_return;
-   }
-
-   /** 
-    * GFGSC_googlesheet::sync_with_google_account
-    * Fetch Spreadsheets
-    * @since 3.1 
-    **/
-   public function sync_with_google_account()
-   {
-      return;
-
-      $return_ajax = false;
-
-      if (isset($_POST['isajax']) && $_POST['isajax'] == 'yes') {
-         check_ajax_referer('gf-ajax-nonce', 'security');
-         $init = sanitize_text_field($_POST['isinit']);
-         $return_ajax = true;
-      }
-
-      include_once(GS_CONNECTOR_PRO_ROOT . '/lib/google-sheets.php');
-      $worksheet_array = array();
-      $sheetdata = array();
-      $doc = new GFGSC_googlesheet();
-      $doc->auth();
-      $spreadsheetFeed = $doc->get_spreadsheets();
-
-      if (!$spreadsheetFeed) {
-         return false;
-      }
-
-      foreach ($spreadsheetFeed as $sheetfeeds) {
-         $sheetId = $sheetfeeds['id'];
-         $sheetname = $sheetfeeds['title'];
-
-         $worksheetFeed = $doc->get_worktabs($sheetId);
-
-         foreach ($worksheetFeed as $worksheet) {
-            $tab_id = $worksheet['id'];
-            $tab_name = $worksheet['title'];
-
-
-            $worksheet_array[] = $tab_name;
-            $worksheet_ids[$tab_name] = $tab_id;
-         }
-
-         $sheetId_array[$sheetname] = array(
-            "id" => $sheetId,
-            "tabId" => $worksheet_ids
-         );
-
-         unset($worksheet_ids);
-         $sheetdata[$sheetname] = $worksheet_array;
-         unset($worksheet_array);
-      }
-
-      update_option('wpforms_gs_sheetId', $sheetId_array);
-      update_option('gfgs_feeds', $sheetdata);
-
-      if ($return_ajax == true) {
-         if ($init == 'yes') {
-            wp_send_json_success(array("success" => 'yes'));
-         } else {
-            wp_send_json_success(array("success" => 'no'));
-         }
-      }
-   }
-
-
-   /** 
+    /** 
     * GFGSC_googlesheet::gsheet_get_google_account
     * Get Google Account
     * @since 3.1 
@@ -565,9 +471,7 @@ class wpfgsc_googlesheet
    public function gsheet_print_google_account_email()
    {
       try {
-         $google_account = get_option("wpgs_email_account");
-
-         $google_sheet = new wpfgsc_googlesheet();
+        $google_sheet = new wpfgsc_googlesheet();
          $google_sheet->auth();
          $email = $google_sheet->gsheet_get_google_account_email();
          update_option("wpgs_email_account", $email);

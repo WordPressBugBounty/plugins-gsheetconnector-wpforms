@@ -8,7 +8,7 @@
 if (!defined('ABSPATH')) {
    exit();
 }
-
+// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Safe: tab selection used for UI only, no sensitive action
 $active_tab = ( isset($_GET['tab']) && sanitize_text_field($_GET["tab"])) ? sanitize_text_field($_GET['tab']) : 'integration';
 
 $active_tab_name = '';
@@ -41,23 +41,22 @@ $plugin_version = defined('WPFORMS_GOOGLESHEET_VERSION') ? WPFORMS_GOOGLESHEET_V
 
 <div class="wrap">
 	
-	
    <?php
    $tabs = array(
        'integration'    => __('Integration', 'gsheetconnector-wpforms'),
        'settings'       => __('GoogleSheet Form Settings', 'gsheetconnector-wpforms'),
-      // 'faq'            => __('FAQ', 'gsheetconnector-wpforms'),
-      // 'demos'          => __('Demos', 'gsheetconnector-wpforms'),
-      // 'support'        => __('Support','gsheetconnector-wpforms'),
        'system_status'  => __('System Status', 'gsheetconnector-wpforms'),
 	   'extensions'  => __('Extensions', 'gsheetconnector-wpforms'),
    );
    echo '<div id="icon-themes" class="icon32"><br></div>';
    echo '<h2 class="nav-tab-wrapper">';
-   foreach ($tabs as $tab => $name) {
-      $class = ( $tab == $active_tab ) ? ' nav-tab-active' : '';
-      echo "<a class='nav-tab$class' href='?page=wpform-google-sheet-config&tab=$tab'>$name</a>";
-   }
+    foreach ( $tabs as $tab => $name ) {
+        $class = ( $tab === $active_tab ) ? ' nav-tab-active' : '';
+        $tab_url = esc_url( add_query_arg( [ 'page' => 'wpform-google-sheet-config', 'tab' => $tab ] ) );
+        $tab_name = esc_html( $name );
+        echo '<a class="nav-tab' . esc_attr( $class ) . '" href="' . $tab_url . '">' . $tab_name . '</a>';
+    }
+
    echo '</h2>';
    switch ($active_tab) {
       case 'settings' :

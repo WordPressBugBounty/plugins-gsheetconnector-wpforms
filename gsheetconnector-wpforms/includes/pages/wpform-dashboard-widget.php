@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
    ?>
    <div class="main-content">
       <div>
-         <h3 style="font-weight:bold;"><?php echo __("WPForms Connected with Google Sheets.", "gsheetconnector-wpforms"); ?></h3>
+         <h3 style="font-weight:bold;"><?php echo esc_html__("WPForms Connected with Google Sheets.", "gsheetconnector-wpforms"); ?></h3>
 
          <style>
 			  .widget-table { border:1px solid #eee; width:100%; }
@@ -80,13 +80,8 @@ if (!defined('ABSPATH')) {
         ?>
     </tbody>
 </table>
-
-
-
-
-          
-      </div>
-   </div> <!-- main-content end -->
+</div>
+</div> <!-- main-content end -->
 </div> <!-- dashboard-content end -->
 <style type="text/css">
 .postbox-header .hndle {

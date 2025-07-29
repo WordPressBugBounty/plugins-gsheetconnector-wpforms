@@ -267,9 +267,8 @@ class WPGS_FormBuilder {
 		// $wfgs_google_client = $this->get_wpgs_googlesheet();	
 	
 		if( $wpgs_spreadsheets && is_array($wpgs_spreadsheets) && ! empty($wpgs_spreadsheets)  ){
-			// echo '<pre>';print_r($wpgs_spreadsheets);die;
-
-			foreach( $wpgs_spreadsheets as $wpgs_feed_id => $gsheet_feed ) {
+			
+          foreach( $wpgs_spreadsheets as $wpgs_feed_id => $gsheet_feed ) {
 				
 				$integration_method = $gsheet_feed['gs_sheet_integration_mode'];
 				// $gs_sheet_select_name = $gsheet_feed['gs_sheet_select_name'];				
@@ -554,13 +553,7 @@ class WPGS_FormBuilder {
 		<div class="wpforms-panel-content-section wpforms-panel-content-section-wf_googlesheets" >
 			
 			
-			<!-- <div class="wpforms-panel-content-section-title">
-				<?php esc_html_e( 'GSheetConnector Feed Settings', 'gsheetconnector-wpforms' ); ?>
-				<span class='syncBtnPro wpforms-builder-settings-block-add wpforms-webooks-add' style="float: right;
-    margin-left: 5px;">Pro</span>
-				<button <?php echo ! $token ? "style='display: none';" : ""; ?> type="button" class="btnstylewpform wpforms-builder-settings-block-add wpforms-webooks-add" data-block-type="googlesheet" data-next-id="<?php echo absint( $next_id ); ?>"><?php esc_html_e( 'Add New Feed', 'gsheetconnector-wpforms' ); ?></button>
-			</div> -->
-
+		
 			
 			 
 			<?php 
@@ -577,7 +570,7 @@ class WPGS_FormBuilder {
 			?>
 			<input type="hidden" name="settings[wfgs_force_reload]" value=0 class="wfgs_force_reload">
 			
-			<!-- <input type="hidden" value='<?php echo json_encode($wpforms_gs_sheetId); ?>' id="gs_sheet_select_sheets_list">Old Code -->
+			
 			<textarea style="display: none;" id="gs_sheet_select_sheets_list"><?php echo json_encode($wpforms_gs_sheetId); ?></textarea><!-- New Code : Resolved issue : Apostrophe(') issue while fetching sheets and tabs. -->
 			
 			<?php } ?>
@@ -595,8 +588,7 @@ class WPGS_FormBuilder {
 	 * @return string
 	 */
 	protected function get_enable_control_html( $wpgs_spreadsheets, $builder_panel_settings ) {
-// echo '<pre>';print_r($builder_panel_settings);die;
-		return wpforms_panel_field(
+     return wpforms_panel_field(
 			'select',
 			'settings',
 			'gsheetconnector-wpforms',
@@ -624,11 +616,9 @@ class WPGS_FormBuilder {
 	protected function get_fields_html( $wpgs_spreadsheets, $builder_panel_settings ) {
 
 		$result   = '';
-			// echo '<pre>';print_r($wpgs_spreadsheets);die;
 		foreach ( $wpgs_spreadsheets as $wpgs_feed_id => $googlesheet ) {
-			
-			$googlesheet['wpgs_feed_id'] = $wpgs_feed_id;
-// echo '<pre>';print_r( $googlesheet);
+		   $googlesheet['wpgs_feed_id'] = $wpgs_feed_id;
+
 			$result .= $this->get_fields_block( $googlesheet, $builder_panel_settings );
 		}
 

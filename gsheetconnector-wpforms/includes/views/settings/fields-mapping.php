@@ -48,9 +48,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 			<tr>
 				<td class="key">
-					<input type="text" value="<?php echo esc_attr( str_replace("___", " ",$key) ); ?>" placeholder="<?php esc_attr_e( 'Enter Column Name Upgrade To Pro &hellip;', 'gsheetconnector-wpforms' ); ?>" class="http-key-source" data-gs_index="<?php echo $i; $i++; ?>" data-feed-id="<?php echo $args['wpgs_feed_id'] ?>">
-					<label for="<?php echo $field_id ?>">&nbsp;</label>
-					
+					<input 
+					   type="text" 
+					   value="<?php echo esc_attr( str_replace( "___", " ", $key ) ); ?>" 
+					   placeholder="<?php esc_attr_e( 'Enter Column Name Upgrade To Pro &hellip;', 'gsheetconnector-wpforms' ); ?>" 
+					   class="http-key-source" 
+					   data-gs_index="<?php echo esc_attr( $i ); $i++; ?>" 
+					   data-feed-id="<?php echo esc_attr( $args['wpgs_feed_id'] ); ?>" 
+					/>
+					<label for="<?php echo esc_attr( $field_id ); ?>">&nbsp;</label>
 				</td>
 				<td class="field<?php echo esc_attr( $extra_class ); ?>">
 					<div class="wpforms-field-map-wrap">
@@ -66,13 +72,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 								<?php
 							} ?>
 							
-							<input type="text" value="<?php echo esc_attr( $value ); ?>" class="key-destination wpforms-field-map-inputText" name="<?php echo esc_attr( $flds_name['source'] ); ?>" data-name="<?php echo esc_attr( $args['name'] ); ?>" data-suffix="[{source}]" data-field-map-allowed="<?php echo isset($args['allowed_types']) ? esc_attr( $args['allowed_types'] ) : ''; ?>" data-custom-value-support="true" id="<?php echo $field_id ?>" >
-							
-							<select style="display: none;" data-name="<?php echo esc_attr( $args['name'] ); ?>" data-suffix="[{source}]" data-field-map-allowed="<?php echo isset($args['allowed_types']) ? esc_attr( $args['allowed_types'] ) : ''; ?>" data-custom-value-support="true"><option></option></select>
-							
-							<label for="<?php echo $field_id ?>">
-								<a href="#" class="toggle-smart-tag-display" data-type="all" data-fields=""><i class="fa fa-tags"></i> <span>Show Smart Tags</span></a>
+							<input 
+							   type="text" 
+							   value="<?php echo esc_attr( $value ); ?>" 
+							   class="key-destination wpforms-field-map-inputText" 
+							   name="<?php echo esc_attr( $flds_name['source'] ); ?>" 
+							   data-name="<?php echo esc_attr( $args['name'] ); ?>" 
+							   data-suffix="[{source}]" 
+							   data-field-map-allowed="<?php echo isset( $args['allowed_types'] ) ? esc_attr( $args['allowed_types'] ) : ''; ?>" 
+							   data-custom-value-support="true" 
+							   id="<?php echo esc_attr( $field_id ); ?>" 
+							/>
+
+							<select 
+							   style="display: none;" 
+							   data-name="<?php echo esc_attr( $args['name'] ); ?>" 
+							   data-suffix="[{source}]" 
+							   data-field-map-allowed="<?php echo isset( $args['allowed_types'] ) ? esc_attr( $args['allowed_types'] ) : ''; ?>" 
+							   data-custom-value-support="true">
+							   <option></option>
+							</select>
+
+							<label for="<?php echo esc_attr( $field_id ); ?>">
+							   <a href="#" class="toggle-smart-tag-display" data-type="all" data-fields="">
+							      <i class="fa fa-tags"></i> <span>Show Smart Tags</span>
+							   </a>
 							</label>
+
 						</div>
 						
 					</div>

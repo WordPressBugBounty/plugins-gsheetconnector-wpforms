@@ -207,7 +207,114 @@ jQuery(document).ready(function($) {
                     }, 1000);
          }
       });
+   }); 
+});
+jQuery(document).ready(function ($) {
+   $('.install-plugin-btn').on('click', function () {
+       var button = $(this);
+       var pluginSlug = button.data('plugin');
+       var downloadUrl = button.data('download');
+       var loader = button.find('.loaderimg');
+
+       loader.css('display', 'inline-block'); // Show loader
+
+       button.html('<img src="' + loader.attr('src') + '" alt="Loading..."> Installing...')
+           .prop('disabled', true);
+
+       $.ajax({
+           url: ajaxurl,
+           type: 'POST',
+           data: {
+               action: 'install_plugin',
+               plugin_slug: pluginSlug,
+               download_url: downloadUrl,
+               security: pluginInstallData.nonce,  // for install
+           },
+           success: function (response) {
+               if (response.success) {
+                   // Hide the "Install" button
+                   button.hide();
+
+                   // Show the corresponding "Activate" button
+                   button.closest('.button-bar').find('.activate-plugin-btn').show();
+               } else {
+                   alert('Installation failed: ' + (response.data?.message || 'Unknown error'));
+                   button.html('Install').prop('disabled', false);
+               }
+           },
+
+           error: function () {
+               button.html('Install').prop('disabled', false);
+               alert('Error installing the plugin.');
+           }
+       });
    });
- 
-   
+
+   // Plugin Activation
+   $(document).on('click', '.activate-plugin-btn', function () {
+       var button = $(this);
+       var pluginSlug = button.data('plugin');
+       var loader = button.find('.loaderimg');
+       loader.css('display', 'inline-block'); // Show loader
+
+       button.html('<img src="' + loader.attr('src') + '" alt="Loading..."> Activating...')
+           .prop('disabled', true);
+
+       $.ajax({
+           url: ajaxurl,
+           type: 'POST',
+           data: {
+               action: 'wc_gsheetconnector_activate_plugin',
+               plugin_slug: pluginSlug,
+               security: pluginActivateData.nonce, // for activate
+           },
+           success: function (response) {
+               if (response.success) {
+                   button.text('Activated').prop('disabled', true);
+                   loader.hide();
+                   location.reload();
+
+               } else {
+                   button.html('Activate').prop('disabled', false);
+                   alert('Activation failed: ' + (response.data?.message || 'Unknown error'));
+               }
+           },
+           error: function () {
+               button.html('Activate').prop('disabled', false);
+               alert('Error activating the plugin.');
+           }
+       });
+   });
+    $('.deactivate-plugin').on('click', function () {
+        var pluginSlug = $(this).data('plugin');
+
+        if (!pluginSlug) {
+            alert('Plugin slug not found.');
+            return;
+        }
+
+        $.ajax({
+            url: pluginDeactivateData.ajax_url,
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                action: 'wc_gsheetconnector_deactivate_plugin',
+                plugin_slug: pluginSlug,
+                security: pluginDeactivateData.nonce // for deactivate
+            },
+            success: function (response) {
+                if (response.success) {
+                    alert(response.data);
+                    location.reload();
+                } else {
+                    alert('Error: ' + response.data);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error(xhr.responseText);
+                alert('AJAX error: ' + error);
+            }
+        });
+    });
+
 });

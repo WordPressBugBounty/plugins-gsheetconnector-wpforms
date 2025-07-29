@@ -5,7 +5,7 @@ Tags: WPFORMS, WPForms Google Sheet, Google Sheet Integration, WPForms Google Sh
 Tested up to: 6.8
 Requires at least: 5.6
 Requires PHP: 7.4 
-Stable tag: 3.4.27
+Stable tag: 4.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,6 +110,12 @@ Enjoy!
 
 
 == Changelog ==
+
+= 4.0.0 = (29-07-2025) 
+* Secured the plugin code by eliminating remote file calls, adding file access checks, escaping output, and verifying nonces.
+* Replaced static asset includes with wp_enqueue_* functions for proper script and style loading.
+* Fixed text domain for consistent internationalization support.
+
 = 3.4.27 = (16-07-2025)
 * Tested up to latest version of WordPress 6.8.1.
 * Confirmed compatibility with the latest versions of WPForms and WPForms Lite.  

@@ -63,33 +63,31 @@ class Wpform_gs_Connector_Utility
     */
    public function admin_notice($data = array())
    {
-      // extract message and type from the $data array
-      $message = isset($data['message']) ? $data['message'] : "";
-      $message_type = isset($data['type']) ? $data['type'] : "";
+      $message = isset($data['message']) ? $data['message'] : '';
+      $message_type = isset($data['type']) ? $data['type'] : '';
+        
       switch ($message_type) {
          case 'error':
-            $admin_notice = '<div id="message" class="error notice is-dismissible">';
-            break;
+             $admin_notice = '<div id="message" class="error notice is-dismissible">';
+             break;
          case 'update':
-            $admin_notice = '<div id="message" class="updated notice is-dismissible">';
-            break;
+             $admin_notice = '<div id="message" class="updated notice is-dismissible">';
+             break;
          case 'update-nag':
-            $admin_notice = '<div id="message" class="update-nag">';
-            break;
-         case 'auth-expired-notice':
-            $admin_notice = '<div id="message" class="error notice wpform-gs-auth-expired-adds is-dismissible">';
-            break;
+             $admin_notice = '<div id="message" class="update-nag">';
+             break;
          case 'upgrade':
-            $admin_notice = '<div id="message" class="error notice wpforms-gs-upgrade is-dismissible">';
-            break;
+             $admin_notice = '<div id="message" class="error notice wpforms-gs-upgrade is-dismissible">';
+             break;
          default:
-            $message = __('There\'s something wrong with your code...', 'gsheetconnector-wpforms');
-            $admin_notice = "<div id=\"message\" class=\"error\">\n";
-            break;
+             $message = __('There\'s something wrong with your code...', 'gsheetconnector-wpforms');
+             $admin_notice = "<div id=\"message\" class=\"error\">";
+             break;
       }
 
-      $admin_notice .= "    <p>" . __($message, 'gsheetconnector-wpforms') . "</p>\n";
+      $admin_notice .= '<p>' . esc_html( $message ) . '</p>';
       $admin_notice .= "</div>\n";
+
       return $admin_notice;
    }
 
@@ -153,69 +151,53 @@ class Wpform_gs_Connector_Utility
          }
       }
    }
+
    /**
     * Utility function to get the current user's role
     *
     * @since 1.0
     */
+   public static function gs_debug_log( $error ) {
+        if ( ! function_exists( 'WP_Filesystem' ) ) {
+            require_once ABSPATH . 'wp-admin/includes/file.php';
+        }
+        global $wp_filesystem;
+        WP_Filesystem();
 
-   public static function gs_debug_log($error)
-   {
-      try {
-         if (!is_dir(WPFORMS_GOOGLESHEET_PATH . 'logs')) {
-            mkdir(WPFORMS_GOOGLESHEET_PATH . 'logs', 0755, true);
-         }
-      } catch (Exception $e) {
+        $upload_dir = wp_upload_dir();
+        $log_dir = trailingslashit( $upload_dir['basedir'] ) . 'gscwpforms-debug-logs/';
+        $log_file = get_option( 'wpf_gs_debug_log_file' );
+        $timestamp = gmdate( 'Y-m-d H:i:s' ) . "\t PHP " . phpversion() . "\t";
 
-      }
-      try {
-         // check if debug log file exists or not
-         $wplogFilePathToDelete = WPFORMS_GOOGLESHEET_PATH . "logs/log.txt";
-         // Check if the log file exists before attempting to delete
-         if (file_exists($wplogFilePathToDelete)) {
-            unlink($wplogFilePathToDelete);
-         }
-         // check if debug unique log file exists or not
-         $wpexistDebugFile = get_option('wpf_gs_debug_log_file');
-         if (!empty($wpexistDebugFile) && file_exists($wpexistDebugFile)) {
-            $wplog = fopen($wpexistDebugFile, 'a');
-            if (is_array($error)) {
-               fwrite($wplog, print_r(date_i18n('j F Y H:i:s', current_time('timestamp')) . " \t PHP " . phpversion(), TRUE));
-               fwrite($wplog, print_r($error, TRUE));
-            } else {
-               $result = fwrite($wplog, print_r(date_i18n('j F Y H:i:s', current_time('timestamp')) . " \t PHP " . phpversion() . " \t $error \r\n", TRUE));
+         try {
+            if ( ! $wp_filesystem->is_dir( $log_dir ) ) {
+                $wp_filesystem->mkdir( $log_dir, FS_CHMOD_DIR );
             }
-            fclose($wplog);
-         } else {
-            // if unique log file not exists then create new file code
-            // Your log content (you can customize this)
-            $wp_unique_log_content = "Log created at " . date('Y-m-d H:i:s');
-            // Create the log file
-            $wplogfileName = 'log-' . uniqid() . '.txt';
-            // Define the file path
-            $wplogUniqueFile = WPFORMS_GOOGLESHEET_PATH . "logs/" . $wplogfileName;
-            if (file_put_contents($wplogUniqueFile, $wp_unique_log_content)) {
-               // save debug unique file in table
-               update_option('wpf_gs_debug_log_file', $wplogUniqueFile);
-               // Success message
-               // echo "Log file created successfully: " . $logUniqueFile;
-               $wplog = fopen($wplogUniqueFile, 'a');
-               if (is_array($error)) {
-                  fwrite($wplog, print_r(date_i18n('j F Y H:i:s', current_time('timestamp')) . " \t PHP " . phpversion(), TRUE));
-                  fwrite($wplog, print_r($error, TRUE));
-               } else {
-                  $result = fwrite($wplog, print_r(date_i18n('j F Y H:i:s', current_time('timestamp')) . " \t PHP " . phpversion() . " \t $error \r\n", TRUE));
-               }
-               fclose($wplog);
 
-            } else {
-               // Error message
-               echo "Error - Not able to create Log File.";
+            $old_file = $log_dir . 'log.txt';
+            if ( $wp_filesystem->exists( $old_file ) ) {
+                wp_delete_file( $old_file );
             }
-         }
 
-      } catch (Exception $e) {
+            $log_message = is_array( $error ) || is_object( $error )
+                ? $timestamp . wp_json_encode( $error ) . "\r\n"
+                : $timestamp . $error . "\r\n";
 
+            if ( ! empty( $log_file ) && $wp_filesystem->exists( $log_file ) ) {
+                $existing = $wp_filesystem->get_contents( $log_file );
+                $wp_filesystem->put_contents( $log_file, $existing . $log_message, FS_CHMOD_FILE );
+            } else {
+                $new_log_file = $log_dir . 'log-' . uniqid() . '.txt';
+                $log_content = "Log created at " . gmdate( 'Y-m-d H:i:s' ) . "\r\n" . $log_message;
+
+                if ( $wp_filesystem->put_contents( $new_log_file, $log_content, FS_CHMOD_FILE ) ) {
+                    update_option( 'wpf_gs_debug_log_file', $new_log_file );
+                } else {
+                    
+                }
+            }
+      } catch ( Exception $e ) {
+         
       }
    }
 

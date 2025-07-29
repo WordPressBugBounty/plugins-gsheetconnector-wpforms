@@ -14,181 +14,217 @@ if (!defined('ABSPATH')) {
  */
 class WPforms_Googlesheet_Services {
 
-   public function __construct() {
-      // get with all data and display form
-      add_action('wp_ajax_get_wpforms', array($this, 'display_wpforms_data'));
-      // get all form data
-      add_action('admin_init', array($this, 'execute_post_data'));
-      // activation n deactivation ajax call
-      add_action('wp_ajax_deactivate_wpformgsc_integation', array($this, 'deactivate_wpformgsc_integation'));
-      // save entry with posted data
-      add_action('wpforms_process_entry_save', array($this, 'entry_save'), 20, 4);
-      add_action( 'wp_ajax_set_upgrade_notification_interval', array( $this, 'set_upgrade_notification_interval' ) );
-      add_action( 'wp_ajax_close_upgrade_notification_interval', array( $this, 'close_upgrade_notification_interval' ) );
+    public function __construct() {
+        // get with all data and display form
+        add_action('wp_ajax_get_wpforms', array($this, 'display_wpforms_data'));
+        // get all form data
+        add_action('admin_init', array($this, 'execute_post_data'));
+        // activation n deactivation ajax call
+        add_action('wp_ajax_deactivate_wpformgsc_integation', array($this, 'deactivate_wpformgsc_integation'));
+        // save entry with posted data
+        add_action('wpforms_process_entry_save', array($this, 'entry_save'), 20, 4);
+        add_action( 'wp_ajax_set_upgrade_notification_interval', array( $this, 'set_upgrade_notification_interval' ) );
+        add_action( 'wp_ajax_close_upgrade_notification_interval', array( $this, 'close_upgrade_notification_interval' ) );
 
-   }
+        add_action('wp_ajax_install_plugin', array($this, 'install_plugin'));
+        add_action('wp_ajax_wc_gsheetconnector_activate_plugin', array($this, 'activate_plugin'));
+        add_action("wp_ajax_wc_gsheetconnector_deactivate_plugin", array($this, "deactivate_plugin"));
+    }
 
-   /**
+    /**
     * AJAX function - get wpforms details with sheet data
     * @since 1.1
     */
-   function display_wpforms_data() {
+    function display_wpforms_data() {
 
-      // nonce check
-      check_ajax_referer('wp-ajax-nonce', 'security');
+        // nonce check
+        check_ajax_referer('wp-ajax-nonce', 'security');
 
-      $form = get_post($_POST['wpformsId']);
-      $form_id = $_POST['wpformsId'];
-     $form_title = wpforms()->form->get( absint( $form_id ) );
-    $form_name = '';
-    if ( ! empty( $form_title  ) ) {
-     $form_name =  $form->post_title;
+        // Validate and sanitize input
+        if ( ! isset( $_POST['wpformsId'] ) ) {
+            wp_send_json_error( 'Form ID is missing.' );
+        }
+
+        $form_id_raw = wp_unslash( $_POST['wpformsId'] ); // Remove slashes
+        $form_id     = absint( $form_id_raw ); // Ensure it's an integer
+
+        // Get form
+        $form = get_post( $form_id );
+        $form_title = wpforms()->form->get( $form_id );
+
+        $form_name = '';
+        if ( ! empty( $form_title ) ) {
+            $form_name = $form->post_title;
+        }
+
+        ob_start();
+
+        if ( ! empty( $form_id ) ) {
+            $host_name = str_replace( '/wp-admin', '', get_admin_url() );
+            $new_link  = admin_url( "admin.php?page=wpforms-builder&view=settings&form_id={$form_id}" );
+        } else {
+            $new_link  = admin_url( "admin.php?page=wpform-google-sheet-config&tab=settings" );
+        }
+
+        ?>
+        <p class="deprecated-notice">
+            <?php
+            echo wp_kses_post(
+                sprintf(
+                    __( 'This settings page is deprecated and will be removed in upcoming version. Move your settings to the <a target="_blank" href="%s">new settings page</a> under GSheetConnector Tab to avoid loss of data.', 'gsheetconnector-wpforms' ),
+                    esc_url( $new_link )
+                )
+            );
+            ?>
+        </p>
+        <?php
+
+        // Migrate old settings
+        $this->save_old_settings_to_new_settings( $form_id, $form_name );
+
+        ob_end_clean();
+
+        wp_send_json_success( esc_url_raw( $new_link ) );
     }
-      ob_start();
-      if(!empty($form_id)){
-         $host_name = str_replace('/wp-admin', '', get_admin_url());
-          $new_link = site_url("wp-admin/admin.php?page=wpforms-builder&view=settings&form_id=$form_id");
-      }
-      else{
-     $new_link = site_url("wp-admin/admin.php?page=wpform-google-sheet-config&tab=settings");   
-      }
-    
-      ?>
-<p class="deprecated-notice">
-    <?php _e( 'This settings page is deprecated and will be removed in upcoming version. Move your settings to the <a target="_blank" href="'.$new_link.'">new settings page</a> under GSheetConnector Tab to avoid loss of data.', 'gsheetconnector-wpforms' ); ?>
-</p>
-<?php 
-      // $this->wpforms_googlesheet_settings_content($form_id,$form_name);
-      $this->save_old_settings_to_new_settings($form_id,$form_name);
-      $result = ob_get_contents();
-      ob_get_clean();
-      // wp_send_json_success(htmlentities($result));
-      wp_send_json_success($new_link);
-   }
 
 
-   // moved old settings to new settings
+    // moved old settings to new settings
     public function save_old_settings_to_new_settings($form_id,$form_name){
         
-     $get_existing_data = get_post_meta($form_id, 'wpform_gs_settings');
-    
-     $gheet_new = [];
-     if(!empty($get_existing_data)){
-      foreach($get_existing_data as $ge){
+        $get_existing_data = get_post_meta($form_id, 'wpform_gs_settings');
+        
+        $gheet_new = [];
+        if(!empty($get_existing_data)){
+            foreach($get_existing_data as $ge){
 
-    $gsheet_new['name'] = $form_name.' '.'GoogleSheet';
-    $gsheet_new['gs_sheet_integration_mode'] = 'manual'; 
-    $gsheet_new['gs_sheet_manuals_sheet_name'] = $ge['sheet-name'];
-    $gsheet_new['gs_sheet_manuals_sheet_id'] = $ge['sheet-id']; 
-    $gsheet_new['gs_sheet_manuals_sheet_tab_name'] = $ge['sheet-tab-name'];
-    $gsheet_new['gs_sheet_manuals_sheet_tab_id'] = $ge['tab-id']; 
-}
-
-   // update_post_meta($form_id, 'wpform_gs_settings_new', $gsheet_new);
-       update_post_meta($form_id, 'wpform_gs_settings', $gsheet_new);
-   
-   }
-
-}
-
+                $gsheet_new['name'] = $form_name.' '.'GoogleSheet';
+                $gsheet_new['gs_sheet_integration_mode'] = 'manual'; 
+                $gsheet_new['gs_sheet_manuals_sheet_name'] = $ge['sheet-name'];
+                $gsheet_new['gs_sheet_manuals_sheet_id'] = $ge['sheet-id']; 
+                $gsheet_new['gs_sheet_manuals_sheet_tab_name'] = $ge['sheet-tab-name'];
+                $gsheet_new['gs_sheet_manuals_sheet_tab_id'] = $ge['tab-id']; 
+            }
+            // update_post_meta($form_id, 'wpform_gs_settings_new', $gsheet_new);
+            update_post_meta($form_id, 'wpform_gs_settings', $gsheet_new);
+        }
+    }
 
    /**
     * Function - save the setting data of google sheet with sheet name and tab name
     * @since 1.0
     */
-   public function wpforms_googlesheet_settings_content($form_id, $form_name) {
+    public function wpforms_googlesheet_settings_content($form_id, $form_name) {
 
-      $get_data = get_post_meta($form_id, 'wpform_gs_settings');
+        $get_data = get_post_meta($form_id, 'wpform_gs_settings');
    
-     $get_disable_setting = get_post_meta($form_id, 'wpform_gs_old_settings');
-      $check = $disable_text = '';
-      if(isset($get_disable_setting[0]) && $get_disable_setting[0] == 1){
-      $check = 'checked';
-      $disable_text = 'disabled';
-     }
-       $saved_sheet_name = isset($get_data[0]['sheet-name']) ? $get_data[0]['sheet-name'] : "";
-      
-       $saved_tab_name = isset($get_data[0]['sheet-tab-name']) ? $get_data[0]['sheet-tab-name'] : "";
+        $get_disable_setting = get_post_meta($form_id, 'wpform_gs_old_settings');
+        $check = $disable_text = '';
+        if(isset($get_disable_setting[0]) && $get_disable_setting[0] == 1){
+            $check = 'checked';
+            $disable_text = 'disabled';
+        }
+        $saved_sheet_name = isset($get_data[0]['sheet-name']) ? $get_data[0]['sheet-name'] : "";
+        $saved_tab_name = isset($get_data[0]['sheet-tab-name']) ? $get_data[0]['sheet-tab-name'] : "";
+        $saved_sheet_id = isset($get_data[0]['sheet-id']) ? $get_data[0]['sheet-id'] : "";
+        $saved_tab_id = isset($get_data[0]['tab-id']) ? $get_data[0]['tab-id'] : "";
+
+       echo '<div class="wpforms-panel-content-section-googlesheet-tab">';
+       echo '<div class="wpforms-panel-content-section-title">';
+       ?>
+
+    <div class="wpforms-old-settings">
+        <label class="switch">
+        <input 
+            type="checkbox" 
+            class="checkbox disable_old_settings" 
+            name="disable_old_settings" 
+            form-id="<?php echo esc_attr( $form_id ); ?>" 
+            form-title="<?php echo esc_attr( $form_name ); ?>" 
+            value="" 
+            <?php checked( $check ); ?> 
+        >
+        <span class="slider round"></span>
+        </label>Disable Old Settings
+        <span class="gs-disble-setting-message"></span>
+    </div>
+    <div class="wpforms-gs-fields">
     
-       $saved_sheet_id = isset($get_data[0]['sheet-id']) ? $get_data[0]['sheet-id'] : "";
-    
-      $saved_tab_id = isset($get_data[0]['tab-id']) ? $get_data[0]['tab-id'] : "";
-
-    
-      
-      echo '<div class="wpforms-panel-content-section-googlesheet-tab">';
-      echo '<div class="wpforms-panel-content-section-title">';
-      ?>
-
-
-   
-<div class="wpforms-old-settings">
-  <label class="switch">
-  <input type="checkbox" class="checkbox disable_old_settings" name="disable_old_settings" form-id="<?php echo $form_id; ?>" form-title="<?php echo $form_name; ?>" value="" <?php echo $check; ?>>
-  <span class="slider round"></span>
-</label>
-
-    Disable Old Settings
-      <span class="gs-disble-setting-message"></span>
-</div>
-<div class="wpforms-gs-fields">
-    <!-- <input type="checkbox" class="checkbox disable_old_settings" name="disable_old_settings" form-id="<?php echo $form_id; ?>" value="" <?php echo $check; ?>>Disable Old Settings
-        -->
           
     <h3><?php esc_html_e('Google Sheet Settings', 'gsheetconnector-wpforms'); ?>
         <strong class="gs-info-wpform">( Fetch your sheets automatically using PRO <a
-                href="https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro?gsheetconnector-ref=17"
-                target="_blank">Upgrade to PRO</a> )</strong>
-
-                
+            href="https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro?gsheetconnector-ref=17"
+            target="_blank">Upgrade to PRO</a> )</strong>     
     </h3>
  
     <p>
-        <label><?php echo esc_html(__('Google Sheet Name', 'gsheetconnector-wpforms')); ?></label>
+        <label><?php echo esc_html__( 'Google Sheet Name', 'gsheetconnector-wpforms' ); ?></label>
         <input type="text" name="wpform-gs[sheet-name]" id="wpforms-gs-sheet-name"
-            value="<?php echo  esc_attr($saved_sheet_name); ?>" <?php echo $disable_text;?>  />
-        <a href=""
-            class=" gs-name help-link"><?php //echo esc_html(__('Where do i get Google Sheet Name?', 'gsheetconnector-wpforms')); ?><img
-                src="<?php echo WPFORMS_GOOGLESHEET_URL; ?>assets/img/help.png" class="help-icon"><span
-                class='hover-data'><?php echo esc_html(__('Go to your google account and click on"Google apps" icon and than click "Sheets". Select the name of the appropriate sheet you want to link your contact form or create new sheet.', 'gsheetconnector-wpforms')); ?>
-            </span></a>
-    </p>
-    <p>
-        <label><?php echo esc_html(__('Google Sheet Id', 'gsheetconnector-wpforms')); ?></label>
-        <input type="text" name="wpform-gs[sheet-id]" id="wpforms-gs-sheet-id"
-            value="<?php echo  esc_attr($saved_sheet_id) ; ?>" <?php echo $disable_text;?> />
-        <a href="" class=" gs-name help-link"><img src="<?php echo WPFORMS_GOOGLESHEET_URL; ?>assets/img/help.png"
-                class="help-icon"><?php //echo esc_html(__('Google Sheet Id?', 'gsheetconnector-wpforms')); ?><span
-                class='hover-data'><?php echo esc_html(__('you can get sheet id from your sheet URL', 'gsheetconnector-wpforms')); ?></span></a>
-    </p>
-    <p>
-        <label><?php echo esc_html(__('Google Sheet Tab Name', 'gsheetconnector-wpforms')); ?></label>
-        <input type="text" name="wpform-gs[sheet-tab-name]" id="wpforms-sheet-tab-name"
-            value="<?php echo  esc_attr($saved_tab_name) ; ?>" <?php echo $disable_text;?> />
-        <a href="" class=" gs-name help-link"><img src="<?php echo WPFORMS_GOOGLESHEET_URL; ?>assets/img/help.png"
-                class="help-icon"><?php //echo esc_html(__('Where do i get Sheet Tab Name?', 'gsheetconnector-wpforms')); ?><span
-                class='hover-data'><?php echo esc_html(__('Open your Google Sheet with which you want to link your contact form . You will notice a tab names at bottom of the screen. Copy the tab name where you want to have an entry of contact form.', 'gsheetconnector-wpforms')); ?></span></a>
-    </p>
-    <p>
-        <label><?php echo esc_html(__('Google Tab Id', 'gsheetconnector-wpforms')); ?></label>
-        <input type="text" name="wpform-gs[tab-id]" id="wpforms-gs-tab-id"
-            value="<?php echo esc_attr($saved_tab_id) ; ?>" <?php echo $disable_text;?> />
-        <a href="" class=" gs-name help-link"><img src="<?php echo WPFORMS_GOOGLESHEET_URL; ?>assets/img/help.png"
-                class="help-icon"><?php //echo esc_html(__('Google Tab Id?', 'gsheetconnector-wpforms')); ?><span
-                class='hover-data'><?php echo esc_html(__('you can get tab id from your sheet URL', 'gsheetconnector-wpforms')); ?></span></a>
-    </p>
-    <?php if(((isset($saved_sheet_name)) || $saved_sheet_name!="") && ((isset($saved_tab_name)) || $saved_tab_name!="") &&  ((isset($saved_sheet_id)) || $saved_sheet_id!="") && ((isset($saved_tab_id)) || $saved_tab_id)) {
-          $sheet_url = "https://docs.google.com/spreadsheets/d/".$saved_sheet_id."/edit#gid=".$saved_tab_id;
-          ?>
-    <p>
-        <a href="<?php echo $sheet_url; ?>" target="_blank" class="cf7_gs_link_wpfrom">Google Sheet Link</a>
+            value="<?php echo esc_attr( $saved_sheet_name ); ?>" <?php echo esc_attr( $disable_text ); ?> />
+        <a href="" class="gs-name help-link">
+            <img src="<?php echo esc_url( WPFORMS_GOOGLESHEET_URL ); ?>assets/img/help.png" class="help-icon">
+            <span class='hover-data'>
+                <?php echo esc_html__( 'Go to your google account and click on "Google apps" icon and then click "Sheets". Select the name of the appropriate sheet you want to link your contact form or create a new sheet.', 'gsheetconnector-wpforms' ); ?>
+            </span>
+        </a>
     </p>
 
+    <p>
+        <label><?php echo esc_html__( 'Google Sheet Id', 'gsheetconnector-wpforms' ); ?></label>
+        <input type="text" name="wpform-gs[sheet-id]" id="wpforms-gs-sheet-id"
+            value="<?php echo esc_attr( $saved_sheet_id ); ?>" <?php echo esc_attr( $disable_text ); ?> />
+        <a href="" class="gs-name help-link">
+            <img src="<?php echo esc_url( WPFORMS_GOOGLESHEET_URL ); ?>assets/img/help.png" class="help-icon">
+            <span class='hover-data'>
+                <?php echo esc_html__( 'You can get sheet ID from your sheet URL.', 'gsheetconnector-wpforms' ); ?>
+            </span>
+        </a>
+    </p>
+
+    <p>
+        <label><?php echo esc_html__( 'Google Sheet Tab Name', 'gsheetconnector-wpforms' ); ?></label>
+        <input type="text" name="wpform-gs[sheet-tab-name]" id="wpforms-sheet-tab-name"
+            value="<?php echo esc_attr( $saved_tab_name ); ?>" <?php echo esc_attr( $disable_text ); ?> />
+        <a href="" class="gs-name help-link">
+            <img src="<?php echo esc_url( WPFORMS_GOOGLESHEET_URL ); ?>assets/img/help.png" class="help-icon">
+            <span class='hover-data'>
+                <?php echo esc_html__( 'Open your Google Sheet you want to link with your contact form. You will notice tab names at the bottom. Copy the name of the tab where you want entries.', 'gsheetconnector-wpforms' ); ?>
+            </span>
+        </a>
+    </p>
+
+    <p>
+        <label><?php echo esc_html__( 'Google Tab Id', 'gsheetconnector-wpforms' ); ?></label>
+        <input type="text" name="wpform-gs[tab-id]" id="wpforms-gs-tab-id"
+            value="<?php echo esc_attr( $saved_tab_id ); ?>" <?php echo esc_attr( $disable_text ); ?> />
+        <a href="" class="gs-name help-link">
+            <img src="<?php echo esc_url( WPFORMS_GOOGLESHEET_URL ); ?>assets/img/help.png" class="help-icon">
+            <span class='hover-data'>
+                <?php echo esc_html__( 'You can get the tab ID from your Google Sheet URL.', 'gsheetconnector-wpforms' ); ?>
+            </span>
+        </a>
+    </p>
+
+    <?php
+    if (
+        ( ! empty( $saved_sheet_name ) ) &&
+        ( ! empty( $saved_tab_name ) ) &&
+        ( ! empty( $saved_sheet_id ) ) &&
+        ( ! empty( $saved_tab_id ) )
+    ) {
+        $sheet_url = "https://docs.google.com/spreadsheets/d/" . urlencode( $saved_sheet_id ) . "/edit#gid=" . urlencode( $saved_tab_id );
+        ?>
+        <p>
+            <a href="<?php echo esc_url( $sheet_url ); ?>" target="_blank" class="cf7_gs_link_wpfrom">
+                <?php echo esc_html__( 'Google Sheet Link', 'gsheetconnector-wpforms' ); ?>
+            </a>
+        </p>
     <?php } ?>
 
 </div>
 
-<input type="hidden" name="form-id" id="form-id" value="<?php echo $form_id; ?>">
+<input type="hidden" name="form-id" id="form-id" value="<?php echo esc_attr( $form_id ); ?>">
+
+
 </div>
 <!-- Upgrade to PRO -->
 <br />
@@ -229,7 +265,7 @@ class WPforms_Googlesheet_Services {
                 </div>
                 <div class="gsh_wpform_pro_img_int">
                     <img width="250" height="200" alt="wpform-GSheetConnector"
-                        src="<?php echo WPFORMS_GOOGLESHEET_URL; ?>assets/img/WPForms-GSheetConnector-desktop-img.png"
+                        src="<?php echo esc_url( WPFORMS_GOOGLESHEET_URL . 'assets/img/WPForms-GSheetConnector-desktop-img.png' ); ?>"
                         class="">
                 </div>
                 <div class="gsh_wpform_pro_fatur_int2">
@@ -320,19 +356,46 @@ class WPforms_Googlesheet_Services {
 
       ?>
 
-<div class="main-promotion-box"> <a href="#" class="close-link"></a>
-  <div class="promotion-inner">
-    <h2><?php echo __('A way to connect WordPress', 'gsheetconnector-wpforms'); ?> <br />
-      <?php echo __('and', 'gsheetconnector-wpforms'); ?> <span><?php echo __('Google Sheets Pro', 'gsheetconnector-wpforms'); ?></span></h2>
-    <p class="ratings"><?php echo __('Ratings', 'gsheetconnector-wpforms'); ?> : <span></span></p>
-    <p><?php echo __('The Most Powerful Bridge Between WordPress  and', 'gsheetconnector-wpforms'); ?> <strong><?php echo __('Google Sheets', 'gsheetconnector-wpforms'); ?></strong>, <br />
-      <?php echo __('Now available for popular', 'gsheetconnector-wpforms'); ?> <strong><?php echo __('Contact Forms', 'gsheetconnector-wpforms'); ?></strong>, <strong><?php echo __('Page Builder Forms', 'gsheetconnector-wpforms'); ?></strong>,<br />
-      <?php echo __('and', 'gsheetconnector-wpforms'); ?> <strong><?php echo __('E-commerce', 'gsheetconnector-wpforms'); ?></strong> <?php echo __('Platforms like ', 'gsheetconnector-wpforms'); ?> <strong><?php echo __('WooCommerce', 'gsheetconnector-wpforms'); ?></strong> <br />
-      <?php echo __('and', 'gsheetconnector-wpforms'); ?> <strong><?php echo __('Easy Digital Downloads', 'gsheetconnector-wpforms'); ?></strong> (<?php echo __('EDD', 'gsheetconnector-wpforms'); ?>).</p>
-    <div class="button-bar"> <a href="https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro" target="_blank"><?php echo __('Buy Now', 'gsheetconnector-wpforms'); ?></a> <a href="https://demo.gsheetconnector.com/wpforms-google-sheet-connector-pro/" target="_blank"><?php echo __('Check Demo', 'gsheetconnector-wpforms'); ?></a> </div>
-  </div>
-  <div class="gsheet-plugins"></div>
-</div> <!-- main-promotion-box #end -->
+<div class="main-promotion-box"> 
+    <a href="#" class="close-link"></a>
+    <div class="promotion-inner">
+        <h2>
+            <?php echo esc_html__( 'A way to connect WordPress', 'gsheetconnector-wpforms' ); ?><br />
+            <?php echo esc_html__( 'and', 'gsheetconnector-wpforms' ); ?> 
+            <span><?php echo esc_html__( 'Google Sheets Pro', 'gsheetconnector-wpforms' ); ?></span>
+        </h2>
+
+        <p class="ratings">
+            <?php echo esc_html__( 'Ratings', 'gsheetconnector-wpforms' ); ?> : <span></span>
+        </p>
+
+        <p>
+            <?php echo esc_html__( 'The Most Powerful Bridge Between WordPress  and', 'gsheetconnector-wpforms' ); ?>
+            <strong><?php echo esc_html__( 'Google Sheets', 'gsheetconnector-wpforms' ); ?></strong>, <br />
+            <?php echo esc_html__( 'Now available for popular', 'gsheetconnector-wpforms' ); ?>
+            <strong><?php echo esc_html__( 'Contact Forms', 'gsheetconnector-wpforms' ); ?></strong>, 
+            <strong><?php echo esc_html__( 'Page Builder Forms', 'gsheetconnector-wpforms' ); ?></strong>,<br />
+            <?php echo esc_html__( 'and', 'gsheetconnector-wpforms' ); ?>
+            <strong><?php echo esc_html__( 'E-commerce', 'gsheetconnector-wpforms' ); ?></strong>
+            <?php echo esc_html__( 'Platforms like ', 'gsheetconnector-wpforms' ); ?>
+            <strong><?php echo esc_html__( 'WooCommerce', 'gsheetconnector-wpforms' ); ?></strong><br />
+            <?php echo esc_html__( 'and', 'gsheetconnector-wpforms' ); ?>
+            <strong><?php echo esc_html__( 'Easy Digital Downloads', 'gsheetconnector-wpforms' ); ?></strong> 
+            (<?php echo esc_html__( 'EDD', 'gsheetconnector-wpforms' ); ?>).
+        </p>
+
+        <div class="button-bar">
+            <a href="https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro" target="_blank">
+                <?php echo esc_html__( 'Buy Now', 'gsheetconnector-wpforms' ); ?>
+            </a>
+            <a href="https://demo.gsheetconnector.com/wpforms-google-sheet-connector-pro/" target="_blank">
+                <?php echo esc_html__( 'Check Demo', 'gsheetconnector-wpforms' ); ?>
+            </a>
+        </div>
+    </div>
+    <div class="gsheet-plugins"></div>
+</div>
+ <!-- main-promotion-box #end -->
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -384,18 +447,33 @@ document.addEventListener("DOMContentLoaded", function() {
             </option>
             <option value="wpforms_manual" disabled=""><?php echo esc_html__('Use Manual Client/Secret Key (Use Your Google API Configuration) (Upgrade To PRO)', 'gsheetconnector-wpforms'); ?></option>
         </select>
-        <p class="int-meth-btn-wpforms"><a href="https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro" target="_blank"><input type="button" name="save-method-api-wpforms" id=""
-                value="<?php _e('Upgrade To PRO', 'gsheetconnector-wpforms'); ?>" class="button button-primary" /></a>
-            <span class="tooltip"> <img src="<?php echo WPFORMS_GOOGLESHEET_URL; ?>assets/img/help.png"
-                        class="help-icon"> <span
-                        class="tooltiptext tooltip-right"><?php _e('Manual Client/Secret Key (Use Your Google API Configuration) method is available in the PRO version of the plugin.', 'gsheetconnector-wpforms'); ?></span></span>
+        <p class="int-meth-btn-wpforms">
+            <a href="https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro" target="_blank">
+                <input 
+                    type="button" 
+                    name="save-method-api-wpforms" 
+                    id="" 
+                    value="<?php echo esc_attr__( 'Upgrade To PRO', 'gsheetconnector-wpforms' ); ?>" 
+                    class="button button-primary" />
+            </a>
+            
+            <span class="tooltip"> 
+                <img 
+                    src="<?php echo esc_url( WPFORMS_GOOGLESHEET_URL . 'assets/img/help.png' ); ?>" 
+                    class="help-icon" 
+                    alt="Help Icon"> 
+                    
+                <span class="tooltiptext tooltip-right">
+                    <?php echo esc_html__( 'Manual Client/Secret Key (Use Your Google API Configuration) method is available in the PRO version of the plugin.', 'gsheetconnector-wpforms' ); ?>
+                </span>
+            </span>
         </p>
+
     </div>
 </div>
 <div class="gs-parts-wpform">
     <div class="card-wp">
-        <input type="hidden" name="redirect_auth_wpforms" id="redirect_auth_wpforms"
-            value="<?php echo (isset($header)) ?$header:''; ?>">
+        <input type="hidden" name="redirect_auth_wpforms" id="redirect_auth_wpforms" value="<?php echo isset( $header ) ? esc_attr( $header ) : ''; ?>">
         <span class="wpforms-setting-field log-setting">
             <h2 class="title"><?php echo esc_html__('WPForms - Google Sheet Integration', 'gsheetconnector-wpforms'); ?></h2>
              
@@ -414,9 +492,6 @@ document.addEventListener("DOMContentLoaded", function() {
 									<span> <?php echo esc_html__('* Ensure that you enable the checkbox for each of these services.', 'gsheetconnector-wpforms'); ?></span>
 								</li>
                             </ul>
-                             
-                               
-                              
                         </li>
                         <li><?php echo esc_html__('This will allow the integration to access your Google Drive and Google Sheets.', 'gsheetconnector-wpforms'); ?>
                         </li>
@@ -424,41 +499,48 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             <?php } ?>
 
-         
             <p class="integration-box">
-                <label><?php echo __('Google Access Code', 'gsheetconnector-wpforms'); ?></label>
+                <label><?php echo esc_html__('Google Access Code', 'gsheetconnector-wpforms'); ?></label>
 
-                <?php if (!empty(get_option('wpform_gs_token')) && get_option('wpform_gs_token') !== "") { ?>
-                <input type="text" name="google-access-code" id="wpforms-setting-google-access-code" value="" disabled
-                    placeholder="<?php echo __('Currently Active', 'gsheetconnector-wpforms'); ?>" />
-                <input type="button" name="wp-deactivate-log" id="wp-deactivate-log"
-                    value="<?php echo __('Deactivate', 'gsheetconnector-wpforms'); ?>" class="button button-primary" />
-                <span class="tooltip"> <img src="<?php echo WPFORMS_GOOGLESHEET_URL; ?>assets/img/help.png"
-                        class="help-icon"> <span
-                        class="tooltiptext tooltip-right"><?php _e('On deactivation, all your data saved with authentication will be removed and you need to reauthenticate with your google account and configure sheet name and tab.', 'gsheetconnector-wpforms'); ?></span></span>
-                <span class="loading-sign-deactive">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <?php } else { 
-            $redirct_uri = admin_url( 'admin.php?page=wpform-google-sheet-config' );
-         ?>
+                <?php if ( ! empty( get_option( 'wpform_gs_token' ) ) && get_option( 'wpform_gs_token' ) !== "" ) { ?>
+                    <input type="text" name="google-access-code" id="wpforms-setting-google-access-code" value="" disabled
+                        placeholder="<?php echo esc_attr__('Currently Active', 'gsheetconnector-wpforms'); ?>" />
+                    
+                    <input type="button" name="wp-deactivate-log" id="wp-deactivate-log"
+                        value="<?php echo esc_attr__('Deactivate', 'gsheetconnector-wpforms'); ?>" class="button button-primary" />
+                    
+                    <span class="tooltip">
+                        <img src="<?php echo esc_url( WPFORMS_GOOGLESHEET_URL . 'assets/img/help.png' ); ?>" class="help-icon">
+                        <span class="tooltiptext tooltip-right">
+                            <?php esc_html_e( 'On deactivation, all your data saved with authentication will be removed and you need to reauthenticate with your google account and configure sheet name and tab.', 'gsheetconnector-wpforms' ); ?>
+                        </span>
+                    </span>
+                    
+                    <span class="loading-sign-deactive">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <?php } else {
+                    $redirct_uri = admin_url( 'admin.php?page=wpform-google-sheet-config' );
+                ?>
+
 
          <input type="text" name="google-access-code" id="wpforms-setting-google-access-code" value="<?php echo esc_attr($Code); ?>" disabled placeholder="<?php echo esc_html__('Click Sign in with Google', 'gsheetconnector-wpforms'); ?>" oncopy="return false;" onpaste="return false;" oncut="return false;" />
 
                 <!-- <a href="https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=1075324102277-drjc21uouvq2d0l7hlgv3bmm67er90mc.apps.googleusercontent.com&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&scope=https%3A%2F%2Fspreadsheets.google.com%2Ffeeds%2F+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/drive.metadata.readonly" target="_blank" class="wpforms-btn wpforms-btn-md wpforms-btn-light-grey"><?php //echo __('Get Code', 'gsheetconnector-wpforms'); ?></a> -->
                 
 
-            <?php if (empty($Code)) { ?>  
-                <a href="https://oauth.gsheetconnector.com/index.php?client_admin_url=<?php echo $redirct_uri;  ?>&plugin=woocommercegsheetconnector"
-                    >
-                    <img class="button_wpformgsc" src="<?php echo WPFORMS_GOOGLESHEET_URL ?>/assets/img/btn_google_signin_dark_pressed_web.gif">
+            <?php if ( empty( $Code ) ) { ?>  
+                <a href="<?php echo esc_url( 'https://oauth.gsheetconnector.com/index.php?client_admin_url=' . urlencode( $redirct_uri ) . '&plugin=woocommercegsheetconnector' ); ?>">
+                    <img class="button_wpformgsc" src="<?php echo esc_url( WPFORMS_GOOGLESHEET_URL . 'assets/img/btn_google_signin_dark_pressed_web.gif' ); ?>">
                 </a>
-                <?php } ?>
+            <?php } ?>
             <?php } ?>
                 <!-- set nonce -->
-                <input type="hidden" name="gs-ajax-nonce" id="gs-ajax-nonce"
-                    value="<?php echo wp_create_nonce('gs-ajax-nonce'); ?>" />
+               <input type="hidden" name="gs-ajax-nonce" id="gs-ajax-nonce"
+            value="<?php echo esc_attr( wp_create_nonce('gs-ajax-nonce') ); ?>" />
+
                 <?php if (!empty($_GET['code'])) { ?>
                     <input type="submit" name="save-gs" class="wpforms-btn wpforms-btn-md wpforms-btn-orange blinking-button-wc"
-                       id="save-wpform-gs-code" value="Click here to Save Authentication Code">
+                   id="save-wpform-gs-code" value="<?php echo esc_attr__( 'Click here to Save Authentication Code', 'gsheetconnector-wpforms' ); ?>">
+
                 <?php } ?>
                  <span class="loading-sign">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             </p>
@@ -469,8 +551,10 @@ document.addEventListener("DOMContentLoaded", function() {
         <p style="color:#c80d0d; font-size: 14px; border: 1px solid;padding: 8px;">
           <?php echo esc_html(__('Something went wrong! It looks you have not given the permission of Google Drive and Google Sheets from your google account.Please Deactivate Auth and Re-Authenticate again with the permissions.', 'gsheetconnector-wpforms')); ?>
         </p>
-        <p style="color:#c80d0d;border: 1px solid;padding: 8px;"><img width="350px"
-                    src="<?php echo WPFORMS_GOOGLESHEET_URL; ?>assets/img/permission_screen.png"></p>
+        <p style="color:#c80d0d;border: 1px solid;padding: 8px;">
+            <img width="350" src="<?php echo esc_url( WPFORMS_GOOGLESHEET_URL . 'assets/img/permission_screen.png' ); ?>">
+        </p>
+
             <p style="color:#c80d0d; font-size: 14px; border: 1px solid;padding: 8px;">
                 <?php echo esc_html(__('Also,', 'gsheetconnector-wpforms')); ?><a href="https://myaccount.google.com/permissions"
                     target="_blank"> <?php echo esc_html(__('Click Here ', 'gsheetconnector-wpforms')); ?></a>
@@ -488,12 +572,18 @@ document.addEventListener("DOMContentLoaded", function() {
          if (!empty($email_account)) { 
              update_option( 'wpform_gs_auth_expired_free', 'false' );
           ?>
-            <p class="connected-account-wpform">
-                <?php printf( __( 'Connected email account: %s', 'gsheetconnector-wpforms' ), $email_account ); ?>
+           <p class="connected-account-wpform">
+                <?php
+                // translators: %s is the connected Google email account address.
+                printf(
+                    esc_html__( 'Connected email account: %s', 'gsheetconnector-wpforms' ),
+                    esc_html( $email_account )
+                );
+                ?>
             </p>
-                <?php } else{
-             update_option( 'wpform_gs_auth_expired_free', 'true' );
-                  ?>
+
+            <?php } else{
+            update_option( 'wpform_gs_auth_expired_free', 'true' ); ?>
             <p style="color:red">
                 <?php echo esc_html(__('Something went wrong ! Your Auth Code may be wrong or expired. Please Deactivate AUTH and Re-Authenticate again. ', 'gsheetconnector-wpforms')); ?>
             </p>
@@ -503,7 +593,7 @@ document.addEventListener("DOMContentLoaded", function() {
           }
           ?>
           <br>
-          <p>
+        <p>
             <div id="wp-gsc-cta" class="wp-gsc-privacy-box">
                 <div class="wp-gsc-table">
                     <div class="wp-gsc-less-free">
@@ -512,27 +602,23 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             </div>
         </p>
-            <span class="wpforms-setting-field">
-                <label><?php echo __('Debug Log', 'gsheetconnector-wpforms'); ?></label> 
-                <button class="wpgsc-logs"><?php echo __('View', 'gsheetconnector-wpforms'); ?></button>
-                <!-- <label><a href="<?php echo plugins_url('logs/log.txt', __FILE__); ?>" target="_blank"
-                        class="wpform-debug-view"><?php echo __('View', 'gsheetconnector-wpforms'); ?></a></label> -->
-                <label><a class="debug-clear-kk"><?php echo __('Clear', 'gsheetconnector-wpforms'); ?></a></label>
-                <span class="clear-loading-sign">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <p id="gs-validation-message"></p>
-               
-                <span id="deactivate-message"></span>
-            </span>
-           
-            
-           
+        <span class="wpforms-setting-field">
+            <label><?php echo esc_html__( 'Debug Log', 'gsheetconnector-wpforms' ); ?></label> 
+
+            <button class="wpgsc-logs"><?php echo esc_html__( 'View', 'gsheetconnector-wpforms' ); ?></button>
+               <label>
+                <a class="debug-clear-kk"><?php echo esc_html__( 'Clear', 'gsheetconnector-wpforms' ); ?></a>
+            </label>
+
+            <span class="clear-loading-sign">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <p id="gs-validation-message"></p>
+            <span id="deactivate-message"></span>
+        </span>
+
     </div>
-    
 </div>
 <div class="wp-system-Error-logs">
-
     <button id="copy-logs-btn" onclick="copyLogs()"><?php echo esc_html__('Copy Logs', 'gsheetconnector-wpforms'); ?></button>
-
     <div class="wpdisplayLogs">
         <?php
         $wpexistDebugFile = get_option('wpf_gs_debug_log_file');
@@ -565,10 +651,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 </script>
-
-
- 
-
 
 <div class="two-col wpform-box-help12">
     <div class="col wpform-box12">
@@ -693,38 +775,44 @@ jQuery(document).ready(function($) {
       ));
       ?>
 <div class="wp-formSelect">
-    <h3><?php echo __('Select Form', 'gsheetconnector-wpforms'); ?></h3>
+    <h3><?php echo esc_html__('Select Form', 'gsheetconnector-wpforms'); ?>
+</h3>
 </div>
 <div class="wp-select">
     <select id="wpforms_select" name="wpforms">
-        <option value=""><?php echo __('Select Form', 'gsheetconnector-wpforms'); ?></option>
+        <option value=""><?php echo esc_html__('Select Form', 'gsheetconnector-wpforms'); ?>
+       </option>
         <?php foreach ($forms as $form) { ?>
         <option value="<?php echo $form->ID; ?>"><?php echo $form->post_title; ?></option>
         <?php } ?>
     </select>
     <!-- <span class="loading-sign-select">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> -->
-    <input type="hidden" name="wp-ajax-nonce" id="wp-ajax-nonce" value="<?php echo wp_create_nonce('wp-ajax-nonce'); ?>" />
+    <input type="hidden" name="wp-ajax-nonce" id="wp-ajax-nonce" value="<?php echo esc_attr( wp_create_nonce('wp-ajax-nonce') ); ?>" />
 </div>
 <div class="wrap gs-form">
     <div class="wp-parts">
 
         <div class="card" id="wpform-gs">
             <form method="post">
-                <h2 class="title"><?php echo __('WPForms - Google Sheet Settings', 'gsheetconnector-wpforms'); ?></h2>
+                <h2 class="title"><?php echo esc_html__('WPForms - Google Sheet Settings', 'gsheetconnector-wpforms'); ?>
+                    </h2>
                  
               
                 <p class="deprecated-notice">
-    <?php _e( 'This settings page is deprecated and moved old settings to new settings.Follow these below steps to import the old settings into the new settings.', 'gsheetconnector-wpforms' ); ?>
+   <?php esc_html_e( 'This settings page is deprecated and moved old settings to new settings. Follow these below steps to import the old settings into the new settings.', 'gsheetconnector-wpforms' ); ?>
+
      </p>
-      <p class="old_settings_steps">1) <?php echo __('Select the form which you want to connect with your spreadsheet.', 'gsheetconnector-wpforms'); ?>
-     </p>
+      <p class="old_settings_steps">1) <?php echo esc_html__('Select the form which you want to connect with your spreadsheet.', 'gsheetconnector-wpforms'); ?>
+          
+      </p>
         <p> 
             <img src="<?php echo WPFORMS_GOOGLESHEET_URL; ?>assets/img/faq-screenshot1.png" class="alignnone">
 
          </p>
       <p class="old_settings_steps">
-        2) <?php echo __('Then you can see your old settings here.', 'gsheetconnector-wpforms'); ?>
-      </p>
+        2) <?php esc_html_e('Then you can see your old settings here.', 'gsheetconnector-wpforms'); ?>
+            
+        </p>
       <p>
      <img src="<?php echo WPFORMS_GOOGLESHEET_URL; ?>assets/img/new_settings_screenshot.png" class="alignnone">
 
@@ -850,14 +938,15 @@ jQuery(document).ready(function($) {
             'type'    => 'upgrade',
             'message' => $upgrade_text
          ) );
-         echo $upgrade_block;
+         echo wp_kses_post( $upgrade_block );
+
       }
    }
    
    public function set_upgrade_notification_interval() {
       // check nonce
       check_ajax_referer( 'wpforms_gs_upgrade_ajax_nonce', 'security' );
-      $time_interval = date( 'Y-m-d', strtotime( '+10 day' ) );
+      $time_interval = gmdate( 'Y-m-d', strtotime( '+10 day' ) );
       update_option( 'wpforms_gs_upgrade_notice_interval', $time_interval );
       wp_send_json_success();
    }

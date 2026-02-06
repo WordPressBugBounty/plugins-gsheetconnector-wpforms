@@ -165,7 +165,7 @@ class Wpform_gs_Connector_Utility
         WP_Filesystem();
 
         $upload_dir = wp_upload_dir();
-        $log_dir = trailingslashit( $upload_dir['basedir'] ) . 'gscwpforms-debug-logs/';
+        $log_dir = trailingslashit( $upload_dir['basedir'] ) . 'gsc-wpforms-logs/';
         $log_file = get_option( 'wpf_gs_debug_log_file' );
         $timestamp = gmdate( 'Y-m-d H:i:s' ) . "\t PHP " . phpversion() . "\t";
 

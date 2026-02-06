@@ -32,24 +32,34 @@ $plugin_version = defined('WPFORMS_GOOGLESHEET_VERSION') ? WPFORMS_GOOGLESHEET_V
 <div class="gsheet-header">
     <div class="gsheet-logo">
         <a href="https://www.gsheetconnector.com/"><i></i></a></div>
-    <h1 class="gsheet-logo-text"><span class="title"><?php echo esc_html__( "WPForms - GSheetConnector", "gsheetconnector-wpforms" ); ?></span> <small><?php echo esc_html__( "Version :", "gsheetconnector-wpforms" ); ?> <?php  echo esc_html($plugin_version, WPFORMS_GOOGLESHEET_VERSION); ?> </small></h1>
-    <a href="https://support.gsheetconnector.com/kb" title="gsheet Knowledge Base" target="_blank" class="button gsheet-help"><i class="dashicons dashicons-editor-help"></i></a>
+    <h1 class="gsheet-logo-text"><span class="title"><?php echo esc_html__( "GSheetConnector For WPForms", "gsheetconnector-wpforms" ); ?></span> <small><?php echo esc_html__( "Version :", "gsheetconnector-wpforms" ); ?> <?php  echo esc_html($plugin_version, WPFORMS_GOOGLESHEET_VERSION); ?> </small></h1>
+    
+	<ul> 
+		<li><a href="https://www.gsheetconnector.com/docs/wpforms-gsheetconnector/introduction" title="Document" target="_blank"><i class="fa-regular fa-file-lines"></i></a></li>
+		<li><a href="https://www.gsheetconnector.com/support" title="Support" target="_blank"><i class="fa-regular fa-life-ring"></i></a></li>
+		<li><a href="https://wordpress.org/plugins/gsheetconnector-wpforms/#developers" title="Changelog" target="_blank"><i class="fa-solid fa-bullhorn"></i></a></li>
+	</ul>
+	
 </div><!-- header #end -->
-<span class="dashboard-gsc"><?php echo esc_html( __('DASHBOARD', 'gsheetconnector-wpforms' ) ); ?></span>
-<span class="divider-gsc"> / </span>
-<span class="modules-gsc"> <?php echo esc_html( __($active_tab_name, 'gsheetconnector-wpforms' ) ); ?></span>
 
-<div class="wrap">
+<div class="breadcrumb">
+	<span class="dashboard-gsc"><?php echo esc_html( __('DASHBOARD', 'gsheetconnector-wpforms' ) ); ?></span>
+	<span class="divider-gsc"> / </span>
+	<span class="modules-gsc"> <?php echo esc_html( __($active_tab_name, 'gsheetconnector-wpforms' ) ); ?></span>
+</div>
+
+
 	
    <?php
-   $tabs = array(
-       'integration'    => __('Integration', 'gsheetconnector-wpforms'),
-       'settings'       => __('GoogleSheet Form Settings', 'gsheetconnector-wpforms'),
-       'system_status'  => __('System Status', 'gsheetconnector-wpforms'),
-	   'extensions'  => __('Extensions', 'gsheetconnector-wpforms'),
-   );
+  $tabs = array(
+    'integration'    => esc_html__( 'Integration', 'gsheetconnector-wpforms' ),
+    'settings'       => esc_html__( 'GoogleSheet Form Settings', 'gsheetconnector-wpforms' ),
+    'system_status'  => esc_html__( 'System Status', 'gsheetconnector-wpforms' ),
+    'extensions'     => esc_html__( 'Extensions', 'gsheetconnector-wpforms' ),
+);
+
    echo '<div id="icon-themes" class="icon32"><br></div>';
-   echo '<h2 class="nav-tab-wrapper">';
+   echo '<div class="nav-tab-wrapper">';
     foreach ( $tabs as $tab => $name ) {
         $class = ( $tab === $active_tab ) ? ' nav-tab-active' : '';
         $tab_url = esc_url( add_query_arg( [ 'page' => 'wpform-google-sheet-config', 'tab' => $tab ] ) );
@@ -57,7 +67,7 @@ $plugin_version = defined('WPFORMS_GOOGLESHEET_VERSION') ? WPFORMS_GOOGLESHEET_V
         echo '<a class="nav-tab' . esc_attr( $class ) . '" href="' . $tab_url . '">' . $tab_name . '</a>';
     }
 
-   echo '</h2>';
+   echo '</div><div class="wrap-gsc">';
    switch ($active_tab) {
       case 'settings' :
          $wpform_settings = new WPforms_Googlesheet_Services();

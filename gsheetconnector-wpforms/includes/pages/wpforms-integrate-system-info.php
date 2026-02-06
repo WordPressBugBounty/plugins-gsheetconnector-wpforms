@@ -3,6 +3,12 @@
 if ( ! defined( 'ABSPATH' ) ) {
    exit();
 }
+
+// 🔒 Prevent Subscribers from seeing sensitive info
+if ( ! current_user_can( 'manage_options' ) ) {
+    wp_die( __( 'You do not have permission to access this page.', 'gsheetconnector-wpforms' ) );
+}
+
 $WpForms_gs_tools_service = new WPforms_Gsheet_Connector_Init();
 ?>
 <div class="system-statuswc">

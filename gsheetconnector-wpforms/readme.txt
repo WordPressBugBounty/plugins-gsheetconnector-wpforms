@@ -1,40 +1,104 @@
-=== GSheetConnector For WPForms ===
+=== GSheetConnector For WPForms - WPForms Google Sheets Integration (Real-Time Sync) ===
 Contributors: westerndeal, abdullah17, gsheetconnector
 Author URL: https://www.gsheetconnector.com/
-Tags: WPFORMS, WPForms Google Sheet, Google Sheet Integration, WPForms Google Sheet Integration, Contact Form Google Sheet Integration
-Tested up to: 6.8
+Tags: WPForms, WPForms Google Sheets, Google Sheets Integration, WPForms Google Sheets Integration, Contact Form Google Sheets
+Tested up to: 6.9
 Requires at least: 5.6
 Requires PHP: 7.4 
-Stable tag: 4.0.0
+Stable tag: 4.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+Connect WPForms to Google Sheets and automatically send form entries to a google sheet in real-time. No manual exports, no coding required.
+
 == Description ==
 
-This is an Addon Plugin of WPForms, A bridge between your [WordPress](https://wordpress.org/) based **[WPForms](https://wordpress.org/plugins/wpforms-lite/) and [Google Sheets](https://www.google.com/sheets/about/).** It helps to record the entries in real-time.
+Automatically send WPForms entries to Google Sheets in real-time.
 
-When a visitor submits the form on your website from the frontend using WPForms, upon the form submission, such responses/filled entries are also sent to Google Sheets.
-**Compatible with [WPForms Lite](https://wordpress.org/plugins/wpforms-lite/) and [PRO Versions](https://wpforms.com/pricing/)**
+**GSheetConnector for WPForms** is a powerful and user-friendly add-on that connects your [WordPress](https://wordpress.org/) website running **[WPForms](https://wordpress.org/plugins/wpforms-lite/)** with **[Google Sheets](https://www.google.com/sheets/about/)** and automatically saves every form submission into a connected spreadsheet.
 
-[Homepage](https://www.gsheetconnector.com/) | [Documentation](https://www.gsheetconnector.com/docs) | [Support](https://www.gsheetconnector.com/support) | [Demo](https://wpformsdemo.gsheetconnector.com/) | [Premium Version](https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro?wp-repo)
+When a visitor submits a form on your website, the data is instantly synced to Google Sheets — no manual export, no copy-paste, and no coding required. This makes it easy to manage, share, and analyze WPForms entries directly inside Google Sheets.
 
-= 🤝 PRO FEATURES 🙌 =
+This plugin works with both **[WPForms Lite](https://wordpress.org/plugins/wpforms-lite/)** and **[WPForms Pro](https://wpforms.com/pricing/)** and allows you to build a complete **WPForms to Google Sheets automation system** without writing any code.
 
-Get a rid of making mistakes while adding the sheet settings or adding the headers manually to the sheet column. We have Launched the [WPForms Google Sheet Connector Pro](https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro?wp-repo) version with more automated features.
-➜ Custom Google API Integration Settings
-➜ Allowing to Create a New Sheet from Plugin Settings
-➜ Custom Ordering Feature / Manage Fields to Display in Sheet using Enable-Disable / Edit the Fields/ Headers Name to display in Google Sheet.
-➜ Using all the [Smart Tags](https://wpforms.com/docs/how-to-use-smart-tags-in-wpforms/) Fields in Headers
-➜ Syncronize Existing Entries for WPForms PRO users
-➜ Freeze Header Settings
-➜ Header Color and Row Odd/Even Colors.
-Refer to the features and benefits page for more detailed information on the features of the [WPForms Google Sheet PRO Addon Plugin](https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro?wp-repo)
+= 🚀 Key Features =
 
+🔄 Real-time sync of WPForms entries to Google Sheets  
+📄 Works with WPForms Lite and WPForms Pro (tested with the latest versions)  
+🧩 Feed-based form-to-sheet connections  
+📊 Supports multiple forms and multiple Google Sheets per form  
+🔑 Secure Google authentication (one-click OAuth)  
+🏷 Supports WPForms Smart Tags  
+📅 Sync submission date and time  
+🛠 Debug log and system status for troubleshooting  
+
+= 💡 Why Use GSheetConnector for WPForms? =
+
+Most businesses waste time exporting WPForms entries, downloading CSV files, and manually copying data into spreadsheets. GSheetConnector eliminates this by creating a **real-time connection between WPForms and Google Sheets**.
+
+Every form submission is automatically synced, allowing you to:
+• Follow up on leads instantly  
+• Share data with your team  
+• Build reports and dashboards  
+• Avoid data loss and human errors  
+• Manage everything inside Google Sheets  
+• Enable real-time collaboration  
+
+[Documentation](https://www.gsheetconnector.com/docs/gsheetconnnector-for-wpforms/) | [Support](https://www.gsheetconnector.com/support) | [Demo](https://demo.gsheetconnector.com/wpforms-google-sheet-connector-pro/) | [WPForms Google Sheet Connector Pro](https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro?wp-repo) | [Our Plugins](https://www.gsheetconnector.com/plugins/)
+
+= 🤝 Powerful PRO Automation Features =
+
+Upgrade to **[WPForms Google Sheet Connector Pro](https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro?wp-repo)** to unlock full automation and advanced control:
+
+➜ Custom Google API integration (OAuth & Service Account)  
+➜ Create new Google Sheets directly from WordPress  
+➜ Field-to-column mapping  
+➜ Re-order or rename Google Sheet headers  
+➜ Use any [WPForms Smart Tags](https://wpforms.com/docs/how-to-use-smart-tags-in-wpforms/) as column headers  
+➜ Sync existing WPForms entries to Google Sheets  
+➜ Freeze header row  
+➜ Row colors (odd/even + header styling)  
+➜ Multiple feeds per form  
+➜ Date-based and filtered syncing  
+
+👉 Upgrade to Pro: https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro/
+
+**Trusted by 20,000+ active installations across FREE and PRO versions. Try WPForms Google Sheet Connector now and simplify your WPForms to Google Sheets workflow.**
 
 = ⚡️ Check Live Demo =
-[Demo URL: WPForms Demo](https://wpformsdemo.gsheetconnector.com/)
+🔗 [WPForms Live Demo – Click Here](https://demo.gsheetconnector.com/wpforms-google-sheet-connector-pro/)
 
-[Google Sheet URL to Check submitted Data](https://docs.google.com/spreadsheets/d/1ooBdX0cgtk155ww9MmdMTw8kDavIy5J1m76VwSrcTSs/edit#gid=1289172471)
+
+[Google Sheet URL to Check submitted Data](https://docs.google.com/spreadsheets/d/1IzQqqCziV2eOxH2vb1EFmcvkGt4WIIjHfxUIE4MdpZk/edit?gid=1144149960#gid=1144149960)
+
+= Related Google Sheets Connector Plugins =
+
+GSheetConnector also offers Google Sheets integrations for other popular WordPress plugins, helping you automate data syncing across your website without writing code.
+
+• **GSheetConnector for Contact Form 7** – Automatically send Contact Form 7 submissions to Google Sheets for easy lead management. *(Free & Pro available)*
+
+• **GSheetConnector for WPForms** – Sync WPForms entries to Google Sheets in real-time with flexible feed-based settings. *(Free & Pro available)*
+
+• **GSheetConnector for Gravity Forms** – Connect Gravity Forms submissions to Google Sheets and manage form data efficiently. *(Free & Pro available)*
+
+• **GSheetConnector for Ninja Forms** – Automatically export Ninja Forms entries to Google Sheets with reliable syncing. *(Free & Pro available)*
+
+• **GSheetConnector for Formidable Forms** – Connect Formidable Forms data to Google Sheets for structured data management. *(Free & Pro available)*
+
+• **GSheetConnector for Fluent Forms** – Export Fluent Forms entries to Google Sheets automatically upon form submission. *(Free & Pro available)*
+
+• **GSheetConnector for Elementor Forms** – Send Elementor form submissions directly to Google Sheets for reporting and collaboration. *(Free & Pro available)*
+
+• **GSheetConnector for WooCommerce** – Sync WooCommerce orders, customers, and products with Google Sheets for real-time tracking. *(Free & Pro available)*
+
+• **GSheetConnector for Divi Forms** – Integrate Divi form submissions with Google Sheets. *(Pro version only)*
+
+• **GSheetConnector for Avada Forms** – Send Avada form entries to Google Sheets for centralized data handling. *(Pro version only)*
+
+• **GSheetConnector for WordPress Core** – Import and export WordPress posts and pages using Google Sheets. *(Pro version only)*
+
+[Explore our Google Sheets connector plugins and access free versions where available.](https://www.gsheetconnector.com/plugins/)
+
 
 = ✨ How to Use this Plugin =
 
@@ -60,11 +124,22 @@ Refer to the features and benefits page for more detailed information on the fea
 
 🚀WPForms Forms Google Sheet Connector Introduction Video
 
-[youtube https://youtu.be/tgF9GfDjQOw?si=4Ej3vPfpxfDcU7hq]
+https://youtu.be/tgF9GfDjQOw?si=4Ej3vPfpxfDcU7hq
+
+### 🔐 Secure & Compliant
+
+GSheetConnector connects directly to **your Google account**. Your form data stays inside:
+• Your WordPress site  
+• Your Google Drive  
+
+No third-party servers, no external storage.
+
+
+If you need advanced automation, bulk sync, or multiple feeds, the Pro version gives you full control over how your WPForms data flows into Google Sheets.
 
 = Important Notes = 
 
-➜ You must pay very careful attention to your naming. This plugin will have unpredictable results if names and spellings do not match between your Google Sheets and WPForms settings.
+➜ Make sure the column headers in your Google Sheet match the field labels used in WPForms. Keeping names consistent ensures that form entries are mapped and synced correctly.
 
 👉 [Get WPForms PRO today]((https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro?wp-repo))
 
@@ -78,38 +153,152 @@ Enjoy!
 == Screenshots ==
 
 1. Google Sheet Integration Shown with Authentication along with Permissions. 
-2. How to Enter Sheet Name and Tab Name is shown.
-3. Entering the Field Header Names Manually in the Connected Sheet and Submitting the form.
+2. How to Enter Sheet Name and Tab Name is shown and Entering the Field Header Names Manually in the Connected Sheet and Submitting the form.
+3. GoogleSheet Form Settings.
 4. System Status. 
 5. Extensions.
 
-= How do I get the Google Access Code required in step 3 of Installation? =
-
-* On the `Admin Panel > WPForms > Google Sheet > Integration` page, click the "Get Code" button.
-* In a popup Google will ask you to authorize the plugin to connect to your Google Sheets. Authorize it - you may have to log in to your Google account if you aren't already logged in. 
-* On the next screen, you should receive the Access Code. Copy the code. 
-* Now you can paste this code back on the `Admin Panel > WPForms > Google Sheet > Integration` page.
-
 == Frequently Asked Questions ==
 
-= How to get smart tag like query_vars, user_meta key values to the Sheet?  =
+= How do I get the Google Access Code? =
 
-* First, use hook "wpforms_smart_tags" to add the smart tags with the key for which you want the value to the Google Sheet as below example.
+To connect WPForms with Google Sheets, you need to authorize your Google account.
 
-   add_filter( "wpforms_smart_tags", "edit_smart_tags" );
+Follow these steps:
 
-   public function edit_smart_tags( $tags ) {
-      $tags['query_var key="wpformstest"'] = esc_html__( 'Query String Variable', 'wpforms-lite' );
-      return $tags;
-   }
-* Add same key ( query_var key="wpformstest" ) to the Google Sheet header to get the values.
+1. Go to **WPForms → Google Sheet → Integration** in your WordPress admin.
+2. Click the **“Google Signin”** button.
+3. You will be redirected to Google to log in and authorize access to **Google Drive** and **Google Sheets**.  
+   Please allow both permissions.
+4. After authorization, Google will generate an **Access Code** and redirect you back to the plugin.
+5. Click **Save & Authenticate**.  
+   Your connected Google email will be displayed, confirming that the connection is successful.
 
-= entry_id and entry_date smart tag not getting saved to the Google Sheet.
 
-* WPForms lite version don't save form submitted entries to the database. For a reason entry_id is zero(0) and entry_date is null. Hence not being saved to the Google Sheet.
+= How can I send custom Smart Tag values (query_vars, user_meta, etc.) to Google Sheets? =
+
+You can add custom Smart Tags to WPForms and use them as column headers in Google Sheets.
+
+Add this code to your site:
+
+add_filter( "wpforms_smart_tags", "edit_smart_tags" );
+function edit_smart_tags( $tags ) {
+    $tags['query_var key="wpformstest"'] = 'Query String Variable';
+    return $tags;
+}
+
+Then add the same Smart Tag key  
+query_var key="wpformstest"  
+as a column header in your Google Sheet to receive the value.
+
+
+= Why are entry_id and entry_date not appearing in my Google Sheet? =
+
+In the free version of the plugin, only the submission date is supported using the **"date"** column. Other Smart Tags, require the Pro version.
+
+To use all Smart Tags and advanced syncing options, please upgrade to the  
+**[WPForms Google Sheet Connector Pro](https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro?wp-repo)**.
+
+
+= Can I connect multiple WPForms to different Google Sheets? =
+
+Yes. You can connect each WPForm to a different Google Sheet or even to different tabs within the same spreadsheet using feed-based connections.
+
+---
+
+= Does the plugin sync data in real-time? =
+
+Yes. As soon as a form is submitted, the data is automatically sent to Google Sheets.
+
+---
+
+= Is my data stored on external servers? =
+
+No. All data is transferred directly between your WordPress site and your Google account.  
+GSheetConnector does not store your form entries on any third-party servers.
+
+= Why is my WPForms data not being sent to Google Sheets? =
+
+This usually happens if Google authentication has expired or permissions were not granted correctly.
+
+Please check:
+• Your Google account is still connected in **WPForms → Google Sheet → Integration**
+• Google Drive and Google Sheets permissions are enabled
+• You have clicked **Save & Authenticate** after signing in
+
+If needed, simply re-authenticate your Google account from the Integration tab.
+
+---
+
+= Will the submission date and time be saved in Google Sheets? =
+
+Yes. The plugin can send the submission date and time to Google Sheets.  
+In the free version, you can use the **"date"** column.  
+The Pro version supports full date, time, and Smart Tag based values.
+
+---
+
+= Can I connect multiple WPForms to different Google Sheets? =
+
+Yes. You can connect each WPForm to its own Google Sheet or to different tabs within the same spreadsheet using feed-based connections.
+
+---
+
+= Can I map form fields to specific Google Sheet columns? =
+
+Yes. Field-to-column mapping is available in the **Pro version**, allowing you to control the column order, names, and structure of your Google Sheet.
+
+---
+
+= Is my form data stored securely? =
+
+Yes. All form data is transferred directly between your WordPress site and your Google account.  
+GSheetConnector does not store your form submissions on any external servers.
+
+---
+
+= Can I sync existing WPForms entries to Google Sheets? =
+
+Yes. The **Pro version** allows you to sync previously submitted WPForms entries to Google Sheets.
+
+---
+
+= Can I use Smart Tags in Google Sheet headers? =
+
+Yes. The **Pro version** allows you to use any WPForms Smart Tag as a column header, including user data, query strings, and custom values.
+
+---
+
+= What should I do if Google shows a “This app isn’t verified” warning? =
+
+This may appear when using a custom Google API project.  
+Click **Advanced** and then **Go to project** to continue. It is safe when you are connecting your own Google account.
+
+---
+
+= What does the Service Account option do? =
+
+Service Account authentication allows you to connect Google Sheets without repeated login prompts. It is ideal for websites that need uninterrupted syncing and higher reliability.
+
+---
+
+= Why am I getting errors or missing entries? =
+
+Enable **Debug Log** and **System Status** in the plugin settings to see detailed error messages. These tools help identify permission, API, or configuration issues quickly.
 
 
 == Changelog ==
+
+= 4.0.3 = (17-01-2026)
+* Fixed: freemius issues. 
+
+= 4.0.2 = (03-12-2025)
+* Added: UI changes.
+* Added: capabilities check for the access of the plugin pages. 
+
+= 4.0.1 = (20-11-2025)
+* Added: UI changes.
+* Fixed: Vulnerabilities issues. 
 
 = 4.0.0 = (29-07-2025) 
 * Secured the plugin code by eliminating remote file calls, adding file access checks, escaping output, and verifying nonces.

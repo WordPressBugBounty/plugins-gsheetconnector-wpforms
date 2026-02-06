@@ -1,37 +1,47 @@
-<?php
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-?>
-<div id="plugin-manager-data"
-     data-ajaxurl="<?php echo esc_url(admin_url('admin-ajax.php')); ?>"
-     data-plugin-nonce="<?php echo esc_attr(wp_create_nonce('plugin_manager_nonce')); ?>"
-     data-deactivate-nonce="<?php echo esc_attr(wp_create_nonce('deactivate_plugin_nonce')); ?>">
-</div>
-<!-- tab extenion page  -->
-<div class="wrap">
+<!-- tab extension page  -->
+<div class="wrap extension-wrap">
     <h2></h2>
     <?php
 
     $all_plugins = get_plugins();
-   
     $active_theme = wp_get_theme();
 
     $plugins = [
-        'woocommerce/woocommerce.php' => [
+        'wpforms-lite/wpforms.php' => [
             'connector' => 'gsheetconnector-wpforms/gsheetconnector-wpforms.php',
             'connector-pro' => 'gsheetconnector-wpforms-pro/gsheetconnector-wpforms-pro.php',
-            'name' => 'WooCommerce Google Sheet Connector',
-            'link' => 'https://www.gsheetconnector.com/woocommerce-google-sheet-connector-pro',
-            'img' => 'https://www.gsheetconnector.com/wp-content/uploads/wpplugin-org/woo-gsc.webp',
-            'text' => 'WooCommerce is a powerful and customizable eCommerce platform for building online stores.',
-            'pro_plugin_active' => 'gsheetconnector-wpforms-pro/gsheetconnector-wpforms-pro.php',
+            'name' => 'WPForms Google Sheet Connector',
+            'link' => 'https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro',
+            'img' => 'https://www.gsheetconnector.com/wp-content/uploads/wpplugin-org/wpforms-gsc.webp',
+            'text' => 'A bridge between your WordPress-based WPForms and Google Sheets.',
+            'pro_plugin_active' => 'gsheetconnector-wpform-pro/gsheetconnector-wpforms-pro.php',
             'url' => 'https://wordpress.org/plugins/gsheetconnector-wpforms/',
             'button' => 'Install Now',
             'badge' => 'PRO',
             'freeLink' => 'https://wordpress.org/plugins/gsheetconnector-wpforms/',
             'downloadLink' => 'https://downloads.wordpress.org/plugin/gsheetconnector-wpforms.zip',
-            'buyLink' => 'https://www.gsheetconnector.com/woocommerce-google-sheet-connector-pro',
-            'mainPlugin' => 'woocommerce/woocommerce.php',
-            'theme' => 'woocommerce'
+            'buyLink' => 'https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro',
+            'mainPlugin' => 'wpforms-lite/wpforms.php',
+            'theme' => 'wpforms'
+
+        ],
+        'gravityforms/gravityforms.php' => [
+            'connector' => 'gsheetconnector-gravityforms/gsheetconnector-gravityforms.php',
+            'connector-pro' => 'gsheetconnector-gravityforms-pro/gsheetconnector-gravityforms-pro.php',
+            'name' => 'Gravity Forms Google Sheet Connector',
+            'link' => 'https://www.gsheetconnector.com/gravity-forms-google-sheet-connector',
+            'img' => 'https://www.gsheetconnector.com/wp-content/uploads/wpplugin-org/grvity-gsc.webp',
+            'text' => 'Gravity Forms Google Sheets Connector Plugin is a bridge between your Gravity Forms and Google Sheets.',
+            'pro_plugin_active' => 'gsheetconnector-gravityforms-pro/gsheetconnector-gravityforms-pro.php',
+            'url' => 'https://wordpress.org/plugins/gsheetconnector-gravity-forms/',
+            'button' => 'Install Now',
+            'badge' => 'PRO',
+            'freeLink' => 'https://wordpress.org/plugins/gsheetconnector-gravity-forms/',
+            'downloadLink' => 'https://downloads.wordpress.org/plugin/gsheetconnector-gravity-forms.zip',
+            'buyLink' => 'https://www.gsheetconnector.com/gravity-forms-google-sheet-connector',
+            'mainPlugin' => 'gravityforms/gravityforms.php',
+            'theme' => 'gravityforms'
+
         ],
         'contact-form-7/wp-contact-form-7.php' => [
             'connector' => 'cf7-google-sheets-connector/google-sheet-connector.php',
@@ -51,7 +61,23 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
             'theme' => 'contact-form-7'
 
         ],
-
+        'woocommerce/woocommerce.php' => [
+            'connector' => 'wc-gsheetconnector/wc-gsheetconnector.php',
+            'connector-pro' => 'wc-gsheetconnector-pro/wc-gsheetconnector-pro.php',
+            'name' => 'WooCommerce Google Sheet Connector',
+            'link' => 'https://www.gsheetconnector.com/woocommerce-google-sheet-connector-pro',
+            'img' => 'https://www.gsheetconnector.com/wp-content/uploads/wpplugin-org/woo-gsc.webp',
+            'text' => 'WooCommerce is a powerful and customizable eCommerce platform for building online stores.',
+            'pro_plugin_active' => 'wc-gsheetconnector-pro/wc-gsheetconnector-pro.php',
+            'url' => 'https://wordpress.org/plugins/wc-gsheetconnector/',
+            'button' => 'Install Now',
+            'badge' => 'PRO',
+            'freeLink' => 'https://wordpress.org/plugins/wc-gsheetconnector/',
+            'downloadLink' => 'https://downloads.wordpress.org/plugin/wc-gsheetconnector.zip',
+            'buyLink' => 'https://www.gsheetconnector.com/woocommerce-google-sheet-connector-pro',
+            'mainPlugin' => 'woocommerce/woocommerce.php',
+            'theme' => 'woocommerce'
+        ],
         'pro-elements/pro-elements.php' => [
             'connector' => 'gsheetconnector-for-elementor-forms/gsheetconnector-for-elementor-forms.php',
             'connector-pro' => 'gsheetconnector-for-elementor-forms-pro/gsheetconnector-for-elementor-forms-pro.php',
@@ -71,24 +97,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
         ],
 
-        'wpforms-lite/wpforms.php' => [
-            'connector' => 'gsheetconnector-wpforms/gsheetconnector-wpforms.php',
-            'connector-pro' => 'gsheetconnector-wpforms-pro/gsheetconnector-wpforms-pro.php',
-            'name' => 'WPForms Google Sheet Connector',
-            'link' => 'https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro',
-            'img' => 'https://www.gsheetconnector.com/wp-content/uploads/wpplugin-org/wpforms-gsc.webp',
-            'text' => 'A bridge between your WordPress-based WPForms and Google Sheets.',
-            'pro_plugin_active' => 'gsheetconnector-wpforms-pro/gsheetconnector-wpforms-pro.php',
-            'url' => 'https://wordpress.org/plugins/gsheetconnector-wpforms/',
-            'button' => 'Install Now',
-            'badge' => 'PRO',
-            'freeLink' => 'https://wordpress.org/plugins/gsheetconnector-wpforms/',
-            'downloadLink' => 'https://downloads.wordpress.org/plugin/gsheetconnector-wpforms.zip',
-            'buyLink' => 'https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro',
-            'mainPlugin' => 'wpforms-lite/wpforms.php',
-            'theme' => 'wpforms'
 
-        ],
         'ninja-forms/ninja-forms.php' => [
             'connector' => 'gsheetconnector-ninja-forms/gsheetconnector-ninjaforms.php',
             'connector-pro' => 'gsheetconnector-ninja-forms-pro/gsheetconnector-ninjaform-pro.php',
@@ -106,24 +115,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
             'mainPlugin' => 'ninja-forms/ninja-forms.php',
             'theme' => 'ninja-forms'
         ],
-        'gravityforms/gravityforms.php' => [
-            'connector' => 'gsheetconnector-gravityforms/gsheetconnector-gravityforms.php',
-            'connector-pro' => 'gsheetconnector-gravity-forms-pro/gsheetconnector-gravity-forms-pro.php',
-            'name' => 'Gravity Forms Google Sheet Connector',
-            'link' => 'https://www.gsheetconnector.com/gravity-forms-google-sheet-connector',
-            'img' => 'https://www.gsheetconnector.com/wp-content/uploads/wpplugin-org/grvity-gsc.webp',
-            'text' => 'Gravity Forms Google Sheets Connector Plugin is a bridge between your Gravity Forms and Google Sheets.',
-            'pro_plugin_active' => 'gsheetconnector-gravity-forms-pro/gsheetconnector-gravity-forms-pro.php',
-            'url' => 'https://wordpress.org/plugins/gsheetconnector-gravity-forms/',
-            'button' => 'Install Now',
-            'badge' => 'PRO',
-            'freeLink' => 'https://wordpress.org/plugins/gsheetconnector-gravity-forms/',
-            'downloadLink' => 'https://downloads.wordpress.org/plugin/gsheetconnector-gravity-forms.zip',
-            'buyLink' => 'https://www.gsheetconnector.com/gravity-forms-google-sheet-connector',
-            'mainPlugin' => 'gravityforms/gravityforms.php',
-            'theme' => 'gravityforms'
 
-        ],
         'easy-digital-downloads/easy-digital-downloads.php' => [
             'connector' => 'gsheetconnector-easy-digital-downloads/gsheetconnector-easy-digital-downloads.php',
             'connector-pro' => 'gsheetconnector-easy-digital-downloads-pro/gsheetconnector-easy-digital-downloads-pro.php',
@@ -232,6 +224,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
     ?>
 
+
     <h2>Install and Activated Plugins</h2>
     <div class="gsheetconnector-addons-list">
         <?php
@@ -271,8 +264,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                                 <div class="addon-item-header">
                                     <div class="plugin-premium">PRO</div>
                                     <a href="<?php echo esc_url($details['buyLink']); ?>" target="_blank">
-                                        <!-- phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Image is not from WP Media Library -->
-                                        <img src="<?php echo esc_url($details['img']); ?>" alt="<?php echo esc_attr($details['name']); ?>">
+                                        <img src="<?php echo esc_url($details['img']); ?>" alt="<?php echo esc_attr($details['name']); ?>"
+                                            loading="plugin-img">
                                     </a>
                                     <div class="addon-item-header-meta">
                                         <div class="addon-item-meta-title">
@@ -289,27 +282,24 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                                 </div>
                                 <div class="addon-item-footer">
                                     <div class="button-bar">
-                                        <button class="activate-plugin-btn button button-free proactive"
+                                        <button class="gscwpform-activate-plugin-btn-pro button button-free proactive"
                                             data-plugin="<?php echo esc_attr($details['pro_plugin_active']); ?>">
-                                            <!-- phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Safe static plugin image -->
-                                            <img src="<?php echo esc_url(WPFORMS_GOOGLESHEET_URL . 'assets/img/ajax-loader.gif'); ?>"
-                                                alt="Loading..." class="loaderimg" />
-                                           <?php esc_html_e('Activate', 'gsheetconnector-wpforms'); ?>
+                                            <?php esc_attr_e('Activate', 'gsheetconnector-wpforms'); ?>
                                         </button>
+                                        <span class="loading-sign-active"></span>
                                     </div>
                                 </div>
                             </div>
                         <?php } else { ?>
                             <div class="gsheetconnector-list-item">
                                 <div class="activated">
-                                    <a href="#" class="button button-free deactivate-plugin"
+                                    <a href="#" class="button button-free gscwpform-deactivate-plugin-pro"
                                         data-download="<?php echo esc_url($details['connector']); ?>"
                                         data-plugin="<?php echo esc_attr($details['connector']); ?>">Deactivate</a>
                                 </div>
                                 <div class="addon-item-header">
                                     <div class="plugin-free">Free</div>
                                     <a href="<?php echo esc_url($details['buyLink']); ?>" target="_blank">
-                                        <!-- phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Image is not from WP Media Library -->
                                         <img src="<?php echo esc_url($details['img']); ?>" alt="<?php echo esc_attr($details['name']); ?>">
                                     </a>
                                     <div class="addon-item-header-meta">
@@ -320,7 +310,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                                         </div>
                                         <div class="addon-item-header-meta-excerpt">
                                             <a href="<?php echo esc_url($details['buyLink']); ?>" target="_blank" class="addon-link">
-                                               <?php esc_html_e( 'Upgrade to PRO', 'gsheetconnector-wpforms' ); ?>
+                                                <?php esc_attr_e('Upgrade to PRO', 'gsheetconnector-wpforms'); ?>
                                             </a>
                                         </div>
                                     </div>
@@ -336,14 +326,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                 } else { ?>
                     <div class="gsheetconnector-list-item">
                         <div class="activated">
-                            <a href="#" class="button button-free deactivate-plugin"
+                            <a href="#" class="button button-free gscwpform-deactivate-plugin-pro"
                                 data-download="<?php echo esc_url($details['connector-pro']); ?>"
                                 data-plugin="<?php echo esc_attr($details['connector-pro']); ?>">Deactivate</a>
                         </div>
                         <div class="addon-item-header">
                             <div class="plugin-premium">PRO</div>
                             <a href="<?php echo esc_url($details['link']); ?>" target="_blank">
-                                <!-- phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Image is not from WP Media Library -->
                                 <img src="<?php echo esc_url($details['img']); ?>" alt="<?php echo esc_attr($details['name']); ?>">
                             </a>
                             <div class="addon-item-header-meta">
@@ -353,7 +342,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                                     </a>
                                 </div>
                                 <div class="addon-item-header-meta-excerpt">
-                                   <strong><?php esc_html_e( 'Already using PRO version', 'gsheetconnector-wpforms' ); ?></strong>
+                                    <strong><?php esc_attr_e('Already using PRO version', 'gsheetconnector-wpforms'); ?></strong>
                                 </div>
                             </div>
                         </div>
@@ -397,7 +386,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                         <div class="addon-item-header">
                             <div class="plugin-free">Free</div>
                             <a href="<?php echo esc_url($data['url']); ?>" target="_blank">
-                                <!-- phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Image is not from WP Media Library -->
                                 <img src="<?php echo esc_url($data['img']); ?>" alt="<?php echo esc_attr($data['name']); ?>">
                             </a>
                             <div class="addon-item-header-meta">
@@ -415,34 +403,28 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                             <div class="button-bar">
                                 <?php if ($is_free_active): ?>
                                     <button class="button button-secondary" disabled>
-                                        <?php esc_html_e( 'Activated', 'gsheetconnector-wpforms' ); ?>
+                                        <?php esc_attr_e('Activated', 'gsheetconnector-wpforms'); ?>
                                     </button>
                                 <?php elseif ($is_free_installed && !$is_free_active): ?>
-                                    <button class="activate-plugin-btn button button-free"
+                                    <button class="gscwpform-activate-plugin-btn-pro button button-free"
                                         data-plugin="<?php echo esc_attr($data['connector']); ?>">
-                                        <!-- phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Safe static plugin image -->
-                                        <img src="<?php echo esc_url(WPFORMS_GOOGLESHEET_URL . 'assets/img/ajax-loader.gif'); ?>"
-                                            alt="Loading..." class="loaderimg" />
-                                       <?php esc_html_e('Activate', 'gsheetconnector-wpforms'); ?>
+                                        <?php esc_attr_e('Activate', 'gsheetconnector-wpforms'); ?>
                                     </button>
+                                    <span class="loading-sign-active"></span>
 
                                 <?php else: ?>
-                                    <button class="install-plugin-btn button "
+                                    <button class="gscwpfrom-install-plugin-btn-pro button "
                                         data-download="<?php echo esc_url($data['downloadLink']); ?>"
                                         data-plugin="<?php echo esc_attr($plugin); ?>">
-                                        <!-- phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Safe static plugin image -->
-                                        <img src="<?php echo esc_url(WPFORMS_GOOGLESHEET_URL . 'assets/img/ajax-loader.gif'); ?>"
-                                            alt="Loading..." class="loaderimg" />
                                         <?php echo esc_html($data['button']); ?>
                                     </button>
+                                    <span class="loading-sign-install"></span>
                                     <!-- Ensure Activate button exists but is hidden -->
-                                    <button class="activate-plugin-btn button button-free"
+                                    <button class="gscwpform-activate-plugin-btn-pro button button-free"
                                         data-plugin="<?php echo esc_attr($data['connector']); ?>" style="display: none;">
-                                        <!-- phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Safe static plugin image -->
-                                        <img src="<?php echo esc_url(WPFORMS_GOOGLESHEET_URL . 'assets/img/ajax-loader.gif'); ?>"
-                                            alt="Loading..." class="loaderimg" />
-                                       <?php esc_html_e('Activate', 'gsheetconnector-wpforms'); ?>
+                                        <?php esc_attr_e('Activate', 'gsheetconnector-wpforms'); ?>
                                     </button>
+                                    <span class="loading-sign-active"></span>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -453,7 +435,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                     <div class="addon-item-header">
 
                         <a href="<?php echo esc_url($data['buyLink']); ?>" target="_blank">
-                            <!-- phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Image is not from WP Media Library -->
                             <img src="<?php echo esc_url($data['img']); ?>" alt="<?php echo esc_attr($data['name']); ?>">
                         </a>
                         <div class="addon-item-header-meta">
@@ -521,18 +502,17 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                             <?php } else { ?>
                                 <div class="plugin-free">Free</div>
                             <?php } ?>
-                            <a href="<?php echo esc_url( $data['link'] ); ?>" target="_blank" rel="noopener noreferrer">
-                                <!-- phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Image is not from WP Media Library -->
-                                <img src="<?php echo esc_url( $data['img'] ); ?>" alt="<?php echo esc_attr__( 'logo', 'gsheetconnector-wpforms' ); ?>">
+                            <a href="<?php echo esc_url($data['link']); ?>" target="_blank">
+                                <img src="<?php echo esc_html($data['img']); ?>" alt="logo">
                             </a>
                             <div class="addon-item-header-meta">
                                 <div class="addon-item-meta-title">
-                                    <a href="<?php echo esc_url( $data['link'] ); ?>" target="_blank" rel="noopener noreferrer">
-                                        <?php echo esc_html( $data['name'] ); ?>
+                                    <a href="<?php echo esc_url($data['link']); ?>" target="_blank">
+                                        <?php echo esc_html($data['name']); ?>
                                     </a>
                                 </div>
                                 <div class="addon-item-header-meta-excerpt">
-                                   <?php echo wp_kses_post( $data['text'] ); ?>
+                                    <?php echo esc_html($data['text']); ?>
                                 </div>
                             </div>
                         </div>
@@ -549,5 +529,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
         ?>
     </div>
+    <?php wp_nonce_field('gscwpform_ajax_nonce', 'gscwpform_ajax_nonce'); ?>
+
 </div>
 <!-- wrap #end -->

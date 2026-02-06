@@ -841,15 +841,14 @@ class WPGS_FormBuilder {
 							$result .= "</label>";
 						$result .= "</div>";
 					$result .= "</div>";
-					$new_link = 'https://support.gsheetconnector.com/kb/wpforms-gsheetconnector-installation-process-free-version';
+					$new_link = 'https://www.gsheetconnector.com/docs/wpforms-gsheetconnector/installation-process-free-version';
 					$result .=	"<p class='header-reference'>
      Please add header manually in google sheet.for the reference  <a target='_blank' href=$new_link>Click here.</a> 
 </p>";			
 			}
 			}
 			
-		$result .= "</div>";
-		
+		$result .= "</div>";		
 		
 
 

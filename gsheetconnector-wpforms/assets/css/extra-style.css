@@ -1,0 +1,823 @@
+/***Start Extra CSS***/
+#wpbody-content {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, "Helvetica Neue", sans-serif;
+  color: #4a4a4a;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+#wpcontent {
+  padding-left: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+}
+html {
+  scroll-behavior: smooth;
+}
+.gswpf-free div,
+.gswpf-free a,
+.gswpf-free span,
+.gswpf-free p,
+.gswpf-free h1,
+.gswpf-free h2,
+.gswpf-free h3,
+.gswpf-free h4,
+.gswpf-free h5,
+.gswpf-free h6 {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.spacer {
+  clear: both;
+}
+.gswpf-free a {
+  text-decoration: underline;
+  color: #000;
+}
+.gswpf-free a:active,
+.gswpf-free a:hover {
+  color: #000;
+}
+.gswpf-free a:focus {
+  box-shadow: unset;
+  color: #000;
+}
+.gswpf-free ul {
+  list-style-type: none;
+}
+.gswpf-free ul,
+.gswpf-free li {
+  margin: 0px;
+  padding: 0px;
+}
+.gswpf-free h1,
+.gswpf-free h2,
+.gswpf-free h3,
+.gswpf-free h4,
+.gswpf-free h5,
+.gswpf-free h6 {
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 28px;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+.gswpf-free h2 {
+  font-size: 22px;
+}
+.gswpf-free .heading {
+  margin: 15px 0;
+  font-size: 22px;
+  line-height: 31px;
+  color: #000;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.gswpf-free p {
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 26px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.gswpf-free label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-label);
+  line-height: 1.3;
+}
+
+.gswpf-free img {
+  max-width: 100%;
+  display: block;
+}
+.gswpf-free .form-control {
+  width: 100%;
+  padding: 4px 10px 4px 10px !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 0px !important;
+  font-size: 14px !important;
+  line-height: 2.30769231 !important;
+}
+.gswpf-free select {
+  border: 1px solid #ccc;
+  padding: 7px 30px 7px 10px;
+  cursor: pointer;
+  background: #fff url(../img/arrow-down.svg) no-repeat right center;
+  background-size: 22px auto;
+  font-size: 14px;
+  line-height: 25px;
+  color: #444;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.gswpf-free input,
+.gswpf-free select,
+.gswpf-free textarea {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+.gswpf-free select:focus {
+  outline: none;
+  border-color: var(--border-normal);
+}
+.gswpf-free input[type="checkbox"]:focus,
+.gswpf-free input[type="color"]:focus,
+.gswpf-free input[type="date"]:focus,
+.gswpf-free input[type="datetime-local"]:focus,
+.gswpf-free input[type="datetime"]:focus,
+.gswpf-free input[type="email"]:focus,
+.gswpf-free input[type="month"]:focus,
+.gswpf-free input[type="number"]:focus,
+.gswpf-free input[type="password"]:focus,
+.gswpf-free input[type="radio"]:focus,
+.gswpf-free input[type="search"]:focus,
+.gswpf-free input[type="tel"]:focus,
+.gswpf-free input[type="text"]:focus,
+.gswpf-free input[type="time"]:focus,
+.gswpf-free input[type="url"]:focus,
+.gswpf-free input[type="week"]:focus,
+.gswpf-free select:focus,
+.gswpf-free textarea:focus {
+  outline: none !important;
+  border-color: #16a34a !important;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15) !important;
+}
+.btn:active,
+input[type="submit"]:active {
+  transform: scale(0.95);
+}
+.gswpf-free .auto-select {
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  color: #444;
+  padding: 0;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.gswpf-free .auto-select-display {
+  border: 1px solid #ccc !important;
+  line-height: 2.30769231 !important;
+  border-radius: unset !important;
+  padding: 4px 30px 4px 10px !important;
+  cursor: pointer !important;
+  max-width: 100% !important;
+  background: #fff url(../img/arrow-down.svg) no-repeat right center !important;
+  background-size: 22px auto !important;
+}
+.gswpf-free .auto-select-display:hover {
+  color: inherit !important;
+}
+.gswpf-free .auto-select-options {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  z-index: 999;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.gswpf-free .auto-select-options div {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.gswpf-free .auto-select-options div:hover {
+  background: #f2f2f2;
+}
+.gswpf-free .input-msg {
+  color: #dc3232;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+.gswpf-free .btn {
+  box-shadow: none;
+  text-decoration: none;
+  text-shadow: none;
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  border-width: 1px !important;
+  border-style: solid !important;
+  text-align: center;
+  padding: 8px 16px !important;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.gswpf-free .btn-primary {
+  background-color: var(--primary);
+  color: var(--text-white);
+  border: 1px solid var(--primary);
+}
+.gswpf-free .deactivate-btn {
+  background: var(--bg-deactivate);
+  color: var(--btn-deactive-text-normal);
+  border: 1px solid var(--bg-deactivate);
+}
+.gswpf-free .btn-reset {
+  background-color: #000 !important;
+  color: var(--text-white);
+}
+.gswpf-free .btn-reset:hover {
+  color: var(--text-white) !important;
+}
+.gswpf-free .loading {
+  background-image: url(../img/ajax-loader.gif);
+  background-position: 50% 80%;
+  background-repeat: no-repeat;
+  width: 14px;
+  display: inline-block;
+  height: 14px;
+}
+.gswpf-free .common-disable:disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+/*
+.gswpf-free .common-disable:disabled {
+  line-height: 2.30769231;
+  padding: 4px 30px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  background: #199436;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}*/
+/*Start pop up to Display Message*/
+.gswpf-free .gscwpff-popup-overlay {
+  /*position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 99999;
+  overflow-y: auto;
+}
+.gswpf-free .gsc-modal-icon {
+  width: 60px;
+  height: 60px;
+  background: #fff3cd;
+  color: #d97706;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+.gswpf-free .gscwpff-popup {
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  animation: modalFade 0.3s ease forwards;
+}
+.gswpf-free .gsc-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+.gswpf-free .gsc-modal-text {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+.gswpf-free .popup-actions {
+  margin-top: 20px;
+  text-align: right;
+}
+.gswpf-free .popup-actions .button {
+  margin-left: 10px;
+}
+/*End pop up to Display Message*/
+#gscwpff-code,
+#gscwpff-client-token {
+  cursor: not-allowed !important;
+  pointer-events: none;
+  caret-color: transparent;
+}
+.gswpf-free .disable-cursor {
+  cursor: not-allowed !important;
+  pointer-events: none;
+  caret-color: transparent;
+}
+
+/***Start NOTICE SLIDER****/
+.gswpf-free .notification-gsc-notice-slider {
+  position: relative;
+  width: 100%;
+  margin: 15px 0;
+}
+/* Track */
+.gswpf-free .notification-gsc-slider-track {
+  position: relative;
+}
+/* Slides */
+.gswpf-free .notification-gsc-slide {
+  display: none;
+  width: 100%;
+}
+/* Active slide */
+.gswpf-free .notification-gsc-slide.active {
+  display: block;
+  animation: fadeSlide 0.4s ease;
+}
+/* Fade animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*RIGHT ARROWS*/
+.gswpf-free .notification-gsc-slider-arrows {
+  position: absolute;
+  right: 90px;
+  top: 62%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 6px;
+}
+/* Arrow buttons */
+.gswpf-free .notification-gsc-slider-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #111827;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.gswpf-free .notification-gsc-slider-btn:hover {
+  background: #16233f;
+  border-color: #9ca3af;
+}
+/***Start NOTICE SLIDER****/
+
+/*Start Activate pro Plugin Message*/
+/* Activation Banner */
+.gswpf-free .gsc-activate-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(90deg, #eff6ff, #ffffff);
+  border: 1px solid #bfdbfe;
+  border-left: 4px solid #3b82f6;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 15px 15px;
+  position: relative;
+}
+/* Icon */
+.gswpf-free .gsc-activate-icon {
+  color: #2563eb;
+}
+/* Content */
+.gswpf-free .gsc-activate-content {
+  flex: 1;
+}
+.gswpf-free .gsc-activate-content .gsc-activate-content-header {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e3a8a;
+  line-height: normal;
+}
+.gswpf-free .gsc-activate-content p {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #374151;
+}
+/* Actions */
+.gswpf-free .gsc-activate-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+/* Activate Button */
+.gswpf-free .gsc-btn-activate {
+  background: #2563eb;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+.gswpf-free .gsc-btn-activate:hover {
+  background: #1d4ed8;
+}
+/* Skip Button */
+.gswpf-free .gsc-btn-skip {
+  background: transparent;
+  border: none;
+  color: #374151;
+  font-size: 13px;
+  cursor: pointer;
+}
+.gswpf-free .gsc-btn-skip:hover {
+  text-decoration: underline;
+}
+/* Close */
+.gswpf-free .gsc-activate-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 14px;
+  cursor: pointer;
+}
+.gswpf-free .gsc-activate-close:hover {
+  color: #111827;
+}
+/*End Activate pro Plugin Message*/
+/*Start Upgrade to pro message*/
+.gswpf-free .gsc-upgrade-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(90deg, #ecfdf5, #ffffff);
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 14px 18px;
+  position: relative;
+  margin: 15px 15px;
+}
+/* Icon */
+.gswpf-free .gsc-upgrade-icon {
+  font-size: 28px;
+}
+/* Content */
+.gswpf-free .gsc-upgrade-content {
+  flex: 1;
+}
+.gswpf-free .gsc-upgrade-content .gsc-upgrade-heading {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #065f46;
+  line-height: normal;
+}
+.gswpf-free .gsc-upgrade-content p {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #374151;
+}
+
+/* Buttons */
+.gswpf-free .gsc-upgrade-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.gswpf-free .gsc-btn-upgrade {
+  background: #199436;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+.gswpf-free .gsc-btn-upgrade:hover {
+  background: #15803d;
+}
+.gswpf-free .gsc-btn-later {
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+}
+.gswpf-free .gsc-btn-later:hover {
+  text-decoration: underline;
+}
+/* Dismiss Button */
+.gswpf-free .gsc-dismiss-btn {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+/* Hover */
+.gswpf-free .gsc-dismiss-btn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+/* Focus */
+.gswpf-free .gsc-dismiss-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.25);
+}
+/* Active */
+.gswpf-free .gsc-dismiss-btn:active {
+  background: #e5e7eb;
+}
+/* Close Button */
+.gswpf-free .gsc-upgrade-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  color: #6b7280;
+  cursor: pointer;
+}
+.gswpf-free .gsc-upgrade-close:hover {
+  color: #111827;
+}
+/*End Upgrade to pro message*/
+/*Start Advertisement Slide Message*/
+.gswpf-free .gsc-ad-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(90deg, #f8fafc, #ffffff);
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #199436;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 15px;
+  position: relative;
+}
+/* Left Logo */
+.gswpf-free .gsc-ad-left {
+  flex-shrink: 0;
+}
+.gswpf-free .gsc-ad-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+/* Content */
+.gswpf-free .gsc-ad-content {
+  flex: 1;
+}
+.gswpf-free .gsc-ad-content .gsc-ad-content-header {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #065f46;
+  line-height: normal;
+}
+.gswpf-free .gsc-ad-content p {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #374151;
+}
+/* Button */
+.gswpf-free .gsc-ad-actions {
+  display: flex;
+  align-items: center;
+}
+.gswpf-free .gsc-btn-ad {
+  background: #199436;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.gswpf-free .gsc-btn-ad:hover {
+  background: #15803d;
+}
+/*End Advertisement Slide Message*/
+
+/*Start Copy Message Display*/
+.gswpf-free .position-relative-copy {
+  position: relative;
+}
+.gswpf-free .gsc-copy-msg {
+  position: fixed;
+  bottom: 48px;
+  left: 175px;
+  background: #fff;
+  z-index: 9999;
+  color: #0c63e4;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600 !important;
+  border-left: 4px solid #0c63e4;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+/*End Copy Message Display*/
+
+/*Start Integration Debug LOG */
+.gswpf-free .gsc-error-details {
+  position: relative;
+}
+.gswpf-free .more-error-display {
+  max-height: 75px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.gswpf-free .more-error-toggle {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 13px;
+  color: #0073aa;
+  cursor: pointer;
+}
+.gswpf-free .more-error-display {
+  line-height: 15px; /* 5 lines = 75px */
+  max-height: 75px; /* 5 lines */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.gswpf-free .error-log-main {
+  max-width: 100%;
+}
+.gswpf-free .debug-log-div {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.gswpf-free .error-log-table tbody {
+  display: block;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.gswpf-free .error-log-table thead,
+.gswpf-free .error-log-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.gswpf-free .error-log-table th,
+.gswpf-free .error-log-table td {
+  word-break: break-word;
+}
+.gswpf-free .error-log-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gswpf-free .debug-logon,
+.gswpf-free .debug-logoff {
+  width: 18px;
+  height: 18px;
+  background: url(../img/arrow.svg) no-repeat left top;
+  background-size: 18px;
+  display: inline-block;
+  font-size: 0px;
+  text-decoration: none;
+  position: relative;
+  top: -5px;
+  left: 10px;
+}
+.gswpf-free .debug-logon {
+  rotate: 180deg;
+}
+.gswpf-free .gsc-log-badge {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.gswpf-free .button-primary {
+  background-color: #199436 !important;
+  border-color: #199436 !important;
+}
+.gswpf-free .btn-logs {
+  border-color: #d1d5db !important;
+  background-color: #f6f7f7 !important;
+  color: #000 !important;
+}
+.gswpf-free .gsc-success {
+  background: #e6f4ea;
+  color: #1e7e34;
+}
+.gswpf-free .gsc-warning {
+  background: #fff4e5;
+  color: #856404;
+}
+.gswpf-free .gsc-error {
+  background: #fdecea;
+  color: #b02a37;
+}
+/* Base style for error code badge */
+.gswpf-free .sb-error-code {
+  display: inline-block;
+  padding: 0px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 17px;
+  border: 1px solid transparent;
+  background: #f3f4f6;
+  color: #111827;
+}
+/* 2xx – Success (Green) */
+.gswpf-free .sb-error-code[data-code^="2"] {
+  border-color: #16a34a;
+  background-color: rgba(22, 163, 74, 0.15);
+  color: #166534;
+}
+/* 3xx – Redirect / Info (Blue) */
+.gswpf-free .sb-error-code[data-code^="3"] {
+  border-color: #2563eb;
+  background-color: rgba(37, 99, 235, 0.15);
+  color: #1e40af;
+}
+/* 4xx – Client Error (Amber / Orange) */
+.gswpf-free .sb-error-code[data-code^="4"] {
+  border-color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.18);
+  color: #92400e;
+}
+/* 5xx – Server Error (Red) */
+.gswpf-free .sb-error-code[data-code^="5"] {
+  border-color: #dc2626;
+  background-color: rgba(220, 38, 38, 0.16);
+  color: #7f1d1d;
+}
+/* 401 / 403 – Auth related */
+.gswpf-free .sb-error-code[data-code="401"],
+.gswpf-free .sb-error-code[data-code="403"] {
+  border-color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.18);
+  color: #92400e;
+}
+/* 404 – Not Found (still client error) */
+.gswpf-free .sb-error-code[data-code="404"] {
+  border-color: #f97316;
+  background-color: rgba(249, 115, 22, 0.18);
+  color: #9a3412;
+}
+/* 500+ – Hard server crash */
+.gswpf-free .sb-error-code[data-code="500"],
+.gswpf-free .sb-error-code[data-code="502"],
+.gswpf-free .sb-error-code[data-code="503"] {
+  border-color: #dc2626;
+  background-color: rgba(220, 38, 38, 0.16);
+  color: #7f1d1d;
+}
+/*End Integration Debug LOG */
+/***End Extra CSS***/
+
+/* css for uninstall modal title */
+.gsc-uninstall-modal-title {
+  line-height: 1.2;
+}

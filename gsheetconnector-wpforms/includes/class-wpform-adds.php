@@ -51,7 +51,7 @@ class Wpform_gs_Connector_Adds {
   public function wpform_gs_set_auth_expired_adds_interval() {
       // check nonce
       check_ajax_referer( 'wpform_gs_auth_expired_adds_ajax_nonce', 'security' );
-      $time_interval = date( 'Y-m-d', strtotime( '+30 day' ) );
+      $time_interval = gmdate( 'Y-m-d', strtotime( '+30 day' ) );
       update_option( 'wpform_gs_auth_expired_display_add_interval', $time_interval );
       wp_send_json_success();
    }

@@ -8,6 +8,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 ?>
 <div class="wpforms-field-map-table wfgs_mappings wpgs_panel_section">
 	<h3><?php echo wp_kses_post( $args['title'] ); ?></h3>

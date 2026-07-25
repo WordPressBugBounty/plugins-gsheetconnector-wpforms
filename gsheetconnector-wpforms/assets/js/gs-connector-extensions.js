@@ -1,178 +1,216 @@
-jQuery(document).ready(function () {
+jQuery(document).ready(function (jQuery) {
+  /**
+   * Hide empty addon sections and mark them with a CSS class on page load.
+   */
 
-    /**
-     * verify the api code
-     * @since 1.0
-     */
-    jQuery(document).on('click', '#save-wpform-gs-code', function (event) {
-        event.preventDefault();
-        jQuery(".loading-sign").addClass("loading");
-        var data = {
-            action: 'verify_wpform_gs_integation',
-            code: jQuery('#wpforms-setting-google-access-code').val(),
-            security: jQuery('#gs-ajax-nonce').val()
-        };
-        jQuery.post(ajaxurl, data, function (response) {
-            if (!response.success) {
-                jQuery(".loading-sign").removeClass("loading");
-                jQuery("#gs-validation-message").empty();
-                jQuery("<span class='error-message'>Invalid access code entered.</span>").appendTo('#gs-validation-message');
-            } else {
-                jQuery(".loading-sign").removeClass("loading");
-                jQuery("#gs-validation-message").empty();
-                jQuery("<span class='gs-valid-message'>Your Google Access Code is Authorized or Saved.</span> <br/><br/><span class='wp-valid-notice'> Note: If you are getting any errors or not showing sheet in dropdown, then make sure to check the debug log. To contact us for any issues do send us your debug log.</span>").appendTo('#gs-validation-message');
-                //setTimeout(function () { location.reload(); }, 9000);
-
-                setTimeout(function () {
-                    window.location.href = jQuery("#redirect_auth_wpforms").val();
-                }, 1000);
-            }
-        });
-
-    });
-
-    function html_decode(input) {
-        var doc = new DOMParser().parseFromString(input, "text/html");
-        return doc.documentElement.textContent;
+  jQuery(".gsheetconnector-addons-list").each(function () {
+    if (jQuery(this).html().trim().length === 0) {
+      jQuery(this).addClass("blank_div");
+      jQuery(this).prev("div").hide();
     }
+  });
 
-    /**
-     * On select wpform
-     */
-    jQuery('#wpforms_select').change(function (e) {
-        e.preventDefault();
-        var FormId = jQuery(this).val();
-        jQuery(".loading-sign-select").addClass("loading-select");
-        jQuery.ajax({
-            type: "POST",
-            url: ajaxurl,
-            dataType: "json",
-            data: {
-                action: 'get_wpforms',
-                wpformsId: FormId,
-                security: jQuery('#wp-ajax-nonce').val(),
-            },
-            cache: false,
-            success: function (data) {
-                // console.log(data);        
-                if (data['data_result'] == '') {
-                    return;
-                }
-                else {
-                    window.location.href = data.data;
-                    // window.open(data.data, '_blank');
-                    // jQuery("#inside").empty();
-                    // jQuery("#inside").append(html_decode(data.data));
-                    // jQuery(".loading-sign-select").removeClass("loading-select");
-                }
-            }
-        });
-    });
+  /**
+   * Handle plugin install button click via AJAX.
+   *
+   * - Shows loading spinner
+   * - Sends plugin slug and download URL to server
+   * - On success, hides install button and shows activate button
+   * - On error or failure, resets button state
+   */
 
-    /**
-     * Clear debug
-     */
-    jQuery(document).on('click', '.debug-clear-kk', function () {
-        jQuery(".clear-loading-sign").addClass("loading");
-        var data = {
-            action: 'wp_clear_logs',
-            security: jQuery('#gs-ajax-nonce').val()
-        };
-        jQuery.post(ajaxurl, data, function (response) {
-            var clear_msg = response.data;
-            if (response.success) {
-                jQuery(".clear-loading-sign").removeClass("loading");
-                jQuery("#gs-validation-message").empty();
-                jQuery("<span class='gs-valid-message'>" + clear_msg + "</span>").appendTo('#gs-validation-message');
-                setTimeout(function () {
-                    location.reload();
-                }, 1000);
-            }
-        });
-    });
+  jQuery("#gscwpff-popup-active-free").on("click", function () {
+    jQuery("#gscwpff-confirm-active-popup-free").addClass("d-none");
+  });
 
-    /**
- * deactivate the api code
- * @since 1.0
- */
-    jQuery(document).on('click', '#wp-deactivate-log', function () {
-        jQuery(".loading-sign-deactive").addClass("loading");
-        var txt;
-        var r = confirm("Are you sure you want to deactivate Google Sheet Integration ?");
-        if (r == true) {
-            var data = {
-                action: 'deactivate_wpformgsc_integation',
-                security: jQuery('#gs-ajax-nonce').val()
-            };
-            jQuery.post(ajaxurl, data, function (response) {
-                if (response == -1) {
-                    return false; // Invalid nonce
-                }
+  jQuery(".gscwpff-install-plugin-btn").on("click", function () {
+    var button = jQuery(this);
+    var pluginSlug = button.data("plugin");
+    var downloadUrl = button.data("download");
+    var loaderSpan = button
+      .closest(".button-bar")
+      .find(".loading-sign-install");
 
-                if (!response.success) {
-                    alert('Error while deactivation');
-                    jQuery(".loading-sign-deactive").removeClass("loading");
-                    jQuery("#deactivate-message").empty();
+    loaderSpan.addClass("loading");
+    button.prop("disabled", true);
 
-                } else {
-                    jQuery(".loading-sign-deactive").removeClass("loading");
-                    jQuery("#deactivate-message").empty();
-                    jQuery("</br><span class='gs-valid-message'>Your account is removed, now reauthenticate to configure WPForms to Google Sheet.</span>").appendTo('#deactivate-message');
-                    setTimeout(function () { location.reload(); }, 1000);
-                }
-            });
+    jQuery.ajax({
+      url: ajaxurl,
+      type: "POST",
+      dataType: "json",
+      data: {
+        action: "gscwpform_install_plugin",
+        plugin_slug: pluginSlug,
+        download_url: downloadUrl,
+        security: jQuery("#gscwpff-ajax-nonce").val(),
+      },
+
+      success: function (response) {
+        loaderSpan.removeClass("loading");
+
+        if (response.success) {
+          // ✅ Install success
+          button.hide();
+
+          button
+            .closest(".button-bar")
+            .find(".gscwpff-activate-plugin-btn")
+            .show();
         } else {
-            jQuery(".loading-sign-deactive").removeClass("loading");
+          // ❌ Permission or other error → open popup
+          jQuery(".popup-actions-active-msg-free").text(
+            response.data.message ||
+              "You do not have permission to install this plugin.",
+          );
+
+          jQuery("#gscwpff-confirm-active-popup-free").removeClass("d-none");
+
+          button.prop("disabled", false);
         }
+      },
+
+      error: function () {
+        loaderSpan.removeClass("loading");
+
+        jQuery(".popup-actions-active-msg-free").text(
+          "Something went wrong. Please try again.",
+        );
+
+        jQuery("#gscwpff-confirm-active-popup-free").removeClass("d-none");
+
+        button.prop("disabled", false);
+      },
     });
+  });
 
-    
+  /**
+   * Handle plugin activation button click via AJAX.
+   *
+   * - Shows loading spinner
+   * - Sends plugin slug to server for activation
+   * - On success, updates button to "Activated" and reloads page
+   * - On error or failure, resets button and removes loading state
+   */
 
-    // Msg Hide ///
+  jQuery(document).on("click", ".gscwpff-activate-plugin-btn", function () {
+    var button = jQuery(this);
+    var pluginSlug = button.data("plugin");
+    var loaderSpan = button.siblings(".loading-sign-active");
 
-    jQuery(document).ready(function ($) {
-        // Check if the message has already been hidden by looking in localStorage
-        if (localStorage.getItem('googleDriveMsgHidden') === 'true') {
-            jQuery('#google-drive-msg').hide(); // Hide the message if it's already hidden
+    loaderSpan.addClass("loading");
+    button.prop("disabled", true);
+
+    jQuery.ajax({
+      url: ajaxurl,
+      type: "POST",
+      dataType: "json",
+      data: {
+        action: "gscwp_activate_plugin",
+        plugin_slug: pluginSlug,
+        security: jQuery("#gscwpff-ajax-nonce").val(),
+      },
+
+      success: function (response) {
+        loaderSpan.removeClass("loading");
+
+        if (response.success) {
+          // ✅ Success → reload only
+          location.reload();
+        } else {
+          // ❌ Permission denied → open popup
+          jQuery(".popup-actions-active-msg-free").text(
+            response.data.message ||
+              "You do not have permission to activate this plugin.",
+          );
+
+          jQuery("#gscwpff-confirm-active-popup-free").removeClass("d-none");
+
+          button.prop("disabled", false);
         }
+      },
 
-        // On button click, hide the #google-drive-msg div and store the hidden state in localStorage
-        jQuery('.button_wpformgsc').on('click', function () {
-            jQuery('#google-drive-msg').hide(); // Hide the message
-            localStorage.setItem('googleDriveMsgHidden', 'true'); // Save the hidden state in localStorage
-        });
+      error: function () {
+        loaderSpan.removeClass("loading");
 
-        // On #deactivate-log click, show the #google-drive-msg div and clear localStorage
-        jQuery('#wp-deactivate-log').on('click', function () {
-            jQuery('#google-drive-msg').show(); // Show the message
-            localStorage.removeItem('googleDriveMsgHidden'); // Remove the hidden state from localStorage
-        });
+        jQuery(".popup-actions-active-msg-free").text(
+          "Something went wrong. Please try again.",
+        );
+
+        jQuery("#gscwpff-confirm-active-popup-free").removeClass("d-none");
+
+        button.prop("disabled", false);
+      },
     });
+  });
 
-    /**
-     * Clear debug for system status tab
-     */
-    jQuery(document).on('click', '.clear-content-logs-wp', function () {
+  /**
+   * Handle plugin deactivation button click via AJAX.
+   *
+   * - Sends plugin slug to server for deactivation
+   * - On success, shows alert and reloads the page
+   * - On error, shows AJAX error alert
+   */
 
-        jQuery(".clear-loading-sign-logs-wp").addClass("loading");
-        var data = {
-            action: 'wp_clear_debug_logs',
-            security: jQuery('#gs-ajax-nonce').val()
-        };
-        jQuery.post(ajaxurl, data, function (response) {
-            if (response == -1) {
-                return false; // Invalid nonce
-            }
+  let selectedPluginSlug = "";
+  // Open popup on deactivate click
+  jQuery(".gscwpff-deactivate-plugin").on("click", function (e) {
+    selectedPluginSlug = jQuery(this).data("plugin");
+    jQuery("#gscwpff-confirm-dective-popup-free").removeClass("d-none");
+  });
+  // Cancel button
+  jQuery("#gscwpff-dective-popup-cancel-free").on("click", function () {
+    jQuery("#gscwpff-confirm-dective-popup-free").addClass("d-none");
+    selectedPluginSlug = "";
+  });
 
-            if (response.success) {
-                jQuery(".clear-loading-sign-logs-wp").removeClass("loading");
-                jQuery('.clear-content-logs-msg-wp').html('Logs are cleared.');
-                setTimeout(function () {
-                    location.reload();
-                }, 1000);
-            }
-        });
+
+  // Confirm deactivate
+  jQuery("#gscwpff-deactive-popup-confirm-free").on("click", function () {
+
+   // Add loading class to the corresponding loading element
+    jQuery(".loading-sign-deactive[data-plugin='" + selectedPluginSlug + "']").addClass("loading");
+
+    if (!selectedPluginSlug) return;
+     jQuery("#gscwpff-confirm-dective-popup-free").addClass("d-none");
+    jQuery.ajax({
+      url: ajaxurl,
+      type: "POST",
+      dataType: "json",
+      data: {
+        action: "gscwpform_deactivate_plugin",
+        plugin_slug: selectedPluginSlug,
+        security: jQuery("#gscwpff-ajax-nonce").val(),
+      },
+      success: function (response) {
+        if (response.success) {
+         
+          location.reload();
+        }
+      },
     });
+  });
+
+
+  // filter
+  document.querySelectorAll(".market-tab").forEach((tab) => {
+    tab.addEventListener("click", function () {
+      let filter = this.dataset.filter;
+
+      document
+        .querySelectorAll(".market-tab")
+        .forEach((t) => t.classList.remove("active"));
+
+      this.classList.add("active");
+
+      document.querySelectorAll(".gsc-market-item").forEach((card) => {
+        if (filter === "all") {
+          card.style.display = "block";
+        } else {
+          card.style.display = card.classList.contains(filter)
+            ? "block"
+            : "none";
+        }
+      });
+    });
+  });
 });
-
-

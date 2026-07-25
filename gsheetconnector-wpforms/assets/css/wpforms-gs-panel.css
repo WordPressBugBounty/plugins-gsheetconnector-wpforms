@@ -1,6 +1,4 @@
-#wpforms-panel-settings .wpforms-builder-settings-block-googlesheet .wpforms-conditional-groups {
-  padding: 0 20px;
-}
+
 
 #wpforms-panel-settings .wpforms-builder-settings-block-googlesheet .wpforms-field-map-table table {
   table-layout: fixed;
@@ -90,7 +88,7 @@
   max-width: 250px;
 }
 #wpforms-builder .wpforms-panel-field .sync-heading p{
-  font-size: 16px;
+  font-size: 14px;
 }
 #wpforms-builder .wpforms-panel-field.sync-posts{
 	max-width: 100%;
@@ -106,7 +104,6 @@
   padding-top: 30px !important;
   margin-bottom: 0px;  
   margin-top: 0px !important;
-  border-top: 1px solid #ccc;
 }
 #wpforms-builder .alternate_colors_section > div{
   display: inline-block;
@@ -189,9 +186,15 @@ margin-top: -10px!important;
 margin-left: 15px!important;
 }
 
-.form-fields-disable, .request-header-disable, .freeze_header-disable, 
+.form-fields-disable, .request-header-disable, .freeze_header-disable,
 .alternate_colors_disable, .sort_sheet_disable, .conditional_logic_disable{
   pointer-events: none;
+}
+
+.form-fields-disable .wpforms-help-tooltip, .request-header-disable .wpforms-help-tooltip,
+.freeze_header-disable .wpforms-help-tooltip, .alternate_colors_disable .wpforms-help-tooltip,
+.sort_sheet_disable .wpforms-help-tooltip, .conditional_logic_disable .wpforms-help-tooltip{
+  pointer-events: auto;
 }
 
 .syncBtnPro{
@@ -210,7 +213,6 @@ margin-left: 15px!important;
     font-weight: 600;
     line-height: initial;
     color: red;
-    margin-left: 20px;
   }
 .wp-gs-display-note{
     border: 1px solid #c3c4c7;
@@ -220,4 +222,780 @@ margin-left: 15px!important;
     background: #fff;
     box-shadow: 0 1px 1px rgba(0,0,0,.04);
     padding: 12px 12px;
+}
+
+
+/**Display msg without auth**/
+/* Setup Required Alert Box */
+.gscwpff-setup-alert {
+  display: flex;
+  gap: 16px;
+  background: #fff7ed;
+  border: 1px solid #fdba74;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 900px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon */
+.gscwpff-alert-icon {
+  font-size: 30px;
+  line-height: 1;
+  color: #ea580c;
+}
+/* Content */
+.gscwpff-alert-content .feed-alert-header, .gscwpff-feed-alert-header {
+  margin: 0 0 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #9a3412;
+  line-height: normal;
+}
+.gscwpff-alert-content p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: #7c2d12;
+  line-height: 1.5;
+}
+/* Steps List */
+.gscwpff-alert-content ul {
+  margin: 0 0 14px;
+  padding-left: 18px;
+}
+.gscwpff-alert-content li {
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #7c2d12;
+}
+/* Button */
+.gscwpff-alert-btn {
+  display: inline-block;
+  background: #ea580c;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.gscwpff-alert-btn:hover {
+  color: #fff;
+}
+
+
+a.button.button-primary.gscwpff-sheeturl-btn {
+    color: #fff;
+    background: #e27730;
+    border-color: #e27730;
+}
+
+.sync-date {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: #f8f9fa;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-top: 10px;
+}
+#wpforms-panel-settings .wpforms-builder-settings-block .wpforms-panel-field, #wpforms-panel-settings .wpforms-builder-settings-block .wpforms-field-map-table{
+  padding:0 !important
+}
+#wpforms-panel-settings .wpforms-builder-settings-block-content{
+      margin-left: 20px;
+    margin-right: 20px;
+}
+#wpforms-panel-settings .wpforms-builder-settings-block .wpforms-panel-field:last-child{
+      padding-bottom: 20px !important;
+}
+.sync-date .wpgs-date-picker {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #333;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+a.button.button-primary.btnsync-pro {
+    background-color: #999999 !important;
+    border: 1px solid #999999 !important;
+    color: #fff !important;
+    border-radius: 2px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    margin-top: -10px !important;
+}
+
+.sync-date label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    white-space: nowrap;
+}
+.feed-sync__entry {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    margin-top: 10px;
+}
+
+
+
+.gsc-email-permission {
+    background: #f9fafb;
+    border: 1px dashed #d1d5db;
+    border-radius: 10px;
+    padding: 18px !important;
+    margin: 5px !important;
+    margin-bottom: 20px !important;
+}
+.gsc-email-permission ul {
+  margin:15px 0 0;
+  padding:0;
+  list-style:none;
+}
+.gsc-email-permission ul li {
+  margin:0 0 5px;
+  padding:0;
+  list-style:none;
+  display:flex;
+}
+.gsc-email-permission ul li svg {
+  width:20px;
+  height:20px;
+  margin-right:8px;
+}
+
+
+.smart-tags-list-display .heading{
+display:none
+}
+
+.d-flex {
+    display: flex;
+}
+
+/* Success / Error */
+.gswpf-pro .gsc-sheet-status-info .success {
+  color: #008000;
+}
+.gswpf-pro .gsc-sheet-status-info .error {
+  color: #ff0000;
+}
+
+ .ptag {
+    font-size: 15px !important;
+    color: #7d7d7d;
+    line-height: 26px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.gsc-sheet-status-header {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+    padding-bottom: 8px;
+  }
+
+
+.email-unsuccess-service .gsc-service-email{
+    color: #ff0000;
+}
+
+.gsc-email-box {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-family: monospace;
+    margin-bottom: 12px;
+    color: #111827;
+    overflow-x: auto;
+}
+
+#copy-wpfservicefree-email{
+  background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-none{
+  display:none !important;
+}
+
+.email-success-service {
+    color: #008000;
+}
+
+.gsc-sheet-email-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    gap: 10px;
+}
+
+.gsc-sheet-badge.connected {
+    background: #ecfdf5;
+    color: #15803d;
+}
+
+.gsc-copy-msg {
+  position: fixed;
+  bottom: 48px;
+  left: 175px;
+  background: #fff;
+  z-index: 9999;
+  color: #0c63e4;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600 !important;
+  border-left: 4px solid #0c63e4;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.gsc-email-box {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Google Account Connection card  start */
+.gscwpff-integration-box .d-flex {
+  display: flex;
+}
+
+.gscwpff-integration-box .flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gscwpff-integration-box .align-center {
+  align-items: center;
+}
+
+.gscwpff-integration-box .justify-between {
+  justify-content: space-between;
+}
+
+.gscwpff-integration-box .gap-15 {
+  gap: 15px;
+}
+
+.gscwpff-integration-box .gap-20 {
+  gap: 20px;
+}
+
+.gscwpff-integration-box .mt-0 {
+  margin-top: 0;
+}
+
+.gscwpff-integration-box .mt-30 {
+  margin-top: 30px;
+}
+
+.gscwpff-integration-box .mb-30 {
+  margin-bottom: 30px;
+}
+
+.gscwpff-integration-box .gsc-google-auth-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  margin: 0 0px 20px 0px;
+}
+
+.gscwpff-integration-box .heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #3c434a;
+}
+
+.gscwpff-integration-box .badge {
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.gscwpff-integration-box .gsc-google-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gscwpff-integration-box .gsc-connected-left {
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gscwpff-integration-box .gsc-connected-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.gscwpff-integration-box .gsc-connected-email {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.gscwpff-integration-box .gsc-connected-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.gscwpff-integration-box .gsc-connected-pill .dot {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+
+
+/* Google Account Connection card  end */
+
+/* Pro Feature card (edit-gs-pro-card) start */
+.edit-gs-pro-card.shadow-box {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.edit-gs-pro-card.mt-40 {
+  margin-top: 40px;
+}
+
+.edit-gs-pro-card.mb-30 {
+  margin-bottom: 30px;
+}
+
+.edit-gs-pro-card .p-20 {
+  padding: 20px;
+}
+
+.edit-gs-pro-card .d-flex {
+  display: flex;
+}
+
+.edit-gs-pro-card .flex-wrap {
+  flex-wrap: wrap;
+}
+
+.edit-gs-pro-card .align-items-center {
+  align-items: center;
+}
+
+.edit-gs-pro-card .gap-15 {
+  gap: 15px;
+}
+
+.edit-gs-pro-card .mb-20 {
+  margin-bottom: 20px;
+}
+
+.edit-gs-pro-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.edit-gs-pro-icon .pro-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.edit-gs-pro-title {
+  flex: 1;
+}
+
+.edit-gs-pro-title .heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: #3c434a;
+  margin-bottom: 14px;
+}
+
+.edit-gs-pro-badge {
+  display: inline-block;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.edit-gs-upgrade-btn a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #15803d;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.edit-gs-upgrade-btn a:hover {
+  background: #166534;
+  color: #ffffff;
+}
+
+#toggle-features {
+  display: none;
+}
+
+.edit-gs-pro-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.edit-gs-feature-col a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3c434a;
+  text-decoration: underline;
+}
+
+.gsc-pro-grid ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gsc-pro-grid li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #3c434a;
+}
+
+.gsc-pro-grid li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 5px;
+  height: 5px;
+  background: #94a3b8;
+}
+
+.edit-gs-pro-footer {
+  background: #f3f4f6;
+  border-top: 1px solid #e5e7eb;
+  padding: 14px;
+  text-align: center;
+}
+
+.edit-gs-show-btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: #3c434a;
+  cursor: pointer;
+}
+
+.edit-gs-pro-card .edit-gs-show-btn.show {
+  display: none;
+}
+
+.edit-gs-pro-card .edit-gs-show-btn.hide {
+  display: inline-block;
+}
+
+#toggle-features:checked ~ .edit-gs-pro-features {
+  display: none;
+}
+
+#toggle-features:checked ~ .edit-gs-pro-footer .edit-gs-show-btn.show {
+  display: inline-block;
+}
+
+#toggle-features:checked ~ .edit-gs-pro-footer .edit-gs-show-btn.hide {
+  display: none;
+}
+
+.edit-gs-pro-card.shadow-box.mt-40.mb-30 {
+    margin: 0 0px 20px 0px;
+}
+
+p.wp-sync-row {
+    padding-left: 20px;
+}
+
+.gscwpff-pro-heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3c434a;
+    margin-bottom: 8px;
+}
+
+.gscwpff-pro-wid-pad-heading{
+    font-size: 16px;
+    font-weight: 700;
+    color: #3c434a;
+    margin-bottom: 8px;
+
+}
+
+
+.gscwpff-pro-wid-heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3c434a; 
+     padding-left: 0px;
+     padding-bottom: 8px;
+}
+
+.wpforms-field-map-table.wfgs_mappings.wpgs_panel_section.wpforms-undo-redo-container {
+    margin-top: -10px !important;
+}
+div#integratio_auto {
+    border-top: 1px solid #c3c4c7;
+}
+
+
+.request-header-disable {
+    border-bottom: 1px solid #c3c4c7;;
+}
+
+.btndownload-pro {
+    background-color: #999999 !important;
+    border: 1px solid #999999 !important;
+    color: #fff !important;
+    border-radius: 2px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+   
+}
+
+
+a.button.button-primary.gscwpff-sheeturl-btn.btndownload-pro.btnsync-pro {
+    margin-top: 0px !important;
+    margin-left: 10px !important;
+}
+
+a#copy-service-email {
+    background-color: #036aab;
+    border-color: #036aab;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+select.wpforms-conditional-field {
+    width: 100%;
+}
+
+.wpforms-conditional-group td.field {
+    width: 50%;
+}
+
+
+.headerfont_colors_section, .alternate_colors_sections {
+    display: flex;
+    gap: 50px;
+}
+.wpforms-builder-settings-block .wpforms-conditional-groups{
+  padding-left: 0 !important;
+  padding-right:0 !important
+}
+.wpforms-badge-silver, .wpforms-badge-platinum{
+      color: #443838;
+    background-color: #d5cccc;
+    margin-left: 8px;
+}
+
+.gscwpff-sheeturl-btn {
+    position: relative;
+}
+
+.gscwpff-sheeturl-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.4;
+    padding: 6px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.gscwpff-sheeturl-btn::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease;
+    z-index: 9999;
+}
+
+.gscwpff-sheeturl-btn:hover::after,
+.gscwpff-sheeturl-btn:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+@media (max-width: 1024px) {
+  .edit-gs-pro-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .edit-gs-pro-features {
+    grid-template-columns: 1fr;
+  }
+}
+/* Pro Feature card (edit-gs-pro-card) end */
+.headerfont_colors_section .wpgs-headerfont-size-row,
+.headerfont_colors_section .wpgs-headerfont-style-row,
+.headerfont_colors_section .wpgs-headerfont-color-row {
+  width:30%;
+}
+
+.alternate_colors_sections .wpforms-panel-field {
+  width:30%;
+  max-width:inherit !important;
+}
+ #wpforms-builder .wpforms-field-map-table {
+  padding: 0 18px 20px !important;
+}
+
+
+.conditional_logic_disable .wpforms-toggle-control .wpforms-toggle-control-icon:after {
+    inset-inline-start: calc(100% - 13px - 2px);
+}
+
+
+.sort_sheet_disable .wpforms-toggle-control .wpforms-toggle-control-icon:after {
+    inset-inline-start: calc( 100% - 13px - 2px);
+}
+
+.alternate_colors_disable .wpforms-toggle-control .wpforms-toggle-control-icon:after {  
+    inset-inline-start: calc( 100% - 13px - 2px);
+}
+
+.wpforms-builder-settings-block-name-edit-field{
+  display:none;
+}
+
+a.wpforms-builder-settings-block-name-edit-save {
+    background-color: #cd6622;
+    border-color: #cd6622;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+a.wpforms-builder-settings-block-name-edit-cancel {
+    background-color: #215d8f;
+    color: #ffffff;
+    box-shadow: none;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.gscwpff-edit-btn{
+  display: flex;
+  gap: 10px;
 }

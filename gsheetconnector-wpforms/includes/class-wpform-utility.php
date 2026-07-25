@@ -17,9 +17,44 @@ if (!defined('ABSPATH')) {
 class Wpform_gs_Connector_Utility
 {
 
-   private function __construct()
+   /**
+    * Tracks which form entries have already been synced to Google Sheets
+    * during the current request, keyed by "{form_id}:{entry_id}".
+    *
+    * @var array<string,bool>
+    */
+   private static $synced_entries = array();
+
+   private function __construct() {}
+
+   /**
+    * Whether an entry has already been synced to Google Sheets during this request.
+    *
+    * Guards against duplicate rows if both the legacy and active
+    * `wpforms_process_entry_save` handlers ever match the same form's settings.
+    *
+    * @since 4.0.4
+    *
+    * @param int $form_id
+    * @param int $entry_id
+    * @return bool
+    */
+   public static function is_entry_synced($form_id, $entry_id)
    {
-      // Do Nothing
+      return isset(self::$synced_entries[$form_id . ':' . $entry_id]);
+   }
+
+   /**
+    * Marks an entry as synced to Google Sheets for the current request.
+    *
+    * @since 4.0.4
+    *
+    * @param int $form_id
+    * @param int $entry_id
+    */
+   public static function mark_entry_synced($form_id, $entry_id)
+   {
+      self::$synced_entries[$form_id . ':' . $entry_id] = true;
    }
 
    /**
@@ -38,22 +73,6 @@ class Wpform_gs_Connector_Utility
    }
 
    /**
-    * Prints message (string or array) in the debug.log file
-    *
-    * @param mixed $message
-    */
-   public function logger($message)
-   {
-      if (WP_DEBUG === true) {
-         if (is_array($message) || is_object($message)) {
-            error_log(print_r($message, true));
-         } else {
-            error_log($message);
-         }
-      }
-   }
-
-   /**
     * Display error or success message in the admin section
     *
     * @param array $data containing type and message
@@ -65,44 +84,59 @@ class Wpform_gs_Connector_Utility
    {
       $message = isset($data['message']) ? $data['message'] : '';
       $message_type = isset($data['type']) ? $data['type'] : '';
-        
+
       switch ($message_type) {
          case 'error':
-             $admin_notice = '<div id="message" class="error notice is-dismissible">';
-             break;
+            $admin_notice = '<div id="message" class="error notice is-dismissible">';
+            break;
          case 'update':
-             $admin_notice = '<div id="message" class="updated notice is-dismissible">';
-             break;
+            $admin_notice = '<div id="message" class="updated notice is-dismissible">';
+            break;
          case 'update-nag':
-             $admin_notice = '<div id="message" class="update-nag">';
-             break;
+            $admin_notice = '<div id="message" class="update-nag">';
+            break;
          case 'upgrade':
-             $admin_notice = '<div id="message" class="error notice wpforms-gs-upgrade is-dismissible">';
-             break;
+            $admin_notice = '<div id="message" class="error notice wpforms-gs-upgrade is-dismissible">';
+            break;
          default:
-             $message = __('There\'s something wrong with your code...', 'gsheetconnector-wpforms');
-             $admin_notice = "<div id=\"message\" class=\"error\">";
-             break;
+            $message = __('There\'s something wrong with your code...', 'gsheetconnector-wpforms');
+            $admin_notice = "<div id=\"message\" class=\"error\">";
+            break;
       }
 
-      $admin_notice .= '<p>' . esc_html( $message ) . '</p>';
+      $admin_notice .= '<p>' . ($message) . '</p>';
       $admin_notice .= "</div>\n";
 
       return $admin_notice;
    }
 
    /**
-    * Utility function to get the current user's role
+    * Guards an AJAX callback behind a capability check.
     *
-    * @since 1.0
+    * Sends a JSON error response, logs the denial, and terminates the
+    * request (via wp_send_json_error()) if the current user lacks the
+    * given capability. Centralizes the pattern used by every
+    * auth-state-changing AJAX handler so the check/log/response shape
+    * stays identical everywhere it's needed.
+    *
+    * @since 4.0.4
+    *
+    * @param string $capability WordPress capability to require, e.g. 'manage_options'.
+    * @param string $message    Optional user-facing error message override.
     */
-   public function get_current_user_role()
+   public static function require_capability($capability = 'manage_options', $message = '')
    {
-      global $wp_roles;
-      foreach ($wp_roles->role_names as $role => $name):
-         if (current_user_can($role))
-            return $role;
-      endforeach;
+      if (current_user_can($capability)) {
+         return;
+      }
+
+      if (empty($message)) {
+         $message = __('You do not have permission to perform this action.', 'gsheetconnector-wpforms');
+      }
+
+      self::gs_debug_log(sprintf('Permission denied: current user lacks the "%s" capability.', $capability));
+
+      wp_send_json_error(array('message' => $message));
    }
 
    /**
@@ -157,48 +191,14 @@ class Wpform_gs_Connector_Utility
     *
     * @since 1.0
     */
-   public static function gs_debug_log( $error ) {
-        if ( ! function_exists( 'WP_Filesystem' ) ) {
-            require_once ABSPATH . 'wp-admin/includes/file.php';
-        }
-        global $wp_filesystem;
-        WP_Filesystem();
-
-        $upload_dir = wp_upload_dir();
-        $log_dir = trailingslashit( $upload_dir['basedir'] ) . 'gsc-wpforms-logs/';
-        $log_file = get_option( 'wpf_gs_debug_log_file' );
-        $timestamp = gmdate( 'Y-m-d H:i:s' ) . "\t PHP " . phpversion() . "\t";
-
-         try {
-            if ( ! $wp_filesystem->is_dir( $log_dir ) ) {
-                $wp_filesystem->mkdir( $log_dir, FS_CHMOD_DIR );
-            }
-
-            $old_file = $log_dir . 'log.txt';
-            if ( $wp_filesystem->exists( $old_file ) ) {
-                wp_delete_file( $old_file );
-            }
-
-            $log_message = is_array( $error ) || is_object( $error )
-                ? $timestamp . wp_json_encode( $error ) . "\r\n"
-                : $timestamp . $error . "\r\n";
-
-            if ( ! empty( $log_file ) && $wp_filesystem->exists( $log_file ) ) {
-                $existing = $wp_filesystem->get_contents( $log_file );
-                $wp_filesystem->put_contents( $log_file, $existing . $log_message, FS_CHMOD_FILE );
-            } else {
-                $new_log_file = $log_dir . 'log-' . uniqid() . '.txt';
-                $log_content = "Log created at " . gmdate( 'Y-m-d H:i:s' ) . "\r\n" . $log_message;
-
-                if ( $wp_filesystem->put_contents( $new_log_file, $log_content, FS_CHMOD_FILE ) ) {
-                    update_option( 'wpf_gs_debug_log_file', $new_log_file );
-                } else {
-                    
-                }
-            }
-      } catch ( Exception $e ) {
-         
+   public static function gs_debug_log($error)
+   {
+   
+      // ===============================
+      // 🔥 DATABASE LOG (ADD ONLY THIS)
+      // ===============================
+      if (class_exists('gswpff_error_logs')) {
+         gswpff_error_logs::log_from_debug($error);
       }
    }
-
 }

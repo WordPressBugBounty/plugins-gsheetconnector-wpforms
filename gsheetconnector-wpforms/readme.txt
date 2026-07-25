@@ -1,11 +1,11 @@
-=== GSheetConnector For WPForms - WPForms Google Sheets Integration (Real-Time Sync) ===
-Contributors: westerndeal, abdullah17, gsheetconnector
+=== GSheetConnector - WPForms Google Sheets Connector ===
+Contributors: westerndeal, abdullah17
 Author URL: https://www.gsheetconnector.com/
 Tags: WPForms, WPForms Google Sheets, Google Sheets Integration, WPForms Google Sheets Integration, Contact Form Google Sheets
-Tested up to: 6.9
+Tested up to: 7.0
 Requires at least: 5.6
 Requires PHP: 7.4 
-Stable tag: 4.0.3
+Stable tag: 4.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -288,6 +288,15 @@ Enable **Debug Log** and **System Status** in the plugin settings to see detaile
 
 
 == Changelog ==
+
+= 4.0.4 = (27-0-2026)
+* Added: UI Changes
+* Added: Dashboad Tab
+* Added: Notification Bar
+* Added: Service Auth
+* Added: Improved feed UI
+* Fixed: Fixed PCP Error
+* Fixed: Remove Lib/ Folder
 
 = 4.0.3 = (17-01-2026)
 * Fixed: freemius issues. 

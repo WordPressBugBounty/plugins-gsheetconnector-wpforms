@@ -12,8 +12,8 @@ if (!defined('ABSPATH')) {
 // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Safe: tab selection used for UI only, no sensitive action
 $active_tab = !empty($_GET['tab']) ? sanitize_text_field(wp_unslash($_GET['tab'])) : 'wpform-dashboard';
 
-if (isset($_GET['code'])) {
-    if (is_string($_GET['code'])) {
+if (isset($_GET['code'])) {// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+    if (is_string($_GET['code'])) {// phpcs:ignore WordPress.Security.NonceVerification.Recommended
         $active_tab = 'integration';
     }
 }
@@ -350,7 +350,7 @@ $has_notice =// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPre
                             </a>
                         </li>
                         <li>
-                            <a href="https://wordpress.org/support/plugin/gsheetconnector-wpforms/" class="d-flex justify-center align-center bg-white" title="Support" target="_blank">
+                            <a href="https://wordpress.org/support/plugin/gsheetconnector-wpforms/#new-topic-0" class="d-flex justify-center align-center bg-white" title="Support" target="_blank">
                                 <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M18 6L14.8284 9.17157M14.8284 9.17157C14.1046 8.44772 13.1046 8 12 8C10.8954 8 9.89543 8.44772 9.17157 9.17157M14.8284 9.17157C15.5523 9.89543 16 10.8954 16 12C16 13.1046 15.5523 14.1046 14.8284 14.8284M18 18L14.8284 14.8284M14.8284 14.8284C14.1046 15.5523 13.1046 16 12 16C10.8954 16 9.89543 15.5523 9.17157 14.8284M6 18L9.17157 14.8284M9.17157 14.8284C8.44772 14.1046 8 13.1046 8 12C8 10.8954 8.44772 9.89543 9.17157 9.17157M6 6L9.17157 9.17157M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>

@@ -1944,8 +1944,8 @@ class WPGS_FormBuilder
 			$selected_method = esc_html__('Auth Required', 'gsheetconnector-wpforms');
 		}
 
-		$GSCWPFF_Title = sprintf(
-			__( 'GSheetConnector (%s)', 'gsheetconnector-wpforms' ),
+		$GSCWPFF_Title = sprintf(// phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
+			__( 'GSheetConnector (%s)', 'gsheetconnector-wpforms' ),// phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
 			$selected_method
 		);
 

@@ -210,7 +210,7 @@ if (!defined('ABSPATH')) {
                             <?php echo esc_html__('Find the perfect connector for your WordPress workflow.', 'gsheetconnector-wpforms'); ?>
                         </p>
                         <div class="plugin-category-section">
-                            <a href="https://www.gsheetconnector.com/plugins#contactform" target="_blank" class="plugin-category-box text-decoration-none">
+                            <a href="https://www.gsheetconnector.com/plugins" target="_blank" class="plugin-category-box text-decoration-none">
                                 <div class="plugin-category-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text w-6 h-6 text-emerald-600" aria-hidden="true">
                                         <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
@@ -236,7 +236,7 @@ if (!defined('ABSPATH')) {
                                 </div>
                             </a>
 
-                            <a href="https://www.gsheetconnector.com/plugins#ecommerce" target="_blank" class="plugin-category-box text-decoration-none">
+                            <a href="https://www.gsheetconnector.com/plugins" target="_blank" class="plugin-category-box text-decoration-none">
                                 <div class="plugin-category-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart w-6 h-6 text-emerald-600" aria-hidden="true">
                                         <circle cx="8" cy="21" r="1"></circle>
@@ -260,7 +260,7 @@ if (!defined('ABSPATH')) {
                                 </div>
                             </a>
 
-                            <a href="https://www.gsheetconnector.com/plugins#pagebuilderform" target="_blank" class="plugin-category-box text-decoration-none">
+                            <a href="https://www.gsheetconnector.com/plugins" target="_blank" class="plugin-category-box text-decoration-none">
                                 <div class="plugin-category-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panels-top-left w-6 h-6 text-emerald-600" aria-hidden="true">
                                         <rect width="18" height="18" x="3" y="3" rx="2"></rect>
@@ -352,7 +352,7 @@ if (!defined('ABSPATH')) {
                             <div class="gsc-content">
                                 <div class="support-headings"><?php echo esc_html__('Need more support? We\'re here to help.', 'gsheetconnector-wpforms'); ?></div>
 
-                                <a href="https://wordpress.org/support/plugin/gsheetconnector-wpforms/" target="_blank" class="btn btn-primary mt-10 link-hover-white text-decoration-none">
+                                <a href="https://wordpress.org/support/plugin/gsheetconnector-wpforms/#new-topic-0" target="_blank" class="btn btn-primary mt-10 link-hover-white text-decoration-none">
                                     <?php echo esc_html__('Submit a Support Ticket', 'gsheetconnector-wpforms'); ?>
                                     <svg width="10" height="10" viewBox="0 0 6 8" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1.66681 0L0.726807 0.94L3.78014 4L0.726807 7.06L1.66681 8L5.66681 4L1.66681 0Z"></path>

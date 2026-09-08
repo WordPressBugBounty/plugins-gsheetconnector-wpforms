@@ -67,7 +67,7 @@ switch ($active_tab) {
                     <div class="gsc-content">
                         <div class="support-headings"><?php echo esc_html__('Need more support? We\'re here to help.', 'gsheetconnector-wpforms'); ?></div>
 
-                        <a href="https://wordpress.org/support/plugin/gsheetconnector-wpforms/" target="_blank" class="btn btn-primary mt-10 link-hover-white text-decoration-none">
+                        <a href="https://wordpress.org/support/plugin/gsheetconnector-wpforms/#new-topic-0" target="_blank" class="btn btn-primary mt-10 link-hover-white text-decoration-none">
                             <?php echo esc_html__('Submit a Support Ticket', 'gsheetconnector-wpforms'); ?>
                             <svg width="10" height="10" viewBox="0 0 6 8" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.66681 0L0.726807 0.94L3.78014 4L0.726807 7.06L1.66681 8L5.66681 4L1.66681 0Z"></path>

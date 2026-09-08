@@ -568,29 +568,20 @@ class WPforms_Googlesheet_Services
     {
         global $wpdb;
 
-        $cache_key = 'gscwpff_forms_connected_to_sheet';
-        $results   = wp_cache_get( $cache_key, 'gscwpff' );
-
-        if ( false === $results ) {
-            $sql = "
-            SELECT p.ID, p.post_title, pm.meta_value
+        
+            $sql =  "SELECT p.ID, p.post_title, p.post_content, pm.meta_value
             FROM {$wpdb->posts} AS p
-            INNER JOIN {$wpdb->postmeta} AS pm
-                ON p.ID = pm.post_id
-            WHERE pm.meta_key = %s
-              AND p.post_type = %s
-            ORDER BY p.ID
-        ";
+            LEFT JOIN {$wpdb->postmeta} AS pm
+                ON p.ID = pm.post_id AND pm.meta_key = 'wpform_gs_settings'
+            WHERE p.post_type = 'wpforms'
+            AND p.post_status = 'publish'
+            ORDER BY p.ID";
 
             // $wpdb->posts/$wpdb->postmeta are core table properties, not request input; the two dynamic values are %s-bound via prepare().
             // phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.PreparedSQL.NotPrepared
-            $results = $wpdb->get_results(
-                $wpdb->prepare($sql, 'wpform_gs_settings', 'wpforms')
-            );
-            // phpcs:enable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.PreparedSQL.NotPrepared
-            wp_cache_set( $cache_key, $results, 'gscwpff', MINUTE_IN_SECONDS );
-        }
-
+            $results = $wpdb->get_results(($sql));// phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching
+           
+    
         return $results;
     }
 
@@ -953,6 +944,43 @@ public function add_integration() {
                     <span id="gscwpff-validation-deactivate-message"></span>
                 </div>
 
+
+                <!-- service method recommand start-->
+
+                 <?php if (0 == $wpforms_auth_method && !empty($email_account)) : ?>
+
+                    <?php
+                    $gs_wpform_recommended_method = '';
+
+                    /*  Gmail account → recommend Service Account. */
+                    if (false !== strpos(strtolower(trim($email_account)), '@gmail.com')) {
+                        $gs_wpform_recommended_method = esc_html__('Service Account', 'gsheetconnector-wpforms');
+                    } 
+
+                    $gs_wpform_notice_message = sprintf(
+                        /* translators: %1$s: recommended Google connection method name. */
+                        __(
+                            'For better reliability, we recommend using the %1$s method. In some cases, the current method may be affected by Google API quota limits, which could cause a few entries to not sync to the sheet.<br><br>Switching to the recommended method provides a more stable connection and helps ensure all entries are synced successfully.',
+                            'gsheetconnector-wpforms'
+                        ),
+                        '<strong>' . esc_html($gs_wpform_recommended_method) . '</strong>'
+                    );
+                    
+                    $message_one = esc_html__( 'For better reliability, we recommend using the', 'gsheetconnector-wpforms' );
+                    $message_two = esc_html__( 'method. In some cases, the current method may be affected by Google API quota limits, which could cause a few entries to not sync to the sheet.', 'gsheetconnector-wpforms' );
+                    $message_three = esc_html__( 'Switching to the recommended method provides a more stable connection and helps ensure all entries are synced successfully.', 'gsheetconnector-wpforms' );
+
+                    $gs_gra_recommended_method = $message_one . ' <strong>' . esc_html( $gs_wpform_recommended_method ) . '</strong> ' . $message_two . '<br><br>' . $message_three;
+                    ?>
+
+                    <div class="gsc-email-notice mt-30 pt-10 pb-10 text-dark gap-5">
+                        <?php echo wp_kses_post($gs_gra_recommended_method); ?>
+                    </div>
+
+                <?php endif; ?>
+
+                <!-- service method recommand  end-->
+
                 <!-- Privacy note -->
                 <div class="gsc-privacy-note mt-30 pt-10 pb-10 text-dark d-flex gap-5">
                     <div class="gsc-privacy-note-image">
@@ -1222,11 +1250,7 @@ if ($wpforms_auth_method == '2') {
     <!-- manual popup #end -->
 
     <?php
-    if ( class_exists( 'gsff_error_logs' ) ) {
-        $logs = new gswpff_error_logs();
-        $logs->gswpff_render_page_html();
-    }
-
+   
 } // end add_integration()
 
     /**
@@ -1685,8 +1709,8 @@ public function gscwpfrom_paginate_feed_list(){
 
       global $wpdb;
     
-
-         $wpformdb_feed_sheet_list = $wpdb->get_results(
+         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching
+         $wpformdb_feed_sheet_list = $wpdb->get_results(// phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching
             "SELECT p.ID, p.post_title, p.post_content, pm.meta_value
             FROM {$wpdb->prefix}posts AS p
             LEFT JOIN {$wpdb->prefix}postmeta AS pm

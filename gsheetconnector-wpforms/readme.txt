@@ -1,11 +1,11 @@
-=== GSheetConnector - WPForms Google Sheets Connector ===
+=== GSheetConnector – WPForms Google Sheets Connector, Save WPForms Lite & PRO Entries to Database & Sheets ===
 Contributors: westerndeal, abdullah17
 Author URL: https://www.gsheetconnector.com/
 Tags: WPForms, WPForms Google Sheets, Google Sheets Integration, WPForms Google Sheets Integration, Contact Form Google Sheets
-Tested up to: 7.0
 Requires at least: 5.6
+Tested up to: 7.1
 Requires PHP: 7.4 
-Stable tag: 4.1.0
+Stable tag: 4.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -169,10 +169,10 @@ Follow these steps:
 1. Go to **WPForms → Google Sheet → Integration** in your WordPress admin.
 2. Click the **“Google Signin”** button.
 3. You will be redirected to Google to log in and authorize access to **Google Drive** and **Google Sheets**.  
-   Please allow both permissions.
+Please allow both permissions.
 4. After authorization, Google will generate an **Access Code** and redirect you back to the plugin.
 5. Click **Save & Authenticate**.  
-   Your connected Google email will be displayed, confirming that the connection is successful.
+Your connected Google email will be displayed, confirming that the connection is successful.
 
 
 = How can I send custom Smart Tag values (query_vars, user_meta, etc.) to Google Sheets? =
@@ -183,8 +183,8 @@ Add this code to your site:
 
 add_filter( "wpforms_smart_tags", "edit_smart_tags" );
 function edit_smart_tags( $tags ) {
-    $tags['query_var key="wpformstest"'] = 'Query String Variable';
-    return $tags;
+$tags['query_var key="wpformstest"'] = 'Query String Variable';
+return $tags;
 }
 
 Then add the same Smart Tag key  
@@ -289,14 +289,18 @@ Enable **Debug Log** and **System Status** in the plugin settings to see detaile
 
 == Changelog ==
 
-= 4.0.4 = (27-0-2026)
-* Added: UI Changes
-* Added: Dashboad Tab
-* Added: Notification Bar
-* Added: Service Auth
-* Added: Improved feed UI
-* Fixed: Fixed PCP Error
-* Fixed: Remove Lib/ Folder
+= 4.2.1 (08-09-2026) =
+* Fixed: Improved the display of connected Google Sheet details in the WordPress dashboard.
+* Fixed: Resolved a compatibility issue identified during PCP plugin compatibility testing.
+
+= 4.1.0 (25-07-2026) =
+* Added: Introduced a refreshed and more intuitive user interface.
+* Added: Added a new Dashboard tab for quick access to plugin information.
+* Added: Introduced a notification bar to display important updates and alerts.
+* Added: Added support for Service Account authentication.
+* Added: Enhanced the Feed Settings interface for improved usability.
+* Fixed: Resolved a compatibility issue related to PCP.
+* Fixed: Removed the unused `lib` directory from the plugin package.
 
 = 4.0.3 = (17-01-2026)
 * Fixed: freemius issues. 
@@ -317,7 +321,7 @@ Enable **Debug Log** and **System Status** in the plugin settings to see detaile
 = 3.4.27 = (16-07-2025)
 * Tested up to latest version of WordPress 6.8.1.
 * Confirmed compatibility with the latest versions of WPForms and WPForms Lite.  
- 
+
 = 3.4.26 = (21-04-2025)
 * Added: Moved saving of credentials to database for Auto API Integration.
 

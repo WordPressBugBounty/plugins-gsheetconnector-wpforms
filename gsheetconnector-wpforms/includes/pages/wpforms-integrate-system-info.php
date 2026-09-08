@@ -70,12 +70,6 @@ $WpForms_gs_tools_service = new WPforms_Gsheet_Connector_Init();
 
         $email_account_auto = $google_sheet_auto->gsheet_print_google_account_email();
         $connected_email = !empty($email_account_auto) ? esc_html($email_account_auto) : 'Not Connected';
-    } elseif (!empty($api_token_manual) && $gs_wpforms_manual_setting == 1) {
-        /* The user is authenticated through the manual method */
-        /*  You can use the manual method to retrieve the email */
-        $google_sheet = new WPFGSC_googlesheet();
-        $email_account_manual = $google_sheet->gsheet_print_google_account_email_manual();
-        $connected_email = !empty($email_account_manual) ? esc_html($email_account_manual) : 'Not Connected';
     } elseif (!empty($api_token_service) && $gs_wpforms_manual_setting == 2) {
         $decoded_json = json_decode($api_token_service, true);
         if (json_last_error() === JSON_ERROR_NONE && isset($decoded_json['client_email'])) {
@@ -745,7 +739,7 @@ $WpForms_gs_tools_service = new WPforms_Gsheet_Connector_Init();
               if ( ! $has_logs ) : ?>
                   <tr>
                       <td colspan="4" class="text-center">
-                          <?php echo esc_html__( 'No logs found', 'gsheetconnector-gravityforms-pro' ); ?>
+                          <?php echo esc_html__( 'No logs found', 'gsheetconnector-wpforms' ); ?>
                       </td>
                   </tr>
               <?php endif; ?>

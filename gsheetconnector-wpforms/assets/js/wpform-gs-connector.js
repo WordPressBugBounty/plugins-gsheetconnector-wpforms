@@ -1166,7 +1166,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*  Copy button  email address in service auth   */
 jQuery(document).ready(function ($) {
-  jQuery(document).on("click", ".gsc-connected-email", function (e) {
+  jQuery(document).on("click", ".wpformspro-ser-email-copy-btn", function (e) {
     e.preventDefault();
 
     var $btn = jQuery(this);

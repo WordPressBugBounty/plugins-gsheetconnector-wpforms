@@ -85,6 +85,11 @@ class Wpform_gs_Connector_Utility
       $message = isset($data['message']) ? $data['message'] : '';
       $message_type = isset($data['type']) ? $data['type'] : '';
 
+      // Nothing to show: bail quietly instead of rendering an empty notice.
+      if ('' === trim((string) $message)) {
+         return '';
+      }
+
       switch ($message_type) {
          case 'error':
             $admin_notice = '<div id="message" class="error notice is-dismissible">';
@@ -99,8 +104,7 @@ class Wpform_gs_Connector_Utility
             $admin_notice = '<div id="message" class="error notice wpforms-gs-upgrade is-dismissible">';
             break;
          default:
-            $message = __('There\'s something wrong with your code...', 'gsheetconnector-wpforms');
-            $admin_notice = "<div id=\"message\" class=\"error\">";
+            $admin_notice = '<div id="message" class="notice notice-error is-dismissible">';
             break;
       }
 

@@ -8,7 +8,7 @@
  * Requires PHP:      7.4
  * Author:            GSheetConnector
  * Author URI:        https://www.gsheetconnector.com/
- * Version:           4.2.1
+ * Version:           4.2.2
  * Text Domain:       gsheetconnector-wpforms
  * License:           GPLv2
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,8 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 // SECTION 1: CONSTANTS & BOOTSTRAP
 // ============================================================
 
-define( 'WPFORMS_GOOGLESHEET_VERSION',      '4.2.1' );
-define( 'WPFORMS_GOOGLESHEET_DB_VERSION',   '4.2.1' );
+define( 'WPFORMS_GOOGLESHEET_VERSION',      '4.2.2' );
+define( 'WPFORMS_GOOGLESHEET_DB_VERSION',   '4.2.2' );
 define( 'WPFORMS_GOOGLESHEET_ROOT',         dirname( __FILE__ ) );
 define( 'WPFORMS_GOOGLESHEET_URL',          plugins_url( '/', __FILE__ ) );
 define( 'WPFORMS_GOOGLESHEET_BASE_FILE',    basename( dirname( __FILE__ ) ) . '/gsheetconnector-wpforms.php' );

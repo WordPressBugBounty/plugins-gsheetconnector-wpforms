@@ -5,7 +5,7 @@ Tags: WPForms, WPForms Google Sheets, Google Sheets Integration, WPForms Google 
 Requires at least: 5.6
 Tested up to: 7.1
 Requires PHP: 7.4 
-Stable tag: 4.2.1
+Stable tag: 4.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -288,6 +288,9 @@ Enable **Debug Log** and **System Status** in the plugin settings to see detaile
 
 
 == Changelog ==
+
+= 4.2.2 (29-09-2026) =
+* Fixed: Resolved an issue where Google Sheet details were not being saved correctly when using the Service Account authentication method.
 
 = 4.2.1 (08-09-2026) =
 * Fixed: Improved the display of connected Google Sheet details in the WordPress dashboard.

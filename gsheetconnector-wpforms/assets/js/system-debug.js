@@ -7,98 +7,107 @@ jQuery(document).ready(function ($) {
 
     // Loop through each section
     $container.find(".info-button").each(function () {
-        const $button = $(this);
-        const $infoContent = $button.closest(".mb-20, .info-container > div").next(".info-content");
-        
-        // Get heading text
-        const heading = $button
-            .clone()
-            .find(".dashicons")
-            .remove()
-            .end()
-            .text()
-            .trim();
+      const $button = $(this);
+      const $infoContent = $button
+        .closest(".mb-20, .info-container > div")
+        .next(".info-content");
 
-        if (heading && $infoContent.length) {
-            // Add section heading
-            systemInfoText += "========================================\n";
-            systemInfoText += heading + "\n";
-            systemInfoText += "========================================\n";
+      // Get heading text
+      const heading = $button
+        .clone()
+        .find(".dashicons")
+        .remove()
+        .end()
+        .text()
+        .trim();
 
-            // Get table rows
-            $infoContent.find("table tbody tr").each(function () {
-                const $cells = $(this).find("td");
-                
-                if ($cells.length >= 2) {
-                    const label = $cells.eq(0).text().trim();
-                    const value = $cells.eq(1).text().trim();
+      if (heading && $infoContent.length) {
+        // Add section heading
+        systemInfoText += "========================================\n";
+        systemInfoText += heading + "\n";
+        systemInfoText += "========================================\n";
 
-                    if (label && value) {
-                        systemInfoText += `${label}: ${value}\n`;
-                    }
-                } else if ($cells.length === 1) {
-                    // For single column rows
-                    const text = $cells.eq(0).text().trim();
-                    if (text) {
-                        systemInfoText += `${text}\n`;
-                    }
-                }
+        // Get table rows
+        $infoContent.find("table tbody tr").each(function () {
+          const $cells = $(this).find("td");
+
+          if ($cells.length >= 2) {
+            const label = $cells.eq(0).text().trim();
+
+            // Take column 2, 3, 4... so "Writable" is included
+            const values = [];
+            $cells.slice(1).each(function () {
+              const cellText = $(this).text().replace(/\s+/g, " ").trim();
+              if (cellText) {
+                values.push(cellText);
+              }
             });
 
-            // Get paragraph text if any
-            $infoContent.find("p").each(function () {
-                const text = $(this).text().trim();
-                if (text) {
-                    systemInfoText += `${text}\n`;
-                }
-            });
+            if (label && values.length) {
+              systemInfoText += `${label}: ${values.join(" - ")}\n`;
+            }
+          } else if ($cells.length === 1) {
+            // For single column rows
+            const text = $cells.eq(0).text().trim();
+            if (text) {
+              systemInfoText += `${text}\n`;
+            }
+          }
+        });
 
-            systemInfoText += "\n\n";
-        }
+        // Get paragraph text if any
+        $infoContent.find("p").each(function () {
+          const text = $(this).text().trim();
+          if (text) {
+            systemInfoText += `${text}\n`;
+          }
+        });
+
+        systemInfoText += "\n\n";
+      }
     });
 
     // Copy to clipboard
     if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(systemInfoText.trim())
-            .then(function () {
-                $(".gsc-copy-msg")
-                    .stop(true, true)
-                    .removeClass("d-none")
-                    .fadeIn(200)
-                    .delay(2000)
-                    .fadeOut(300);
-            })
-            .catch(function (err) {
-                console.error("Unable to copy system info:", err);
-                fallbackCopy(systemInfoText.trim());
-            });
+      navigator.clipboard
+        .writeText(systemInfoText.trim())
+        .then(function () {
+          $(".gsc-copy-msg")
+            .stop(true, true)
+            .removeClass("d-none")
+            .fadeIn(200)
+            .delay(2000)
+            .fadeOut(300);
+        })
+        .catch(function (err) {
+          console.error("Unable to copy system info:", err);
+          fallbackCopy(systemInfoText.trim());
+        });
     } else {
-        fallbackCopy(systemInfoText.trim());
+      fallbackCopy(systemInfoText.trim());
     }
 
     function fallbackCopy(text) {
-        const ta = document.createElement("textarea");
-        ta.value = text;
-        ta.style.position = "fixed";
-        ta.style.left = "-999999px";
-        document.body.appendChild(ta);
-        ta.select();
-        try {
-            document.execCommand("copy");
-            $(".gsc-copy-msg")
-                .stop(true, true)
-                .removeClass("d-none")
-                .fadeIn(200)
-                .delay(2000)
-                .fadeOut(300);
-        } catch (err) {
-            console.error("Copy failed:", err);
-        }
-        document.body.removeChild(ta);
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.left = "-999999px";
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand("copy");
+        $(".gsc-copy-msg")
+          .stop(true, true)
+          .removeClass("d-none")
+          .fadeIn(200)
+          .delay(2000)
+          .fadeOut(300);
+      } catch (err) {
+        console.error("Copy failed:", err);
+      }
+      document.body.removeChild(ta);
     }
-};
-
-
+  };
 
   window.copyErrorLog = function () {
     const $textarea = $(".errorlog");
@@ -112,11 +121,11 @@ jQuery(document).ready(function ($) {
         setTimeout(() => $copyMessage.hide(), 3000);
       } catch (err) {
         console.error("Unable to copy error log:", err);
-        alert("Error log copy failed. Please copy it manually.");
+        
       }
       $textarea.blur();
     } else {
-      alert("Error log textarea or copy message not found.");
+      
     }
   };
 
@@ -176,17 +185,15 @@ jQuery(document).ready(function ($) {
   jQuery(document).ready(function ($) {
     // Remove any existing handlers
     $(document).off("click", "#gscwpff-free-system-copy");
-    
+
     // Attach click handler
     $(document).on("click", "#gscwpff-free-system-copy", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        window.copySystemInfo();
+      e.preventDefault();
+      e.stopPropagation();
+      window.copySystemInfo();
     });
   });
 });
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   /**
@@ -241,7 +248,7 @@ jQuery(document).ready(function ($) {
     var copyText = "";
 
     if (!rows.length) {
-      alert("No error logs found.");
+      
       return;
     }
 
@@ -275,7 +282,6 @@ jQuery(document).ready(function ($) {
   });
 });
 
-
 jQuery(document).ready(function ($) {
   $("#gscwpff-csv-info").on("click", function (e) {
     e.preventDefault();
@@ -284,7 +290,7 @@ jQuery(document).ready(function ($) {
     var csvContent = "";
 
     if (rows.length === 0) {
-      alert("No error logs found.");
+     
       return;
     }
 

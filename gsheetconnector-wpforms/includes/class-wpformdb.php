@@ -489,8 +489,8 @@ class GS_WPFORMDB
 
         $meta_rows = [];
 
-        if (! empty($entry['entry_id'])) {
-            $meta_rows[__('Entry ID', 'gsheetconnector-wpforms')] = $entry['entry_id'];
+        if (! empty($entry['id'])) {
+            $meta_rows[__('Entry ID', 'gsheetconnector-wpforms')] = $entry['id'];
         }
 
         $meta_rows[__('Submitted On', 'gsheetconnector-wpforms')] = $formatted_date;

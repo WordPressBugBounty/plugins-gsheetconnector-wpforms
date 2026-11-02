@@ -8,7 +8,7 @@
  * Requires PHP:      7.4
  * Author:            GSheetConnector
  * Author URI:        https://www.gsheetconnector.com/
- * Version:           4.2.3
+ * Version:           4.2.4
  * Text Domain:       gsheetconnector-wpforms
  * License:           GPLv2
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,8 +25,8 @@ if (! defined('ABSPATH')) {
 // SECTION 1: CONSTANTS & BOOTSTRAP
 // ============================================================
 
-define('WPFORMS_GOOGLESHEET_VERSION',      '4.2.3');
-define('WPFORMS_GOOGLESHEET_DB_VERSION',   '4.2.3');
+define('WPFORMS_GOOGLESHEET_VERSION',      '4.2.4');
+define('WPFORMS_GOOGLESHEET_DB_VERSION',   '4.2.4');
 define('WPFORMS_GOOGLESHEET_ROOT',         dirname(__FILE__));
 define('WPFORMS_GOOGLESHEET_URL',          plugins_url('/', __FILE__));
 define('WPFORMS_GOOGLESHEET_BASE_FILE',    basename(dirname(__FILE__)) . '/gsheetconnector-wpforms.php');
@@ -35,6 +35,20 @@ define('WPFORMS_GOOGLESHEET_PATH',         plugin_dir_path(__FILE__));
 define('WPFORMS_GOOGLESHEET_PRODUCT_NAME', 'Wpforms Google Sheet Connector');
 define('WPFORMS_GOOGLESHEET_API_URL',      'https://oauth.gsheetconnector.com/api-cred.php');
 define('WPFORMS_GOOGLESHEET_CURRENT_THEME', get_stylesheet_directory());
+
+// 4.2.4: WordPress < 6.8 does not load plugin.php before plugins (front-end fatal otherwise).
+if (! function_exists('is_plugin_active')) {
+	require_once ABSPATH . 'wp-admin/includes/plugin.php';
+}
+
+if (is_plugin_active('gsheetconnector-wpforms-pro/gsheetconnector-wpforms-pro.php')) {
+	define('GSCWPF_FREE_PAUSED_FOR_PRO', true); // 4.2.4: tells Pro that Free is paused.
+	return;
+}
+
+// 4.2.4: credentials encrypted at rest (shared with the Pro plugin).
+require_once WPFORMS_GOOGLESHEET_ROOT . '/includes/class-gscwpf-credential-crypto.php';
+GSCWPF_Credential_Crypto::register();
 
 /* Suppress "doing it wrong" notices from WP core during plugin init. */
 add_filter('doing_it_wrong_trigger_error', '__return_false');
@@ -243,6 +257,9 @@ class WPforms_Gsheet_Connector_Init
 		add_action('init', array($this, 'load_css_and_js_files'));
 		add_action('init', array($this, 'load_all_classes'));
 
+		/* @since 4.2.4 Give saved entries a real Entry ID. */
+		add_action('init', array('Wpform_gs_Connector_Utility', 'maybe_upgrade_submissions_table'), 5);
+
 		/* AJAX handlers. */
 		add_action('wp_ajax_wp_clear_logs',       array($this, 'wp_clear_logs'));
 		add_action('wp_ajax_wp_clear_debug_logs', array($this, 'wp_clear_debug_logs'));
@@ -289,7 +306,13 @@ class WPforms_Gsheet_Connector_Init
 	 * Runs on plugin deactivation.
 	 * Intentionally left empty – no cleanup required on deactivation.
 	 */
-	public function wpform_gs_connector_deactivate() {}
+	public function wpform_gs_connector_deactivate($network_wide = false)
+	{
+		// 4.2.4: leave credentials readable by older Free/Pro versions (every site on network deactivation).
+		if (class_exists('GSCWPF_Credential_Crypto')) {
+			GSCWPF_Credential_Crypto::restore_plaintext_for_deactivation($network_wide);
+		}
+	}
 
 	/**
 	 * Runs on plugin uninstall (static – called without an object instance).
@@ -334,6 +357,7 @@ class WPforms_Gsheet_Connector_Init
 		dbDelta("CREATE TABLE {$submissions_table} (
 			id            BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
 			entry_id      BIGINT(20) UNSIGNED NOT NULL,
+			entry_source  VARCHAR(10)         NOT NULL DEFAULT '',
 			form_id       BIGINT(20) UNSIGNED NOT NULL,
 			submitted_at  DATETIME            NOT NULL,
 			form_data     LONGTEXT            NOT NULL,
@@ -343,7 +367,8 @@ class WPforms_Gsheet_Connector_Init
 			is_read       TINYINT(1)          NOT NULL DEFAULT 1,
 			PRIMARY KEY (id),
 			KEY form_id  (form_id),
-			KEY entry_id (entry_id)
+			KEY entry_id (entry_id),
+			KEY entry_source (entry_source)
 		) {$charset_collate};");
 
 		/* Error-log table. */
@@ -512,6 +537,10 @@ class WPforms_Gsheet_Connector_Init
 		if (! $wpforms_active) {
 			add_action('admin_notices',         array($this, 'wpforms_missing_notice'));
 			add_action('network_admin_notices', array($this, 'wpforms_missing_notice'));
+			// 4.2.4: a subsite without WPForms must not network-deactivate the plugin.
+			if (is_multisite() && is_plugin_active_for_network($plugin)) {
+				return;
+			}
 			deactivate_plugins($plugin);
 			unset($_GET['activate']);
 		}
@@ -721,7 +750,7 @@ class WPforms_Gsheet_Connector_Init
 			/* System debug and extension scripts. */
 			$page_scripts = array(
 				'gscwpform-debug-js'      => 'assets/js/system-debug.js',
-				'gs-connector-extensions' => 'assets/js/gs-connector-extensions.js',
+				'wpform--connector-extensions' => 'assets/js/gs-connector-extensions.js',
 			);
 
 			foreach ($page_scripts as $handle => $path) {

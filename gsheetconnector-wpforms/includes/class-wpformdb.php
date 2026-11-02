@@ -101,12 +101,22 @@ class GS_WPFORMDB
 			return;
 		}
 
+		$upgraded = Wpform_gs_Connector_Utility::submissions_table_upgraded();
+
 		foreach ( $entries as $entry ) {
 
-			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery -- $wpdb->insert() is the WP-blessed write API; no core equivalent exists for this custom table.
-			$wpdb->insert(
-				$custom_table,
-				array(
+			// @since 4.2.4 Skip entries already stored; Lite rows never match.
+			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, PluginCheck.Security.DirectDB.UnescapedDBParameter, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $custom_table is derived from $wpdb->prefix, not request input.
+			$exists = $wpdb->get_var(
+				$wpdb->prepare(
+					"SELECT id FROM {$custom_table} WHERE entry_id = %d AND form_id = %d" . ( $upgraded ? " AND entry_source <> 'lite'" : '' ) . ' LIMIT 1',
+					(int) $entry['entry_id'],
+					(int) $entry['form_id']
+				)
+			);
+
+			if ( ! $exists ) {
+				$row = array(
 					'form_id'      => (int) $entry['form_id'],
 					'entry_id'     => (int) $entry['entry_id'],
 					'submitted_at' => $entry['date'],
@@ -114,8 +124,14 @@ class GS_WPFORMDB
 					'user_ip'      => $entry['ip_address'],
 					'browser_info' => $entry['user_agent'],
 					'is_read'      => 0,
-				)
-			);
+				);
+				if ( $upgraded ) {
+					$row['entry_source'] = 'wpforms';
+				}
+
+				// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery -- $wpdb->insert() is the WP-blessed write API; no core equivalent exists for this custom table.
+				$wpdb->insert( $custom_table, $row );
+			}
 
 			/* Advance the cursor so the next run picks up from here. */
 			update_option( 'wpgs_last_synced_wpforms_entry_id', (int) $entry['entry_id'] );
@@ -154,13 +170,15 @@ class GS_WPFORMDB
 	 */
 	public function gsc_save_wpforms_submission( $fields, $entry, $form_data, $entry_id ) {
 
-    if ( ! is_plugin_active( 'wpforms-lite/wpforms.php' ) ) {
+    /* @since 4.2.4 WPForms Lite only; Pro entries are copied by wpgs_sync_wpforms_entries_incremental(). */
+    if ( ! function_exists( 'wpforms' ) || wpforms()->is_pro() ) {
         return false;
     }
 
 		global $wpdb;
 
 		$table_name = $wpdb->prefix . 'gscwpforms_submissions';
+		$upgraded   = Wpform_gs_Connector_Utility::submissions_table_upgraded();
 
 		/* Extract the first email field value, if present. */
 		$user_email = '';
@@ -177,21 +195,25 @@ class GS_WPFORMDB
 			}
 		}
 
-		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery -- $wpdb->insert() is the WP-blessed write API; no core equivalent exists for this custom table.
-		$inserted = $wpdb->insert(
-			$table_name,
-			array(
-				'entry_id'     => absint( $entry_id ),
-				'form_id'      => absint( $form_data['id'] ?? 0 ),
-				'submitted_at' => current_time( 'mysql' ),
-				'form_data'    => wp_json_encode( $fields ),
-				'user_email'   => $user_email,
-				'user_ip'      => isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '',
-				'browser_info' => isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_textarea_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) : '',
-				'is_read'      => 0,
-			),
-			array( '%d', '%d', '%s', '%s', '%s', '%s', '%s', '%d' )
+		$row = array(
+			'entry_id'     => absint( $entry_id ),
+			'form_id'      => absint( $form_data['id'] ?? 0 ),
+			'submitted_at' => current_time( 'mysql' ),
+			'form_data'    => wp_json_encode( $fields ),
+			'user_email'   => $user_email,
+			'user_ip'      => isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '',
+			'browser_info' => isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_textarea_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) : '',
+			'is_read'      => 0,
 		);
+		$formats = array( '%d', '%d', '%s', '%s', '%s', '%s', '%s', '%d' );
+
+		if ( $upgraded ) {
+			$row['entry_source'] = 'lite';
+			$formats[]           = '%s';
+		}
+
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery -- $wpdb->insert() is the WP-blessed write API; no core equivalent exists for this custom table.
+		$inserted = $wpdb->insert( $table_name, $row, $formats );
 
 		if ( $inserted === false ) {
 			Wpform_gs_Connector_Utility::gs_debug_log(
@@ -201,6 +223,15 @@ class GS_WPFORMDB
 				'DB Error: ' . $wpdb->last_error
 			);
 			return false;
+		}
+
+		/* @since 4.2.4 Lite has no entry IDs: the row id is the Entry ID. */
+		if ( $upgraded ) {
+			$row_id = (int) $wpdb->insert_id;
+			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery -- $wpdb->update() is the WP-blessed write API; no core equivalent exists for this custom table.
+			$wpdb->update( $table_name, array( 'entry_id' => $row_id ), array( 'id' => $row_id ), array( '%d' ), array( '%d' ) );
+			Wpform_gs_Connector_Utility::set_lite_entry_id( $form_data['id'] ?? 0, $row_id );
+			update_option( 'gscwpf_lite_entries_pending', 1 );
 		}
 
 		return true;
@@ -489,8 +520,9 @@ class GS_WPFORMDB
 
         $meta_rows = [];
 
-        if (! empty($entry['id'])) {
-            $meta_rows[__('Entry ID', 'gsheetconnector-wpforms')] = $entry['id'];
+        if (! empty($entry['entry_id']) || ! empty($entry['id'])) {
+            // @since 4.2.4 Same Entry ID as WPForms and the sheet.
+            $meta_rows[__('Entry ID', 'gsheetconnector-wpforms')] = ! empty($entry['entry_id']) ? $entry['entry_id'] : $entry['id'];
         }
 
         $meta_rows[__('Submitted On', 'gsheetconnector-wpforms')] = $formatted_date;

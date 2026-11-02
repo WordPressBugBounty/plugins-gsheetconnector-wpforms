@@ -110,6 +110,7 @@ class WPGS_FormBuilder
 					$data['date'] = date_i18n(get_option('date_format'));
 					$data['time'] = date_i18n(get_option('time_format'));
 
+					$phone_columns = array();
 					foreach ($fields as $k => $v) {
 
 						$get_field = $fields[$k];
@@ -117,12 +118,15 @@ class WPGS_FormBuilder
 						$value = $get_field['value'];
 						if (in_array($get_field['type'], $payment_type)) {
 							$value =  html_entity_decode($get_field['value']);
-							
+
+						}
+						if ('phone' === $get_field['type']) {
+							$phone_columns[] = $key;
 						}
 						$data[$key] = $value;
 					}
-					
-					$doc->add_row($data);
+
+					$doc->add_row($data, $phone_columns);
 				} catch (Exception $e) {
 					
 					$data['ERROR_MSG'] = $e->getMessage();

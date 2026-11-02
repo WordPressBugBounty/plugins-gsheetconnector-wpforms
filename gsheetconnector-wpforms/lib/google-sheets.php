@@ -39,6 +39,10 @@ class wpfgsc_googlesheet
          $args['body'] = wp_json_encode($args['body']);
       }
 
+      if (!isset($args['timeout'])) {
+         $args['timeout'] = self::api_timeout(); // 4.2.4
+      }
+
       $response = wp_remote_request($url, $args);
 
       if (is_wp_error($response)) {
@@ -98,6 +102,7 @@ class wpfgsc_googlesheet
       $response = wp_remote_post(
          'https://oauth2.googleapis.com/token',
          array(
+            'timeout' => self::api_timeout(),
             'body' => array(
                'grant_type' => 'urn:ietf:params:oauth:grant-type:jwt-bearer',
                'assertion'  => implode('.', $segments),
@@ -120,9 +125,69 @@ class wpfgsc_googlesheet
 
     private static function creds()
    {
-   return is_multisite()
+   $creds = is_multisite()
    ? get_site_option('Wpformsgsc_api_creds')
    : get_option('Wpformsgsc_api_creds');
+
+   // 4.2.4: re-fetch missing managed credentials (throttled to once per 10 minutes) instead of requiring reactivation.
+   if ((!is_array($creds) || empty($creds['client_id_web'])) && !get_site_transient('gscwpf_api_creds_retry')) {
+      set_site_transient('gscwpf_api_creds_retry', 1, 10 * MINUTE_IN_SECONDS);
+      if (class_exists('Wpform_gs_Connector_Utility') && Wpform_gs_Connector_Utility::instance()->save_api_credentials()) {
+         $creds = is_multisite()
+         ? get_site_option('Wpformsgsc_api_creds')
+         : get_option('Wpformsgsc_api_creds');
+      }
+   }
+
+   return $creds;
+   }
+
+   /**
+    * Google API request timeout in seconds (filter: gscwpf_google_api_timeout).
+    *
+    * @since 4.2.4
+    */
+   public static function api_timeout()
+   {
+      return max(5, (int) apply_filters('gscwpf_google_api_timeout', 20));
+   }
+
+   /**
+    * Quote a tab name for A1 notation so names like "Q1" or with ' / ! resolve to the tab.
+    *
+    * @since 4.2.4
+    */
+   public static function a1_tab($tab)
+   {
+      return "'" . str_replace("'", "''", (string) $tab) . "'";
+   }
+
+   /**
+    * Write phone cells of one row in Plain text format, so "+92 300 1234567" or "0300..." is kept as typed
+    * without an apostrophe. Only the cell's number format changes; colors and fonts stay.
+    *
+    * @since 4.2.4
+    */
+   public function write_phone_cells($spreadsheet_id, $tab_id, $row, $cells, $token)
+   {
+      $requests = [];
+      foreach ($cells as $i => $value) {
+         $requests[] = ['updateCells' => [
+            'range'  => ['sheetId' => (int) $tab_id, 'startRowIndex' => $row - 1, 'endRowIndex' => $row, 'startColumnIndex' => (int) $i, 'endColumnIndex' => (int) $i + 1],
+            'rows'   => [['values' => [['userEnteredValue' => ['stringValue' => (string) $value], 'userEnteredFormat' => ['numberFormat' => ['type' => 'TEXT']]]]]],
+            'fields' => 'userEnteredValue,userEnteredFormat.numberFormat',
+         ]];
+      }
+      $response = wp_remote_post("https://sheets.googleapis.com/v4/spreadsheets/{$spreadsheet_id}:batchUpdate", [
+         'timeout' => self::api_timeout(),
+         'headers' => ['Authorization' => 'Bearer ' . $token, 'Content-Type' => 'application/json'],
+         'body'    => wp_json_encode(['requests' => $requests]),
+      ]);
+      if (is_wp_error($response) || 200 !== (int) wp_remote_retrieve_response_code($response)) {
+         Wpform_gs_Connector_Utility::gs_debug_log('Phone cells write failed for spreadsheet ' . $spreadsheet_id . ': ' . (is_wp_error($response) ? $response->get_error_message() : wp_remote_retrieve_body($response)));
+         return false;
+      }
+      return true;
    }
 
    //constructed on call
@@ -136,6 +201,7 @@ class wpfgsc_googlesheet
          $response = wp_remote_post(
             'https://oauth2.googleapis.com/token',
             [
+            'timeout' => self::api_timeout(),
             'body' => [
                'code'          => $access_code,
                'client_id'     => $creds['client_id_web'],
@@ -169,6 +235,12 @@ class wpfgsc_googlesheet
 
    public static function updateToken($tokenData)
    {
+      // 4.2.4: keep the stored token when Google returns an error instead of a token.
+      if (empty($tokenData['access_token'])) {
+         Wpform_gs_Connector_Utility::gs_debug_log('Google token exchange failed: ' . sanitize_text_field((string) ($tokenData['error'] ?? 'empty response')));
+         return;
+      }
+
       $expires_in = isset($tokenData['expires_in']) ? intval($tokenData['expires_in']) : 0;
       $tokenData['expire'] = time() + $expires_in;
       try {
@@ -345,7 +417,7 @@ class wpfgsc_googlesheet
             sprintf(
                'https://sheets.googleapis.com/v4/spreadsheets/%s/values/%s',
                rawurlencode($spreadsheet_id),
-               rawurlencode($sheet_title . '!1:1')
+               rawurlencode(self::a1_tab($sheet_title) . '!1:1')
             ),
             $token
          );
@@ -507,6 +579,7 @@ private function generate_wpforms_service_token($creds)
     $response = wp_remote_post(
       'https://oauth2.googleapis.com/token',
       [
+        'timeout' => self::api_timeout(),
         'body' => [
           'grant_type' => 'urn:ietf:params:oauth:grant-type:jwt-bearer',
           'assertion'  => $jwt
@@ -534,9 +607,9 @@ private function generate_wpforms_service_token($creds)
 
 
 
-       public function add_row($data)
+       public function add_row($data, $phone_columns = [])
    {
-	   
+
 
       try {
 
@@ -552,6 +625,7 @@ private function generate_wpforms_service_token($creds)
          $meta_response = wp_remote_get(
             "https://sheets.googleapis.com/v4/spreadsheets/{$spreadsheetId}?fields=sheets.properties",
             [
+               'timeout' => self::api_timeout(),
                'headers' => [
                   'Authorization' => 'Bearer ' . $token,
                ],
@@ -577,8 +651,9 @@ private function generate_wpforms_service_token($creds)
          }
 
          $header_response = wp_remote_get(
-            "https://sheets.googleapis.com/v4/spreadsheets/{$spreadsheetId}/values/" . urlencode($sheet_name . '!1:1'),
+            "https://sheets.googleapis.com/v4/spreadsheets/{$spreadsheetId}/values/" . urlencode(self::a1_tab($sheet_name) . '!1:1'),
             [
+               'timeout' => self::api_timeout(),
                'headers' => [
                   'Authorization' => 'Bearer ' . $token,
                ],
@@ -597,14 +672,22 @@ private function generate_wpforms_service_token($creds)
          }
 
          $insert_data = [];
+         $phone_cells = [];
 
-         foreach ($header_fields as $name) {
-            $insert_data[] = (isset($data[$name]) && $data[$name] != '') ? $data[$name] : '';
+         foreach ($header_fields as $i => $name) {
+            $value = (isset($data[$name]) && $data[$name] != '') ? $data[$name] : '';
+            // @since 4.2.4 Phone values are written as plain text after the row (null = skipped here).
+            if ('' !== $value && in_array($name, (array) $phone_columns, true)) {
+               $phone_cells[$i] = (string) $value;
+               $value = null;
+            }
+            $insert_data[] = $value;
          }
 
          $response = wp_remote_post(
-            "https://sheets.googleapis.com/v4/spreadsheets/{$spreadsheetId}/values/" . urlencode($sheet_name) . ":append?valueInputOption=USER_ENTERED",
+            "https://sheets.googleapis.com/v4/spreadsheets/{$spreadsheetId}/values/" . urlencode(self::a1_tab($sheet_name)) . ":append?valueInputOption=USER_ENTERED",
             [
+               'timeout' => self::api_timeout(),
                'headers' => [
                   'Authorization' => 'Bearer ' . $token,
                   'Content-Type'  => 'application/json',
@@ -618,6 +701,18 @@ private function generate_wpforms_service_token($creds)
          if (is_wp_error($response)) {
             Wpform_gs_Connector_Utility::gs_debug_log('add_row Error: ' . $response->get_error_message());
             return null;
+         }
+
+         // 4.2.4: a non-2xx Google response is a failure, not a success.
+         $response_code = (int) wp_remote_retrieve_response_code($response);
+         if ($response_code < 200 || $response_code >= 300) {
+            Wpform_gs_Connector_Utility::gs_debug_log('add_row Google API Error (' . $response_code . ') for spreadsheet ' . $spreadsheetId . ': ' . wp_remote_retrieve_body($response));
+            return null;
+         }
+
+         $updated = json_decode(wp_remote_retrieve_body($response), true)['updates']['updatedRange'] ?? '';
+         if ($phone_cells && preg_match('/!\$?[A-Z]+\$?(\d+)/', $updated, $m)) {
+            $this->write_phone_cells($spreadsheetId, $worksheet_id, (int) $m[1], $phone_cells, $token);
          }
 
          return true;
@@ -703,7 +798,7 @@ private function generate_wpforms_service_token($creds)
             sprintf(
                'https://sheets.googleapis.com/v4/spreadsheets/%s/values/%s',
                rawurlencode($spreadsheet_id),
-               rawurlencode($sheet_title . '!1:1')
+               rawurlencode(self::a1_tab($sheet_title) . '!1:1')
             ),
             $token
          );
@@ -737,6 +832,7 @@ private function generate_wpforms_service_token($creds)
          $response = wp_remote_get(
             'https://www.googleapis.com/oauth2/v2/userinfo',
             [
+            'timeout' => self::api_timeout(),
             'headers' => [
                'Authorization' => 'Bearer ' . $token
             ]
@@ -789,7 +885,7 @@ private function generate_wpforms_service_token($creds)
          if (empty($email)) {
 
             $auth_method = get_option(
-            'wcgsc_manual_setting',
+            'gs_wpforms_manual_setting',
             '0'
             );
 
@@ -863,6 +959,7 @@ private function generate_wpforms_service_token($creds)
       $response = wp_remote_post(
          'https://oauth2.googleapis.com/revoke',
          [
+            'timeout' => self::api_timeout(),
             'body' => [ 'token' => $token ],
          ]
       );
@@ -950,6 +1047,7 @@ private function refresh($token)
     $response = wp_remote_post(
       'https://oauth2.googleapis.com/token',
       [
+        'timeout' => self::api_timeout(),
         'body' => [
           'client_id'     => $creds['client_id_web'],
           'client_secret' => $creds['client_secret_web'],
@@ -997,6 +1095,7 @@ private function refresh($token)
         $response = wp_remote_get(
             "https://sheets.googleapis.com/v4/spreadsheets/{$spreadsheet_id}?fields=spreadsheetId",
             [
+                'timeout' => self::api_timeout(),
                 'headers' => [
                     'Authorization' => 'Bearer ' . $token,
                 ],

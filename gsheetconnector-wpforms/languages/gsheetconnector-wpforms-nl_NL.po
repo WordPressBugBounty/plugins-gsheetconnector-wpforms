@@ -1,0 +1,2281 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPForms GSheetConnector\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-02 18:20+0530\n"
+"PO-Revision-Date: 2026-11-02 19:03+0530\n"
+"Last-Translator: POForge <noreply@poforge.com>\n"
+"Language-Team: nl_NL <noreply@poforge.com>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.9\n"
+
+msgid "WPForms Google Sheet Connector Add-on requires WPForms "
+msgstr "WPForms Google Sheet Connector Add-on vereist dat de WPForms "
+
+msgid " plugin to be installed and activated."
+msgstr " plugin is geïnstalleerd en geactiveerd."
+
+msgid "Google Sheet"
+msgstr "Google Sheet"
+
+msgid "GSheetConnector For WPForms"
+msgstr "GSheetConnector For WPForms"
+
+msgid "Settings"
+msgstr "Instellingen"
+
+msgid "Upgrade to PRO"
+msgstr "Upgrade naar PRO"
+
+msgid "View Documentation"
+msgstr "Bekijk documentatie"
+
+msgid "Docs"
+msgstr "Docs"
+
+msgid "Get Support"
+msgstr "Krijg ondersteuning"
+
+msgid "Support"
+msgstr "Ondersteuning"
+
+msgid "Error Log"
+msgstr "Foutlog"
+
+msgid ""
+"Error logs are saved in the database. Please clear them regularly to avoid "
+"increasing the database size."
+msgstr ""
+"Foutlogboeken worden opgeslagen in de database. Verwijder ze regelmatig om te "
+"voorkomen dat de databasegrootte toeneemt."
+
+msgid "Clear Logs"
+msgstr "Logs Wissen"
+
+msgid "Download CSV"
+msgstr "CSV Downloaden"
+
+msgid "Copy Logs"
+msgstr "Logboeken Kopiëren"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Error ID"
+msgstr "Fout ID"
+
+msgid "Code"
+msgstr "Code"
+
+msgid "Message"
+msgstr "Bericht"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "No logs found"
+msgstr "Geen logs gevonden"
+
+msgid "Permission denied."
+msgstr "Toegang geweigerd."
+
+msgid "You do not have permission to perform this action."
+msgstr "Je hebt geen toestemming om deze actie uit te voeren."
+
+msgid "WPForms Database Manager"
+msgstr "WPForms Database Manager"
+
+msgid ""
+"Store and manage WPForms submissions securely inside your WordPress dashboard. "
+"Enable database storage to keep a backup of all form entries."
+msgstr ""
+"Sla WPForms-inzendingen veilig op en beheer ze binnen uw WordPress-dashboard. "
+"Schakel database-opslag in om een back-up van alle formulierinzendingen te "
+"bewaren."
+
+msgid "Enable Database Storage"
+msgstr "Schakel databaseopslag in"
+
+msgid "Automatically save all form submissions to your WordPress database."
+msgstr "Sla automatisch alle formulierinzendingen op in uw WordPress-database."
+
+msgid "Data Management Guidelines"
+msgstr "Gegevensbeheer richtlijnen"
+
+msgid "Enable storage before launching live forms"
+msgstr "Schakel opslag in voordat u live formulieren lanceert"
+
+msgid "Regularly remove spam entries to maintain performance"
+msgstr "Verwijder regelmatig spam-inzendingen om de prestaties te behouden"
+
+msgid "Delete unused form data to reduce database load"
+msgstr ""
+"Verwijder ongebruikte formuliergegevens om de databasebelasting te verminderen"
+
+msgid "Save Settings"
+msgstr "Instellingen Opslaan"
+
+msgid "Back to Forms"
+msgstr "Terug naar formulieren"
+
+msgid "Want to send entries to Google Sheets?"
+msgstr "Wilt u inzendingen naar Google Sheets sturen?"
+
+msgid ""
+"Export and sync your form submissions directly to Google Sheets to easily "
+"organize, filter, and manage your data in one place. Unlock this feature to "
+"simplify your workflow and access your entries anytime."
+msgstr ""
+"Exporteer en synchroniseer uw formulierinzendingen rechtstreeks naar Google "
+"Sheets om uw gegevens eenvoudig op één plek te ordenen, filteren en beheren. "
+"Ontgrendel deze functie om uw workflow te vereenvoudigen en altijd toegang te "
+"hebben tot uw inzendingen."
+
+msgid "Upgrade to Unlock"
+msgstr "Upgrade om te Ontgrendelen"
+
+msgid "Want to download your form entries?"
+msgstr "Wilt u uw formulierinzendingen downloaden?"
+
+msgid ""
+"Export your form entries as a CSV file and use them in Sheets. You can sort, "
+"filter, and manage everything more easily."
+msgstr ""
+"Exporteer uw formulierinzendingen als een CSV-bestand en gebruik ze in Sheets. U "
+"kunt alles eenvoudiger sorteren, filteren en beheren."
+
+msgid "Back to Entries"
+msgstr "Terug naar Inzendingen"
+
+msgid "Entry not found."
+msgstr "Inzending niet gevonden."
+
+msgid "Fields"
+msgstr "Velden"
+
+msgid "Entry Details"
+msgstr "Inzendingsdetails"
+
+msgid "Entry ID"
+msgstr "Ingang ID"
+
+msgid "Submitted On"
+msgstr "Verzonden op"
+
+msgid "User Email"
+msgstr "E-mailadres gebruiker"
+
+msgid "Remote IP"
+msgstr "Extern IP-adres"
+
+msgid "User Agent"
+msgstr "Gebruikersagent"
+
+msgid "WPForms List"
+msgstr "WPForms-lijst"
+
+msgid ""
+"View all WPForms that are currently saving submissions to the database. Select a "
+"form below to access and manage its stored entries."
+msgstr ""
+"Bekijk alle WPForms die momenteel inzendingen opslaan in de database. Selecteer "
+"hieronder een formulier om de opgeslagen inzendingen te openen en te beheren."
+
+msgid "Send To SpreadSheet"
+msgstr "Verstuur naar Spreadsheet"
+
+msgid "Delete"
+msgstr "Verwijderen"
+
+msgid "Mark Read"
+msgstr "Markeren als gelezen"
+
+msgid "Mark Unread"
+msgstr "Markeren als ongelezen"
+
+msgid "Google Sheet Settings"
+msgstr "Google Sheet Instellingen"
+
+msgid "Google Sheet Name"
+msgstr "Google Sheet Naam"
+
+msgid ""
+"Go to your google account and click on \"Google apps\" icon and then click "
+"\"Sheets\". Select the name of the appropriate sheet you want to link your "
+"contact form or create a new sheet."
+msgstr ""
+"Ga naar uw Google-account en klik op het pictogram 'Google-apps' en klik "
+"vervolgens op 'Sheets'. Selecteer de naam van het juiste blad dat u wilt koppelen "
+"aan uw contactformulier of maak een nieuw blad aan."
+
+msgid "Google Sheet Id"
+msgstr "Google Sheet Id"
+
+msgid "You can get sheet ID from your sheet URL."
+msgstr "U kunt de sheet-ID uit de URL van uw sheet halen."
+
+msgid "Google Sheet Tab Name"
+msgstr "Google Sheet Tab Naam"
+
+msgid ""
+"Open your Google Sheet you want to link with your contact form. You will notice "
+"tab names at the bottom. Copy the name of the tab where you want entries."
+msgstr ""
+"Open uw Google Sheet die u wilt koppelen aan uw contactformulier. U ziet onderaan "
+"tabbladnamen. Kopieer de naam van het tabblad waar u invoer wilt hebben."
+
+msgid "Google Tab Id"
+msgstr "Google-tab-ID"
+
+msgid "You can get the tab ID from your Google Sheet URL."
+msgstr "U kunt de tab-ID uit uw Google Sheet-URL halen."
+
+msgid "Google Sheet Link"
+msgstr "Google Sheet-koppeling"
+
+msgid "Upgrade to WPForms Google sheet Connector PRO"
+msgstr "Upgrade naar WPForms Google sheet Connector PRO"
+
+msgid "Click Here Demo"
+msgstr "Klik Hier Demo"
+
+msgid "Sheet URL (Click Here to view Sheet with submitted data.)"
+msgstr "Sheet URL (Klik Hier om Sheet met ingediende gegevens te bekijken.)"
+
+msgid "WPForms Google Sheet Connector PRO Features"
+msgstr "WPForms Google Sheet Connector PRO-functies"
+
+msgid "Google Sheets API (Up-to date)"
+msgstr "Google Sheets API (up-to-date)"
+
+msgid "One Click Authentication"
+msgstr "Een Klik Authenticatie"
+
+msgid "Click & Fetch Sheet Automated"
+msgstr "Klik & Haal Blad Geautomatiseerd"
+
+msgid "Automated Sheet Name & Tab Name"
+msgstr "Geautomatiseerde Bladnaam & Tabbladnaam"
+
+msgid "Manually Adding Sheet Name & Tab Name"
+msgstr "Handmatig Bladnaam & Tabbladnaam Toevoegen"
+
+msgid "Supported WPForms Lite/Pro"
+msgstr "Ondersteunt WPForms Lite/Pro"
+
+msgid "Latest WordPress & PHP Support"
+msgstr "Laatste WordPress & PHP Ondersteuning"
+
+msgid "Support WordPress Multisite"
+msgstr "Ondersteunt WordPress Multisite"
+
+msgid "Multiple Forms to Sheet"
+msgstr "Meerdere formulieren naar Sheet"
+
+msgid "Roles Management"
+msgstr "Rollenbeheer"
+
+msgid "Creating New Sheet Option"
+msgstr "Optie voor het maken van een nieuw Sheet"
+
+msgid "Authenticated Email Display"
+msgstr "Geauthenticeerde E-mailweergave"
+
+msgid "Automatic Updates"
+msgstr "Automatische Updates"
+
+msgid "Using Smart Tags"
+msgstr "Gebruik van Smart Tags"
+
+msgid "Custom Ordering"
+msgstr "Aangepaste Volgorde"
+
+msgid "Image / PDF Attachment Link"
+msgstr "Afbeelding / PDF Bijlage Link"
+
+msgid "Sheet Headers Settings"
+msgstr "Instellingen voor Sheet-koppen"
+
+msgid "Click to Sync"
+msgstr "Klik om te synchroniseren"
+
+msgid "Sheet Sorting"
+msgstr "Blad sorteren"
+
+msgid "Excellent Priority Support"
+msgstr "Uitstekende Prioriteit Ondersteuning"
+
+msgid "Buy Now"
+msgstr "Koop Nu"
+
+msgid "Google Sheets Integration for WPForms"
+msgstr "Google Sheets-integratie voor WPForms"
+
+msgid "Choose Google API Setting"
+msgstr "Kies Google API-instelling"
+
+msgid "Existing Client / Secret Key (Auto Setup)"
+msgstr "Bestaande Client / Geheime Sleutel (Auto Setup)"
+
+msgid "Manual Client/Secret Key (Use Your Google API Configuration)"
+msgstr "Handmatige Client/Geheime Sleutel (Gebruik je Google API-configuratie)"
+
+msgid "Service Account (Recommended)"
+msgstr "Serviceaccount (Aanbevolen)"
+
+msgid "Select how WPForms should authenticate with Google Sheets."
+msgstr "Selecteer hoe WPForms zich moet authenticeren bij Google Sheets."
+
+msgid "Save"
+msgstr "Opslaan"
+
+msgid "Google Account Connection"
+msgstr "Google Account Verbinding"
+
+msgid "Auto Setup"
+msgstr "Auto Setup"
+
+msgid ""
+"Sign in with your Google account to connect WPForms with Google Sheets. Once "
+"connected, your data syncs based on your settings. Learn more in the documentation"
+msgstr ""
+"Meld u aan met uw Google-account om WPForms met Google Sheets te verbinden. Zodra "
+"de verbinding is gemaakt, worden uw gegevens gesynchroniseerd op basis van uw "
+"instellingen. Lees meer in de documentatie"
+
+msgid "click here"
+msgstr "klik hier"
+
+msgid "Authenticate with Your Google Account"
+msgstr "Authenticeer met uw Google-account"
+
+msgid "Click on the"
+msgstr "Klik op de"
+
+msgid "Sign in with Google"
+msgstr "Aanmelden met Google"
+
+msgid " button."
+msgstr " knop."
+
+msgid "Log in using your Google account."
+msgstr "Log in met uw Google-account."
+
+msgid "Select the Google account where your Sheets are stored."
+msgstr "Selecteer het Google-account waar uw Sheets zijn opgeslagen."
+
+msgid "Grant access to:"
+msgstr "Verleen toegang tot:"
+
+msgid "Google Drive"
+msgstr "Google Drive"
+
+msgid "Google Sheets"
+msgstr "Google Sheets"
+
+msgid "Click"
+msgstr "Klik op"
+
+msgid "Allow to finish authorization."
+msgstr "Toestaan om de autorisatie te voltooien."
+
+msgid "to finish authorization."
+msgstr "om de autorisatie te voltooien."
+
+msgid "Save the authentication code if prompted."
+msgstr "Bewaar de authenticatiecode als daarom wordt gevraagd."
+
+msgid "This allows the plugin to securely sync your form data with Google Sheets."
+msgstr ""
+"Dit stelt de plugin in staat om uw formuliergegevens veilig te synchroniseren met "
+"Google Sheets."
+
+msgid ""
+"Google Drive and Google Sheets permissions were not granted during authentication "
+"with Google."
+msgstr ""
+"Google Drive- en Google Sheets-machtigingen zijn niet verleend tijdens de "
+"authenticatie met Google."
+
+msgid "Refer to Step 4 in the Connection Guide shown alongside."
+msgstr "Raadpleeg Stap 4 in de meegeleverde Connection Guide."
+
+msgid ""
+"Then, deactivate the connection and re-authorize it, ensuring both Google Drive "
+"and Google Sheets permissions are enabled."
+msgstr ""
+"Deactiveer vervolgens de verbinding en autoriseer deze opnieuw, waarbij je ervoor "
+"zorgt dat zowel de machtigingen voor Google Drive als Google Sheets zijn "
+"ingeschakeld."
+
+msgid "and"
+msgstr "en"
+
+msgid ""
+"Something went wrong! Your auth code may be wrong or expired. Please deactivate "
+"auth and re-authenticate again."
+msgstr ""
+"Er is iets misgegaan! Uw authenticatiecode is mogelijk onjuist of verlopen. "
+"Deactiveer de authenticatie en authenticteer opnieuw."
+
+msgid "Connected Google Account"
+msgstr "Verbonden Google-account"
+
+msgid "Client Token"
+msgstr "Clienttoken"
+
+msgid "Connect Your Google Account"
+msgstr "Verbind uw Google-account"
+
+msgid ""
+"Securely link your Google account to start syncing form entries automatically."
+msgstr ""
+"Koppel uw Google-account veilig om automatisch formulierinvoer te synchroniseren."
+
+msgid "Connected"
+msgstr "Verbonden"
+
+msgid "Click Sign in with Google"
+msgstr "Klik op Aanmelden met Google"
+
+msgid "Deactivate"
+msgstr "Deactiveren"
+
+msgid "Deactivate Integration"
+msgstr "Integratie deactiveren"
+
+msgid ""
+"Are you sure you want to deactivate Google Sheets integration? This will stop "
+"syncing your form entries."
+msgstr ""
+"Weet u zeker dat u de integratie met Google Sheets wilt deactiveren? Dit stopt de "
+"synchronisatie van uw formulierinvoer."
+
+msgid "Cancel"
+msgstr "Annuleren"
+
+msgid "Save Client Token"
+msgstr "Sla Client Token Op"
+
+msgid "Service Account"
+msgstr "Serviceaccount"
+
+msgid ""
+"For better reliability, we recommend using the %1$s method. In some cases, the "
+"current method may be affected by Google API quota limits, which could cause a "
+"few entries to not sync to the sheet.<br><br>Switching to the recommended method "
+"provides a more stable connection and helps ensure all entries are synced "
+"successfully."
+msgstr ""
+"Voor betere betrouwbaarheid raden we aan de %1$s-methode te gebruiken. In sommige "
+"gevallen kan de huidige methode worden beïnvloed door de quota-limieten van de "
+"Google API, wat kan leiden tot enkele invoer die niet naar het blad worden "
+"gesynchroniseerd.<br><br>Overschakelen naar de aanbevolen methode biedt een "
+"stabielere verbinding en helpt ervoor te zorgen dat alle invoer succesvol worden "
+"gesynchroniseerd."
+
+msgid "For better reliability, we recommend using the"
+msgstr "Voor betere betrouwbaarheid raden we aan de"
+
+msgid ""
+"method. In some cases, the current method may be affected by Google API quota "
+"limits, which could cause a few entries to not sync to the sheet."
+msgstr ""
+"methode te gebruiken. In sommige gevallen kan de huidige methode worden beïnvloed "
+"door Google API-quotalimieten, waardoor enkele items mogelijk niet naar het sheet "
+"worden gesynchroniseerd."
+
+msgid ""
+"Switching to the recommended method provides a more stable connection and helps "
+"ensure all entries are synced successfully."
+msgstr ""
+"Overschakelen naar de aanbevolen methode zorgt voor een stabielere verbinding en "
+"helpt ervoor te zorgen dat alle items succesvol worden gesynchroniseerd."
+
+msgid ""
+"We do not store any of the data from your Google account on our servers, "
+"everything is processed & stored on your server. We take your privacy extremely "
+"seriously and ensure it is never misused. Learn more in the documentation"
+msgstr ""
+"We slaan geen van de gegevens van uw Google-account op onze servers op, alles "
+"wordt verwerkt en opgeslagen op uw server. We nemen uw privacy zeer serieus en "
+"zorgen ervoor dat deze nooit wordt misbruikt. Leer meer in de documentatie"
+
+msgid "click here."
+msgstr "klik hier."
+
+msgid "Connection Status & Next Steps"
+msgstr "Verbindingsstatus & Volgende stappen"
+
+msgid ""
+"Your Google account has been successfully connected. You are now ready to sync "
+"your form submissions with Google Sheets securely and automatically."
+msgstr ""
+"Uw Google-account is succesvol verbonden. U bent nu klaar om uw "
+"formulierinzendingen veilig en automatisch met Google Sheets te synchroniseren."
+
+msgid "Create New Feed"
+msgstr "Nieuwe feed aanmaken"
+
+msgid "Select Google Spreadsheet"
+msgstr "Selecteer Google Spreadsheet"
+
+msgid "Add Labels in Sheet Headers Manually"
+msgstr "Labels Handmatig Toevoegen in Blad Koppen"
+
+msgid "Enable Fields to Sync"
+msgstr "Velden inschakelen voor synchronisatie"
+
+msgid "Customize the Headers Appearance"
+msgstr "Pas het Uiterlijk van de Koppen Aan"
+
+msgid "Use Sync Settings (Past Entries)"
+msgstr "Gebruik synchronisatie-instellingen (verleden invoer)"
+
+msgid "PRO"
+msgstr "PRO"
+
+msgid "Upgrade to unlock"
+msgstr "Upgrade om te ontgrendelen"
+
+msgid "Connection Guide"
+msgstr "Verbindingsgids"
+
+msgid "Step-by-Step"
+msgstr "Stap-voor-stap"
+
+msgid ""
+"Follow these steps to connect your Google account and start syncing your form "
+"data with Google Sheets."
+msgstr ""
+"Volg deze stappen om uw Google-account te verbinden en uw formuliergegevens met "
+"Google Sheets te synchroniseren."
+
+msgid "Step-1 Connect Your Google Account"
+msgstr "Stap-1 Verbind uw Google-account"
+
+msgid ""
+"Sign in with your Google account to start the automatic Google Sheets integration."
+msgstr ""
+"Log in met uw Google-account om de automatische Google Sheets-integratie te "
+"starten."
+
+msgid "Step-2 Choose Google Account"
+msgstr "Stap-2 Kies Google-account"
+
+msgid "Choose the Google account where your Sheets are stored."
+msgstr "Kies het Google-account waar uw Sheets zijn opgeslagen."
+
+msgid "check our detailed guideline"
+msgstr "bekijk onze gedetailleerde richtlijn"
+
+msgid "Step-3 Review Access Information"
+msgstr "Stap-3 Controleer Toegangsgegevens"
+
+msgid "Google will show what information the plugin can access."
+msgstr "Google toont welke informatie de plugin kan benaderen."
+
+msgid "Step-4 Grant Required Permissions"
+msgstr "Stap-4 Verleen Vereiste Machtigingen"
+
+msgid "Allow required permissions for Google Sheets and Drive access."
+msgstr "Sta vereiste machtigingen toe voor toegang tot Google Sheets en Drive."
+
+msgid "Step-5 Save Authentication Code"
+msgstr "Stap-5 Sla Authenticatiecode op"
+
+msgid "Save the authentication code to complete the Google account connection."
+msgstr ""
+"Sla de authenticatiecode op om de verbinding met uw Google-account te voltooien."
+
+msgid "Step-6 Integration Completed"
+msgstr "Stap-6 Integratie Voltooid"
+
+msgid "Your Google account is now successfully connected."
+msgstr "Uw Google-account is nu succesvol verbonden."
+
+msgid "Manual Google Sheets Integration"
+msgstr "Handmatige Google Sheets-integratie"
+
+msgid ""
+"Connect WPForms to Google Sheets using your own Google Cloud project. Ideal for "
+"advanced users who need full API control, custom OAuth setup, and independent "
+"credential management."
+msgstr ""
+"Verbind WPForms met Google Sheets via je eigen Google Cloud-project. Ideaal voor "
+"gevorderde gebruikers die volledige API-controle, een aangepaste OAuth-"
+"configuratie en onafhankelijke informatiebeheer nodig hebben."
+
+msgid "Custom API Credentials"
+msgstr "Aangepaste API Referenties"
+
+msgid ""
+"Connect using your own Google Cloud Client ID and Client Secret for full "
+"authentication control."
+msgstr ""
+"Verbind met je eigen Google Cloud Client ID en Client Secret voor volledige "
+"authenticatiecontrole."
+
+msgid "Secure Authentication"
+msgstr "Veilige Authenticatie"
+
+msgid ""
+"Authenticate directly with Google using a secure Authentication flow without "
+"third-party dependency."
+msgstr ""
+"Authenticeer direct met Google met een veilige authenticatiestroom zonder "
+"afhankelijkheid van derden."
+
+msgid "Advanced Configuration"
+msgstr "Geavanceerde Configuratie"
+
+msgid ""
+"Set custom Redirect URIs, manage scopes, and configure API settings based on your "
+"project needs."
+msgstr ""
+"Stel aangepaste Redirect URI's in, beheer scopes en configureer API-instellingen "
+"op basis van je projectbehoeften."
+
+msgid "Priority Technical Support"
+msgstr "Prioriteit Technische Ondersteuning"
+
+msgid ""
+"Get fast assistance from our expert team for setup, troubleshooting, and "
+"optimization."
+msgstr ""
+"Krijg snelle hulp van ons expertteam voor installatie, probleemoplossing en "
+"optimalisatie."
+
+msgid "View Pro Features"
+msgstr "Bekijk Pro Kenmerken"
+
+msgid "WPForms - Google Sheet Settings"
+msgstr "WPForms - Google Sheet-instellingen"
+
+msgid "Select a form to configure the WPForms GSheetConnector integration."
+msgstr ""
+"Selecteer een formulier om de WPForms GSheetConnector-integratie te configureren."
+
+msgid "Choose WPForms"
+msgstr "Kies WPForms"
+
+msgid "Select Form"
+msgstr "Formulier Kiezen"
+
+msgid "Invalid access code entered."
+msgstr "Ongeldige toegangscode ingevoerd."
+
+msgid "Your Google Access Code is Authorized and Saved"
+msgstr "Uw Google-toegangscode is geautoriseerd en opgeslagen"
+
+msgid "Unauthorized access."
+msgstr "Ongeautoriseerde toegang."
+
+msgid "Invalid authentication method."
+msgstr "Ongeldige authenticatiemethode."
+
+msgid "Authentication method saved successfully."
+msgstr "Authenticatiemethode succesvol opgeslagen."
+
+msgid "Something went wrong. Please try again."
+msgstr "Er is iets misgegaan. Probeer het opnieuw."
+
+msgid "JSON data is empty. Please provide valid credentials."
+msgstr "JSON-gegevens zijn leeg. Geef geldige inloggegevens op."
+
+msgid "Your uploaded JSON key is invalid"
+msgstr "Uw geüploade JSON-sleutel is ongeldig"
+
+msgid "Service account credentials saved successfully."
+msgstr "Serviceaccountgegevens succesvol opgeslagen."
+
+msgid "Service account deactivated successfully."
+msgstr "Serviceaccount succesvol gedeactiveerd."
+
+msgid "Not connected"
+msgstr "Niet verbonden"
+
+msgid "No Form Feeds Created Yet"
+msgstr "Nog geen Form Feeds aangemaakt"
+
+msgid ""
+"Connect your form to Google Sheets to automatically sync submissions in real "
+"time. Create a feed to start sending data to your spreadsheet."
+msgstr ""
+"Verbind je formulier met Google Sheets om inzendingen automatisch in real time te "
+"synchroniseren. Maak een feed aan om gegevens naar je spreadsheet te verzenden."
+
+msgid "Create Feed"
+msgstr "Feed aanmaken"
+
+msgid "Please rate"
+msgstr "Beoordeel alstublieft"
+
+msgid "GSheetConnector for WPForms"
+msgstr "GSheetConnector voor WPForms"
+
+msgid "on"
+msgstr "aan"
+
+msgid "WordPress.org"
+msgstr "WordPress.org"
+
+msgid "to help us spread the word."
+msgstr "om ons te helpen het woord te verspreiden."
+
+msgid "Version:"
+msgstr "Versie:"
+
+msgid "Plugins"
+msgstr "Plugins"
+
+msgid "About GSheetConnector"
+msgstr "Over GSheetConnector"
+
+msgid "Built by Experts. Trusted by Thousands."
+msgstr "Gebouwd door Experts. Vertrouwd door Duizenden."
+
+msgid ""
+"Led by experienced developers and powered by a passionate team, GSheetConnector "
+"helps WordPress users automate their workflows with confidence."
+msgstr ""
+"Geleid door ervaren ontwikkelaars en aangedreven door een gepassioneerd team, "
+"helpt GSheetConnector WordPress-gebruikers om hun workflows met vertrouwen te "
+"automatiseren."
+
+msgid ""
+"We focus on building tools that are fast, secure, and easy to use - so you can "
+"spend less time managing data."
+msgstr ""
+"We richten ons op het bouwen van tools die snel, veilig en eenvoudig te gebruiken "
+"zijn - zodat je minder tijd hoeft te besteden aan het beheren van gegevens."
+
+msgid "Meet Our Core Team"
+msgstr "Ontmoet Ons Kernteam"
+
+msgid "Our Mission"
+msgstr "Onze Missie"
+
+msgid ""
+"Our mission is to make form automation simple, secure, and reliable for every "
+"WordPress user - from beginners to enterprise teams."
+msgstr ""
+"Onze missie is om formulierautomatisering eenvoudig, veilig en betrouwbaar te "
+"maken voor elke WordPress-gebruiker - van beginners tot enterprise teams."
+
+msgid "Fast & Reliable Data Sync"
+msgstr "Snelle & Betrouwbare Gegevenssynchronisatie"
+
+msgid "100% Secure Authentication"
+msgstr "100% Veilige Authenticatie"
+
+msgid "Real-Time Google Sheets Updates"
+msgstr "Updates van Google Sheets in Realtime"
+
+msgid "Easy Setup & Configuration"
+msgstr "Eenvoudige Installatie & Configuratie"
+
+msgid "Dedicated Support Team"
+msgstr "Toegewijd Ondersteuningsteam"
+
+msgid "Forms Successfully Synced"
+msgstr "Formulieren Succesvol Gesynchroniseerd"
+
+msgid "Trusted by Active Users"
+msgstr "Vertrouwd door Actieve Gebruikers"
+
+msgid "Reliable Uptime"
+msgstr "Betrouwbare Uptime"
+
+msgid "Dedicated Support"
+msgstr "Toegewijde Ondersteuning"
+
+msgid "Add-ons & Extensions"
+msgstr "Add-ons & Extensies"
+
+msgid ""
+"Extend your Google Sheets integration with powerful add-ons. Install, manage, and "
+"activate extensions to unlock advanced features."
+msgstr ""
+"Breid je Google Sheets-integratie uit met krachtige add-ons. Installeer, beheer "
+"en activeer extensies om geavanceerde functies te ontgrendelen."
+
+msgid "CF7 Google Sheet Connector"
+msgstr "CF7 Google Sheet Connector"
+
+msgid ""
+"Easily connect Contact Form 7 to Google Sheets and automatically sync form "
+"submissions in real-time. Every entry is instantly added to your selected "
+"spreadsheet, helping you manage leads, inquiries, and customer data efficiently "
+"without manual export."
+msgstr ""
+"Verbind Contact Form 7 eenvoudig met Google Sheets en synchroniseer "
+"formulierinzendingen automatisch in realtime. Elke invoer wordt direct aan je "
+"geselecteerde spreadsheet toegevoegd, zodat je leads, aanvragen en klantgegevens "
+"efficiënt kunt beheren zonder handmatige export."
+
+msgid "Install"
+msgstr "Installeren"
+
+msgid "WPForms Google Sheet Connector"
+msgstr "WPForms Google Sheet Connector"
+
+msgid ""
+"Integrate WPForms with Google Sheets and send form entries directly to your "
+"spreadsheet automatically. Track leads, manage customer data, and streamline "
+"reporting with seamless Google Sheets integration and real-time sync."
+msgstr ""
+"Integreer WPForms met Google Sheets en stuur formulierinvoeren automatisch direct "
+"naar je spreadsheet. Volg leads, beheer klantgegevens en stroomlijn rapportage "
+"met naadloze Google Sheets-integratie en realtime synchronisatie."
+
+msgid "Gravity Forms Google Sheet Connector"
+msgstr "Gravity Forms Google Sheet Connector"
+
+msgid ""
+"Connect Gravity Forms to Google Sheets and automatically push form submissions to "
+"your spreadsheet. Simplify data management, improve workflow automation, and keep "
+"all entries organized in one secure location."
+msgstr ""
+"Verbind Gravity Forms met Google Sheets en duw formulierinzendingen automatisch "
+"naar je spreadsheet. Vereenvoudig gegevensbeheer, verbeter workflowautomatisering "
+"en houd alle invoeren georganiseerd op één veilige locatie."
+
+msgid "Ninja Forms Google Sheet Connector"
+msgstr "Ninja Forms Google Sheet Connector"
+
+msgid ""
+"Automatically sync Ninja Forms submissions to Google Sheets with one-click "
+"integration. Capture leads, monitor responses, and manage data efficiently with "
+"instant spreadsheet updates and easy reporting."
+msgstr ""
+"Synchroniseer automatisch Ninja Forms-inzendingen met Google Sheets met een klik-"
+"integratie. Leg leads vast, monitor reacties en beheer gegevens efficiënt met "
+"directe spreadsheet-updates en eenvoudige rapportage."
+
+msgid "Forminator Forms Google Sheet Connector"
+msgstr "Forminator Forms Google Sheet Connector"
+
+msgid ""
+"Integrate Forminator Forms with Google Sheets to automatically store form entries "
+"in your spreadsheet. Eliminate manual data entry and ensure accurate, real-time "
+"syncing for better data tracking and analysis."
+msgstr ""
+"Integreer Forminator Forms met Google Sheets om formulierinvoeren automatisch in "
+"je spreadsheet op te slaan. Elimineer handmatige gegevensinvoer en zorg voor "
+"nauwkeurige, realtime synchronisatie voor betere gegevensregistratie en analyse."
+
+msgid "Free"
+msgstr "Gratis"
+
+msgid "Formidable Forms Google Sheet Connector"
+msgstr "Formidable Forms Google Sheet Connector"
+
+msgid ""
+"Automatically sync Formidable Forms entries to Google Sheets. Manage leads, track "
+"submissions, and simplify data reporting with real-time integration."
+msgstr ""
+"Synchroniseer automatisch Formidable Forms inzendingen met Google Sheets. Beheer "
+"leads, volg inzendingen en vereenvoudig datarapportage met realtime integratie."
+
+msgid "Fluent Forms Google Sheet Connector"
+msgstr "Fluent Forms Google Sheet Connector"
+
+msgid ""
+"Automatically sync Fluent Forms submissions to Google Sheets in real-time. Every "
+"form entry is instantly added to your selected spreadsheet, helping you manage "
+"leads, customer inquiries, and business data without manual export. Streamline "
+"your workflow, improve reporting accuracy, and keep all submissions organized "
+"with seamless Google Sheets integration."
+msgstr ""
+"Synchroniseer automatisch Fluent Forms-indieningen in realtime met Google Sheets. "
+"Elke formulierinvoer wordt onmiddellijk toegevoegd aan je geselecteerde "
+"spreadsheet, waardoor je leads, klantvragen en bedrijfsgegevens zonder handmatige "
+"export kunt beheren. Stroomlijn je workflow, verbeter de nauwkeurigheid van "
+"rapportages en houd alle indieningen georganiseerd met naadloze Google Sheets-"
+"integratie."
+
+msgid "Elementor Forms Google Sheet Connector"
+msgstr "Elementor Forms Google Sheet Connector"
+
+msgid ""
+"Sync Elementor Forms with Google Sheets instantly. Automatically add new form "
+"submissions to your spreadsheet, manage leads efficiently, and simplify reporting "
+"with real-time data synchronization."
+msgstr ""
+"Synchroniseer Elementor Forms direct met Google Sheets. Voeg automatisch nieuwe "
+"formulierinzendingen toe aan je spreadsheet, beheer leads efficiënt en "
+"vereenvoudig rapportage met realtime datasychronisatie."
+
+msgid "Avada Forms Google Sheet Connector"
+msgstr "Avada Forms Google Sheet Connector"
+
+msgid ""
+"Connect Avada Forms to Google Sheets and automatically transfer form entries to "
+"your spreadsheet. Streamline lead management, automate data collection, and "
+"improve business reporting with seamless integration."
+msgstr ""
+"Verbind Avada Forms met Google Sheets en verzend automatisch formulierinzendingen "
+"naar je spreadsheet. Stroomlijn leadbeheer, automatiseer gegevensverzameling en "
+"verbeter bedrijfsrapportage met naadloze integratie."
+
+msgid "Available PRO Version"
+msgstr "Beschikbare PRO Versie"
+
+msgid "Divi Forms Google Sheet Connector"
+msgstr "Divi Forms Google Sheet Connector"
+
+msgid ""
+"Integrate Divi Forms with Google Sheets and automatically sync submissions in "
+"real-time. Store customer data securely, track inquiries efficiently, and "
+"eliminate manual spreadsheet updates."
+msgstr ""
+"Integreer Divi Forms met Google Sheets en synchroniseer inzendingen automatisch "
+"in realtime. Bewaar klantgegevens veilig, volg aanvragen efficiënt en elimineer "
+"handmatige spreadsheetupdates."
+
+msgid "WP Core Google Sheet Connector"
+msgstr "WP Core Google Sheet Connector"
+
+msgid ""
+"Automatically send WordPress core data (like comments or custom submissions) to "
+"Google Sheets. Simplify website data tracking, automate record keeping, and "
+"centralize important information in one organized spreadsheet."
+msgstr ""
+"Verzend automatisch WordPress kerngegevens (zoals opmerkingen of aangepaste "
+"inzendingen) naar Google Sheets. Vereenvoudig websitegegevenstracking, "
+"automatiseer het bijhouden van gegevens en centraliseer belangrijke informatie in "
+"één georganiseerde spreadsheet."
+
+msgid "WooCommerce Google Sheet Connector"
+msgstr "WooCommerce Google Sheet Connector"
+
+msgid ""
+"Sync WooCommerce orders with Google Sheets automatically. Store order details, "
+"customer information, and transaction data in real-time for easy reporting, "
+"accounting, and business analysis."
+msgstr ""
+"Synchroniseer WooCommerce bestellingen automatisch met Google Sheets. Bewaar "
+"bestelgegevens, klantinformatie en transactiegegevens in realtime voor eenvoudige "
+"rapportage, boekhouding en bedrijfsanalyse."
+
+msgid "Easy Digital Downloads Google Sheet Connector"
+msgstr "Easy Digital Downloads Google Sheet Connector"
+
+msgid ""
+"Automatically send Easy Digital Downloads (EDD) order details to Google Sheets. "
+"Track digital product sales, monitor transactions, and manage customer data "
+"effortlessly with real-time spreadsheet integration."
+msgstr ""
+"Verzend automatisch Easy Digital Downloads (EDD) bestelgegevens naar Google "
+"Sheets. Volg digitale productverkopen, monitor transacties en beheer "
+"klantgegevens moeiteloos met realtime spreadsheetintegratie."
+
+msgid "Installed & Active Plugins"
+msgstr "Geïnstalleerde & Actieve Plugins"
+
+msgid ""
+"View and manage all currently installed and active connectors on your site. You "
+"can activate, deactivate, or upgrade plugins from here."
+msgstr ""
+"Bekijk en beheer alle momenteel geïnstalleerde en actieve connectors op je site. "
+"Je kunt plugins hier activeren, deactiveren of upgraden."
+
+msgid "Pro"
+msgstr "Pro"
+
+msgid "View Docs"
+msgstr "Bekijk Documentatie"
+
+msgid "Recommended Plugins"
+msgstr "Aanbevolen Plugins"
+
+msgid ""
+"Discover recommended plugins that enhance your workflow and help you get more "
+"value from your Google Sheets integration."
+msgstr ""
+"Ontdek aanbevolen plugins die je workflow verbeteren en je helpen meer waarde uit "
+"je Google Sheets-integratie te halen."
+
+msgid "Pro Active"
+msgstr "Pro Actief"
+
+msgid "Already Active"
+msgstr "Al Actief"
+
+msgid "Activate"
+msgstr "Activeren"
+
+msgid "Get Pro"
+msgstr "Krijg Pro"
+
+msgid "Explore More Plugins"
+msgstr "Verken Meer Plugins"
+
+msgid "Discover the right connector for your workflow and automate data syncing."
+msgstr ""
+"Ontdek de juiste connector voor je workflow en automatiseer "
+"gegevenssynchronisatie."
+
+msgid "All"
+msgstr "Alle"
+
+msgid "Forms"
+msgstr "Formulieren"
+
+msgid "Page Builders"
+msgstr "Pagina Builders"
+
+msgid "eCommerce"
+msgstr "eCommerce"
+
+msgid "View Demo"
+msgstr "Bekijk Demo"
+
+msgid "Deactivate plugin"
+msgstr "Deactiveer plugin"
+
+msgid " Are you sure you want to deactivate this plugin?"
+msgstr "Weet je zeker dat je deze plugin wilt deactiveren?"
+
+msgid "Unlock Beta Version Control"
+msgstr "Ontgrendel bèta versiebeheer"
+
+msgid "Test upcoming features before official release"
+msgstr "Test aankomende functies vóór officiële release"
+
+msgid "Early Access"
+msgstr "Vroege toegang"
+
+msgid "Get updates before public release"
+msgstr "Ontvang updates vóór openbare release"
+
+msgid "Test new features in advance"
+msgstr "Test nieuwe functies van tevoren"
+
+msgid "Try improvements early"
+msgstr "Probeer verbeteringen vroeg"
+
+msgid "Stay ahead with new changes"
+msgstr "Blijf voorop met nieuwe wijzigingen"
+
+msgid "Testing Purpose"
+msgstr "Testdoeleinden"
+
+msgid "Features may still be under testing"
+msgstr "Functies kunnen nog in testfase zijn"
+
+msgid "Some options may change later"
+msgstr "Sommige opties kunnen later veranderen"
+
+msgid "Minor issues may occur"
+msgstr "Kleine problemen kunnen optreden"
+
+msgid "Used for feedback and improvements"
+msgstr "Gebruikt voor feedback en verbeteringen"
+
+msgid "Safety Notice"
+msgstr "Veiligheidsmelding"
+
+msgid "Recommended for staging sites"
+msgstr "Aanbevolen voor staging-sites"
+
+msgid "Avoid enabling on live websites"
+msgstr "Vermijd inschakelen op live websites"
+
+msgid "Take backup before testing"
+msgstr "Maak een back-up voordat je test"
+
+msgid "Disable anytime if needed"
+msgstr "Schakel op elk moment uit indien nodig"
+
+msgid "Update Control"
+msgstr "Updatebeheer"
+
+msgid "Receive beta notifications"
+msgstr "Ontvang bèta meldingen"
+
+msgid "Updates are not installed automatically"
+msgstr "Updates worden niet automatisch geïnstalleerd"
+
+msgid "You control when to update"
+msgstr "Jij bepaalt wanneer te updaten"
+
+msgid "Switch on/off anytime"
+msgstr "Schakel op elk moment aan/uit"
+
+msgid "Beta Program Access"
+msgstr "Toegang tot Bèta-programma"
+
+msgid ""
+"Get early access to upcoming features and improvements before they are officially "
+"released. Beta versions may include experimental updates and should be used for "
+"testing purposes only."
+msgstr ""
+"Krijg vroege toegang tot aankomende functies en verbeteringen voordat ze "
+"officieel worden uitgebracht. Bèta-versies kunnen experimentele updates bevatten "
+"en moeten alleen voor testdoeleinden worden gebruikt."
+
+msgid "Enable Beta Updates"
+msgstr "Schakel Bèta-updates in"
+
+msgid ""
+"Receive notifications and access to beta releases. Updates will not be installed "
+"automatically."
+msgstr ""
+"Ontvang meldingen en toegang tot bèta-releases. Updates worden niet automatisch "
+"geïnstalleerd."
+
+msgid "Beta Usage Notice"
+msgstr "Kennisgeving Bèta-gebruik"
+
+msgid "Beta versions may include unfinished or experimental features"
+msgstr "Bèta-versies kunnen onafgebroken of experimentele functies bevatten"
+
+msgid "Some features may change or be removed in future updates"
+msgstr ""
+"Sommige functies kunnen in toekomstige updates veranderen of worden verwijderd"
+
+msgid "Minor bugs or performance issues may occur"
+msgstr "Kleine bugs of prestatieproblemen kunnen optreden"
+
+msgid "We recommend enabling beta only on test or staging sites"
+msgstr "We raden aan om bèta alleen in te schakelen op test- of staging-sites"
+
+msgid ""
+"Beta versions are intended for testing purposes. Do not enable on live production "
+"websites without proper backups."
+msgstr ""
+"Bèta-versies zijn bedoeld voor testdoeleinden. Schakel niet in op live productie-"
+"websites zonder juiste back-ups."
+
+msgid "invalid"
+msgstr "ongeldig"
+
+msgid "Use Existing Client/Secret Key (Auto Google API Configuration)"
+msgstr "Gebruik Bestaande Client/Geheim Sleutel (Auto Google API Configuratie)"
+
+msgid "Auth Required"
+msgstr "Authenticatie vereist"
+
+msgid "Welcome To GSheetConnector"
+msgstr "Welkom bij GSheetConnector"
+
+msgid ""
+"GSheetConnector is a powerful automation plugin that syncs WordPress data with "
+"Google Sheets in real time. It supports WooCommerce, Easy Digital Downloads, and "
+"popular form plugins such as WPForms, Contact Form 7, Elementor Forms, along with "
+"10+ additional WordPress integrations for efficient data management."
+msgstr ""
+"GSheetConnector is een krachtige automatiseringsplugin die WordPress-gegevens in "
+"realtime synchroniseert met Google Sheets. Het ondersteunt WooCommerce, Easy "
+"Digital Downloads en populaire formulierplugins zoals WPForms, Contact Form 7, "
+"Elementor Forms, samen met meer dan 10 extra WordPress-integraties voor efficiënt "
+"gegevensbeheer."
+
+msgid "Connected Email Account"
+msgstr "Verbonden E-mailaccount"
+
+msgid "Form Name"
+msgstr "Formuliernaam"
+
+msgid "Feed Name"
+msgstr "Voedingsnaam"
+
+msgid "Sheet Name"
+msgstr "Sheet Naam"
+
+msgid "Loading feeds..."
+msgstr "Feeds laden..."
+
+msgid "Let's Connect"
+msgstr "Laten we Verbinden"
+
+msgid "Setup Guide & Troubleshooting"
+msgstr "Installatiehandleiding & Probleemoplossing"
+
+msgid ""
+"Sync WPForms data with Google Sheets in real-time effortlessly and accurately."
+msgstr ""
+"Synchroniseer WPForms-gegevens moeiteloos en nauwkeurig in realtime met Google "
+"Sheets."
+
+msgid "Getting Started"
+msgstr "Aan de Slag"
+
+msgid "Installation Process"
+msgstr "Installatieproces"
+
+msgid "Integration with Google (Existing Method)"
+msgstr "Integratie met Google (Bestaande Methode)"
+
+msgid "Integration with Google (Service Method)"
+msgstr "Integratie met Google (Service Methode)"
+
+msgid "Integration of WP Forms with Google Sheet"
+msgstr "Integratie van WP Forms met Google Sheet"
+
+msgid "Docs & Troubleshooting"
+msgstr "Documenten & Probleemoplossing"
+
+msgid "How to Enable Debugging in WordPress"
+msgstr "Hoe Debugging in WordPress In te Schakelen"
+
+msgid "Invalid OAuth2 token"
+msgstr "Ongeldig OAuth2-token"
+
+msgid "Change Date/Time Format and Time Zone in Google Sheets"
+msgstr "Datum-/tijdformaat en tijdzone in Google Sheets wijzigen"
+
+msgid "Additional Resources"
+msgstr "Aanvullende Bronnen"
+
+msgid "Integration with Google (Manual Method)"
+msgstr "Integratie met Google (Handmatige Methode)"
+
+msgid "Automatic Select Spreadsheet"
+msgstr "Automatisch Spreadsheet Selecteren"
+
+msgid "Role Settings"
+msgstr "Rolinstellingen"
+
+msgid "Plugins by Category"
+msgstr "Plugins per Categorie"
+
+msgid "Find the perfect connector for your WordPress workflow."
+msgstr "Vind de perfecte connector voor jouw WordPress-werkstroom."
+
+msgid "Contact Form Connectors"
+msgstr "Contactformulier Connectors"
+
+msgid "6 plugins available"
+msgstr "6 plugins beschikbaar"
+
+msgid "eCommerce Connectors"
+msgstr "eCommerce Connectors"
+
+msgid "2 plugins available"
+msgstr "2 plugins beschikbaar"
+
+msgid "Page Builder Forms"
+msgstr "Page Builder Forms"
+
+msgid "3 plugins available"
+msgstr "3 plugins beschikbaar"
+
+msgid "WP Core Connector"
+msgstr "WP Core Connector"
+
+msgid "1 plugin available"
+msgstr "1 plugin beschikbaar"
+
+msgid "Free Plugins"
+msgstr "Gratis Plugins"
+
+msgid "12 plugin available"
+msgstr "12 plugins beschikbaar"
+
+msgid "Need more support? We're here to help."
+msgstr "Meer ondersteuning nodig? Wij zijn hier om te helpen."
+
+msgid "Submit a Support Ticket"
+msgstr "Dien een Ondersteuningsverzoek in"
+
+msgid "Our fast and friendly support team is always happy to help!"
+msgstr "Ons snelle en vriendelijke ondersteuningsteam helpt je altijd graag!"
+
+msgid "Amazing Key Features"
+msgstr "Geweldige Kernfunctionaliteiten"
+
+msgid "Everything You Need to Sync Data"
+msgstr "Alles wat je nodig hebt om gegevens te synchroniseren"
+
+msgid ""
+"Common features shared across every GSheetConnector Pro add-on built for "
+"reliability, flexibility, and scale."
+msgstr ""
+"Veelvoorkomende functies die zijn gedeeld over elke GSheetConnector Pro-add-on, "
+"gebouwd voor betrouwbaarheid, flexibiliteit en schaalbaarheid."
+
+msgid "Google Sheets API v4"
+msgstr "Google Sheets API v4"
+
+msgid "One-Click Authentication"
+msgstr "One-Click Authenticatie"
+
+msgid "Click & Fetch Automation"
+msgstr "Klik & Haal Automatisering"
+
+msgid "Create New Spreadsheet"
+msgstr "Nieuwe Spreadsheet Aanmaken"
+
+msgid "Manual Sheet / Tab Name"
+msgstr "Handmatige Blad / Tab Naam"
+
+msgid "Freeze & Color Headers"
+msgstr "Bevries & Kleur Koppen"
+
+msgid "Automated Sheet & Tab"
+msgstr "Geautomatiseerd Blad & Tab"
+
+msgid "Multiple Feeds to Sheets"
+msgstr "Meerdere Feeds naar Sheets"
+
+msgid "Send Missed Entries to GSheet"
+msgstr "Verzend gemiste invoer naar GSheet"
+
+msgid " Smart Tags"
+msgstr " Slimme tags"
+
+msgid "Drag-and-Drop Column Order"
+msgstr "Sleep-en-Drop Kolom Volgorde"
+
+msgid "Headers On / Off + Rename"
+msgstr "Koppen Aan / Uit + Hernoemen"
+
+msgid "Sync Past Entries"
+msgstr "Synchroniseer Eerdere Invoeren"
+
+msgid "Role Management"
+msgstr "Rolbeheer"
+
+msgid "Quick Configuration"
+msgstr "Snelle Configuratie"
+
+msgid "Multi-Language Support"
+msgstr "Meertalige Ondersteuning"
+
+msgid "Multi-Site Support"
+msgstr "Multi-Site Ondersteuning"
+
+msgid "Latest WP & PHP Support"
+msgstr "Laatste WP & PHP Ondersteuning"
+
+msgid "Upgrade to Pro"
+msgstr "Upgrade naar Pro"
+
+msgid "View Full Features"
+msgstr "Bekijk Volledige Functionaliteiten"
+
+msgid "Form"
+msgstr "Formulier"
+
+msgid "Processing"
+msgstr "Verwerken"
+
+msgid "Sheet"
+msgstr "Blad"
+
+msgid "Instant"
+msgstr "Direct"
+
+msgid "Real-time updates"
+msgstr "Updates in real-time"
+
+msgid "100%"
+msgstr "100%"
+
+msgid "Accuracy"
+msgstr "Nauwkeurigheid"
+
+msgid "Flexible"
+msgstr "Flexibel"
+
+msgid "Custom mapping"
+msgstr "Aangepaste mapping"
+
+msgid "Video Tutorials"
+msgstr "Videotutorials"
+
+msgid "Plugin Preferences"
+msgstr "Plugin Voorkeuren"
+
+msgid ""
+"Manage how plugin settings and data are handled when the plugin is uninstalled."
+msgstr ""
+"Beheer hoe plugininstellingen en gegevens worden behandeld wanneer de plugin "
+"wordt verwijderd."
+
+msgid "Delete Plugin Data on Uninstall"
+msgstr "Verwijder Plugingegevens bij Verwijderen"
+
+msgid "Removes all plugin data (options, metadata) when the plugin is deleted."
+msgstr ""
+"Verwijdert alle plugingegevens (instellingen, metadata) wanneer de plugin wordt "
+"verwijderd."
+
+msgid "Uninstall Data Notice"
+msgstr "Kennisgeving Verwijdergegevens"
+
+msgid "Enable this option only if you want a complete cleanup"
+msgstr "Schakel deze optie alleen in als je een volledige opruiming wilt"
+
+msgid "All plugin settings and data will be permanently removed"
+msgstr "Alle plugininstellingen en gegevens worden permanent verwijderd"
+
+msgid "Incorrect settings can delete all sensitive form and user data"
+msgstr ""
+"Onjuiste instellingen kunnen alle gevoelige formulier- en gebruikersgegevens "
+"verwijderen"
+
+msgid "Confirm Data Deletion"
+msgstr "Bevestig Gegevensverwijdering"
+
+msgid ""
+"Enabling this option will permanently delete all plugin data, including settings "
+"and integrations, when the plugin is uninstalled."
+msgstr ""
+"Het inschakelen van deze optie verwijdert permanent alle plugin-gegevens, "
+"inclusief instellingen en integraties, wanneer de plugin wordt verwijderd."
+
+msgid ""
+"If you plan to upgrade from Free to Pro, you may lose your existing configuration "
+"data."
+msgstr ""
+"Als je van plan bent om te upgraden van Free naar Pro, kun je je bestaande "
+"configuratiegegevens verliezen."
+
+msgid "Proceed only if you want a complete cleanup. This action cannot be undone."
+msgstr ""
+"Ga alleen verder als je een volledige opruiming wilt. Deze actie kan niet "
+"ongedaan worden gemaakt."
+
+msgid "Enable Deletion"
+msgstr "Verwijdering Inschakelen"
+
+msgid "Permission Not Allowed"
+msgstr "Toestemming Niet Toegestaan"
+
+msgid "Unlock Role-Based Access Control"
+msgstr "Ontgrendel Rolgebaseerde Toegangscontrole"
+
+msgid "Advanced options are available in PRO"
+msgstr "Geavanceerde opties zijn beschikbaar in PRO"
+
+msgid "Role Permissions"
+msgstr "Rol Machtigingen"
+
+msgid "Allow specific WordPress roles"
+msgstr "Specifieke WordPress-rollen toestaan"
+
+msgid "Enable/disable integration access"
+msgstr "Inschakelen/uitschakelen van integratietoegang"
+
+msgid "Control form feed visibility"
+msgstr "Beheer zichtbaarheid van formulierinvoer"
+
+msgid "Restrict settings management"
+msgstr "Beperk het beheer van instellingen"
+
+msgid "Security Control"
+msgstr "Beveiligingscontrole"
+
+msgid "Prevent unauthorized changes"
+msgstr "Voorkom ongeautoriseerde wijzigingen"
+
+msgid "Secure Google Sheet credentials"
+msgstr "Beveilig Google Sheet-gegevens"
+
+msgid "Role-based configuration control"
+msgstr "Rolgebaseerde configuratiecontrole"
+
+msgid "Protect integration settings"
+msgstr "Bescherm integratie-instellingen"
+
+msgid "Management Benefits"
+msgstr "Beheer Voordelen"
+
+msgid "Grant access to trusted editors"
+msgstr "Verleen toegang aan vertrouwde redacteuren"
+
+msgid "Hide settings from subscribers"
+msgstr "Verberg instellingen voor abonnees"
+
+msgid "Team-based permission structure"
+msgstr "Teamgebaseerde toestemmingsstructuur"
+
+msgid "Improved dashboard security"
+msgstr "Verbeterde dashboardbeveiliging"
+
+msgid "Audit & Monitoring"
+msgstr "Audit & Monitoring"
+
+msgid "Track role-based changes"
+msgstr "Volg rolgebaseerde wijzigingen"
+
+msgid "Monitor integration access"
+msgstr "Monitor integratie-toegang"
+
+msgid "Review permission updates"
+msgstr "Beoordeel toestemming updates"
+
+msgid "Maintain admin accountability"
+msgstr "Handhaaf verantwoordelijkheid van de beheerder"
+
+msgid "Access Management"
+msgstr "Toegangsbeheer"
+
+msgid ""
+"Control which user roles are allowed to access and manage the Google Sheets "
+"integration for your forms."
+msgstr ""
+"Beheer welke gebruikersrollen toegang hebben tot en de Google Sheets-integratie "
+"voor uw formulieren kunnen beheren."
+
+msgid "Plugin Access Control"
+msgstr "Plugin Toegangscontrole"
+
+msgid "Control who can access and manage the GSheetConnector plugin settings."
+msgstr ""
+"Beheer wie toegang heeft tot en de instellingen van de GSheetConnector-plugin kan "
+"beheren."
+
+msgid "Administrator"
+msgstr "Administrator"
+
+msgid "Permission Guidelines"
+msgstr "Toestemming Richtlijnen"
+
+msgid "Control which user roles can access the GSheetConnector plugin"
+msgstr "Beheer welke gebruikersrollen toegang hebben tot de GSheetConnector-plugin"
+
+msgid "Allow selected users to manage Google Sheets integration settings"
+msgstr ""
+"Sta geselecteerde gebruikers toe om de instellingen voor Google Sheets-integratie "
+"te beheren"
+
+msgid "Restrict access to sensitive features like feeds, logs, and configurations"
+msgstr "Beperk de toegang tot gevoelige functies zoals feeds, logs en configuraties"
+
+msgid "Only enabled roles will see the plugin menu in the admin panel"
+msgstr "Alleen ingeschakelde rollen zien het pluginmenu in het beheerpaneel"
+
+msgid "Recommended: Allow only Administrators and trusted Editors"
+msgstr "Aanbevolen: Sta alleen Beheerders en vertrouwde Redacteuren toe"
+
+msgid "General Settings"
+msgstr "Algemene Instellingen"
+
+msgid "Version Control"
+msgstr "Versiebeheer"
+
+msgid "WPForms Connected with Google Sheets."
+msgstr "WPForms gekoppeld met Google Sheets."
+
+msgid "Not Connected"
+msgstr "Niet verbonden"
+
+msgid "No WPForms are Connected with Google Sheets."
+msgstr "Er zijn geen WPForms gekoppeld met Google Sheets."
+
+msgid "Google Sheets Integration"
+msgstr "Google Sheets Integratie"
+
+msgid ""
+"Connect WPForms to Google Sheets using a secure service account. Upload your JSON "
+"credentials and share your spreadsheet with the service account email to enable "
+"syncing."
+msgstr ""
+"Verbind WPForms met Google Sheets via een veilig serviceaccount. Upload je JSON-"
+"inloggegevens en deel je spreadsheet met het e-mailadres van het serviceaccount "
+"om synchronisatie in te schakelen."
+
+msgid "Upload or paste your JSON credentials"
+msgstr "Upload of plak uw JSON-referenties"
+
+msgid "Service Account JSON File"
+msgstr "Service Account JSON Bestand"
+
+msgid "Paste your service account JSON credentials here..."
+msgstr "Plak hier je JSON-referenties van het serviceaccount..."
+
+msgid "This JSON file is used for authentication and is stored securely."
+msgstr ""
+"Dit JSON-bestand wordt gebruikt voor authenticatie en wordt veilig opgeslagen."
+
+msgid "Upload JSON File"
+msgstr "Upload JSON Bestand"
+
+msgid "Click to select your .json file"
+msgstr "Klik om uw .json-bestand te selecteren"
+
+msgid ""
+"Choose your service account JSON file. Its contents will be auto-filled above."
+msgstr ""
+"Kies uw serviceaccount JSON-bestand. De inhoud zal hierboven automatisch worden "
+"ingevuld."
+
+msgid ""
+"To enable syncing, share your Google Sheet with the service account email "
+"connected to this plugin and grant Editor access."
+msgstr ""
+"Om synchronisatie mogelijk te maken, deel uw Google Sheet met het e-mailadres van "
+"het serviceaccount dat aan deze plugin is gekoppeld en geef Editor-toegang."
+
+msgid "Service Account Email"
+msgstr "Service Account E-mail"
+
+msgid ""
+"Your Google Sheet must be shared with this service account email and granted "
+"Editor access to enable data synchronization."
+msgstr ""
+"Je Google Sheet moet gedeeld zijn met dit e-mailadres van het serviceaccount en "
+"moet toegang als Editor hebben om gegevenssynchronisatie mogelijk te maken."
+
+msgid "Share sheet for sync"
+msgstr "Deel sheet voor synchronisatie"
+
+msgid ""
+"Follow these step-by-step instructions to create and configure your Google "
+"service account and securely connect it with WPForms."
+msgstr ""
+"Volg deze stapsgewijze instructies om uw Google-serviceaccount te maken en te "
+"configureren en het veilig te koppelen aan WPForms."
+
+msgid "Step-1 Open Google Cloud > Service Accounts"
+msgstr "Stap-1 Open Google Cloud > Service Accounts"
+
+msgid ""
+"Open your Google Cloud project and go to IAM & Admin > Service Accounts to manage "
+"service identities."
+msgstr ""
+"Open uw Google Cloud-project en ga naar IAM & Admin > Service Accounts om service-"
+"identiteiten te beheren."
+
+msgid "Navigate to Service Accounts"
+msgstr "Navigeer naar Service Accounts"
+
+msgid "Step-2 Create a New Service Account"
+msgstr "Stap-2 Maak een Nieuw Service Account"
+
+msgid ""
+"Click Create Service Account and enter a meaningful name like ex. WPForms GSheet."
+msgstr ""
+"Klik op Create Service Account en voer een betekenisvolle naam in, bijvoorbeeld "
+"WPForms GSheet."
+
+msgid "Create a Service Account"
+msgstr "Maak een Service Account"
+
+msgid "Step-3 Fill Service Account Details"
+msgstr "Stap-3 Vul Service Account Gegevens In"
+
+msgid "Add Service Account Name & ID"
+msgstr "Voeg Service Account Naam & ID Toe"
+
+msgid "Google Console"
+msgstr "Google Console"
+
+msgid "Step-4 Open Service Account Keys Section"
+msgstr "Stap-4 Open Sectie Service Account Sleutels"
+
+msgid ""
+"Open the created service account and switch to the Keys tab to generate "
+"credentials."
+msgstr ""
+"Open het aangemaakte service account en schakel over naar het tabblad Sleutels om "
+"inloggegevens te genereren."
+
+msgid "Go to Service Account → Keys"
+msgstr "Ga naar Service Account → Sleutels"
+
+msgid "Step-5 Download JSON Key File"
+msgstr "Stap-5 Download JSON Sleutelbestand"
+
+msgid "Select JSON format and download the key file securely to your computer."
+msgstr ""
+"Selecteer JSON-formaat en download het sleutelbestand veilig naar uw computer."
+
+msgid "Download JSON Key File"
+msgstr "Download JSON Sleutelbestand"
+
+msgid "Step-6 Upload JSON Key in WPForms"
+msgstr "Stap 6: Upload JSON-sleutel in WPForms"
+
+msgid ""
+"Upload or paste the downloaded JSON key into the field on the left to complete "
+"setup."
+msgstr ""
+"Upload of plak de gedownloade JSON-sleutel in het veld links om de installatie te "
+"voltooien."
+
+msgid "Check our detailed guideline"
+msgstr "Bekijk onze gedetailleerde richtlijn"
+
+msgid "How to Connect Google Sheets"
+msgstr "Hoe Google Sheets te Verbinden"
+
+msgid ""
+"This guide shows how to share your Google Sheet with the connected service "
+"account and grant editor access for seamless synchronization."
+msgstr ""
+"Deze gids toont hoe u uw Google Sheet kunt delen met het verbonden service "
+"account en bewerkingsrechten kunt verlenen voor naadloze synchronisatie."
+
+msgid "Share sheet with service account"
+msgstr "Blad delen met serviceaccount"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Integration"
+msgstr "Integratie"
+
+msgid "Form Settings"
+msgstr "Formulierinstellingen"
+
+msgid "Extensions"
+msgstr "Extensies"
+
+msgid "WPForms Database"
+msgstr "WPForms-database"
+
+msgid "System Status"
+msgstr "Systeemstatus"
+
+msgid "Existing"
+msgstr "Bestaande"
+
+msgid "Service"
+msgstr "Service"
+
+msgid ""
+"You`re using GSheetConnector for WPForms Lite. To unlock more features consider "
+msgstr ""
+"Je gebruikt GSheetConnector voor WPForms Lite. Overweeg om meer functies te "
+"ontgrendelen "
+
+msgid "upgrading to Pro"
+msgstr "om te upgraden naar Pro"
+
+msgid "Your connection has expired or hasn’t been set up yet."
+msgstr "Uw verbinding is verlopen of is nog niet ingesteld."
+
+msgid ""
+"Please reauthenticate with your google account to continue syncing data without "
+"interruptions."
+msgstr ""
+"Authenticeer opnieuw met uw Google-account om gegevens zonder onderbrekingen te "
+"blijven synchroniseren."
+
+msgid "Authenticate Now"
+msgstr "Authenticeer Nu"
+
+msgid "Learn How"
+msgstr "Leer Hoe"
+
+msgid "Enjoying the Plugin?"
+msgstr "Geniet U van de Plugin?"
+
+msgid ""
+"If you are enjoying the plugin, please consider leaving a 5-star review. Your "
+"support helps us improve and grow."
+msgstr ""
+"Als u van de plugin geniet, overweeg dan alstublieft om een 5-sterren recensie "
+"achter te laten. Uw steun helpt ons verbeteren en groeien."
+
+msgid "Ok, you deserve it!"
+msgstr "Oké, u verdient het!"
+
+msgid "I already did"
+msgstr "Dat heb ik al gedaan"
+
+msgid "I need help"
+msgstr "Ik heb hulp nodig"
+
+msgid "Maybe Later"
+msgstr "Misschien Later"
+
+msgid " Enhance Your Setup"
+msgstr "Verbeter Uw Setup"
+
+msgid "Extend your workflow with our add-ons."
+msgstr "Breid uw workflow uit met onze add-ons."
+
+msgid "Discover tools that integrate seamlessly and help you get more done."
+msgstr "Ontdek tools die naadloos integreren en u helpen meer gedaan te krijgen."
+
+msgid "View Details"
+msgstr "Bekijk details"
+
+msgid "Unlock Advance Features of WPForms Pro version 🚀"
+msgstr "Ontgrendel geavanceerde functies van de WPForms Pro-versie 🚀"
+
+msgid ""
+"Use advanced features like Manual Authentication and automatic field mapping, no "
+"need to create columns in Google Sheets manually."
+msgstr ""
+"Gebruik geavanceerde functies zoals Handmatige Authenticatie en automatische "
+"veldmapping, zonder dat je kolommen handmatig in Google Sheets hoeft te maken."
+
+msgid ""
+"Choose only the fields you need with simple toggles, use advanced tags, sync past "
+"form entries, and get priority support."
+msgstr ""
+"Kies alleen de velden die je nodig hebt met eenvoudige schakelaars, gebruik "
+"geavanceerde tags, synchroniseer eerdere formulierinzendingen en krijg prioriteit "
+"ondersteuning."
+
+msgid "View License Types"
+msgstr "Bekijk Licentietypen"
+
+msgid "Compare Features"
+msgstr "Vergelijk Functies"
+
+msgid "v"
+msgstr "v"
+
+msgid "Advanced Tools for Easy Spreadsheet Control"
+msgstr "Geavanceerde Tools voor Eenvoudige Spreadsheet Controle"
+
+msgid ""
+"Improve your sheet management with smart automation and flexible customization "
+"features."
+msgstr ""
+"Verbeter je sheetbeheer met slimme automatisering en flexibele "
+"aanpassingsmogelijkheden."
+
+msgid "You do not have permission to access this page."
+msgstr "Je hebt geen toestemming om deze pagina te openen."
+
+msgid "System Information"
+msgstr "Systeeminformatie"
+
+msgid ""
+"View detailed information about your plugin, server, and WordPress setup for "
+"troubleshooting and support."
+msgstr ""
+"Bekijk gedetailleerde informatie over uw plugin, server en WordPress-configuratie "
+"voor probleemoplossing en ondersteuning."
+
+msgid "Copy System Info"
+msgstr "Kopieer Systeeminfo"
+
+msgid "Authenticated Using Existing Method"
+msgstr "Geauthenticeerd met bestaande methode"
+
+msgid "Google Sheet Permission"
+msgstr "Google Sheet Toestemming"
+
+msgid "Active Plugins"
+msgstr "Actieve plugins"
+
+msgid "Debug Log"
+msgstr "Debug Log"
+
+msgid "copied successfully"
+msgstr "succesvol gekopieerd"
+
+msgid "Enter Column Name Upgrade To Pro &hellip;"
+msgstr "Voer kolomnaam in Upgrade naar Pro &hellip;"
+
+msgid "Publishing processing stopped by conditional logic."
+msgstr "Publicatieverwerking gestopt door voorwaardelijke logica."
+
+msgid "Google Sheets Setup Required"
+msgstr "Google Sheets Setup Vereist"
+
+msgid "Your selected method is: "
+msgstr "Uw geselecteerde methode is: "
+
+msgid ""
+"To start sending form entries to Google Sheets, please connect your Google "
+"account first."
+msgstr ""
+"Om formulierinvoer naar Google Sheets te verzenden, verbind eerst uw Google-"
+"account."
+
+msgid "✔ Click on the Sign in with Google button"
+msgstr "✔ Klik op de knop Aanmelden met Google"
+
+msgid "✔ Log in using your Google account"
+msgstr "✔ Log in met uw Google-account"
+
+msgid "✔ Select the Google account where your Sheets are stored"
+msgstr "✔ Selecteer het Google-account waar uw Sheets zijn opgeslagen"
+
+msgid "✔ Grant access to: Google Drive & Google Sheets"
+msgstr "✔ Geef toegang tot: Google Drive & Google Sheets"
+
+msgid "✔ Save the authentication code if prompted"
+msgstr "✔ Bewaar de authenticatiecode als daarom wordt gevraagd"
+
+msgid "Go to Integration Setup"
+msgstr "Ga naar Integratie Setup"
+
+msgid "To connect Google Sheets using Service Account:"
+msgstr "Om Google Sheets te verbinden met een Serviceaccount:"
+
+msgid "✔ Go to Google Cloud Console"
+msgstr "✔ Ga naar Google Cloud Console"
+
+msgid "✔ Create or select a project"
+msgstr "✔ Maak of selecteer een project"
+
+msgid "✔ Enable Google Sheets & Drive APIs"
+msgstr "✔ Schakel Google Sheets & Drive API's in"
+
+msgid "✔ Create a Service Account"
+msgstr "✔ Maak een Serviceaccount aan"
+
+msgid "✔ Generate and download the JSON key"
+msgstr "✔ Genereer en download de JSON-sleutel"
+
+msgid "✔ Upload the JSON file here"
+msgstr "✔ Upload het JSON-bestand hier"
+
+msgid "✔ Share your Google Sheet with the Service Account email"
+msgstr "✔ Deel uw Google Sheet met het e-mailadres van het Serviceaccount"
+
+msgid "Enable Settings"
+msgstr "Instellingen inschakelen"
+
+msgid "On"
+msgstr "Aan"
+
+msgid "Off"
+msgstr "Uit"
+
+msgid " Connected"
+msgstr " Verbonden"
+
+msgid "Integration Mode"
+msgstr "Integratiemodus"
+
+msgid "Manual Google Sheets Configuration"
+msgstr "Handmatige Google Sheets Configuratie"
+
+msgid "Automatic Google Sheets Configuration (Upgrade To Pro)"
+msgstr "Automatische Google Sheets-configuratie (Upgrade naar Pro)"
+
+msgid "Selection of chosing google sheet for data submission."
+msgstr "Selectie van het kiezen van een Google Sheet voor gegevensindiening."
+
+msgid "Spreadsheet Name"
+msgstr "Spreadsheetnaam"
+
+msgid "Enter the exact name of your Google Spreadsheet (as shown in Google Sheets)."
+msgstr ""
+"Voer de exacte naam van uw Google Spreadsheet in (zoals weergegeven in Google "
+"Sheets)."
+
+msgid "Spreadsheet ID"
+msgstr "Spreadsheet-ID"
+
+msgid "Spreadsheet ID "
+msgstr "Spreadsheet-ID "
+
+msgid "Enter the Spreadsheet ID from your Google Sheet URL. (Example: %s)"
+msgstr "Voer de Spreadsheet-ID in uit uw Google Sheet-URL. (Voorbeeld: %s)"
+
+msgid "Tab Name"
+msgstr "Tab Naam"
+
+msgid ""
+"Enter the exact sheet tab name (e.g., Sheet1) from the bottom of your Google "
+"Spreadsheet."
+msgstr ""
+"Voer de exacte naam van het bladtabblad in (bijv. Blad1) onderaan uw Google "
+"Spreadsheet."
+
+msgid "Tab ID"
+msgstr "Tab ID"
+
+msgid "Get the Tab ID from your sheet URL after gid="
+msgstr "Haal de Tabblad-ID uit uw sheet-URL na gid="
+
+msgid "View SpreadSheets"
+msgstr "Spreadsheets bekijken"
+
+msgid "Download CSV (PRO)"
+msgstr "CSV downloaden (PRO)"
+
+msgid ""
+"Your Google Spreadsheet is securely connected and ready to receive form "
+"submissions in real time."
+msgstr ""
+"Je Google Spreadsheet is veilig verbonden en klaar om formulierinzendingen in "
+"realtime te ontvangen."
+
+msgid ""
+"Please share your Google Spreadsheet with the following service account to enable "
+"automatic syncing."
+msgstr ""
+"Deel je Google Spreadsheet met het volgende serviceaccount om automatische "
+"synchronisatie mogelijk te maken."
+
+msgid " Green email means the spreadsheet  is shared correctly."
+msgstr " Groen email betekent dat de spreadsheet correct is gedeeld."
+
+msgid " Red email means the spreadsheet is not yet shared — please grant access."
+msgstr " Rood email betekent dat de spreadsheet nog niet is gedeeld — geef toegang."
+
+msgid "Unlock Advanced Features with Form Feeds"
+msgstr "Ontgrendel Geavanceerde Functies met Form Feeds"
+
+msgid "Get Advanced Features"
+msgstr "Krijg Geavanceerde Functies"
+
+msgid "Automatic Google Sheets Configuration"
+msgstr "Automatische Google Sheets-configuratie"
+
+msgid "Auto fetch Google Sheets list"
+msgstr "Auto haal Google Sheets lijst op"
+
+msgid "Auto detect sheet tabs"
+msgstr "Auto detecteer blad tabs"
+
+msgid "One-click configuration"
+msgstr "Configuratie met één klik"
+
+msgid "Real-time entry sync"
+msgstr "Realtime invoer synchronisatie"
+
+msgid "Select Fields to Sync"
+msgstr "Selecteer velden om te synchroniseren"
+
+msgid "Drag & drop field reordering"
+msgstr "Sleep & drop veldherordening"
+
+msgid "Rename column headers"
+msgstr "Hernoem kolomkoppen"
+
+msgid "Select specific fields to sync"
+msgstr "Selecteer specifieke velden om te synchroniseren"
+
+msgid "Conditional Logic"
+msgstr "Voorwaardelijke Logica"
+
+msgid "Apply rules based on form values"
+msgstr "Pas regels toe op basis van formulierwaarden"
+
+msgid "Sync data only when conditions match"
+msgstr "Synchroniseer gegevens alleen wanneer voorwaarden overeenkomen"
+
+msgid "Filter unwanted or incomplete entries"
+msgstr "Filter ongewenste of onvolledige inzendingen"
+
+msgid "Create dynamic workflows automatically"
+msgstr "Maak automatisch dynamische workflows aan"
+
+msgid "Map data conditionally to sheet columns"
+msgstr "Koppel gegevens voorwaardelijk aan kolommen in het werkblad"
+
+msgid "Support multiple conditions"
+msgstr "Ondersteunt meerdere voorwaarden"
+
+msgid "Improve accuracy and reduce extra data"
+msgstr "Verbeter de nauwkeurigheid en verminder extra gegevens"
+
+msgid "Header Settings"
+msgstr "Kopinstellingen"
+
+msgid "Freeze header row"
+msgstr "Bevries koprij"
+
+msgid "Custom font styling"
+msgstr "Aangepaste lettertype-styling"
+
+msgid "Header & row color control"
+msgstr "Header- en rijkleurcontrole"
+
+msgid "Sort by any column"
+msgstr "Sorteer op elke kolom"
+
+msgid "Download spreadsheet as file"
+msgstr "Download spreadsheet als bestand"
+
+msgid "Show Features ▼"
+msgstr "Functies tonen ▼"
+
+msgid "Hide Features ▲"
+msgstr "Functies verbergen ▲"
+
+msgid ""
+"Automatic configure your Google Sheet and start syncing form submissions in real "
+"time."
+msgstr ""
+"Configureer automatisch je Google Sheet en begin met het realtime synchroniseren "
+"van formulierinzendingen."
+
+msgid "Select google spreadsheet from your google account."
+msgstr "Selecteer een Google-spreadsheet uit je Google-account."
+
+msgid "Select tab from above chosen google sheet Tab."
+msgstr "Selecteer een tabblad uit het hierboven gekozen Google Sheet-tabblad."
+
+msgid "Enable the fields and rename columns if needed."
+msgstr "Schakel de velden in en hernoem kolommen indien nodig."
+
+msgid " Check All "
+msgstr " Alles selecteren "
+
+msgid "Can't find the field you added recently?"
+msgstr "Kun je het veld dat je onlangs hebt toegevoegd niet vinden?"
+
+msgid "Click here to save and reload"
+msgstr "Klik hier om op te slaan en opnieuw te laden"
+
+msgid "Save and reload the form to view new fields."
+msgstr "Sla het formulier op en laad het opnieuw om nieuwe velden te bekijken."
+
+msgid "Smart Tags"
+msgstr "Smart Tags"
+
+msgid "Insert dynamic values from your forms"
+msgstr "Dynamische waarden invoegen uit uw formulieren"
+
+msgid "Header Behavior"
+msgstr "Kopgedrag"
+
+msgid "Freeze Header "
+msgstr "Kopregel vastzetten "
+
+msgid "if you want to freeze first row considered as header."
+msgstr "als u de eerste rij als kopregel wilt vastzetten."
+
+msgid "Header and Rows Style"
+msgstr "Opmaak van kopregel en rijen"
+
+msgid "Alternate Colors "
+msgstr "Afwisselende kleuren "
+
+msgid ""
+"Control background colors of odd even rows as well as background color of header "
+"row."
+msgstr ""
+"Beheer achtergrondkleuren van oneven en even rijen, evenals de achtergrondkleur "
+"van de koprij."
+
+msgid "Header Color"
+msgstr "Kopkleur"
+
+msgid "Odd Color"
+msgstr "Oneven kleur"
+
+msgid "Even Color"
+msgstr "Even kleur"
+
+msgid "Header Appearance"
+msgstr "Koptekst Uiterlijk"
+
+msgid "Header - Font Settings "
+msgstr "Kopregel - lettertype-instellingen "
+
+msgid "Control Header setting"
+msgstr "Kopregelinstellingen beheren"
+
+msgid "Font Size"
+msgstr "Lettergrootte"
+
+msgid "Font Style"
+msgstr "Lettertype Stijl"
+
+msgid "Bold"
+msgstr "Vet"
+
+msgid "Italic"
+msgstr "Cursief"
+
+msgid "Normal"
+msgstr "Normaal"
+
+msgid "Font Color"
+msgstr "Letterkleur"
+
+msgid "Row Appearance"
+msgstr "Rij Uiterlijk"
+
+msgid "Row - Font Settings "
+msgstr "Rij - lettertype-instellingen "
+
+msgid "Control row setting"
+msgstr "Rijinstellingen beheren"
+
+msgid "Sort Sheet "
+msgstr "Blad sorteren "
+
+msgid ""
+"Set up this field if you want data to be sorted automatically upon the submission "
+"based on column."
+msgstr ""
+"Stel dit veld in als je wilt dat de gegevens automatisch worden gesorteerd bij "
+"indiening op basis van de kolom."
+
+msgid "Enable Conditional Logic "
+msgstr "Voorwaardelijke logica inschakelen "
+
+msgid "Enable Conditional Logic"
+msgstr "Voorwaardelijke logica inschakelen"
+
+msgid "Sync to Google Sheet"
+msgstr "Synchroniseren met Google Sheet"
+
+msgid "Click here"
+msgstr "Klik hier"
+
+msgid ""
+"Click here to sync all the entries to the above selected Google Sheet. Make sure "
+"it will add all the form entries filled till now. If find duplicate then remove "
+"it manually or select the new spreadsheet or a new tab in same sheet."
+msgstr ""
+"Klik hier om alle inzendingen te synchroniseren met het hierboven geselecteerde "
+"Google Sheet. Zorg ervoor dat alle tot nu toe ingevulde formulierinzendingen "
+"worden toegevoegd. Als u duplicaten vindt, verwijder deze dan handmatig of "
+"selecteer een nieuw spreadsheet of een nieuw tabblad in hetzelfde sheet."
+
+msgid "From Date"
+msgstr "Van Datum"
+
+msgid "To Date"
+msgstr "Tot Datum"
+
+msgid "Sync All Entries with this feed"
+msgstr "Synchroniseer alle invoeren met deze feed"
+
+msgid "GSheetConnector (%s)"
+msgstr "GSheetConnector (%s)"
+
+msgid "Enter a Feed Name"
+msgstr "Voer een feednaam in"
+
+msgid "You must provide a googlesheet name"
+msgstr "U moet een naam voor de googlesheet opgeven"
+
+msgid "To disable all wpgs_spreadsheets use the \"Webhooks\" dropdown setting."
+msgstr ""
+"Om alle wpgs_spreadsheets uit te schakelen, gebruikt u de "
+"vervolgkeuzelijstinstelling \"Webhooks\"."
+
+msgid "Are you sure that you want to delete this googlesheet?"
+msgstr "Weet u zeker dat u deze googlesheet wilt verwijderen?"
+
+msgid "Unnamed Googlesheet"
+msgstr "Naamloze Googlesheet"
+
+msgid ""
+"Your form contains required Googlesheet settings that have not been configured. "
+"Please double-check and configure these settings to complete the connection setup."
+msgstr ""
+"Uw formulier bevat verplichte Googlesheet-instellingen die nog niet zijn "
+"geconfigureerd. Controleer deze instellingen en configureer ze om de "
+"verbindingsinstelling te voltooien."
+
+msgid "display"
+msgstr "weergeven"
+
+msgid "https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro"
+msgstr "https://www.gsheetconnector.com/wpforms-google-sheet-connector-pro"
+
+msgid "Send your WPForms data to your Google Sheets spreadsheet."
+msgstr "Stuur uw WPForms-gegevens naar uw Google Sheets-spreadsheet."
+
+msgid "GSheetConnector"
+msgstr "GSheetConnector"
+
+msgid "https://www.gsheetconnector.com/"
+msgstr "https://www.gsheetconnector.com/"

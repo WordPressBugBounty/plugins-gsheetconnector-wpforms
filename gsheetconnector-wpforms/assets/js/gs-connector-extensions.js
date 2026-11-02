@@ -49,7 +49,6 @@ jQuery(document).ready(function (jQuery) {
         loaderSpan.removeClass("loading");
 
         if (response.success) {
-          // ✅ Install success
           button.hide();
 
           button
@@ -57,7 +56,6 @@ jQuery(document).ready(function (jQuery) {
             .find(".gscwpff-activate-plugin-btn")
             .show();
         } else {
-          // ❌ Permission or other error → open popup
           jQuery(".popup-actions-active-msg-free").text(
             response.data.message ||
               "You do not have permission to install this plugin.",
@@ -93,6 +91,7 @@ jQuery(document).ready(function (jQuery) {
    */
 
   jQuery(document).on("click", ".gscwpff-activate-plugin-btn", function () {
+   
     var button = jQuery(this);
     var pluginSlug = button.data("plugin");
     var loaderSpan = button.siblings(".loading-sign-active");
@@ -114,10 +113,10 @@ jQuery(document).ready(function (jQuery) {
         loaderSpan.removeClass("loading");
 
         if (response.success) {
-          // ✅ Success → reload only
+        
           location.reload();
         } else {
-          // ❌ Permission denied → open popup
+         
           jQuery(".popup-actions-active-msg-free").text(
             response.data.message ||
               "You do not have permission to activate this plugin.",
@@ -163,15 +162,15 @@ jQuery(document).ready(function (jQuery) {
     selectedPluginSlug = "";
   });
 
-
   // Confirm deactivate
   jQuery("#gscwpff-deactive-popup-confirm-free").on("click", function () {
-
-   // Add loading class to the corresponding loading element
-    jQuery(".loading-sign-deactive[data-plugin='" + selectedPluginSlug + "']").addClass("loading");
+    // Add loading class to the corresponding loading element
+    jQuery(
+      ".loading-sign-deactive[data-plugin='" + selectedPluginSlug + "']",
+    ).addClass("loading");
 
     if (!selectedPluginSlug) return;
-     jQuery("#gscwpff-confirm-dective-popup-free").addClass("d-none");
+    jQuery("#gscwpff-confirm-dective-popup-free").addClass("d-none");
     jQuery.ajax({
       url: ajaxurl,
       type: "POST",
@@ -183,13 +182,11 @@ jQuery(document).ready(function (jQuery) {
       },
       success: function (response) {
         if (response.success) {
-         
           location.reload();
         }
       },
     });
   });
-
 
   // filter
   document.querySelectorAll(".market-tab").forEach((tab) => {

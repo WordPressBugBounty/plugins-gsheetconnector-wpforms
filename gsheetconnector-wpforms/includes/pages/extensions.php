@@ -145,11 +145,8 @@ if (!defined('ABSPATH')) {
                 <p><?php echo esc_html__('Extend your Google Sheets integration with powerful add-ons. Install, manage, and activate extensions to unlock advanced features.', 'gsheetconnector-wpforms'); ?></p>
 
                 <?php
-                $all_plugins = get_plugins();// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-
-
-
-                $active_theme = wp_get_theme();// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                $all_plugins = get_plugins(); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                $active_theme = wp_get_theme(); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
                 $plugins = [
                     'contact-form-7/wp-contact-form-7.php' => [
                         'connector' => 'cf7-google-sheets-connector/google-sheet-connector.php',
@@ -197,7 +194,7 @@ if (!defined('ABSPATH')) {
                     ],
 
                     'gravityforms/gravityforms.php' => [
-                        'connector' => 'gsheetconnector-gravity-forms/gsheetconnector-gravityforms.php',
+                        'connector' => 'gsheetconnector-gravityforms/gsheetconnector-gravityforms.php',
                         'connector-pro' => 'gsheetconnector-gravityforms-pro/gsheetconnector-gravityforms-pro.php',
                         'name' => __('Gravity Forms Google Sheet Connector', 'gsheetconnector-wpforms'),
                         'link' => 'https://www.gsheetconnector.com/gravity-forms-google-sheet-connector',
@@ -210,7 +207,7 @@ if (!defined('ABSPATH')) {
                         'freeLink' => 'https://wordpress.org/plugins/gsheetconnector-gravity-forms/',
                         'downloadLink' => 'https://downloads.wordpress.org/plugin/gsheetconnector-gravity-forms.zip',
                         'buyLink' => 'https://www.gsheetconnector.com/gravity-forms-google-sheet-connector',
-                        'mainPlugin' => 'gravityforms/gravityforms.php',
+                        'mainPlugin' => 'gsheetconnector-gravityforms/gsheetconnector-gravityforms.php',
                         'theme' => 'gravityforms',
                         'docs' => 'https://www.gsheetconnector.com/docs/gravity-forms-gsheetconnector',
                         'demo' => 'https://demo.gsheetconnector.com/gravityforms-google-sheet-connector-pro'
@@ -262,7 +259,7 @@ if (!defined('ABSPATH')) {
                         'link' => 'https://wordpress.org/plugins/gsheetconnector-formidable-forms/',
                         'img' => esc_url(WPFORMS_GOOGLESHEET_URL) . '/assets/img/formidable-addon.webp',
                         'text' => __('Automatically sync Formidable Forms entries to Google Sheets. Manage leads, track submissions, and simplify data reporting with real-time integration.', 'gsheetconnector-wpforms'),
-                        'pro_plugin_active' => 'gsheetconnector-forminator-pro/gsheetconnector-forminator-pro.php',
+                        'pro_plugin_active' => 'gsheetconnector-formidable-forms-pro/gsheetconnector-formidable-forms-pro.php',
                         'url' => 'https://wordpress.org/plugins/gsheetconnector-formidable-forms/',
                         'button' => __('Install', 'gsheetconnector-wpforms'),
                         'badge' => __('Free', 'gsheetconnector-wpforms'),
@@ -335,48 +332,47 @@ if (!defined('ABSPATH')) {
                     ],
 
                     'divi/divi.php' => [
-                        'connector' => 'divi-forms-db-google-sheet-connector-pro/divi-forms-db-google-sheet-connector-pro.php',
-                        'connector-pro' => 'divi-forms-db-google-sheet-connector-pro/divi-forms-db-google-sheet-connector-pro.php',
+                        'connector' => '',
+                        'connector-pro' => 'divi-db-gsheetconnector-pro/divi-db-gsheetconnector-pro.php',
                         'name' => __('Divi Forms Google Sheet Connector', 'gsheetconnector-wpforms'),
                         'link' => 'https://www.gsheetconnector.com/divi-forms-db-google-sheet-connector-pro',
                         'img' => esc_url(WPFORMS_GOOGLESHEET_URL) . '/assets/img/pro-divi-gsc.webp',
                         'text' => __('Integrate Divi Forms with Google Sheets and automatically sync submissions in real-time. Store customer data securely, track inquiries efficiently, and eliminate manual spreadsheet updates.', 'gsheetconnector-wpforms'),
-                        'pro_plugin_active' => 'divi-forms-db-google-sheet-connector-pro/divi-forms-db-google-sheet-connector-pro.php',
+                        'pro_plugin_active' => 'divi-db-gsheetconnector-pro/divi-db-gsheetconnector-pro.php',
                         'url' => '',
                         'button' => __('Install', 'gsheetconnector-wpforms'),
                         'badge' => __('Available PRO Version', 'gsheetconnector-wpforms'),
                         'freeLink' => '',
                         'downloadLink' => '',
                         'buyLink' => 'https://www.gsheetconnector.com/divi-forms-db-google-sheet-connector-pro',
-                        'mainPlugin' => 'Divi',
+                        'mainPlugin' => '',
                         'theme' => 'Divi',
                         'docs' => 'https://www.gsheetconnector.com/docs/divi-forms-google-sheet-connector',
                         'demo' => 'https://demo.gsheetconnector.com/divi-forms-gsheetconnector-pro'
                     ],
 
-                    'gsheetconnector-for-wp-core/gsheetconnector-for-wp-core.php' => [
-                        'connector' => 'gsheetconnector-easy-digital-downloads/gsheetconnector-easy-digital-downloads.php',
-                        'connector-pro' => 'gsheetconnector-easy-digital-downloads-pro/gsheetconnector-easy-digital-downloads-pro.php',
+                    'gsheetconnector-for-core-lite/gsheetconnector-for-core-lite.php' => [
+                        'connector' => 'gsheetconnector-for-core-lite/gsheetconnector-for-core-lite.php',
+                        'connector-pro' => 'gsheetconnector-for-core-pro/gsheetconnector-for-core-pro.php',
                         'name' => __('WP Core Google Sheet Connector', 'gsheetconnector-wpforms'),
-                        'link' => 'https://www.gsheetconnector.com/gsheetconnector-for-wp-core',
+                        'link' => 'https://wordpress.org/plugins/gsheetconnector-for-core-lite/',
                         'img' => esc_url(WPFORMS_GOOGLESHEET_URL) . '/assets/img/gsc-wp-core.webp',
                         'text' => __('Automatically send WordPress core data (like comments or custom submissions) to Google Sheets. Simplify website data tracking, automate record keeping, and centralize important information in one organized spreadsheet.', 'gsheetconnector-wpforms'),
-                        'pro_plugin_active' => 'gsheetconnector-easy-digital-downloads-pro/gsheetconnector-easy-digital-downloads-pro.php',
-                        'url' => 'https://wordpress.org/plugins/gsheetconnector-easy-digital-downloads/',
-                        'button' => __('Install', 'gsheetconnector-wpforms'),
+                        'pro_plugin_active' => 'gsheetconnector-for-core-pro/gsheetconnector-for-core-pro.php',
+                        'url' => 'https://wordpress.org/plugins/gsheetconnector-for-core-lite/',
+                        'button' => (''),
                         'badge' => __('PRO', 'gsheetconnector-wpforms'),
                         'freeLink' => '',
-                        'downloadLink' => 'https://downloads.wordpress.org/plugin/gsheetconnector-easy-digital-downloads.zip',
+                        'downloadLink' => 'https://downloads.wordpress.org/plugin/gsheetconnector-for-core-lite.zip',
                         'buyLink' => 'https://www.gsheetconnector.com/gsheetconnector-for-wp-core',
-                        'mainPlugin' => 'gsheetconnector-for-wp-core',
-                        'theme' => 'gsheetconnector-for-wp-core',
+                        'mainPlugin' => ['wpforms/wpforms.php', 'wpforms-lite/wpforms.php', 'gsheetconnector-for-core-lite/gsheetconnector-for-core-lite.php'],
+                        'theme' => '',
                         'docs' => 'https://www.gsheetconnector.com/docs/gsheetconnector-for-wp-core',
                         'demo' => ''
                     ],
-
                     'woocommerce/woocommerce.php' => [
                         'connector' => 'wc-gsheetconnector/wc-gsheetconnector.php',
-						'connector-pro' => 'wc-gsheetconnector-pro/wc-gsheetconnector-pro.php',
+                        'connector-pro' => 'wc-gsheetconnector-pro/wc-gsheetconnector-pro.php',
                         'name' => __('WooCommerce Google Sheet Connector', 'gsheetconnector-wpforms'),
                         'link' => 'https://www.gsheetconnector.com/woocommerce-google-sheet-connector-pro',
                         'img' => esc_url(WPFORMS_GOOGLESHEET_URL) . '/assets/img/pro-woo-gsc.webp',
@@ -425,35 +421,35 @@ if (!defined('ABSPATH')) {
                 <div class="gsheetconnector-addons-list gsc-ext-grid">
 
                     <?php
-                    foreach ($plugins as $plugin => $details ) {// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                    foreach ($plugins as $plugin => $details) { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 
                         // =========================
                         // MAIN PLUGIN CHECK
                         // =========================
-                        $is_main_installed = false;// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-                        $is_main_active    = false;// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                        $is_main_installed = false; // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                        $is_main_active    = false; // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 
                         if (!empty($details['mainPlugin']) && is_array($details['mainPlugin'])) {
 
                             foreach ($details['mainPlugin'] as $main_plugin) { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 
-                               
+
 
 
                                 if (isset($all_plugins[$main_plugin])) {
-                                    $is_main_installed = true;// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                                    $is_main_installed = true; // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
                                 }
 
                                 if (is_plugin_active($main_plugin)) {
-                                    $is_main_active = true;// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                                    $is_main_active = true; // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
                                     break;
                                 }
                             }
                         } elseif (!empty($details['mainPlugin']) && is_string($details['mainPlugin'])) {
 
-                            $is_main_installed = isset($all_plugins[$details['mainPlugin']]);// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                            $is_main_installed = isset($all_plugins[$details['mainPlugin']]); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 
-                            $is_main_active = is_plugin_active($details['mainPlugin']);// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                            $is_main_active = is_plugin_active($details['mainPlugin']); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
                         }
 
                         // =========================
@@ -538,7 +534,7 @@ if (!defined('ABSPATH')) {
                                                 <?php esc_html_e('Deactivate', 'gsheetconnector-wpforms'); ?>
 
                                             </a>
-                                           <span class="loading-sign-deactive mt-25" data-plugin="<?php echo esc_attr($details['connector-pro']); ?>"></span>
+                                            <span class="loading-sign-deactive mt-25" data-plugin="<?php echo esc_attr($details['connector-pro']); ?>"></span>
 
                                         </div>
 
@@ -648,7 +644,7 @@ if (!defined('ABSPATH')) {
                             $main_plugins = is_array($data['mainPlugin']) ? $data['mainPlugin'] : [$data['mainPlugin']]; // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
                             foreach ($main_plugins as $main_plugin) { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
                                 if (is_plugin_active($main_plugin)) {
-                                    $is_main_active = true;// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                                    $is_main_active = true; // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
                                     break;
                                 }
                             }
@@ -658,15 +654,26 @@ if (!defined('ABSPATH')) {
                         $is_theme_match    = ($active_theme_slug === $data['theme']); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
                         $is_pro_installed  = !empty($data['pro_plugin_active']) && isset($all_plugins[$data['pro_plugin_active']]); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
                         $is_pro_active     = !empty($data['pro_plugin_active']) && is_plugin_active($data['pro_plugin_active']);  // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-                        $is_free_installed = !empty($data['connector']) && isset($all_plugins[$data['connector']]);// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-                        $is_free_active    = !empty($data['connector']) && is_plugin_active($data['connector']);// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-                        if (!$is_theme_match) {
-                            if (!$is_main_active)                        continue;
-                            if ($is_pro_active)                          continue;
-                            if ($is_free_active && !$is_pro_installed)   continue;
-                        }
+                        $is_free_installed = !empty($data['connector']) && isset($all_plugins[$data['connector']]); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                        $is_free_active    = !empty($data['connector']) && is_plugin_active($data['connector']); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+
                         if ($is_pro_active) {
                             continue;
+                        }
+                        if (!$is_theme_match) { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                            if (!$is_main_active) continue;
+                            if ($is_free_active && !$is_pro_installed) continue;
+
+
+                            $will_show_install_btn = !$is_pro_installed // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                                && !($is_free_installed && !$is_free_active);
+
+                            if (
+                                $will_show_install_btn // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                                && trim((string) ($data['button'] ?? '')) === ''
+                            ) {
+                                continue;
+                            }
                         }
                     ?>
 
@@ -674,17 +681,25 @@ if (!defined('ABSPATH')) {
                             <div class="gsheetconnector-list-item gsc-ext-card">
                                 <div class="addon-item-header">
                                     <div class="extension-bg-color-set">
-                                        <a href="<?php echo esc_url($data['buyLink']); ?>" target="_blank">
-                                            <img src="<?php echo esc_url($data['img']); ?>" class="gsc-ext-icon"
-                                                alt="<?php echo esc_attr($data['name']); ?>">
-                                        </a>
+                                        <div class="gsc-ext-top">
+                                            <a href="<?php echo esc_url($data['buyLink'] ?? '#'); ?>" target="_blank">
+                                                <img src="<?php echo esc_url($data['img']); ?>" class="gsc-ext-icon"
+                                                    alt="<?php echo esc_attr($data['name']); ?>">
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="addon-item-header-meta">
-                                        <div class="plugin-premium gsc-ext-badge pro-badge">
-                                            <?php echo esc_html(__('Pro', 'gsheetconnector-wpforms')); ?>
-                                        </div>
+                                        <?php if ($is_pro_active): ?>
+                                            <div class="plugin-premium gsc-ext-badge pro-badge pro-active-badge">
+                                                <?php echo esc_html(__('Pro Active', 'gsheetconnector-wpforms')); ?>
+                                            </div>
+                                        <?php else: ?>
+                                            <div class="plugin-premium gsc-ext-badge pro-badge">
+                                                <?php echo esc_html(__('Pro', 'gsheetconnector-wpforms')); ?>
+                                            </div>
+                                        <?php endif; ?>
                                         <div class="addon-item-meta-title">
-                                            <a href="<?php echo esc_url($data['buyLink']); ?>" target="_blank" class="addon-link">
+                                            <a href="<?php echo esc_url($data['buyLink'] ?? '#'); ?>" target="_blank" class="addon-link">
                                                 <?php echo esc_html($data['name']); ?>
                                             </a>
                                         </div>
@@ -693,17 +708,51 @@ if (!defined('ABSPATH')) {
                                         </div>
 
                                         <div class="addon-item-footer">
-                                            <div class="button-bar">
-                                                <div class="addon-item-meta-title gsc-ext-actions">
-                                                    <a href="<?php echo esc_url($data['link']); ?>" target="_blank" class="btn activate">
-                                                        <?php echo esc_html($data['button']); ?>
+                                            <div class="button-bar gsc-ext-actions">
+                                                <?php if (!empty($data['docs'])): ?>
+                                                    <a href="<?php echo esc_url($data['docs']); ?>" target="_blank"
+                                                        class="addon-link btn btn-default link-hover-white">
+                                                        <?php esc_html_e('View Docs', 'gsheetconnector-wpforms'); ?>
                                                     </a>
-                                                </div>
+                                                <?php endif; ?>
+                                                <?php if ($is_pro_active): ?>
+                                                    <span class="btn activated" tabindex="-1">
+                                                        <?php esc_html_e('Already Active', 'gsheetconnector-wpforms'); ?>
+                                                    </span>
+                                                <?php elseif ($is_pro_installed): ?>
+                                                    <button class="gscwpff-activate-plugin-btn btn activate button-pro"
+                                                        data-plugin="<?php echo esc_attr($data['pro_plugin_active']); ?>">
+                                                        <?php esc_html_e('Activate', 'gsheetconnector-wpforms'); ?>
+                                                    </button>
+                                                    <span class="loading-sign-active mt-25"></span>
+                                                <?php elseif ($is_free_installed && !$is_free_active): ?>
+                                                    <button class="gscwpff-activate-plugin-btn btn activate button-free"
+                                                        data-plugin="<?php echo esc_attr($data['connector']); ?>">
+                                                        <?php esc_html_e('Activate', 'gsheetconnector-wpforms'); ?>
+                                                    </button>
+                                                    <span class="loading-sign-active mt-25"></span>
+                                                <?php elseif (!empty($data['downloadLink'])): ?>
+                                                    <button class="gscwpff-install-plugin-btn btn btn-default"
+                                                        data-download="<?php echo esc_url($data['downloadLink']); ?>"
+                                                        data-plugin="<?php echo esc_attr($plugin); ?>">
+                                                        <?php echo esc_html($data['button']); ?>
+                                                    </button>
+                                                    <span class="loading-sign-install mt-25"></span>
+                                                    <button class="gscwpff-activate-plugin-btn btn activate button-free"
+                                                        data-plugin="<?php echo esc_attr($data['connector']); ?>"
+                                                        style="display:none;">
+                                                        <?php esc_html_e('Activate', 'gsheetconnector-wpforms'); ?>
+                                                    </button>
+                                                    <span class="loading-sign-active mt-25"></span>
+                                                <?php else: ?>
+                                                    <a href="<?php echo esc_url($data['buyLink'] ?? '#'); ?>" target="_blank" class="btn activate">
+                                                        <?php esc_html_e('Get Pro', 'gsheetconnector-wpforms'); ?>
+                                                    </a>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         <?php else: ?>
                             <div class="gsheetconnector-list-item gsc-ext-card">
@@ -715,7 +764,11 @@ if (!defined('ABSPATH')) {
                                                     alt="<?php echo esc_attr($data['name']); ?>"
                                                     class="gsc-ext-icon">
                                             </a>
-                                            <?php if ($is_pro_installed && !$is_pro_active): ?>
+                                            <?php if ($is_pro_active): ?>
+                                                <div class="plugin-premium gsc-ext-badge pro-badge pro-active-badge">
+                                                    <?php echo esc_html(__('Pro Active', 'gsheetconnector-wpforms')); ?>
+                                                </div>
+                                            <?php elseif ($is_pro_installed): ?>
                                                 <div class="plugin-premium gsc-ext-badge pro-badge">
                                                     <?php echo esc_html(__('Pro', 'gsheetconnector-wpforms')); ?>
                                                 </div>
@@ -738,10 +791,17 @@ if (!defined('ABSPATH')) {
 
                                         <div class="addon-item-footer">
                                             <div class="button-bar gsc-ext-actions">
-                                                <a href="<?php echo esc_url($data['docs']); ?>" target="_blank"
-                                                    class="btn btn-default link-hover-white"><?php echo esc_html(__('View Docs', 'gsheetconnector-wpforms')); ?>
-                                                </a>
-                                                <?php if ($is_pro_installed && !$is_pro_active): ?>
+                                                <?php if (!empty($data['docs'])): ?>
+                                                    <a href="<?php echo esc_url($data['docs']); ?>" target="_blank"
+                                                        class="addon-link btn btn-default link-hover-white">
+                                                        <?php esc_html_e('View Docs', 'gsheetconnector-wpforms'); ?>
+                                                    </a>
+                                                <?php endif; ?>
+                                                <?php if ($is_pro_active): ?>
+                                                    <span class="btn activated" tabindex="-1">
+                                                        <?php esc_html_e('Already Active', 'gsheetconnector-wpforms'); ?>
+                                                    </span>
+                                                <?php elseif ($is_pro_installed): ?>
                                                     <button class="gscwpff-activate-plugin-btn btn activate button-pro"
                                                         data-plugin="<?php echo esc_attr($data['pro_plugin_active']); ?>">
                                                         <?php esc_html_e('Activate', 'gsheetconnector-wpforms'); ?>
@@ -753,7 +813,7 @@ if (!defined('ABSPATH')) {
                                                         <?php esc_html_e('Activate', 'gsheetconnector-wpforms'); ?>
                                                     </button>
                                                     <span class="loading-sign-active mt-25"></span>
-                                                <?php else: ?>
+                                                <?php elseif (!empty($data['downloadLink'])): ?>
                                                     <button class="gscwpff-install-plugin-btn btn btn-default"
                                                         data-download="<?php echo esc_url($data['downloadLink']); ?>"
                                                         data-plugin="<?php echo esc_attr($plugin); ?>">
@@ -766,12 +826,15 @@ if (!defined('ABSPATH')) {
                                                         <?php esc_html_e('Activate', 'gsheetconnector-wpforms'); ?>
                                                     </button>
                                                     <span class="loading-sign-active mt-25"></span>
+                                                <?php else: ?>
+                                                    <a href="<?php echo esc_url($data['buyLink'] ?? '#'); ?>" target="_blank" class="btn activate">
+                                                        <?php esc_html_e('Get Pro', 'gsheetconnector-wpforms'); ?>
+                                                    </a>
                                                 <?php endif; ?>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         <?php endif; ?>
                     <?php endforeach; ?>
@@ -805,11 +868,9 @@ if (!defined('ABSPATH')) {
 
                     <div class="gsheetconnector-addons-list gsc-ext-grid">
 
-                        <?php foreach ($plugins as $plugin => $data): // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 
-                            // ---------------------------------
-                            // MAIN PLUGIN ACTIVE CHECK
-                            // ---------------------------------
+
+                        <?php foreach ($plugins as $plugin => $data): // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
                             $is_main_active = false; // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 
                             if (!empty($data['mainPlugin'])) {
@@ -822,6 +883,15 @@ if (!defined('ABSPATH')) {
                                     }
                                 } elseif (is_string($data['mainPlugin'])) {
                                     $is_main_active = is_plugin_active($data['mainPlugin']); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                                }
+                            }
+                            if (!$is_main_active && !empty($data['theme'])) {
+                                $current_theme = wp_get_theme();// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+                                if (
+                                    $data['theme'] === $current_theme->get_stylesheet()
+                                    || $data['theme'] === $current_theme->get_template()
+                                ) {
+                                    $is_main_active = true;// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
                                 }
                             }
 

@@ -5,7 +5,7 @@ Tags: WPForms, WPForms Google Sheets, Google Sheets Integration, WPForms Google 
 Requires at least: 5.6
 Tested up to: 7.1
 Requires PHP: 7.4 
-Stable tag: 4.2.3
+Stable tag: 4.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -288,6 +288,22 @@ Enable **Debug Log** and **System Status** in the plugin settings to see detaile
 
 
 == Changelog ==
+
+= 4.2.4 (02-11-2026) =
+* Added: Google tokens and service account JSON are encrypted at rest.
+* Improved: Google API request timeout raised to 20 seconds (filter `gscwpf_google_api_timeout`).
+* Fixed: Extensions page now prioritizes the active state when both Free and Pro plugins are active.
+* Fixed: Entries saved with WPForms Lite now get a real Entry ID instead of 0 (existing entries are updated automatically).
+* Fixed: Entries are no longer saved twice in the database after switching between the Free and Pro plugins.
+* Fixed: Sending a single entry to Google Sheets finds the "Entry ID" column by its header and updates the same row.
+* Fixed: A failed Google sign-in no longer replaces a working connection with an invalid token.
+* Fixed: Missing Existing-method API credentials are re-fetched automatically instead of requiring plugin reactivation.
+* Fixed: Network-activated plugin is no longer deactivated on all sites when a subsite has no WPForms.
+* Fixed: Failed sheet writes are reported as failures and logged.
+* Fixed: Tab names like "Q1" or containing ' / ! no longer break sheet reads and writes.
+* Fixed: Phone field values are saved exactly as entered (e.g. "+92 300 1234567", "0300..."): no #ERROR!, no lost + or 0, no apostrophe.
+* Fixed: When GSheetConnector for WPForms Pro is active, the Free plugin pauses and Pro handles syncing (before, nothing was sent to Google Sheets while both were active).
+* Fixed: Fatal error on the front end with WordPress versions before 6.8.
 
 = 4.2.3 (10-10-2026) =
 * Updated: Updated Freemius integration code and related files.

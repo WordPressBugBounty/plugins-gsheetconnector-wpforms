@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WPForms GSheetConnector\n"
-"POT-Creation-Date: 2026-07-21 16:27+0530\n"
-"PO-Revision-Date: 2026-07-21 17:30+0530\n"
+"POT-Creation-Date: 2026-11-02 18:56+0530\n"
+"PO-Revision-Date: 2026-11-02 18:57+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -20,47 +20,47 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: gsheetconnector-wpforms.php:514
+#: gsheetconnector-wpforms.php:557
 msgid "WPForms Google Sheet Connector Add-on requires WPForms "
 msgstr "WPForms Google Sheet Connector Add-on requires WPForms "
 
-#: gsheetconnector-wpforms.php:515
+#: gsheetconnector-wpforms.php:558
 msgid " plugin to be installed and activated."
 msgstr " plugin to be installed and activated."
 
-#: gsheetconnector-wpforms.php:534 gsheetconnector-wpforms.php:535
-#: includes/pages/wpforms-gs-settings.php:375
+#: gsheetconnector-wpforms.php:578 gsheetconnector-wpforms.php:579
+#: includes/pages/wpforms-gs-settings.php:377
 msgid "Google Sheet"
 msgstr "Google Sheet"
 
 #. Plugin Name of the plugin/theme
-#: gsheetconnector-wpforms.php:560 includes/pages/wpforms-gs-settings.php:332
+#: gsheetconnector-wpforms.php:606 includes/pages/wpforms-gs-settings.php:334
 msgid "GSheetConnector For WPForms"
 msgstr "GSheetConnector For WPForms"
 
-#: gsheetconnector-wpforms.php:595 gsheetconnector-wpforms.php:606
+#: gsheetconnector-wpforms.php:643 gsheetconnector-wpforms.php:654
 #: includes/pages/wpforms-gs-settings.php:30
-#: includes/pages/wpforms-gs-settings.php:425
+#: includes/pages/wpforms-gs-settings.php:427
 msgid "Settings"
 msgstr "Settings"
 
-#: gsheetconnector-wpforms.php:597
+#: gsheetconnector-wpforms.php:645
 msgid "Upgrade to PRO"
 msgstr "Upgrade to PRO"
 
-#: gsheetconnector-wpforms.php:628
+#: gsheetconnector-wpforms.php:677
 msgid "View Documentation"
 msgstr "View Documentation"
 
-#: gsheetconnector-wpforms.php:629 includes/pages/admin-footer.php:138
+#: gsheetconnector-wpforms.php:678 includes/pages/admin-footer.php:138
 msgid "Docs"
 msgstr "Docs"
 
-#: gsheetconnector-wpforms.php:631
+#: gsheetconnector-wpforms.php:680
 msgid "Get Support"
 msgstr "Get Support"
 
-#: gsheetconnector-wpforms.php:632 includes/pages/admin-footer.php:158
+#: gsheetconnector-wpforms.php:681 includes/pages/admin-footer.php:158
 msgid "Support"
 msgstr "Support"
 
@@ -77,17 +77,17 @@ msgstr ""
 "increasing the database size."
 
 #: includes/class-gsc-wpforms-error-logs.php:197
-#: includes/pages/wpforms-integrate-system-info.php:675
+#: includes/pages/wpforms-integrate-system-info.php:669
 msgid "Clear Logs"
 msgstr "Clear Logs"
 
 #: includes/class-gsc-wpforms-error-logs.php:204
-#: includes/pages/wpforms-integrate-system-info.php:677
+#: includes/pages/wpforms-integrate-system-info.php:671
 msgid "Download CSV"
 msgstr "Download CSV"
 
 #: includes/class-gsc-wpforms-error-logs.php:206
-#: includes/pages/wpforms-integrate-system-info.php:679
+#: includes/pages/wpforms-integrate-system-info.php:673
 msgid "Copy Logs"
 msgstr "Copy Logs"
 
@@ -112,30 +112,26 @@ msgid "Details"
 msgstr "Details"
 
 #: includes/class-gsc-wpforms-error-logs.php:287
-#: includes/pages/wpforms-integrate-system-info.php:748
+#: includes/pages/wpforms-integrate-system-info.php:742
 msgid "No logs found"
 msgstr "No logs found"
 
 #: includes/class-gsc-wpforms-error-logs.php:435
-#: includes/class-wpforms-integration.php:1466
-#: includes/class-wpforms-integration.php:1510
+#: includes/class-wpforms-integration.php:1490
+#: includes/class-wpforms-integration.php:1534
 msgid "Permission denied."
 msgstr "Permission denied."
 
-#: includes/class-wpform-utility.php:102
-msgid "There's something wrong with your code..."
-msgstr "There's something wrong with your code..."
-
-#: includes/class-wpform-utility.php:134
+#: includes/class-wpform-utility.php:246
 #: includes/class-wpforms-entries-table.php:203
 msgid "You do not have permission to perform this action."
 msgstr "You do not have permission to perform this action."
 
-#: includes/class-wpformdb.php:235
+#: includes/class-wpformdb.php:264
 msgid "WPForms Database Manager"
 msgstr "WPForms Database Manager"
 
-#: includes/class-wpformdb.php:238
+#: includes/class-wpformdb.php:267
 msgid ""
 "Store and manage WPForms submissions securely inside your WordPress "
 "dashboard. Enable database storage to keep a backup of all form entries."
@@ -143,46 +139,46 @@ msgstr ""
 "Store and manage WPForms submissions securely inside your WordPress "
 "dashboard. Enable database storage to keep a backup of all form entries."
 
-#: includes/class-wpformdb.php:243
+#: includes/class-wpformdb.php:272
 msgid "Enable Database Storage"
 msgstr "Enable Database Storage"
 
-#: includes/class-wpformdb.php:246
+#: includes/class-wpformdb.php:275
 msgid "Automatically save all form submissions to your WordPress database."
 msgstr "Automatically save all form submissions to your WordPress database."
 
-#: includes/class-wpformdb.php:268
+#: includes/class-wpformdb.php:297
 msgid "Data Management Guidelines"
 msgstr "Data Management Guidelines"
 
-#: includes/class-wpformdb.php:271
+#: includes/class-wpformdb.php:300
 msgid "Enable storage before launching live forms"
 msgstr "Enable storage before launching live forms"
 
-#: includes/class-wpformdb.php:272
+#: includes/class-wpformdb.php:301
 msgid "Regularly remove spam entries to maintain performance"
 msgstr "Regularly remove spam entries to maintain performance"
 
-#: includes/class-wpformdb.php:273
+#: includes/class-wpformdb.php:302
 msgid "Delete unused form data to reduce database load"
 msgstr "Delete unused form data to reduce database load"
 
-#: includes/class-wpformdb.php:279
+#: includes/class-wpformdb.php:308
 #: includes/pages/gs-wpform-beta-version.php:151
 #: includes/pages/gs-wpform-general-setting.php:84
 #: includes/pages/gs-wpform-role-setting.php:316
 msgid "Save Settings"
 msgstr "Save Settings"
 
-#: includes/class-wpformdb.php:337
+#: includes/class-wpformdb.php:366
 msgid "Back to Forms"
 msgstr "Back to Forms"
 
-#: includes/class-wpformdb.php:352
+#: includes/class-wpformdb.php:381
 msgid "Want to send entries to Google Sheets?"
 msgstr "Want to send entries to Google Sheets?"
 
-#: includes/class-wpformdb.php:354
+#: includes/class-wpformdb.php:383
 msgid ""
 "Export and sync your form submissions directly to Google Sheets to easily "
 "organize, filter, and manage your data in one place. Unlock this feature to "
@@ -192,18 +188,18 @@ msgstr ""
 "organize, filter, and manage your data in one place. Unlock this feature to "
 "simplify your workflow and access your entries anytime."
 
-#: includes/class-wpformdb.php:355 includes/class-wpformdb.php:375
-#: includes/class-wpforms-integration.php:1212
+#: includes/class-wpformdb.php:384 includes/class-wpformdb.php:404
+#: includes/class-wpforms-integration.php:1240
 #: includes/pages/gs-wpform-beta-version.php:87
 #: includes/pages/gs-wpform-role-setting.php:186
 msgid "Upgrade to Unlock"
 msgstr "Upgrade to Unlock"
 
-#: includes/class-wpformdb.php:371
+#: includes/class-wpformdb.php:400
 msgid "Want to download your form entries?"
 msgstr "Want to send entries to Google Sheets?"
 
-#: includes/class-wpformdb.php:373
+#: includes/class-wpformdb.php:402
 msgid ""
 "Export your form entries as a CSV file and use them in Sheets. You can sort, "
 "filter, and manage everything more easily."
@@ -211,47 +207,47 @@ msgstr ""
 "Export your form entries as a CSV file and use them in Sheets. You can sort, "
 "filter, and manage everything more easily."
 
-#: includes/class-wpformdb.php:444
+#: includes/class-wpformdb.php:473
 msgid "Back to Entries"
 msgstr "Back to Entries"
 
-#: includes/class-wpformdb.php:451
+#: includes/class-wpformdb.php:480
 msgid "Entry not found."
 msgstr "Entry not found."
 
-#: includes/class-wpformdb.php:465
+#: includes/class-wpformdb.php:494
 msgid "Fields"
 msgstr "Fields"
 
-#: includes/class-wpformdb.php:489
+#: includes/class-wpformdb.php:518
 msgid "Entry Details"
 msgstr "Entry Details"
 
-#: includes/class-wpformdb.php:495
+#: includes/class-wpformdb.php:525
 msgid "Entry ID"
 msgstr "Entry ID"
 
-#: includes/class-wpformdb.php:498
+#: includes/class-wpformdb.php:528
 msgid "Submitted On"
 msgstr "Submitted On"
 
-#: includes/class-wpformdb.php:499
+#: includes/class-wpformdb.php:529
 msgid "User Email"
 msgstr "User Email"
 
-#: includes/class-wpformdb.php:500
+#: includes/class-wpformdb.php:530
 msgid "Remote IP"
 msgstr "Remote IP"
 
-#: includes/class-wpformdb.php:501
+#: includes/class-wpformdb.php:531
 msgid "User Agent"
 msgstr "User Agent"
 
-#: includes/class-wpformdb.php:554
+#: includes/class-wpformdb.php:584
 msgid "WPForms List"
 msgstr "WPForms List"
 
-#: includes/class-wpformdb.php:555
+#: includes/class-wpformdb.php:585
 msgid ""
 "View all WPForms that are currently saving submissions to the database. "
 "Select a form below to access and manage its stored entries."
@@ -274,10 +270,6 @@ msgstr "Mark Read"
 #: includes/class-wpforms-entries-table.php:129
 msgid "Mark Unread"
 msgstr "Mark Unread"
-
-#: includes/class-wpforms-entries-table.php:130
-msgid "Send to Sheet"
-msgstr "Send to Sheet"
 
 #: includes/class-wpforms-integration.php:346
 msgid "Google Sheet Settings"
@@ -393,7 +385,7 @@ msgstr "Creating New Sheet Option"
 
 #: includes/class-wpforms-integration.php:480
 #: includes/pages/gs-wpform-dashboard.php:402
-#: includes/pages/wpforms-gs-settings.php:500
+#: includes/pages/wpforms-gs-settings.php:502
 msgid "Authenticated Email Display"
 msgstr "Authenticated Email Display"
 
@@ -411,7 +403,7 @@ msgstr "Custom Ordering"
 
 #: includes/class-wpforms-integration.php:484
 #: includes/pages/gs-wpform-dashboard.php:415
-#: includes/pages/wpforms-gs-settings.php:513
+#: includes/pages/wpforms-gs-settings.php:515
 msgid "Image / PDF Attachment Link"
 msgstr "Image / PDF Attachment Link"
 
@@ -423,7 +415,7 @@ msgstr "Sheet Headers Settings"
 msgid "Click to Sync"
 msgstr "Click to Sync"
 
-#: includes/class-wpforms-integration.php:487 includes/wpforms-panel.php:1725
+#: includes/class-wpforms-integration.php:487 includes/wpforms-panel.php:1734
 msgid "Sheet Sorting"
 msgstr "Sheet Sorting"
 
@@ -435,49 +427,49 @@ msgstr "Excellent Priority Support"
 msgid "Buy Now"
 msgstr "Buy Now"
 
-#: includes/class-wpforms-integration.php:651
+#: includes/class-wpforms-integration.php:642
 msgid "Google Sheets Integration for WPForms"
 msgstr "Google Sheets Integration for WPForms"
 
-#: includes/class-wpforms-integration.php:666
+#: includes/class-wpforms-integration.php:657
 msgid "Choose Google API Setting"
 msgstr "Choose Google API Setting"
 
-#: includes/class-wpforms-integration.php:671
+#: includes/class-wpforms-integration.php:662
 msgid "Existing Client / Secret Key (Auto Setup)"
 msgstr "Existing Client / Secret Key (Auto Setup)"
 
-#: includes/class-wpforms-integration.php:674
+#: includes/class-wpforms-integration.php:665
 #: includes/pages/wpforms-integrate-system-info.php:62
 msgid "Manual Client/Secret Key (Use Your Google API Configuration)"
 msgstr "Manual Client/Secret Key (Use Your Google API Configuration)"
 
-#: includes/class-wpforms-integration.php:677
+#: includes/class-wpforms-integration.php:668
 #: includes/pages/gs-wpform-dashboard.php:48
 #: includes/pages/wpforms-integrate-system-info.php:64
-#: includes/wpforms-panel.php:899
+#: includes/wpforms-panel.php:903
 msgid "Service Account (Recommended)"
 msgstr "Service Account (Recommended)"
 
-#: includes/class-wpforms-integration.php:683
+#: includes/class-wpforms-integration.php:674
 msgid "Select how WPForms should authenticate with Google Sheets."
 msgstr "Select how WPForms should authenticate with Google Sheets."
 
-#: includes/class-wpforms-integration.php:697
+#: includes/class-wpforms-integration.php:688
 #: includes/pages/wpforms-gs-service-integration.php:88
 msgid "Save"
 msgstr "Save"
 
-#: includes/class-wpforms-integration.php:720
-#: includes/pages/gs-wpform-dashboard.php:84 includes/wpforms-panel.php:923
+#: includes/class-wpforms-integration.php:711
+#: includes/pages/gs-wpform-dashboard.php:84 includes/wpforms-panel.php:927
 msgid "Google Account Connection"
 msgstr "Google Account Connection"
 
-#: includes/class-wpforms-integration.php:721
+#: includes/class-wpforms-integration.php:712
 msgid "Auto Setup"
 msgstr "Auto Setup"
 
-#: includes/class-wpforms-integration.php:725
+#: includes/class-wpforms-integration.php:716
 msgid ""
 "Sign in with your Google account to connect WPForms with Google Sheets. Once "
 "connected, your data syncs based on your settings. Learn more in the "
@@ -487,75 +479,75 @@ msgstr ""
 "connected, your data syncs based on your settings. Learn more in the "
 "documentation"
 
-#: includes/class-wpforms-integration.php:727
+#: includes/class-wpforms-integration.php:718
 msgid "click here"
 msgstr "click here"
 
-#: includes/class-wpforms-integration.php:735
-#: includes/pages/wpforms-gs-settings.php:153
+#: includes/class-wpforms-integration.php:726
+#: includes/pages/wpforms-gs-settings.php:155
 msgid "Authenticate with Your Google Account"
 msgstr "Authenticate with Your Google Account"
 
-#: includes/class-wpforms-integration.php:739
+#: includes/class-wpforms-integration.php:730
 msgid "Click on the"
 msgstr "Click on the"
 
-#: includes/class-wpforms-integration.php:740
-#: includes/class-wpforms-integration.php:860
-#: includes/class-wpforms-integration.php:862
-#: includes/class-wpforms-integration.php:1050
+#: includes/class-wpforms-integration.php:731
+#: includes/class-wpforms-integration.php:851
+#: includes/class-wpforms-integration.php:853
+#: includes/class-wpforms-integration.php:1078
 msgid "Sign in with Google"
 msgstr "Sign in with Google"
 
-#: includes/class-wpforms-integration.php:741
+#: includes/class-wpforms-integration.php:732
 msgid " button."
 msgstr " button."
 
-#: includes/class-wpforms-integration.php:742
+#: includes/class-wpforms-integration.php:733
 msgid "Log in using your Google account."
 msgstr "Log in using your Google account."
 
-#: includes/class-wpforms-integration.php:743
+#: includes/class-wpforms-integration.php:734
 msgid "Select the Google account where your Sheets are stored."
 msgstr "Select the Google account where your Sheets are stored."
 
-#: includes/class-wpforms-integration.php:745
+#: includes/class-wpforms-integration.php:736
 msgid "Grant access to:"
 msgstr "Grant access to:"
 
-#: includes/class-wpforms-integration.php:747
-#: includes/class-wpforms-integration.php:779
+#: includes/class-wpforms-integration.php:738
+#: includes/class-wpforms-integration.php:770
 msgid "Google Drive"
 msgstr "Google Drive"
 
-#: includes/class-wpforms-integration.php:748
-#: includes/class-wpforms-integration.php:779
+#: includes/class-wpforms-integration.php:739
+#: includes/class-wpforms-integration.php:770
 msgid "Google Sheets"
 msgstr "Google Sheets"
 
-#: includes/class-wpforms-integration.php:751
+#: includes/class-wpforms-integration.php:742
 msgid "Click"
 msgstr "Click"
 
-#: includes/class-wpforms-integration.php:752
+#: includes/class-wpforms-integration.php:743
 msgid "Allow to finish authorization."
 msgstr "Allow to finish authorization."
 
-#: includes/class-wpforms-integration.php:753
+#: includes/class-wpforms-integration.php:744
 msgid "to finish authorization."
 msgstr "to finish authorization."
 
-#: includes/class-wpforms-integration.php:755
+#: includes/class-wpforms-integration.php:746
 msgid "Save the authentication code if prompted."
 msgstr "Save the authentication code if prompted."
 
-#: includes/class-wpforms-integration.php:758
+#: includes/class-wpforms-integration.php:749
 msgid ""
 "This allows the plugin to securely sync your form data with Google Sheets."
 msgstr ""
 "This allows the plugin to securely sync your form data with Google Sheets."
 
-#: includes/class-wpforms-integration.php:774
+#: includes/class-wpforms-integration.php:765
 msgid ""
 "Google Drive and Google Sheets permissions were not granted during "
 "authentication with Google."
@@ -563,11 +555,11 @@ msgstr ""
 "Google Drive and Google Sheets permissions were not granted during "
 "authentication with Google."
 
-#: includes/class-wpforms-integration.php:775
+#: includes/class-wpforms-integration.php:766
 msgid "Refer to Step 4 in the Connection Guide shown alongside."
 msgstr "Refer to Step 4 in the Connection Guide shown alongside."
 
-#: includes/class-wpforms-integration.php:776
+#: includes/class-wpforms-integration.php:767
 msgid ""
 "Then, deactivate the connection and re-authorize it, ensuring both Google "
 "Drive and Google Sheets permissions are enabled."
@@ -575,11 +567,11 @@ msgstr ""
 "Then, deactivate the connection and re-authorize it, ensuring both Google "
 "Drive and Google Sheets permissions are enabled."
 
-#: includes/class-wpforms-integration.php:779
+#: includes/class-wpforms-integration.php:770
 msgid "and"
 msgstr "and"
 
-#: includes/class-wpforms-integration.php:789
+#: includes/class-wpforms-integration.php:780
 msgid ""
 "Something went wrong! Your auth code may be wrong or expired. Please "
 "deactivate auth and re-authenticate again."
@@ -587,19 +579,19 @@ msgstr ""
 "Something went wrong! Your auth code may be wrong or expired. Please "
 "deactivate auth and re-authenticate again."
 
-#: includes/class-wpforms-integration.php:806
+#: includes/class-wpforms-integration.php:797
 msgid "Connected Google Account"
 msgstr "Connected Google Account"
 
-#: includes/class-wpforms-integration.php:817
+#: includes/class-wpforms-integration.php:808
 msgid "Client Token"
 msgstr "Client Token"
 
-#: includes/class-wpforms-integration.php:823
+#: includes/class-wpforms-integration.php:814
 msgid "Connect Your Google Account"
 msgstr "Connect Your Google Account"
 
-#: includes/class-wpforms-integration.php:824
+#: includes/class-wpforms-integration.php:815
 msgid ""
 "Securely link your Google account to start syncing form entries "
 "automatically."
@@ -607,31 +599,31 @@ msgstr ""
 "Securely link your Google account to start syncing form entries "
 "automatically."
 
-#: includes/class-wpforms-integration.php:837
+#: includes/class-wpforms-integration.php:828
 #: includes/pages/gs-wpform-dashboard.php:108
 msgid "Connected"
 msgstr "Connected"
 
-#: includes/class-wpforms-integration.php:849
-#: includes/class-wpforms-integration.php:926
+#: includes/class-wpforms-integration.php:840
+#: includes/class-wpforms-integration.php:917
 msgid "Click Sign in with Google"
 msgstr "Click Sign in with Google"
 
-#: includes/class-wpforms-integration.php:882
-#: includes/class-wpforms-integration.php:912 includes/pages/extensions.php:538
-#: includes/pages/extensions.php:616 includes/pages/extensions.php:945
-#: includes/pages/wpforms-gs-service-integration.php:143
-#: includes/pages/wpforms-gs-service-integration.php:308
+#: includes/class-wpforms-integration.php:873
+#: includes/class-wpforms-integration.php:903 includes/pages/extensions.php:534
+#: includes/pages/extensions.php:612 includes/pages/extensions.php:1015
+#: includes/pages/wpforms-gs-service-integration.php:142
+#: includes/pages/wpforms-gs-service-integration.php:307
 msgid "Deactivate"
 msgstr "Deactivate"
 
-#: includes/class-wpforms-integration.php:902
-#: includes/pages/wpforms-gs-service-integration.php:292
+#: includes/class-wpforms-integration.php:893
+#: includes/pages/wpforms-gs-service-integration.php:291
 msgid "Deactivate Integration"
 msgstr "Deactivate Integration"
 
-#: includes/class-wpforms-integration.php:905
-#: includes/pages/wpforms-gs-service-integration.php:296
+#: includes/class-wpforms-integration.php:896
+#: includes/pages/wpforms-gs-service-integration.php:295
 msgid ""
 "Are you sure you want to deactivate Google Sheets integration? This will "
 "stop syncing your form entries."
@@ -639,18 +631,58 @@ msgstr ""
 "Are you sure you want to deactivate Google Sheets integration? This will "
 "stop syncing your form entries."
 
-#: includes/class-wpforms-integration.php:909 includes/pages/extensions.php:942
-#: includes/pages/extensions.php:967
+#: includes/class-wpforms-integration.php:900
+#: includes/pages/extensions.php:1012 includes/pages/extensions.php:1037
 #: includes/pages/gs-wpform-general-setting.php:115
-#: includes/pages/wpforms-gs-service-integration.php:303
+#: includes/pages/wpforms-gs-service-integration.php:302
 msgid "Cancel"
 msgstr "Cancel"
 
-#: includes/class-wpforms-integration.php:943
+#: includes/class-wpforms-integration.php:934
 msgid "Save Client Token"
 msgstr "Save Client Token"
 
-#: includes/class-wpforms-integration.php:964
+#: includes/class-wpforms-integration.php:957
+#: includes/pages/wpforms-gs-service-integration.php:22
+msgid "Service Account"
+msgstr "Service Account"
+
+#: includes/class-wpforms-integration.php:963
+#, php-format
+msgid ""
+"For better reliability, we recommend using the %1$s method. In some cases, "
+"the current method may be affected by Google API quota limits, which could "
+"cause a few entries to not sync to the sheet.<br><br>Switching to the "
+"recommended method provides a more stable connection and helps ensure all "
+"entries are synced successfully."
+msgstr ""
+"For better reliability, we recommend using the %1$s method. In some cases, "
+"the current method may be affected by Google API quota limits, which could "
+"cause a few entries to not sync to the sheet.<br><br>Switching to the "
+"recommended method provides a more stable connection and helps ensure all "
+"entries are synced successfully."
+
+#: includes/class-wpforms-integration.php:969
+msgid "For better reliability, we recommend using the"
+msgstr "For better reliability, we recommend using the"
+
+#: includes/class-wpforms-integration.php:970
+msgid ""
+"method. In some cases, the current method may be affected by Google API "
+"quota limits, which could cause a few entries to not sync to the sheet."
+msgstr ""
+"method. In some cases, the current method may be affected by Google API "
+"quota limits, which could cause a few entries to not sync to the sheet."
+
+#: includes/class-wpforms-integration.php:971
+msgid ""
+"Switching to the recommended method provides a more stable connection and "
+"helps ensure all entries are synced successfully."
+msgstr ""
+"Switching to the recommended method provides a more stable connection and "
+"helps ensure all entries are synced successfully."
+
+#: includes/class-wpforms-integration.php:992
 msgid ""
 "We do not store any of the data from your Google account on our servers, "
 "everything is processed & stored on your server. We take your privacy "
@@ -662,15 +694,15 @@ msgstr ""
 "extremely seriously and ensure it is never misused. Learn more in the "
 "documentation"
 
-#: includes/class-wpforms-integration.php:966
+#: includes/class-wpforms-integration.php:994
 msgid "click here."
 msgstr "click here."
 
-#: includes/class-wpforms-integration.php:983
+#: includes/class-wpforms-integration.php:1011
 msgid "Connection Status & Next Steps"
 msgstr "Connection Status & Next Steps"
 
-#: includes/class-wpforms-integration.php:987
+#: includes/class-wpforms-integration.php:1015
 msgid ""
 "Your Google account has been successfully connected. You are now ready to "
 "sync your form submissions with Google Sheets securely and automatically."
@@ -678,53 +710,53 @@ msgstr ""
 "Your Google account has been successfully connected. You are now ready to "
 "sync your form submissions with Google Sheets securely and automatically."
 
-#: includes/class-wpforms-integration.php:993
+#: includes/class-wpforms-integration.php:1021
 msgid "Create New Feed"
 msgstr "Create New Feed"
 
-#: includes/class-wpforms-integration.php:994
+#: includes/class-wpforms-integration.php:1022
 msgid "Select Google Spreadsheet"
 msgstr "Select Google Spreadsheet"
 
-#: includes/class-wpforms-integration.php:995
+#: includes/class-wpforms-integration.php:1023
 msgid "Add Labels in Sheet Headers Manually"
 msgstr "Add Labels in Sheet Headers Manually"
 
-#: includes/class-wpforms-integration.php:996
+#: includes/class-wpforms-integration.php:1024
 msgid "Enable Fields to Sync"
 msgstr "Enable Fields to Sync"
 
-#: includes/class-wpforms-integration.php:997
+#: includes/class-wpforms-integration.php:1025
 msgid "Customize the Headers Appearance"
 msgstr "Customize the Headers Appearance"
 
-#: includes/class-wpforms-integration.php:998
+#: includes/class-wpforms-integration.php:1026
 msgid "Use Sync Settings (Past Entries)"
 msgstr "Use Sync Settings (Past Entries)"
 
-#: includes/class-wpforms-integration.php:1008
-#: includes/pages/extensions.php:169 includes/pages/extensions.php:189
-#: includes/pages/extensions.php:209 includes/pages/extensions.php:229
-#: includes/pages/extensions.php:308 includes/pages/extensions.php:367
-#: includes/pages/extensions.php:387 includes/pages/extensions.php:407
+#: includes/class-wpforms-integration.php:1036
+#: includes/pages/extensions.php:166 includes/pages/extensions.php:186
+#: includes/pages/extensions.php:206 includes/pages/extensions.php:226
+#: includes/pages/extensions.php:305 includes/pages/extensions.php:364
+#: includes/pages/extensions.php:383 includes/pages/extensions.php:403
 msgid "PRO"
 msgstr "PRO"
 
-#: includes/class-wpforms-integration.php:1017
+#: includes/class-wpforms-integration.php:1045
 msgid "Upgrade to unlock"
 msgstr "Upgrade to unlock"
 
-#: includes/class-wpforms-integration.php:1032
-#: includes/pages/wpforms-gs-service-integration.php:170
+#: includes/class-wpforms-integration.php:1060
+#: includes/pages/wpforms-gs-service-integration.php:169
 msgid "Connection Guide"
 msgstr "Connection Guide"
 
-#: includes/class-wpforms-integration.php:1033
-#: includes/pages/wpforms-gs-service-integration.php:171
+#: includes/class-wpforms-integration.php:1061
+#: includes/pages/wpforms-gs-service-integration.php:170
 msgid "Step-by-Step"
 msgstr "Step-by-Step"
 
-#: includes/class-wpforms-integration.php:1037
+#: includes/class-wpforms-integration.php:1065
 msgid ""
 "Follow these steps to connect your Google account and start syncing your "
 "form data with Google Sheets."
@@ -732,11 +764,11 @@ msgstr ""
 "Follow these steps to connect your Google account and start syncing your "
 "form data with Google Sheets."
 
-#: includes/class-wpforms-integration.php:1047
+#: includes/class-wpforms-integration.php:1075
 msgid "Step-1 Connect Your Google Account"
 msgstr "Step-1 Connect Your Google Account"
 
-#: includes/class-wpforms-integration.php:1048
+#: includes/class-wpforms-integration.php:1076
 msgid ""
 "Sign in with your Google account to start the automatic Google Sheets "
 "integration."
@@ -744,62 +776,67 @@ msgstr ""
 "Sign in with your Google account to start the automatic Google Sheets "
 "integration."
 
-#: includes/class-wpforms-integration.php:1055
+#: includes/class-wpforms-integration.php:1083
 msgid "Step-2 Choose Google Account"
 msgstr "Step-2 Choose Google Account"
 
-#: includes/class-wpforms-integration.php:1056
+#: includes/class-wpforms-integration.php:1084
 msgid "Choose the Google account where your Sheets are stored."
 msgstr "Choose the Google account where your Sheets are stored."
 
-#: includes/class-wpforms-integration.php:1058
-#: includes/class-wpforms-integration.php:1066
-#: includes/class-wpforms-integration.php:1074
-#: includes/class-wpforms-integration.php:1082
-#: includes/class-wpforms-integration.php:1090
+#: includes/class-wpforms-integration.php:1086
+#: includes/class-wpforms-integration.php:1094
+#: includes/class-wpforms-integration.php:1102
+#: includes/class-wpforms-integration.php:1110
+#: includes/class-wpforms-integration.php:1118
 msgid "check our detailed guideline"
 msgstr "check our detailed guideline"
 
-#: includes/class-wpforms-integration.php:1063
+#: includes/class-wpforms-integration.php:1091
 msgid "Step-3 Review Access Information"
 msgstr "Step-3 Review Access Information"
 
-#: includes/class-wpforms-integration.php:1064
+#: includes/class-wpforms-integration.php:1092
 msgid "Google will show what information the plugin can access."
 msgstr "Google will show what information the plugin can access."
 
-#: includes/class-wpforms-integration.php:1071
+#: includes/class-wpforms-integration.php:1099
 msgid "Step-4 Grant Required Permissions"
 msgstr "Step-4 Grant Required Permissions"
 
-#: includes/class-wpforms-integration.php:1072
+#: includes/class-wpforms-integration.php:1100
 msgid "Allow required permissions for Google Sheets and Drive access."
 msgstr "Allow required permissions for Google Sheets and Drive access."
 
-#: includes/class-wpforms-integration.php:1079
+#: includes/class-wpforms-integration.php:1107
 msgid "Step-5 Save Authentication Code"
 msgstr "Step-5 Save Authentication Code"
 
-#: includes/class-wpforms-integration.php:1080
+#: includes/class-wpforms-integration.php:1108
 msgid "Save the authentication code to complete the Google account connection."
 msgstr ""
 "Save the authentication code to complete the Google account connection."
 
-#: includes/class-wpforms-integration.php:1087
+#: includes/class-wpforms-integration.php:1115
 msgid "Step-6 Integration Completed"
 msgstr "Step-6 Integration Completed"
 
-#: includes/class-wpforms-integration.php:1088
+#: includes/class-wpforms-integration.php:1116
 msgid "Your Google account is now successfully connected."
 msgstr "Your Google account is now successfully connected."
 
-#: includes/class-wpforms-integration.php:1169
+#: includes/class-wpforms-integration.php:1197
 msgid "Manual Google Sheets Integration"
 msgstr "Manual Google Sheets Integration"
 
-#: includes/class-wpforms-integration.php:1172
+#: includes/class-wpforms-integration.php:1200
+#, fuzzy
+#| msgid ""
+#| "Connect WP Forms to Google Sheets using your own Google Cloud project. "
+#| "Ideal for advanced users who need full API control, custom OAuth setup, "
+#| "and independent credential management."
 msgid ""
-"Connect WP Forms to Google Sheets using your own Google Cloud project. Ideal "
+"Connect WPForms to Google Sheets using your own Google Cloud project. Ideal "
 "for advanced users who need full API control, custom OAuth setup, and "
 "independent credential management."
 msgstr ""
@@ -807,11 +844,11 @@ msgstr ""
 "for advanced users who need full API control, custom OAuth setup, and "
 "independent credential management."
 
-#: includes/class-wpforms-integration.php:1180
+#: includes/class-wpforms-integration.php:1208
 msgid "Custom API Credentials"
 msgstr "Custom API Credentials"
 
-#: includes/class-wpforms-integration.php:1181
+#: includes/class-wpforms-integration.php:1209
 msgid ""
 "Connect using your own Google Cloud Client ID and Client Secret for full "
 "authentication control."
@@ -819,11 +856,11 @@ msgstr ""
 "Connect using your own Google Cloud Client ID and Client Secret for full "
 "authentication control."
 
-#: includes/class-wpforms-integration.php:1185
+#: includes/class-wpforms-integration.php:1213
 msgid "Secure Authentication"
 msgstr "Secure Authentication"
 
-#: includes/class-wpforms-integration.php:1186
+#: includes/class-wpforms-integration.php:1214
 msgid ""
 "Authenticate directly with Google using a secure Authentication flow without "
 "third-party dependency."
@@ -831,11 +868,11 @@ msgstr ""
 "Authenticate directly with Google using a secure Authentication flow without "
 "third-party dependency."
 
-#: includes/class-wpforms-integration.php:1190
+#: includes/class-wpforms-integration.php:1218
 msgid "Advanced Configuration"
 msgstr "Advanced Configuration"
 
-#: includes/class-wpforms-integration.php:1191
+#: includes/class-wpforms-integration.php:1219
 msgid ""
 "Set custom Redirect URIs, manage scopes, and configure API settings based on "
 "your project needs."
@@ -843,11 +880,11 @@ msgstr ""
 "Set custom Redirect URIs, manage scopes, and configure API settings based on "
 "your project needs."
 
-#: includes/class-wpforms-integration.php:1195
+#: includes/class-wpforms-integration.php:1223
 msgid "Priority Technical Support"
 msgstr "Priority Technical Support"
 
-#: includes/class-wpforms-integration.php:1196
+#: includes/class-wpforms-integration.php:1224
 msgid ""
 "Get fast assistance from our expert team for setup, troubleshooting, and "
 "optimization."
@@ -855,78 +892,92 @@ msgstr ""
 "Get fast assistance from our expert team for setup, troubleshooting, and "
 "optimization."
 
-#: includes/class-wpforms-integration.php:1215
+#: includes/class-wpforms-integration.php:1243
 msgid "View Pro Features"
 msgstr "View Pro Features"
 
-#: includes/class-wpforms-integration.php:1245
+#: includes/class-wpforms-integration.php:1269
 msgid "WPForms - Google Sheet Settings"
 msgstr "WPForms - Google Sheet Settings"
 
-#: includes/class-wpforms-integration.php:1248
+#: includes/class-wpforms-integration.php:1272
 msgid "Select a form to configure the WPForms GSheetConnector integration."
 msgstr "Select a form to configure the WPForms GSheetConnector integration."
 
-#: includes/class-wpforms-integration.php:1256
+#: includes/class-wpforms-integration.php:1280
 msgid "Choose WPForms"
 msgstr "Choose WPForms"
 
-#: includes/class-wpforms-integration.php:1260
+#: includes/class-wpforms-integration.php:1284
 msgid "Select Form"
 msgstr "Select Form"
 
-#: includes/class-wpforms-integration.php:1301
-#: includes/class-wpforms-integration.php:1324
+#: includes/class-wpforms-integration.php:1325
+#: includes/class-wpforms-integration.php:1348
 msgid "Invalid access code entered."
 msgstr "Invalid access code entered."
 
-#: includes/class-wpforms-integration.php:1315
+#: includes/class-wpforms-integration.php:1339
 msgid "Your Google Access Code is Authorized and Saved"
 msgstr "Your Google Access Code is Authorized and Saved"
 
-#: includes/class-wpforms-integration.php:1413
+#: includes/class-wpforms-integration.php:1437
 msgid "Unauthorized access."
 msgstr "Unauthorized access."
 
-#: includes/class-wpforms-integration.php:1424
+#: includes/class-wpforms-integration.php:1448
 msgid "Invalid authentication method."
 msgstr "Invalid authentication method."
 
-#: includes/class-wpforms-integration.php:1441
+#: includes/class-wpforms-integration.php:1465
 msgid "Authentication method saved successfully."
 msgstr "Authentication method saved successfully."
 
-#: includes/class-wpforms-integration.php:1448
-#: includes/class-wpforms-integration.php:1493
-#: includes/class-wpforms-integration.php:1523
+#: includes/class-wpforms-integration.php:1472
+#: includes/class-wpforms-integration.php:1517
+#: includes/class-wpforms-integration.php:1547
 msgid "Something went wrong. Please try again."
 msgstr "Something went wrong. Please try again."
 
-#: includes/class-wpforms-integration.php:1473
+#: includes/class-wpforms-integration.php:1497
 msgid "JSON data is empty. Please provide valid credentials."
 msgstr "JSON data is empty. Please provide valid credentials."
 
-#: includes/class-wpforms-integration.php:1480
+#: includes/class-wpforms-integration.php:1504
 msgid "Your uploaded JSON key is invalid"
 msgstr "Your uploaded JSON key is invalid"
 
-#: includes/class-wpforms-integration.php:1486
+#: includes/class-wpforms-integration.php:1510
 msgid "Service account credentials saved successfully."
 msgstr "Service account credentials saved successfully."
 
-#: includes/class-wpforms-integration.php:1516
+#: includes/class-wpforms-integration.php:1540
 msgid "Service account deactivated successfully."
 msgstr "Service account deactivated successfully."
 
-#: includes/class-wpforms-integration.php:1770
+#: includes/class-wpforms-integration.php:1798
 msgid "Not connected"
 msgstr "Not connected"
 
-#: includes/class-wpforms-integration.php:1782
-msgid "No WPForms are connected with Google Sheets"
-msgstr "No WPForms are connected with Google Sheets"
+#: includes/class-wpforms-integration.php:1810
+msgid "No Form Feeds Created Yet"
+msgstr "No Form Feeds Created Yet"
 
-#: includes/class-wpforms-integration.php:1786
+#: includes/class-wpforms-integration.php:1812
+#, fuzzy
+#| msgid ""
+#| "Integrate Divi Forms with Google Sheets and automatically sync "
+#| "submissions in real-time. Store customer data securely, track inquiries "
+#| "efficiently, and eliminate manual spreadsheet updates."
+msgid ""
+"Connect your form to Google Sheets to automatically sync submissions in real "
+"time. Create a feed to start sending data to your spreadsheet."
+msgstr ""
+"Integrate Divi Forms with Google Sheets and automatically sync submissions "
+"in real-time. Store customer data securely, track inquiries efficiently, and "
+"eliminate manual spreadsheet updates."
+
+#: includes/class-wpforms-integration.php:1815
 msgid "Create Feed"
 msgstr "Create Feed"
 
@@ -1048,11 +1099,11 @@ msgstr ""
 "Extend your Google Sheets integration with powerful add-ons. Install, "
 "manage, and activate extensions to unlock advanced features."
 
-#: includes/pages/extensions.php:158
+#: includes/pages/extensions.php:155
 msgid "CF7 Google Sheet Connector"
 msgstr "CF7 Google Sheet Connector"
 
-#: includes/pages/extensions.php:163
+#: includes/pages/extensions.php:160
 msgid ""
 "Easily connect Contact Form 7 to Google Sheets and automatically sync form "
 "submissions in real-time. Every entry is instantly added to your selected "
@@ -1064,21 +1115,20 @@ msgstr ""
 "spreadsheet, helping you manage leads, inquiries, and customer data "
 "efficiently without manual export."
 
-#: includes/pages/extensions.php:168 includes/pages/extensions.php:188
-#: includes/pages/extensions.php:208 includes/pages/extensions.php:228
-#: includes/pages/extensions.php:248 includes/pages/extensions.php:267
-#: includes/pages/extensions.php:287 includes/pages/extensions.php:307
-#: includes/pages/extensions.php:326 includes/pages/extensions.php:346
-#: includes/pages/extensions.php:366 includes/pages/extensions.php:386
-#: includes/pages/extensions.php:406
+#: includes/pages/extensions.php:165 includes/pages/extensions.php:185
+#: includes/pages/extensions.php:205 includes/pages/extensions.php:225
+#: includes/pages/extensions.php:245 includes/pages/extensions.php:264
+#: includes/pages/extensions.php:284 includes/pages/extensions.php:304
+#: includes/pages/extensions.php:323 includes/pages/extensions.php:343
+#: includes/pages/extensions.php:382 includes/pages/extensions.php:402
 msgid "Install"
 msgstr "Install"
 
-#: includes/pages/extensions.php:182
+#: includes/pages/extensions.php:179
 msgid "WPForms Google Sheet Connector"
 msgstr "WPForms Google Sheet Connector"
 
-#: includes/pages/extensions.php:185
+#: includes/pages/extensions.php:182
 msgid ""
 "Integrate WPForms with Google Sheets and send form entries directly to your "
 "spreadsheet automatically. Track leads, manage customer data, and streamline "
@@ -1088,11 +1138,11 @@ msgstr ""
 "spreadsheet automatically. Track leads, manage customer data, and streamline "
 "reporting with seamless Google Sheets integration and real-time sync."
 
-#: includes/pages/extensions.php:202
+#: includes/pages/extensions.php:199
 msgid "Gravity Forms Google Sheet Connector"
 msgstr "Gravity Forms Google Sheet Connector"
 
-#: includes/pages/extensions.php:205
+#: includes/pages/extensions.php:202
 msgid ""
 "Connect Gravity Forms to Google Sheets and automatically push form "
 "submissions to your spreadsheet. Simplify data management, improve workflow "
@@ -1102,11 +1152,11 @@ msgstr ""
 "submissions to your spreadsheet. Simplify data management, improve workflow "
 "automation, and keep all entries organized in one secure location."
 
-#: includes/pages/extensions.php:222
+#: includes/pages/extensions.php:219
 msgid "Ninja Forms Google Sheet Connector"
 msgstr "Ninja Forms Google Sheet Connector"
 
-#: includes/pages/extensions.php:225
+#: includes/pages/extensions.php:222
 msgid ""
 "Automatically sync Ninja Forms submissions to Google Sheets with one-click "
 "integration. Capture leads, monitor responses, and manage data efficiently "
@@ -1116,11 +1166,11 @@ msgstr ""
 "integration. Capture leads, monitor responses, and manage data efficiently "
 "with instant spreadsheet updates and easy reporting."
 
-#: includes/pages/extensions.php:242
+#: includes/pages/extensions.php:239
 msgid "Forminator Forms Google Sheet Connector"
 msgstr "Forminator Forms Google Sheet Connector"
 
-#: includes/pages/extensions.php:245
+#: includes/pages/extensions.php:242
 msgid ""
 "Integrate Forminator Forms with Google Sheets to automatically store form "
 "entries in your spreadsheet. Eliminate manual data entry and ensure "
@@ -1130,17 +1180,17 @@ msgstr ""
 "entries in your spreadsheet. Eliminate manual data entry and ensure "
 "accurate, real-time syncing for better data tracking and analysis."
 
-#: includes/pages/extensions.php:249 includes/pages/extensions.php:268
-#: includes/pages/extensions.php:288 includes/pages/extensions.php:576
-#: includes/pages/extensions.php:724 includes/pages/extensions.php:867
+#: includes/pages/extensions.php:246 includes/pages/extensions.php:265
+#: includes/pages/extensions.php:285 includes/pages/extensions.php:572
+#: includes/pages/extensions.php:777 includes/pages/extensions.php:937
 msgid "Free"
 msgstr "Free"
 
-#: includes/pages/extensions.php:261
+#: includes/pages/extensions.php:258
 msgid "Formidable Forms Google Sheet Connector"
 msgstr "Formidable Forms Google Sheet Connector"
 
-#: includes/pages/extensions.php:264
+#: includes/pages/extensions.php:261
 msgid ""
 "Automatically sync Formidable Forms entries to Google Sheets. Manage leads, "
 "track submissions, and simplify data reporting with real-time integration."
@@ -1148,11 +1198,11 @@ msgstr ""
 "Automatically sync Formidable Forms entries to Google Sheets. Manage leads, "
 "track submissions, and simplify data reporting with real-time integration."
 
-#: includes/pages/extensions.php:281
+#: includes/pages/extensions.php:278
 msgid "Fluent Forms Google Sheet Connector"
 msgstr "Fluent Forms Google Sheet Connector"
 
-#: includes/pages/extensions.php:284
+#: includes/pages/extensions.php:281
 msgid ""
 "Automatically sync Fluent Forms submissions to Google Sheets in real-time. "
 "Every form entry is instantly added to your selected spreadsheet, helping "
@@ -1166,11 +1216,11 @@ msgstr ""
 "export. Streamline your workflow, improve reporting accuracy, and keep all "
 "submissions organized with seamless Google Sheets integration."
 
-#: includes/pages/extensions.php:301
+#: includes/pages/extensions.php:298
 msgid "Elementor Forms Google Sheet Connector"
 msgstr "Elementor Forms Google Sheet Connector"
 
-#: includes/pages/extensions.php:304
+#: includes/pages/extensions.php:301
 msgid ""
 "Sync Elementor Forms with Google Sheets instantly. Automatically add new "
 "form submissions to your spreadsheet, manage leads efficiently, and simplify "
@@ -1180,11 +1230,11 @@ msgstr ""
 "form submissions to your spreadsheet, manage leads efficiently, and simplify "
 "reporting with real-time data synchronization."
 
-#: includes/pages/extensions.php:320
+#: includes/pages/extensions.php:317
 msgid "Avada Forms Google Sheet Connector"
 msgstr "Avada Forms Google Sheet Connector"
 
-#: includes/pages/extensions.php:323
+#: includes/pages/extensions.php:320
 msgid ""
 "Connect Avada Forms to Google Sheets and automatically transfer form entries "
 "to your spreadsheet. Streamline lead management, automate data collection, "
@@ -1194,15 +1244,15 @@ msgstr ""
 "to your spreadsheet. Streamline lead management, automate data collection, "
 "and improve business reporting with seamless integration."
 
-#: includes/pages/extensions.php:327 includes/pages/extensions.php:347
+#: includes/pages/extensions.php:324 includes/pages/extensions.php:344
 msgid "Available PRO Version"
 msgstr "Available PRO Version"
 
-#: includes/pages/extensions.php:340
+#: includes/pages/extensions.php:337
 msgid "Divi Forms Google Sheet Connector"
 msgstr "Divi Forms Google Sheet Connector"
 
-#: includes/pages/extensions.php:343
+#: includes/pages/extensions.php:340
 msgid ""
 "Integrate Divi Forms with Google Sheets and automatically sync submissions "
 "in real-time. Store customer data securely, track inquiries efficiently, and "
@@ -1212,11 +1262,11 @@ msgstr ""
 "in real-time. Store customer data securely, track inquiries efficiently, and "
 "eliminate manual spreadsheet updates."
 
-#: includes/pages/extensions.php:360
+#: includes/pages/extensions.php:357
 msgid "WP Core Google Sheet Connector"
 msgstr "WP Core Google Sheet Connector"
 
-#: includes/pages/extensions.php:363
+#: includes/pages/extensions.php:360
 msgid ""
 "Automatically send WordPress core data (like comments or custom submissions) "
 "to Google Sheets. Simplify website data tracking, automate record keeping, "
@@ -1226,11 +1276,11 @@ msgstr ""
 "to Google Sheets. Simplify website data tracking, automate record keeping, "
 "and centralize important information in one organized spreadsheet."
 
-#: includes/pages/extensions.php:380
+#: includes/pages/extensions.php:376
 msgid "WooCommerce Google Sheet Connector"
 msgstr "WooCommerce Google Sheet Connector"
 
-#: includes/pages/extensions.php:383
+#: includes/pages/extensions.php:379
 msgid ""
 "Sync WooCommerce orders with Google Sheets automatically. Store order "
 "details, customer information, and transaction data in real-time for easy "
@@ -1240,11 +1290,11 @@ msgstr ""
 "details, customer information, and transaction data in real-time for easy "
 "reporting, accounting, and business analysis."
 
-#: includes/pages/extensions.php:400
+#: includes/pages/extensions.php:396
 msgid "Easy Digital Downloads Google Sheet Connector"
 msgstr "Easy Digital Downloads Google Sheet Connector"
 
-#: includes/pages/extensions.php:403
+#: includes/pages/extensions.php:399
 msgid ""
 "Automatically send Easy Digital Downloads (EDD) order details to Google "
 "Sheets. Track digital product sales, monitor transactions, and manage "
@@ -1254,11 +1304,11 @@ msgstr ""
 "Sheets. Track digital product sales, monitor transactions, and manage "
 "customer data effortlessly with real-time spreadsheet integration."
 
-#: includes/pages/extensions.php:419
+#: includes/pages/extensions.php:415
 msgid "Installed & Active Plugins"
 msgstr "Installed & Active Plugins"
 
-#: includes/pages/extensions.php:421
+#: includes/pages/extensions.php:417
 msgid ""
 "View and manage all currently installed and active connectors on your site. "
 "You can activate, deactivate, or upgrade plugins from here."
@@ -1266,21 +1316,22 @@ msgstr ""
 "View and manage all currently installed and active connectors on your site. "
 "You can activate, deactivate, or upgrade plugins from here."
 
-#: includes/pages/extensions.php:498 includes/pages/extensions.php:684
-#: includes/pages/extensions.php:720 includes/pages/extensions.php:870
+#: includes/pages/extensions.php:494 includes/pages/extensions.php:698
+#: includes/pages/extensions.php:773 includes/pages/extensions.php:940
 msgid "Pro"
 msgstr "Pro"
 
-#: includes/pages/extensions.php:529 includes/pages/extensions.php:607
-#: includes/pages/extensions.php:742 includes/pages/extensions.php:897
+#: includes/pages/extensions.php:525 includes/pages/extensions.php:603
+#: includes/pages/extensions.php:715 includes/pages/extensions.php:797
+#: includes/pages/extensions.php:967
 msgid "View Docs"
 msgstr "View Docs"
 
-#: includes/pages/extensions.php:638
+#: includes/pages/extensions.php:634
 msgid "Recommended Plugins"
 msgstr "Recommended Plugins"
 
-#: includes/pages/extensions.php:640
+#: includes/pages/extensions.php:636
 msgid ""
 "Discover recommended plugins that enhance your workflow and help you get "
 "more value from your Google Sheets integration."
@@ -1288,46 +1339,63 @@ msgstr ""
 "Discover recommended plugins that enhance your workflow and help you get "
 "more value from your Google Sheets integration."
 
-#: includes/pages/extensions.php:747 includes/pages/extensions.php:753
-#: includes/pages/extensions.php:766
+#: includes/pages/extensions.php:694 includes/pages/extensions.php:769
+#, fuzzy
+#| msgid "Activate"
+msgid "Pro Active"
+msgstr "Activate"
+
+#: includes/pages/extensions.php:720 includes/pages/extensions.php:802
+#, fuzzy
+#| msgid "Currently Active"
+msgid "Already Active"
+msgstr "Currently Active"
+
+#: includes/pages/extensions.php:725 includes/pages/extensions.php:731
+#: includes/pages/extensions.php:744 includes/pages/extensions.php:807
+#: includes/pages/extensions.php:813 includes/pages/extensions.php:826
 msgid "Activate"
 msgstr "Activate"
 
-#: includes/pages/extensions.php:788
+#: includes/pages/extensions.php:749 includes/pages/extensions.php:831
+msgid "Get Pro"
+msgstr "Get Pro"
+
+#: includes/pages/extensions.php:851
 msgid "Explore More Plugins"
 msgstr "Explore More Plugins"
 
-#: includes/pages/extensions.php:790
+#: includes/pages/extensions.php:853
 msgid ""
 "Discover the right connector for your workflow and automate data syncing."
 msgstr ""
 "Discover the right connector for your workflow and automate data syncing."
 
-#: includes/pages/extensions.php:797
+#: includes/pages/extensions.php:860
 msgid "All"
 msgstr "All"
 
-#: includes/pages/extensions.php:798
+#: includes/pages/extensions.php:861
 msgid "Forms"
 msgstr "Forms"
 
-#: includes/pages/extensions.php:799
+#: includes/pages/extensions.php:862
 msgid "Page Builders"
 msgstr "Page Builders"
 
-#: includes/pages/extensions.php:800
+#: includes/pages/extensions.php:863
 msgid "eCommerce"
 msgstr "eCommerce"
 
-#: includes/pages/extensions.php:907
+#: includes/pages/extensions.php:977
 msgid "View Demo"
 msgstr "View Demo"
 
-#: includes/pages/extensions.php:937
+#: includes/pages/extensions.php:1007
 msgid "Deactivate plugin"
 msgstr "Deactivate plugin"
 
-#: includes/pages/extensions.php:938
+#: includes/pages/extensions.php:1008
 msgid " Are you sure you want to deactivate this plugin?"
 msgstr " Are you sure you want to deactivate this plugin?"
 
@@ -1484,9 +1552,9 @@ msgstr "Use Existing Client/Secret Key (Auto Google API Configuration)"
 #: includes/pages/gs-wpform-dashboard.php:35
 #: includes/pages/gs-wpform-dashboard.php:51
 #: includes/pages/gs-wpform-dashboard.php:54
-#: includes/pages/wpforms-gs-settings.php:71
-#: includes/pages/wpforms-gs-settings.php:408 includes/wpforms-panel.php:641
-#: includes/wpforms-panel.php:1939
+#: includes/pages/wpforms-gs-settings.php:73
+#: includes/pages/wpforms-gs-settings.php:410 includes/wpforms-panel.php:645
+#: includes/wpforms-panel.php:1948
 msgid "Auth Required"
 msgstr "Auth Required"
 
@@ -1508,7 +1576,7 @@ msgstr ""
 "Elementor Forms, along with 10+ additional WordPress integrations for "
 "efficient data management."
 
-#: includes/pages/gs-wpform-dashboard.php:95 includes/wpforms-panel.php:935
+#: includes/pages/gs-wpform-dashboard.php:95 includes/wpforms-panel.php:939
 msgid "Connected Email Account"
 msgstr "Connected Email Account"
 
@@ -1676,94 +1744,94 @@ msgstr ""
 "reliability, flexibility, and scale."
 
 #: includes/pages/gs-wpform-dashboard.php:400
-#: includes/pages/wpforms-gs-settings.php:498
+#: includes/pages/wpforms-gs-settings.php:500
 msgid "Google Sheets API v4"
 msgstr "Google Sheets API v4"
 
 #: includes/pages/gs-wpform-dashboard.php:401
-#: includes/pages/wpforms-gs-settings.php:499
+#: includes/pages/wpforms-gs-settings.php:501
 msgid "One-Click Authentication"
 msgstr "One-Click Authentication"
 
 #: includes/pages/gs-wpform-dashboard.php:403
-#: includes/pages/wpforms-gs-settings.php:501
+#: includes/pages/wpforms-gs-settings.php:503
 msgid "Click & Fetch Automation"
 msgstr "Click & Fetch Automation"
 
 #: includes/pages/gs-wpform-dashboard.php:404
-#: includes/pages/wpforms-gs-settings.php:502
+#: includes/pages/wpforms-gs-settings.php:504
 msgid "Create New Spreadsheet"
 msgstr "Create New Spreadsheet"
 
 #: includes/pages/gs-wpform-dashboard.php:405
-#: includes/pages/wpforms-gs-settings.php:503
+#: includes/pages/wpforms-gs-settings.php:505
 msgid "Manual Sheet / Tab Name"
 msgstr "Manual Sheet / Tab Name"
 
 #: includes/pages/gs-wpform-dashboard.php:406
 #: includes/pages/gs-wpform-dashboard.php:419
-#: includes/pages/wpforms-gs-settings.php:504
-#: includes/pages/wpforms-gs-settings.php:516
+#: includes/pages/wpforms-gs-settings.php:506
+#: includes/pages/wpforms-gs-settings.php:518
 msgid "Freeze & Color Headers"
 msgstr "Freeze & Color Headers"
 
 #: includes/pages/gs-wpform-dashboard.php:409
-#: includes/pages/wpforms-gs-settings.php:507
+#: includes/pages/wpforms-gs-settings.php:509
 msgid "Automated Sheet & Tab"
 msgstr "Automated Sheet & Tab"
 
 #: includes/pages/gs-wpform-dashboard.php:410
-#: includes/pages/wpforms-gs-settings.php:508
+#: includes/pages/wpforms-gs-settings.php:510
 msgid "Multiple Feeds to Sheets"
 msgstr "Multiple Feeds to Sheets"
 
 #: includes/pages/gs-wpform-dashboard.php:411
-#: includes/pages/wpforms-gs-settings.php:509
+#: includes/pages/wpforms-gs-settings.php:511
 msgid "Send Missed Entries to GSheet"
 msgstr "Send Missed Entries to GSheet"
 
 #: includes/pages/gs-wpform-dashboard.php:412
-#: includes/pages/wpforms-gs-settings.php:510
+#: includes/pages/wpforms-gs-settings.php:512
 msgid " Smart Tags"
 msgstr " Smart Tags"
 
 #: includes/pages/gs-wpform-dashboard.php:413
-#: includes/pages/wpforms-gs-settings.php:511
+#: includes/pages/wpforms-gs-settings.php:513
 msgid "Drag-and-Drop Column Order"
 msgstr "Drag-and-Drop Column Order"
 
 #: includes/pages/gs-wpform-dashboard.php:414
-#: includes/pages/wpforms-gs-settings.php:512
+#: includes/pages/wpforms-gs-settings.php:514
 msgid "Headers On / Off + Rename"
 msgstr "Headers On / Off + Rename"
 
 #: includes/pages/gs-wpform-dashboard.php:420
-#: includes/pages/wpforms-gs-settings.php:517
+#: includes/pages/wpforms-gs-settings.php:519
 msgid "Sync Past Entries"
 msgstr "Sync Past Entries"
 
 #: includes/pages/gs-wpform-dashboard.php:421
-#: includes/pages/wpforms-gs-settings.php:518
+#: includes/pages/wpforms-gs-settings.php:520
 msgid "Role Management"
 msgstr "Role Management"
 
 #: includes/pages/gs-wpform-dashboard.php:422
-#: includes/pages/wpforms-gs-settings.php:519
+#: includes/pages/wpforms-gs-settings.php:521
 msgid "Quick Configuration"
 msgstr "Quick Configuration"
 
 #: includes/pages/gs-wpform-dashboard.php:423
-#: includes/pages/wpforms-gs-settings.php:520
+#: includes/pages/wpforms-gs-settings.php:522
 msgid "Multi-Language Support"
 msgstr "Multi-Language Support"
 
 #: includes/pages/gs-wpform-dashboard.php:424
-#: includes/pages/wpforms-gs-settings.php:521
+#: includes/pages/wpforms-gs-settings.php:523
 msgid "Multi-Site Support"
 msgstr "Multi-Site Support"
 
 #: includes/pages/gs-wpform-dashboard.php:425
-#: includes/pages/wpforms-gs-settings.php:522
+#: includes/pages/wpforms-gs-settings.php:524
 msgid "Latest WP & PHP Support"
 msgstr "Latest WP & PHP Support"
 
@@ -1891,7 +1959,7 @@ msgid "Unlock Role-Based Access Control"
 msgstr "Unlock Role-Based Access Control"
 
 #: includes/pages/gs-wpform-role-setting.php:123
-#: includes/wpforms-panel.php:1117
+#: includes/wpforms-panel.php:1200
 msgid "Advanced options are available in PRO"
 msgstr "Advanced options are available in PRO"
 
@@ -2034,25 +2102,21 @@ msgstr "General Settings"
 msgid "Version Control"
 msgstr "Version Control"
 
-#: includes/pages/wpform-dashboard-widget.php:21
+#: includes/pages/wpform-dashboard-widget.php:54
 msgid "WPForms Connected with Google Sheets."
 msgstr "WPForms Connected with Google Sheets."
 
-#: includes/pages/wpform-dashboard-widget.php:68
+#: includes/pages/wpform-dashboard-widget.php:131
 msgid "Not Connected"
 msgstr "Not Connected"
 
-#: includes/pages/wpform-dashboard-widget.php:77
+#: includes/pages/wpform-dashboard-widget.php:140
 msgid "No WPForms are Connected with Google Sheets."
 msgstr "No WPForms are Connected with Google Sheets."
 
 #: includes/pages/wpforms-gs-service-integration.php:21
 msgid "Google Sheets Integration"
 msgstr "Google Sheets Integration"
-
-#: includes/pages/wpforms-gs-service-integration.php:22
-msgid "Service Account"
-msgstr "Service Account"
 
 #: includes/pages/wpforms-gs-service-integration.php:31
 msgid ""
@@ -2116,11 +2180,11 @@ msgstr ""
 "Your Google Sheet must be shared with this service account email and granted "
 "Editor access to enable data synchronization."
 
-#: includes/pages/wpforms-gs-service-integration.php:135
+#: includes/pages/wpforms-gs-service-integration.php:134
 msgid "Share sheet for sync"
 msgstr "Share sheet for sync"
 
-#: includes/pages/wpforms-gs-service-integration.php:174
+#: includes/pages/wpforms-gs-service-integration.php:173
 msgid ""
 "Follow these step-by-step instructions to create and configure your Google "
 "service account and securely connect it with WPForms."
@@ -2128,11 +2192,11 @@ msgstr ""
 "Follow these step-by-step instructions to create and configure your Google "
 "service account and securely connect it with WPForms."
 
-#: includes/pages/wpforms-gs-service-integration.php:188
+#: includes/pages/wpforms-gs-service-integration.php:187
 msgid "Step-1 Open Google Cloud > Service Accounts"
 msgstr "Step-1 Open Google Cloud > Service Accounts"
 
-#: includes/pages/wpforms-gs-service-integration.php:189
+#: includes/pages/wpforms-gs-service-integration.php:188
 msgid ""
 "Open your Google Cloud project and go to IAM & Admin > Service Accounts to "
 "manage service identities."
@@ -2140,15 +2204,15 @@ msgstr ""
 "Open your Google Cloud project and go to IAM & Admin > Service Accounts to "
 "manage service identities."
 
-#: includes/pages/wpforms-gs-service-integration.php:191
+#: includes/pages/wpforms-gs-service-integration.php:190
 msgid "Navigate to Service Accounts"
 msgstr "Navigate to Service Accounts"
 
-#: includes/pages/wpforms-gs-service-integration.php:195
+#: includes/pages/wpforms-gs-service-integration.php:194
 msgid "Step-2 Create a New Service Account"
 msgstr "Step-2 Create a New Service Account"
 
-#: includes/pages/wpforms-gs-service-integration.php:196
+#: includes/pages/wpforms-gs-service-integration.php:195
 msgid ""
 "Click Create Service Account and enter a meaningful name like ex. WPForms "
 "GSheet."
@@ -2156,27 +2220,27 @@ msgstr ""
 "Click Create Service Account and enter a meaningful name like ex. WPForms "
 "GSheet."
 
-#: includes/pages/wpforms-gs-service-integration.php:198
+#: includes/pages/wpforms-gs-service-integration.php:197
 msgid "Create a Service Account"
 msgstr "Create a Service Account"
 
-#: includes/pages/wpforms-gs-service-integration.php:202
+#: includes/pages/wpforms-gs-service-integration.php:201
 msgid "Step-3 Fill Service Account Details"
 msgstr "Step-3 Fill Service Account Details"
 
-#: includes/pages/wpforms-gs-service-integration.php:203
+#: includes/pages/wpforms-gs-service-integration.php:202
 msgid "Add Service Account Name & ID"
 msgstr "Add Service Account Name & ID"
 
-#: includes/pages/wpforms-gs-service-integration.php:205
+#: includes/pages/wpforms-gs-service-integration.php:204
 msgid "Google Console"
 msgstr "Google Console"
 
-#: includes/pages/wpforms-gs-service-integration.php:209
+#: includes/pages/wpforms-gs-service-integration.php:208
 msgid "Step-4 Open Service Account Keys Section"
 msgstr "Step-4 Open Service Account Keys Section"
 
-#: includes/pages/wpforms-gs-service-integration.php:210
+#: includes/pages/wpforms-gs-service-integration.php:209
 msgid ""
 "Open the created service account and switch to the Keys tab to generate "
 "credentials."
@@ -2184,28 +2248,28 @@ msgstr ""
 "Open the created service account and switch to the Keys tab to generate "
 "credentials."
 
-#: includes/pages/wpforms-gs-service-integration.php:212
+#: includes/pages/wpforms-gs-service-integration.php:211
 msgid "Go to Service Account → Keys"
 msgstr "Go to Service Account → Keys"
 
-#: includes/pages/wpforms-gs-service-integration.php:216
+#: includes/pages/wpforms-gs-service-integration.php:215
 msgid "Step-5 Download JSON Key File"
 msgstr "Step-5 Download JSON Key File"
 
-#: includes/pages/wpforms-gs-service-integration.php:217
+#: includes/pages/wpforms-gs-service-integration.php:216
 msgid "Select JSON format and download the key file securely to your computer."
 msgstr ""
 "Select JSON format and download the key file securely to your computer."
 
-#: includes/pages/wpforms-gs-service-integration.php:219
+#: includes/pages/wpforms-gs-service-integration.php:218
 msgid "Download JSON Key File"
 msgstr "Download JSON Key File"
 
-#: includes/pages/wpforms-gs-service-integration.php:223
+#: includes/pages/wpforms-gs-service-integration.php:222
 msgid "Step-6 Upload JSON Key in WPForms"
 msgstr "Step-6 Upload JSON Key in WPForms"
 
-#: includes/pages/wpforms-gs-service-integration.php:224
+#: includes/pages/wpforms-gs-service-integration.php:223
 msgid ""
 "Upload or paste the downloaded JSON key into the field on the left to "
 "complete setup."
@@ -2213,15 +2277,15 @@ msgstr ""
 "Upload or paste the downloaded JSON key into the field on the left to "
 "complete setup."
 
-#: includes/pages/wpforms-gs-service-integration.php:226
+#: includes/pages/wpforms-gs-service-integration.php:225
 msgid "Check our detailed guideline"
 msgstr "Check our detailed guideline"
 
-#: includes/pages/wpforms-gs-service-integration.php:266
+#: includes/pages/wpforms-gs-service-integration.php:265
 msgid "How to Connect Google Sheets"
 msgstr "How to Connect Google Sheets"
 
-#: includes/pages/wpforms-gs-service-integration.php:269
+#: includes/pages/wpforms-gs-service-integration.php:268
 msgid ""
 "This guide shows how to share your Google Sheet with the connected service "
 "account and grant editor access for seamless synchronization."
@@ -2229,165 +2293,166 @@ msgstr ""
 "This guide shows how to share your Google Sheet with the connected service "
 "account and grant editor access for seamless synchronization."
 
-#: includes/pages/wpforms-gs-service-integration.php:273
+#: includes/pages/wpforms-gs-service-integration.php:272
 msgid "Share sheet with service account"
 msgstr "Share sheet with service account"
 
 #: includes/pages/wpforms-gs-settings.php:24
-#: includes/pages/wpforms-gs-settings.php:422
+#: includes/pages/wpforms-gs-settings.php:424
 msgid "Dashboard"
 msgstr "Dashboard"
 
 #: includes/pages/wpforms-gs-settings.php:26
-#: includes/pages/wpforms-gs-settings.php:423
+#: includes/pages/wpforms-gs-settings.php:425
 msgid "Integration"
 msgstr "Integration"
 
 #: includes/pages/wpforms-gs-settings.php:28
-#: includes/pages/wpforms-gs-settings.php:424
+#: includes/pages/wpforms-gs-settings.php:426
 msgid "Form Settings"
 msgstr "Form Settings"
 
 #: includes/pages/wpforms-gs-settings.php:32
-#: includes/pages/wpforms-gs-settings.php:428
+#: includes/pages/wpforms-gs-settings.php:430
 msgid "Extensions"
 msgstr "Extensions"
 
 #: includes/pages/wpforms-gs-settings.php:34
-#: includes/pages/wpforms-gs-settings.php:427
+#: includes/pages/wpforms-gs-settings.php:429
 msgid "WPForms Database"
 msgstr "WPForms Database"
 
-#: includes/pages/wpforms-gs-settings.php:50
-#: includes/pages/wpforms-gs-settings.php:399 includes/wpforms-panel.php:617
-#: includes/wpforms-panel.php:1935
-msgid "Existing"
-msgstr "Existing"
-
-#: includes/pages/wpforms-gs-settings.php:55
-#: includes/pages/wpforms-gs-settings.php:404 includes/wpforms-panel.php:625
-#: includes/wpforms-panel.php:1937
-msgid "Service"
-msgstr "Service"
-
-#: includes/pages/wpforms-gs-settings.php:130
-msgid ""
-"You`re using GSheetConnector for WPForms Lite. To unlock more features "
-"consider "
-msgstr ""
-"You`re using GSheetConnector for WPForms Lite. To unlock more features "
-"consider "
-
-#: includes/pages/wpforms-gs-settings.php:130
-msgid "upgrading to Pro"
-msgstr "upgrading to Pro"
-
-#: includes/pages/wpforms-gs-settings.php:157
-msgid "Your connection has expired or hasn’t been set up yet."
-msgstr "Your connection has expired or hasn’t been set up yet."
-
-#: includes/pages/wpforms-gs-settings.php:161
-msgid ""
-"Please reauthenticate with your google account to continue syncing data "
-"without interruptions."
-msgstr ""
-"Please reauthenticate with your google account to continue syncing data "
-"without interruptions."
-
-#: includes/pages/wpforms-gs-settings.php:168
-msgid "Authenticate Now"
-msgstr "Authenticate Now"
-
-#: includes/pages/wpforms-gs-settings.php:174
-msgid "Learn How"
-msgstr "Learn How"
-
-#: includes/pages/wpforms-gs-settings.php:192
-msgid "Enjoying the Plugin?"
-msgstr "Enjoying the Plugin?"
-
-#: includes/pages/wpforms-gs-settings.php:196
-msgid ""
-"If you are enjoying the plugin, please consider leaving a 5-star review. "
-"Your support helps us improve and grow."
-msgstr ""
-"If you are enjoying the plugin, please consider leaving a 5-star review. "
-"Your support helps us improve and grow."
-
-#: includes/pages/wpforms-gs-settings.php:203
-msgid "Ok, you deserve it!"
-msgstr "Ok, you deserve it!"
-
-#: includes/pages/wpforms-gs-settings.php:207
-msgid "I already did"
-msgstr "I already did"
-
-#: includes/pages/wpforms-gs-settings.php:213
-msgid "I need help"
-msgstr "I need help"
-
-#: includes/pages/wpforms-gs-settings.php:218
-#: includes/pages/wpforms-gs-settings.php:294
-msgid "Maybe Later"
-msgstr "Maybe Later"
-
-#: includes/pages/wpforms-gs-settings.php:236
-msgid " Enhance Your Setup"
-msgstr " Enhance Your Setup"
-
-#: includes/pages/wpforms-gs-settings.php:240
-msgid "Extend your workflow with our add-ons."
-msgstr "Extend your workflow with our add-ons."
-
-#: includes/pages/wpforms-gs-settings.php:243
-msgid "Discover tools that integrate seamlessly and help you get more done."
-msgstr "Discover tools that integrate seamlessly and help you get more done."
-
-#: includes/pages/wpforms-gs-settings.php:251
-msgid "View Details"
-msgstr "View Details"
-
-#: includes/pages/wpforms-gs-settings.php:271
-msgid "Unlock Advance Features of WPForms Pro version 🚀"
-msgstr "Unlock Advance Features of WPForms Pro version 🚀"
-
-#: includes/pages/wpforms-gs-settings.php:275
-msgid ""
-"Use advanced features like Manual Authentication and automatic field "
-"mapping, no need to create columns in Google Sheets manually."
-msgstr ""
-"Use advanced features like Manual Authentication and automatic field "
-"mapping, no need to create columns in Google Sheets manually."
-
-#: includes/pages/wpforms-gs-settings.php:278
-msgid ""
-"Choose only the fields you need with simple toggles, use advanced tags, sync "
-"past form entries, and get priority support."
-msgstr ""
-"Choose only the fields you need with simple toggles, use advanced tags, sync "
-"past form entries, and get priority support."
-
-#: includes/pages/wpforms-gs-settings.php:285
-msgid "View License Types"
-msgstr "View License Types"
-
-#: includes/pages/wpforms-gs-settings.php:290
-msgid "Compare Features"
-msgstr "Compare Features"
-
-#: includes/pages/wpforms-gs-settings.php:335
-msgid "v"
-msgstr "v"
-
-#: includes/pages/wpforms-gs-settings.php:426
+#: includes/pages/wpforms-gs-settings.php:36
+#: includes/pages/wpforms-gs-settings.php:428
 msgid "System Status"
 msgstr "System Status"
 
-#: includes/pages/wpforms-gs-settings.php:494
+#: includes/pages/wpforms-gs-settings.php:52
+#: includes/pages/wpforms-gs-settings.php:401 includes/wpforms-panel.php:621
+#: includes/wpforms-panel.php:1944
+msgid "Existing"
+msgstr "Existing"
+
+#: includes/pages/wpforms-gs-settings.php:57
+#: includes/pages/wpforms-gs-settings.php:406 includes/wpforms-panel.php:629
+#: includes/wpforms-panel.php:1946
+msgid "Service"
+msgstr "Service"
+
+#: includes/pages/wpforms-gs-settings.php:132
+msgid ""
+"You`re using GSheetConnector for WPForms Lite. To unlock more features "
+"consider "
+msgstr ""
+"You`re using GSheetConnector for WPForms Lite. To unlock more features "
+"consider "
+
+#: includes/pages/wpforms-gs-settings.php:132
+msgid "upgrading to Pro"
+msgstr "upgrading to Pro"
+
+#: includes/pages/wpforms-gs-settings.php:159
+msgid "Your connection has expired or hasn’t been set up yet."
+msgstr "Your connection has expired or hasn’t been set up yet."
+
+#: includes/pages/wpforms-gs-settings.php:163
+msgid ""
+"Please reauthenticate with your google account to continue syncing data "
+"without interruptions."
+msgstr ""
+"Please reauthenticate with your google account to continue syncing data "
+"without interruptions."
+
+#: includes/pages/wpforms-gs-settings.php:170
+msgid "Authenticate Now"
+msgstr "Authenticate Now"
+
+#: includes/pages/wpforms-gs-settings.php:176
+msgid "Learn How"
+msgstr "Learn How"
+
+#: includes/pages/wpforms-gs-settings.php:194
+msgid "Enjoying the Plugin?"
+msgstr "Enjoying the Plugin?"
+
+#: includes/pages/wpforms-gs-settings.php:198
+msgid ""
+"If you are enjoying the plugin, please consider leaving a 5-star review. "
+"Your support helps us improve and grow."
+msgstr ""
+"If you are enjoying the plugin, please consider leaving a 5-star review. "
+"Your support helps us improve and grow."
+
+#: includes/pages/wpforms-gs-settings.php:205
+msgid "Ok, you deserve it!"
+msgstr "Ok, you deserve it!"
+
+#: includes/pages/wpforms-gs-settings.php:209
+msgid "I already did"
+msgstr "I already did"
+
+#: includes/pages/wpforms-gs-settings.php:215
+msgid "I need help"
+msgstr "I need help"
+
+#: includes/pages/wpforms-gs-settings.php:220
+#: includes/pages/wpforms-gs-settings.php:296
+msgid "Maybe Later"
+msgstr "Maybe Later"
+
+#: includes/pages/wpforms-gs-settings.php:238
+msgid " Enhance Your Setup"
+msgstr " Enhance Your Setup"
+
+#: includes/pages/wpforms-gs-settings.php:242
+msgid "Extend your workflow with our add-ons."
+msgstr "Extend your workflow with our add-ons."
+
+#: includes/pages/wpforms-gs-settings.php:245
+msgid "Discover tools that integrate seamlessly and help you get more done."
+msgstr "Discover tools that integrate seamlessly and help you get more done."
+
+#: includes/pages/wpforms-gs-settings.php:253
+msgid "View Details"
+msgstr "View Details"
+
+#: includes/pages/wpforms-gs-settings.php:273
+msgid "Unlock Advance Features of WPForms Pro version 🚀"
+msgstr "Unlock Advance Features of WPForms Pro version 🚀"
+
+#: includes/pages/wpforms-gs-settings.php:277
+msgid ""
+"Use advanced features like Manual Authentication and automatic field "
+"mapping, no need to create columns in Google Sheets manually."
+msgstr ""
+"Use advanced features like Manual Authentication and automatic field "
+"mapping, no need to create columns in Google Sheets manually."
+
+#: includes/pages/wpforms-gs-settings.php:280
+msgid ""
+"Choose only the fields you need with simple toggles, use advanced tags, sync "
+"past form entries, and get priority support."
+msgstr ""
+"Choose only the fields you need with simple toggles, use advanced tags, sync "
+"past form entries, and get priority support."
+
+#: includes/pages/wpforms-gs-settings.php:287
+msgid "View License Types"
+msgstr "View License Types"
+
+#: includes/pages/wpforms-gs-settings.php:292
+msgid "Compare Features"
+msgstr "Compare Features"
+
+#: includes/pages/wpforms-gs-settings.php:337
+msgid "v"
+msgstr "v"
+
+#: includes/pages/wpforms-gs-settings.php:496
 msgid "Advanced Tools for Easy Spreadsheet Control"
 msgstr "Advanced Tools for Easy Spreadsheet Control"
 
-#: includes/pages/wpforms-gs-settings.php:495
+#: includes/pages/wpforms-gs-settings.php:497
 msgid ""
 "Improve your sheet management with smart automation and flexible "
 "customization features."
@@ -2416,23 +2481,23 @@ msgid "Copy System Info"
 msgstr "Copy System Info"
 
 #: includes/pages/wpforms-integrate-system-info.php:60
-#: includes/wpforms-panel.php:897
+#: includes/wpforms-panel.php:901
 msgid "Authenticated Using Existing Method"
 msgstr "Authenticated Using Existing Method"
 
-#: includes/pages/wpforms-integrate-system-info.php:137
+#: includes/pages/wpforms-integrate-system-info.php:131
 msgid "Google Sheet Permission"
 msgstr "Google Sheet Permission"
 
-#: includes/pages/wpforms-integrate-system-info.php:291
+#: includes/pages/wpforms-integrate-system-info.php:285
 msgid "Active Plugins"
 msgstr "Active Plugins"
 
-#: includes/pages/wpforms-integrate-system-info.php:667
+#: includes/pages/wpforms-integrate-system-info.php:661
 msgid "Debug Log"
 msgstr "Debug Log"
 
-#: includes/pages/wpforms-integrate-system-info.php:692
+#: includes/pages/wpforms-integrate-system-info.php:686
 msgid "copied successfully"
 msgstr "copied successfully"
 
@@ -2440,19 +2505,19 @@ msgstr "copied successfully"
 msgid "Enter Column Name Upgrade To Pro &hellip;"
 msgstr "Enter Column Name Upgrade To Pro &hellip;"
 
-#: includes/wpforms-panel.php:265
+#: includes/wpforms-panel.php:266
 msgid "Publishing processing stopped by conditional logic."
 msgstr "Publishing processing stopped by conditional logic."
 
-#: includes/wpforms-panel.php:682 includes/wpforms-panel.php:706
+#: includes/wpforms-panel.php:686 includes/wpforms-panel.php:710
 msgid "Google Sheets Setup Required"
 msgstr "Google Sheets Setup Required"
 
-#: includes/wpforms-panel.php:683 includes/wpforms-panel.php:707
+#: includes/wpforms-panel.php:687 includes/wpforms-panel.php:711
 msgid "Your selected method is: "
 msgstr "Your selected method is: "
 
-#: includes/wpforms-panel.php:684
+#: includes/wpforms-panel.php:688
 msgid ""
 "To start sending form entries to Google Sheets, please connect your Google "
 "account first."
@@ -2460,123 +2525,123 @@ msgstr ""
 "To start sending form entries to Google Sheets, please connect your Google "
 "account first."
 
-#: includes/wpforms-panel.php:686
+#: includes/wpforms-panel.php:690
 msgid "✔ Click on the Sign in with Google button"
 msgstr "✔ Click on the Sign in with Google button"
 
-#: includes/wpforms-panel.php:687
+#: includes/wpforms-panel.php:691
 msgid "✔ Log in using your Google account"
 msgstr "✔ Log in using your Google account"
 
-#: includes/wpforms-panel.php:688
+#: includes/wpforms-panel.php:692
 msgid "✔ Select the Google account where your Sheets are stored"
 msgstr "✔ Select the Google account where your Sheets are stored"
 
-#: includes/wpforms-panel.php:689
+#: includes/wpforms-panel.php:693
 msgid "✔ Grant access to: Google Drive & Google Sheets"
 msgstr "✔ Grant access to: Google Drive & Google Sheets"
 
-#: includes/wpforms-panel.php:690
+#: includes/wpforms-panel.php:694
 msgid "✔ Save the authentication code if prompted"
 msgstr "✔ Save the authentication code if prompted"
 
-#: includes/wpforms-panel.php:693 includes/wpforms-panel.php:719
+#: includes/wpforms-panel.php:697 includes/wpforms-panel.php:723
 msgid "Go to Integration Setup"
 msgstr "Go to Integration Setup"
 
-#: includes/wpforms-panel.php:708
+#: includes/wpforms-panel.php:712
 msgid "To connect Google Sheets using Service Account:"
 msgstr "To connect Google Sheets using Service Account:"
 
-#: includes/wpforms-panel.php:710
+#: includes/wpforms-panel.php:714
 msgid "✔ Go to Google Cloud Console"
 msgstr "✔ Go to Google Cloud Console"
 
-#: includes/wpforms-panel.php:711
+#: includes/wpforms-panel.php:715
 msgid "✔ Create or select a project"
 msgstr "✔ Create or select a project"
 
-#: includes/wpforms-panel.php:712
+#: includes/wpforms-panel.php:716
 msgid "✔ Enable Google Sheets & Drive APIs"
 msgstr "✔ Enable Google Sheets & Drive APIs"
 
-#: includes/wpforms-panel.php:713
+#: includes/wpforms-panel.php:717
 msgid "✔ Create a Service Account"
 msgstr "✔ Create a Service Account"
 
-#: includes/wpforms-panel.php:714
+#: includes/wpforms-panel.php:718
 msgid "✔ Generate and download the JSON key"
 msgstr "✔ Generate and download the JSON key"
 
-#: includes/wpforms-panel.php:715
+#: includes/wpforms-panel.php:719
 msgid "✔ Upload the JSON file here"
 msgstr "✔ Upload the JSON file here"
 
-#: includes/wpforms-panel.php:716
+#: includes/wpforms-panel.php:720
 msgid "✔ Share your Google Sheet with the Service Account email"
 msgstr "✔ Share your Google Sheet with the Service Account email"
 
-#: includes/wpforms-panel.php:746
+#: includes/wpforms-panel.php:750
 msgid "Enable Settings"
 msgstr "General Settings"
 
-#: includes/wpforms-panel.php:750
+#: includes/wpforms-panel.php:754
 msgid "On"
 msgstr "On"
 
-#: includes/wpforms-panel.php:751
+#: includes/wpforms-panel.php:755
 msgid "Off"
 msgstr "Off"
 
-#: includes/wpforms-panel.php:948
+#: includes/wpforms-panel.php:952
 msgid " Connected"
 msgstr " Connected"
 
-#: includes/wpforms-panel.php:962
+#: includes/wpforms-panel.php:966
 msgid "Integration Mode"
 msgstr "Integration Mode"
 
-#: includes/wpforms-panel.php:968
+#: includes/wpforms-panel.php:972
 msgid "Manual Google Sheets Configuration"
 msgstr "Manual Google Sheets Configuration"
 
-#: includes/wpforms-panel.php:969
+#: includes/wpforms-panel.php:973
 msgid "Automatic Google Sheets Configuration (Upgrade To Pro)"
 msgstr "Automatic Google Sheets Configuration (Upgrade To Pro)"
 
-#: includes/wpforms-panel.php:973
+#: includes/wpforms-panel.php:977
 msgid "Selection of chosing google sheet for data submission."
 msgstr "Selection of chosing google sheet for data submission."
 
-#: includes/wpforms-panel.php:995 includes/wpforms-panel.php:1002
+#: includes/wpforms-panel.php:999 includes/wpforms-panel.php:1006
 msgid "Spreadsheet Name"
 msgstr "Spreadsheet Name"
 
-#: includes/wpforms-panel.php:1003
+#: includes/wpforms-panel.php:1007
 msgid ""
 "Enter the exact name of your Google Spreadsheet (as shown in Google Sheets)."
 msgstr ""
 "Enter the exact name of your Google Spreadsheet (as shown in Google Sheets)."
 
-#: includes/wpforms-panel.php:1016
+#: includes/wpforms-panel.php:1020
 msgid "Spreadsheet ID"
 msgstr "Spreadsheet ID"
 
-#: includes/wpforms-panel.php:1023
+#: includes/wpforms-panel.php:1027
 msgid "Spreadsheet ID "
 msgstr "Spreadsheet ID "
 
 #. translators: %s: example Google Sheets URL.
-#: includes/wpforms-panel.php:1026
+#: includes/wpforms-panel.php:1030
 #, php-format
 msgid "Enter the Spreadsheet ID from your Google Sheet URL. (Example: %s)"
 msgstr "Enter the Spreadsheet ID from your Google Sheet URL. (Example: %s)"
 
-#: includes/wpforms-panel.php:1041 includes/wpforms-panel.php:1048
+#: includes/wpforms-panel.php:1045 includes/wpforms-panel.php:1052
 msgid "Tab Name"
 msgstr "Tab Name"
 
-#: includes/wpforms-panel.php:1049
+#: includes/wpforms-panel.php:1053
 msgid ""
 "Enter the exact sheet tab name (e.g., Sheet1) from the bottom of your Google "
 "Spreadsheet."
@@ -2584,147 +2649,23 @@ msgstr ""
 "Enter the exact sheet tab name (e.g., Sheet1) from the bottom of your Google "
 "Spreadsheet."
 
-#: includes/wpforms-panel.php:1062 includes/wpforms-panel.php:1069
+#: includes/wpforms-panel.php:1066 includes/wpforms-panel.php:1073
 msgid "Tab ID"
 msgstr "Tab ID"
 
-#: includes/wpforms-panel.php:1070
+#: includes/wpforms-panel.php:1074
 msgid "Get the Tab ID from your sheet URL after gid="
 msgstr "Get the Tab ID from your sheet URL after gid="
 
-#: includes/wpforms-panel.php:1083
+#: includes/wpforms-panel.php:1087
 msgid "View SpreadSheets"
 msgstr "View SpreadSheets"
 
-#: includes/wpforms-panel.php:1087
+#: includes/wpforms-panel.php:1091
 msgid "Download CSV (PRO)"
 msgstr "Download CSV (PRO)"
 
-#: includes/wpforms-panel.php:1113
-msgid "Unlock Advanced Features with Form Feeds"
-msgstr "Unlock Advanced Features with Form Feeds"
-
-#: includes/wpforms-panel.php:1121
-msgid "Get Advanced Features"
-msgstr "Get Advanced Features"
-
-#: includes/wpforms-panel.php:1137 includes/wpforms-panel.php:1215
-msgid "Automatic Google Sheets Configuration"
-msgstr "Automatic Google Sheets Configuration"
-
-#: includes/wpforms-panel.php:1143
-msgid "Auto fetch Google Sheets list"
-msgstr "Auto fetch Google Sheets list"
-
-#: includes/wpforms-panel.php:1144
-msgid "Auto detect sheet tabs"
-msgstr "Auto detect sheet tabs"
-
-#: includes/wpforms-panel.php:1145
-msgid "One-click configuration"
-msgstr "One-click configuration"
-
-#: includes/wpforms-panel.php:1146
-msgid "Real-time entry sync"
-msgstr "Real-time entry sync"
-
-#: includes/wpforms-panel.php:1154 includes/wpforms-panel.php:1320
-msgid "Select Fields to Sync"
-msgstr "Select Fields to Sync"
-
-#: includes/wpforms-panel.php:1159
-msgid "Drag & drop field reordering"
-msgstr "Drag & drop field reordering"
-
-#: includes/wpforms-panel.php:1160
-msgid "Rename column headers"
-msgstr "Rename column headers"
-
-#: includes/wpforms-panel.php:1161
-msgid "Select specific fields to sync"
-msgstr "Select specific fields to sync"
-
-#: includes/wpforms-panel.php:1169 includes/wpforms-panel.php:1749
-msgid "Conditional Logic"
-msgstr "Conditional Logic"
-
-#: includes/wpforms-panel.php:1174
-msgid "Apply rules based on form values"
-msgstr "Apply rules based on form values"
-
-#: includes/wpforms-panel.php:1175
-msgid "Sync data only when conditions match"
-msgstr "Sync data only when conditions match"
-
-#: includes/wpforms-panel.php:1176
-msgid "Filter unwanted or incomplete entries"
-msgstr "Filter unwanted or incomplete entries"
-
-#: includes/wpforms-panel.php:1177
-msgid "Create dynamic workflows automatically"
-msgstr "Create dynamic workflows automatically"
-
-#: includes/wpforms-panel.php:1178
-msgid "Map data conditionally to sheet columns"
-msgstr "Map data conditionally to sheet columns"
-
-#: includes/wpforms-panel.php:1179
-msgid "Support multiple conditions"
-msgstr "Support multiple conditions"
-
-#: includes/wpforms-panel.php:1180
-msgid "Improve accuracy and reduce extra data"
-msgstr "Improve accuracy and reduce extra data"
-
-#: includes/wpforms-panel.php:1188
-msgid "Header Settings"
-msgstr "Header Settings"
-
-#: includes/wpforms-panel.php:1193
-msgid "Freeze header row"
-msgstr "Freeze header row"
-
-#: includes/wpforms-panel.php:1194
-msgid "Custom font styling"
-msgstr "Custom font styling"
-
-#: includes/wpforms-panel.php:1195
-msgid "Header & row color control"
-msgstr "Header & row color control"
-
-#: includes/wpforms-panel.php:1196
-msgid "Sort by any column"
-msgstr "Sort by any column"
-
-#: includes/wpforms-panel.php:1197
-msgid "Download spreadsheet as file"
-msgstr "Download spreadsheet as file"
-
-#: includes/wpforms-panel.php:1205
-msgid "Show Features ▼"
-msgstr "Show Features ▼"
-
-#: includes/wpforms-panel.php:1208
-msgid "Hide Features ▲"
-msgstr "Hide Features ▲"
-
-#: includes/wpforms-panel.php:1216
-msgid ""
-"Automatic configure your Google Sheet and start syncing form submissions in "
-"real time."
-msgstr ""
-"Automatic configure your Google Sheet and start syncing form submissions in "
-"real time."
-
-#: includes/wpforms-panel.php:1219
-msgid "Select google spreadsheet from your google account."
-msgstr "Select google spreadsheet from your google account."
-
-#: includes/wpforms-panel.php:1229
-msgid "Select tab from above chosen google sheet Tab."
-msgstr "Select tab from above chosen google sheet Tab."
-
-#: includes/wpforms-panel.php:1279
+#: includes/wpforms-panel.php:1147
 msgid ""
 "Your Google Spreadsheet is securely connected and ready to receive form "
 "submissions in real time."
@@ -2732,7 +2673,7 @@ msgstr ""
 "Your Google Spreadsheet is securely connected and ready to receive form "
 "submissions in real time."
 
-#: includes/wpforms-panel.php:1289
+#: includes/wpforms-panel.php:1157
 msgid ""
 "Please share your Google Spreadsheet with the following service account to "
 "enable automatic syncing."
@@ -2740,65 +2681,189 @@ msgstr ""
 "Please share your Google Spreadsheet with the following service account to "
 "enable automatic syncing."
 
-#: includes/wpforms-panel.php:1305
+#: includes/wpforms-panel.php:1173
 msgid " Green email means the spreadsheet  is shared correctly."
 msgstr " Green email means the spreadsheet  is shared correctly."
 
-#: includes/wpforms-panel.php:1308
+#: includes/wpforms-panel.php:1176
 msgid ""
 " Red email means the spreadsheet is not yet shared — please grant access."
 msgstr ""
 " Red email means the spreadsheet is not yet shared — please grant access."
 
-#: includes/wpforms-panel.php:1322
+#: includes/wpforms-panel.php:1196
+msgid "Unlock Advanced Features with Form Feeds"
+msgstr "Unlock Advanced Features with Form Feeds"
+
+#: includes/wpforms-panel.php:1204
+msgid "Get Advanced Features"
+msgstr "Get Advanced Features"
+
+#: includes/wpforms-panel.php:1220 includes/wpforms-panel.php:1298
+msgid "Automatic Google Sheets Configuration"
+msgstr "Automatic Google Sheets Configuration"
+
+#: includes/wpforms-panel.php:1226
+msgid "Auto fetch Google Sheets list"
+msgstr "Auto fetch Google Sheets list"
+
+#: includes/wpforms-panel.php:1227
+msgid "Auto detect sheet tabs"
+msgstr "Auto detect sheet tabs"
+
+#: includes/wpforms-panel.php:1228
+msgid "One-click configuration"
+msgstr "One-click configuration"
+
+#: includes/wpforms-panel.php:1229
+msgid "Real-time entry sync"
+msgstr "Real-time entry sync"
+
+#: includes/wpforms-panel.php:1237 includes/wpforms-panel.php:1329
+msgid "Select Fields to Sync"
+msgstr "Select Fields to Sync"
+
+#: includes/wpforms-panel.php:1242
+msgid "Drag & drop field reordering"
+msgstr "Drag & drop field reordering"
+
+#: includes/wpforms-panel.php:1243
+msgid "Rename column headers"
+msgstr "Rename column headers"
+
+#: includes/wpforms-panel.php:1244
+msgid "Select specific fields to sync"
+msgstr "Select specific fields to sync"
+
+#: includes/wpforms-panel.php:1252 includes/wpforms-panel.php:1758
+msgid "Conditional Logic"
+msgstr "Conditional Logic"
+
+#: includes/wpforms-panel.php:1257
+msgid "Apply rules based on form values"
+msgstr "Apply rules based on form values"
+
+#: includes/wpforms-panel.php:1258
+msgid "Sync data only when conditions match"
+msgstr "Sync data only when conditions match"
+
+#: includes/wpforms-panel.php:1259
+msgid "Filter unwanted or incomplete entries"
+msgstr "Filter unwanted or incomplete entries"
+
+#: includes/wpforms-panel.php:1260
+msgid "Create dynamic workflows automatically"
+msgstr "Create dynamic workflows automatically"
+
+#: includes/wpforms-panel.php:1261
+msgid "Map data conditionally to sheet columns"
+msgstr "Map data conditionally to sheet columns"
+
+#: includes/wpforms-panel.php:1262
+msgid "Support multiple conditions"
+msgstr "Support multiple conditions"
+
+#: includes/wpforms-panel.php:1263
+msgid "Improve accuracy and reduce extra data"
+msgstr "Improve accuracy and reduce extra data"
+
+#: includes/wpforms-panel.php:1271
+msgid "Header Settings"
+msgstr "Header Settings"
+
+#: includes/wpforms-panel.php:1276
+msgid "Freeze header row"
+msgstr "Freeze header row"
+
+#: includes/wpforms-panel.php:1277
+msgid "Custom font styling"
+msgstr "Custom font styling"
+
+#: includes/wpforms-panel.php:1278
+msgid "Header & row color control"
+msgstr "Header & row color control"
+
+#: includes/wpforms-panel.php:1279
+msgid "Sort by any column"
+msgstr "Sort by any column"
+
+#: includes/wpforms-panel.php:1280
+msgid "Download spreadsheet as file"
+msgstr "Download spreadsheet as file"
+
+#: includes/wpforms-panel.php:1288
+msgid "Show Features ▼"
+msgstr "Show Features ▼"
+
+#: includes/wpforms-panel.php:1291
+msgid "Hide Features ▲"
+msgstr "Hide Features ▲"
+
+#: includes/wpforms-panel.php:1299
+msgid ""
+"Automatic configure your Google Sheet and start syncing form submissions in "
+"real time."
+msgstr ""
+"Automatic configure your Google Sheet and start syncing form submissions in "
+"real time."
+
+#: includes/wpforms-panel.php:1302
+msgid "Select google spreadsheet from your google account."
+msgstr "Select google spreadsheet from your google account."
+
+#: includes/wpforms-panel.php:1312
+msgid "Select tab from above chosen google sheet Tab."
+msgstr "Select tab from above chosen google sheet Tab."
+
+#: includes/wpforms-panel.php:1331
 msgid "Enable the fields and rename columns if needed."
 msgstr "Enable the fields and rename columns if needed."
 
-#: includes/wpforms-panel.php:1331
+#: includes/wpforms-panel.php:1340
 msgid " Check All "
 msgstr " Check All "
 
-#: includes/wpforms-panel.php:1381
+#: includes/wpforms-panel.php:1390
 msgid "Can't find the field you added recently?"
 msgstr "Can't find the field you added recently?"
 
-#: includes/wpforms-panel.php:1382
+#: includes/wpforms-panel.php:1391
 msgid "Click here to save and reload"
 msgstr "Click here to save and reload"
 
-#: includes/wpforms-panel.php:1383
+#: includes/wpforms-panel.php:1392
 msgid "Save and reload the form to view new fields."
 msgstr "Save and reload the form to view new fields."
 
-#: includes/wpforms-panel.php:1395
+#: includes/wpforms-panel.php:1404
 msgid "Smart Tags"
 msgstr "Smart Tags"
 
-#: includes/wpforms-panel.php:1395
+#: includes/wpforms-panel.php:1404
 msgid "Insert dynamic values from your forms"
 msgstr "Insert dynamic values from your forms"
 
-#: includes/wpforms-panel.php:1415
+#: includes/wpforms-panel.php:1424
 msgid "Header Behavior"
 msgstr "Header Behavior"
 
-#: includes/wpforms-panel.php:1422
+#: includes/wpforms-panel.php:1431
 msgid "Freeze Header "
 msgstr "Freeze Header "
 
-#: includes/wpforms-panel.php:1424
+#: includes/wpforms-panel.php:1433
 msgid "if you want to freeze first row considered as header."
 msgstr "if you want to freeze first row considered as header."
 
-#: includes/wpforms-panel.php:1431
+#: includes/wpforms-panel.php:1440
 msgid "Header and Rows Style"
 msgstr "Header and Rows Style"
 
-#: includes/wpforms-panel.php:1440
+#: includes/wpforms-panel.php:1449
 msgid "Alternate Colors "
 msgstr "Alternate Colors "
 
-#: includes/wpforms-panel.php:1442
+#: includes/wpforms-panel.php:1451
 msgid ""
 "Control background colors of odd even rows as well as background color of "
 "header row."
@@ -2806,71 +2871,71 @@ msgstr ""
 "Control background colors of odd even rows as well as background color of "
 "header row."
 
-#: includes/wpforms-panel.php:1456
+#: includes/wpforms-panel.php:1465
 msgid "Header Color"
 msgstr "Header Settings"
 
-#: includes/wpforms-panel.php:1472
+#: includes/wpforms-panel.php:1481
 msgid "Odd Color"
 msgstr "Odd Color"
 
-#: includes/wpforms-panel.php:1488
+#: includes/wpforms-panel.php:1497
 msgid "Even Color"
 msgstr "Even Color"
 
-#: includes/wpforms-panel.php:1505
+#: includes/wpforms-panel.php:1514
 msgid "Header Appearance"
 msgstr "Header Appearance"
 
-#: includes/wpforms-panel.php:1511
+#: includes/wpforms-panel.php:1520
 msgid "Header - Font Settings "
 msgstr "Header - Font Settings "
 
-#: includes/wpforms-panel.php:1513
+#: includes/wpforms-panel.php:1522
 msgid "Control Header setting"
 msgstr "Plugin Access Control"
 
-#: includes/wpforms-panel.php:1528 includes/wpforms-panel.php:1640
+#: includes/wpforms-panel.php:1537 includes/wpforms-panel.php:1649
 msgid "Font Size"
 msgstr "Font Size"
 
-#: includes/wpforms-panel.php:1547 includes/wpforms-panel.php:1658
+#: includes/wpforms-panel.php:1556 includes/wpforms-panel.php:1667
 msgid "Font Style"
 msgstr "Font Style"
 
-#: includes/wpforms-panel.php:1560 includes/wpforms-panel.php:1670
+#: includes/wpforms-panel.php:1569 includes/wpforms-panel.php:1679
 msgid "Bold"
 msgstr "Bold"
 
-#: includes/wpforms-panel.php:1573 includes/wpforms-panel.php:1682
+#: includes/wpforms-panel.php:1582 includes/wpforms-panel.php:1691
 msgid "Italic"
 msgstr "Italic"
 
-#: includes/wpforms-panel.php:1587 includes/wpforms-panel.php:1695
+#: includes/wpforms-panel.php:1596 includes/wpforms-panel.php:1704
 msgid "Normal"
 msgstr "Normal"
 
-#: includes/wpforms-panel.php:1602 includes/wpforms-panel.php:1709
+#: includes/wpforms-panel.php:1611 includes/wpforms-panel.php:1718
 msgid "Font Color"
 msgstr "Font Color"
 
-#: includes/wpforms-panel.php:1617
+#: includes/wpforms-panel.php:1626
 msgid "Row Appearance"
 msgstr "Row Appearance"
 
-#: includes/wpforms-panel.php:1623
+#: includes/wpforms-panel.php:1632
 msgid "Row - Font Settings "
 msgstr "Row - Font Settings "
 
-#: includes/wpforms-panel.php:1625
+#: includes/wpforms-panel.php:1634
 msgid "Control row setting"
 msgstr "Control row setting"
 
-#: includes/wpforms-panel.php:1731
+#: includes/wpforms-panel.php:1740
 msgid "Sort Sheet "
 msgstr "Sort Sheet "
 
-#: includes/wpforms-panel.php:1736
+#: includes/wpforms-panel.php:1745
 msgid ""
 "Set up this field if you want data to be sorted automatically upon the "
 "submission based on column."
@@ -2878,23 +2943,23 @@ msgstr ""
 "Set up this field if you want data to be sorted automatically upon the "
 "submission based on column."
 
-#: includes/wpforms-panel.php:1755
+#: includes/wpforms-panel.php:1764
 msgid "Enable Conditional Logic "
 msgstr "Enable Conditional Logic "
 
-#: includes/wpforms-panel.php:1760
+#: includes/wpforms-panel.php:1769
 msgid "Enable Conditional Logic"
 msgstr "Enable Conditional Logic"
 
-#: includes/wpforms-panel.php:1841
+#: includes/wpforms-panel.php:1850
 msgid "Sync to Google Sheet"
 msgstr "Google Sheets Data Sync"
 
-#: includes/wpforms-panel.php:1842
+#: includes/wpforms-panel.php:1851
 msgid "Click here"
 msgstr "Click here"
 
-#: includes/wpforms-panel.php:1843
+#: includes/wpforms-panel.php:1852
 msgid ""
 "Click here to sync all the entries to the above selected Google Sheet. Make "
 "sure it will add all the form entries filled till now. If find duplicate "
@@ -2906,40 +2971,46 @@ msgstr ""
 "then remove it manually or select the new spreadsheet or a new tab in same "
 "sheet."
 
-#: includes/wpforms-panel.php:1860
+#: includes/wpforms-panel.php:1869
 msgid "From Date"
 msgstr "From Date"
 
-#: includes/wpforms-panel.php:1865
+#: includes/wpforms-panel.php:1874
 msgid "To Date"
 msgstr "To Date"
 
-#: includes/wpforms-panel.php:1872
+#: includes/wpforms-panel.php:1881
 msgid "Sync All Entries with this feed"
 msgstr "Sync All Entries with this feed"
 
-#: includes/wpforms-panel.php:1967
+#: includes/wpforms-panel.php:1952
+#, fuzzy, php-format
+#| msgid "GSheetConnector"
+msgid "GSheetConnector (%s)"
+msgstr "About GSheetConnector"
+
+#: includes/wpforms-panel.php:1976
 msgid "Enter a Feed Name"
 msgstr "Enter Column Name"
 
-#: includes/wpforms-panel.php:1969
+#: includes/wpforms-panel.php:1978
 msgid "You must provide a googlesheet name"
 msgstr "You must provide a googlesheet name"
 
-#: includes/wpforms-panel.php:1970
+#: includes/wpforms-panel.php:1979
 msgid "To disable all wpgs_spreadsheets use the \"Webhooks\" dropdown setting."
 msgstr ""
 "To disable all wpgs_spreadsheets use the \"Webhooks\" dropdown setting."
 
-#: includes/wpforms-panel.php:1971
+#: includes/wpforms-panel.php:1980
 msgid "Are you sure that you want to delete this googlesheet?"
 msgstr "Are you sure that you want to delete this googlesheet?"
 
-#: includes/wpforms-panel.php:1972
+#: includes/wpforms-panel.php:1981
 msgid "Unnamed Googlesheet"
 msgstr "Unnamed Googlesheet"
 
-#: includes/wpforms-panel.php:1973
+#: includes/wpforms-panel.php:1982
 msgid ""
 "Your form contains required Googlesheet settings that have not been "
 "configured. Please double-check and configure these settings to complete the "
@@ -2968,6 +3039,15 @@ msgstr "About GSheetConnector"
 #. Author URI of the plugin/theme
 msgid "https://www.gsheetconnector.com/"
 msgstr "https://www.gsheetconnector.com/"
+
+#~ msgid "There's something wrong with your code..."
+#~ msgstr "There's something wrong with your code..."
+
+#~ msgid "Send to Sheet"
+#~ msgstr "Send to Sheet"
+
+#~ msgid "No WPForms are connected with Google Sheets"
+#~ msgstr "No WPForms are connected with Google Sheets"
 
 #~ msgid ""
 #~ " <span style=\"color: #ff0000; font-weight: bold;\">Upgrade to PRO</span>"
@@ -3049,9 +3129,6 @@ msgstr "https://www.gsheetconnector.com/"
 
 #~ msgid "* Ensure that you enable the checkbox for each of these services."
 #~ msgstr "* Ensure that you enable the checkbox for each of these services."
-
-#~ msgid "Currently Active"
-#~ msgstr "Currently Active"
 
 #~ msgid ""
 #~ "Something went wrong! It looks you have not given the permission of "

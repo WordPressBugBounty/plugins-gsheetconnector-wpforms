@@ -1,4 +1,4 @@
-  <?php
+<?php
     /* Exit if accessed directly */
     if (!defined('ABSPATH')) {
         exit;
@@ -30,6 +30,11 @@
 
     function wpgs_sync_from_db_internal($form_id, $entry_id)
     {
+        // @since 4.2.4 Google client library is not bundled in Free (sending is a Pro feature): avoid a fatal error.
+        if (!class_exists('Google_Service_Sheets')) {
+            return;
+        }
+
         global $wpdb;
 
         /* ================= DB ================= */
@@ -46,6 +51,9 @@
         );
 
         if (!$row) return;
+
+        // @since 4.2.4 Stored Entry ID (row id if not upgraded yet).
+        $entry_id = absint($row['entry_id'] ?? 0) ?: absint($row['id']);
 
         $submission_data = json_decode($row['form_data'], true);
         if (empty($submission_data)) return;
@@ -81,7 +89,7 @@
         /* ================= READ ACTUAL HEADERS ================= */
         $header_response = $service->spreadsheets_values->get(
             $spreadsheet_id,
-            $sheet_name . '!A1:ZZ1'
+            wpfgsc_googlesheet::a1_tab($sheet_name) . '!A1:ZZ1'
         );
 
         $sheet_headers = $header_response->getValues()[0] ?? [];
@@ -91,8 +99,12 @@
         $last_col     = wpgs_get_column_letter($header_count - 1);
 
         /* ================= FIND EXISTING ENTRY OR NEXT ROW ================= */
+        // @since 4.2.4 Entry ID column found by its "Entry ID" header (column A if not found).
+        $entry_col = array_search('Entry ID', $sheet_headers, true);
+        $entry_col = wpgs_get_column_letter(false === $entry_col ? 0 : (int) $entry_col);
+
         $colA = $service->spreadsheets_values
-            ->get($spreadsheet_id, $sheet_name . '!A:A')
+            ->get($spreadsheet_id, wpfgsc_googlesheet::a1_tab($sheet_name) . '!' . $entry_col . ':' . $entry_col)
             ->getValues();
 
         $target_row = null;
@@ -149,7 +161,7 @@
         }
 
         /* ================= UPDATE ONLY (NO APPEND) ================= */
-        $range = $sheet_name . '!A' . $target_row . ':' . $last_col . $target_row;
+        $range = wpfgsc_googlesheet::a1_tab($sheet_name) . '!A' . $target_row . ':' . $last_col . $target_row;
 
         $service->spreadsheets_values->update(
             $spreadsheet_id,

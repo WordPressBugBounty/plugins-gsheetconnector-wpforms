@@ -1588,6 +1588,7 @@ public function gscwpf_deactivate_service_account() {
                 $data['date'] = date_i18n(get_option('date_format'));
                 $data['time'] = date_i18n(get_option('time_format'));
 
+                $phone_columns = array();
                 foreach ($fields as $k => $v) {
                     $get_field = $fields[$k];
                     $key = $get_field['name'];
@@ -1595,9 +1596,12 @@ public function gscwpf_deactivate_service_account() {
                     if (in_array($get_field['type'], $payment_type)) {
                         $value = html_entity_decode($get_field['value']);
                     }
+                    if ('phone' === $get_field['type']) {
+                        $phone_columns[] = $key;
+                    }
                     $data[$key] = $value;
                 }
-                $doc->add_row($data);
+                $doc->add_row($data, $phone_columns);
             } catch (Exception $e) {
                 $data['ERROR_MSG'] = $e->getMessage();
                 $data['TRACE_STK'] = $e->getTraceAsString();

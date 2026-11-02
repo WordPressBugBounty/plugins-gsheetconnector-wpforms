@@ -127,7 +127,7 @@
                     'delete'      => __('Delete', 'gsheetconnector-wpforms'),
                     'mark_read'   => __('Mark Read', 'gsheetconnector-wpforms'),
                     'mark_unread' => __('Mark Unread', 'gsheetconnector-wpforms'),
-                    'send_sheet'  => __('Send to Sheet', 'gsheetconnector-wpforms'),
+                    // 4.2.4: "Send to Sheet" removed here, it is a Pro feature and did nothing in Free.
                 ];
             }
 
